@@ -3,11 +3,13 @@
 | Suite/check | Total | Passed | Failed | Skipped |
 |---|---:|---:|---:|---:|
 | Pytest application tests | 35 | 35 | 0 | 0 |
-| Vitest component/data/proxy tests | 10 | 10 | 0 | 0 |
+| Vitest component/data/proxy tests | 11 | 11 | 0 | 0 |
 | Playwright Chromium acceptance | 2 | 2 | 0 | 0 |
-| **Application tests** | **47** | **47** | **0** | **0** |
+| **Application tests** | **48** | **48** | **0** | **0** |
 
-Latest complete backend run: 33.31 seconds. Latest browser run: 16.2 seconds. These are single native Windows observations, not portable performance benchmarks.
+Latest complete backend run: 38.87 seconds. Latest browser run: 14.1 seconds. These are single native Windows observations, not portable performance benchmarks.
+
+Published runtime commit `a2ab3639aa3cc3b8847ecef6aac32ea36231e1e0` passed GitHub Academy CI run `41233814617` on October 31, 2026. The Ubuntu job passed dependency installation, all three test suites, lint/type/format/build checks, Python dependency scanning and the production npm audit. This is executed hosted evidence, not merely a supplied workflow. The preceding release `1c15938` also passed run `41231443196`.
 
 Ruff lint/format, TypeScript checking, ESLint, Prettier and optimized Next.js build passed. One non-failing Starlette warning recommends migrating TestClient's HTTP client dependency; it was not suppressed.
 
@@ -17,13 +19,13 @@ Backend tests cover startup/migrations, all fifteen track/duration combinations 
 
 Provider tests mock status errors (401/403/429/500), timeout, official playlist metadata and persistent stale-cache access after quota failure. They do not use live credentials or incur provider charges.
 
-Component tests cover evidence forms, multi-track selection, safe Markdown/links and understandable errors. Proxy tests cover hostile Host without Origin, hostile Origin, traversal rejection and restore confirmation.
+Component/data tests cover evidence forms, multi-track selection, safe Markdown/links, understandable errors and aggregation of 401 questions across two catalogue pages. Proxy tests cover hostile Host without Origin, hostile Origin, traversal rejection and restore confirmation.
 
 Chromium acceptance executes fresh startup, cloud plan creation, explicit lesson completion, notes, interview answer, employer/manual JD and gaps, project/task persistence across browser reload, snapshot restore and mobile layout. A separate HTTP request verifies hostile-host rejection against the running proxy.
 
 ## Earlier failures fixed
 
-Windows snapshot handles remained open; SQLite snapshot size exceeded the original limit; plan custom routes were shadowed; recalculation misplaced retained work; the proxy dropped restore confirmation; frontend type/lint errors and asynchronous task controls failed; one pytest fixture import was removed by Ruff. Fixes were followed by successful reruns, not skipped tests.
+Windows snapshot handles remained open; SQLite snapshot size exceeded the original limit; plan custom routes were shadowed; recalculation misplaced retained work; the proxy dropped restore confirmation; frontend type/lint errors and asynchronous task controls failed; one pytest fixture import was removed by Ruff. The final pagination change initially misplaced a helper and a test inside existing functions; both were corrected before the successful complete rerun. Fixes were followed by successful reruns, not skipped tests.
 
 ## Not executed
 

@@ -9,5 +9,7 @@
 - Fixed the proxy Host-boundary defect, restore confirmation forwarding, plan route shadowing, recalculation ordering and Windows snapshot handle cleanup.
 - Added native setup/startup/recovery scripts, Docker configuration and CI.
 - Added acceptance/security/recovery tests and readiness documentation.
+- Fixed first-page-only catalogue loading after startup/import and bounded indexed research collections.
+- Verified 48 application tests, the separate native installation/recovery checkout and hosted Linux CI on runtime `a2ab363`.
 
 Docker execution, live provider credentials and licensing are not implied by this release entry.

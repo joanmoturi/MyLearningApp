@@ -4,7 +4,7 @@ Version 1.0.0: Next.js/React/TypeScript, plain themed CSS, FastAPI/Pydantic/SQLA
 
 All five tracks, research ingestion, independent curricula, daily guides/evidence, resources/bookmarks/ratings, competency, interviews/revision, employers/jobs/gaps, portfolio tasks, Markdown notes and local import/export/snapshot recovery are implemented.
 
-47 application tests pass (35 backend, 10 frontend, 2 browser); type/lint/format/build gates pass. Exact coverage and limitations are in `TEST_RESULTS.md`. Native clean-clone installation, process restart and scripted restore passed; hosted CI verification is pending.
+48 application tests pass (35 backend, 11 frontend, 2 browser); type/lint/format/build gates pass. Exact coverage and limitations are in `TEST_RESULTS.md`. Native clean-clone installation, process restart and scripted restore passed. Published runtime `a2ab363` passed GitHub Academy CI run `41233814617`, including Linux browser acceptance and dependency scanning.
 
 Start from the repository in two PowerShell terminals:
 

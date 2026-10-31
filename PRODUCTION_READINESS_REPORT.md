@@ -1,6 +1,6 @@
 # Production readiness report - 2026-10-31
 
-**Status: core native workflows verified; release acceptance still conditional.** This is a local single-learner product, not an authenticated Internet-facing service.
+**Status: core native release, fresh-checkout recovery and hosted CI verified; remaining acceptance gaps are explicit.** This is a local single-learner product, not an authenticated Internet-facing service.
 
 The incoming assumption that implementation was complete was incorrect: the backend was unvalidated and the actual frontend was missing. The audit therefore included completing the functional workspace rather than merely reviewing scaffolding.
 
@@ -21,14 +21,17 @@ The incoming assumption that implementation was complete was incorrect: the back
 | D11 | Medium | Standalone frontend startup warning/asset mismatch | Dedicated native standalone launcher and successful browser startup. |
 | D12 | Medium | Development dependency advisory | Unresolved upstream minimatch advisory; 16 moderate dependent reports, zero production advisories. |
 | D13 | Medium | Docker execution not available | Compose/Dockerfiles supplied; native alternative tested, Docker acceptance pending. |
-| D14 | Medium | Fresh-install/hosted CI acceptance | Native clean-clone installation/restart/restore passed; hosted CI verification pending. |
+| D14 | Medium | Fresh-install/hosted CI acceptance | Native clean-clone installation/restart/restore passed; published runtime `a2ab363` passed hosted CI run `41233814617`. |
 | D15 | Low | Monolithic frontend orchestration | Shared typed helpers/components; future section extraction documented. |
 | D16 | Low | License/public visibility undecided | Explicit pending license; repository stays private. |
+| D17 | Medium | Imported catalogues silently stopped at 400 records | Initial and post-import loading aggregate pages; 401-question regression passes, with a 10,000-record per-kind bound. |
 
 ## Verified evidence and remaining conditions
 
-See `TEST_RESULTS.md` for 47 passing application tests and quality checks; `SECURITY_AUDIT.md` for scope, findings and dependency scans; `INSTALLATION_VERIFICATION.md` for fresh-checkout evidence.
+See `TEST_RESULTS.md` for 48 passing application tests and quality checks; `SECURITY_AUDIT.md` for scope, findings and dependency scans; `INSTALLATION_VERIFICATION.md` for fresh-checkout evidence.
 
 Research files/history are preserved. Core operation needs no API key or paid service. AI feedback, provider quota usage, cloud exercise deployments and external hosting may cost money when explicitly configured.
 
-Do not declare all production-readiness acceptance items complete until the fresh installation and GitHub-hosted CI are recorded. Docker execution, live provider credentials and public-service authentication remain outside current verified readiness.
+The published runtime is `a2ab3639aa3cc3b8847ecef6aac32ea36231e1e0`; subsequent report-only commits record its evidence without changing that tested code. Docker execution, live provider credentials, an actual laptop reboot and exhaustive video playback remain unverified. Development-tree dependency advisories and the owner's licensing decision remain unresolved.
+
+Product-depth limitations also remain: job analysis uses editable keyword/section matching, priority skills are highlighted rather than semantically rescheduled, and resource availability/content quality still requires human review. Public-service authentication and PostgreSQL deployment are not implemented or claimed. These limitations prevent an unconditional all-requirements acceptance claim, but do not require paid APIs for verified core local use.
