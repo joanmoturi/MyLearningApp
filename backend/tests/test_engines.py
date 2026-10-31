@@ -1,6 +1,8 @@
 import asyncio
 import copy
 import shutil
+import sqlite3
+from contextlib import closing
 
 import httpx
 import pytest
@@ -148,3 +150,59 @@ def test_backup_restores_into_a_fresh_database(workspace, tmp_path):
         assert response.status_code == 200, response.text
         assert fresh.get("/api/lessons/" + slot).json()["progress"]["watched_minutes"] == 10
         assert fresh.get("/api/personal/note").json()[0]["title"] == "Move laptops"
+
+
+def test_restore_rejects_removed_database_constraints(workspace, tmp_path):
+    client, _, _ = workspace
+    candidate = tmp_path / "missing-constraint.sqlite3"
+    candidate.write_bytes(client.get("/api/data/backup").content)
+    with closing(sqlite3.connect(candidate)) as connection:
+        connection.executescript(
+            "DROP TABLE study_activity; CREATE TABLE study_activity(slot_id VARCHAR(100) NOT NULL,day VARCHAR(10) NOT NULL,minutes INTEGER NOT NULL,PRIMARY KEY(slot_id,day));"
+        )
+    response = client.post(
+        "/api/data/restore",
+        content=candidate.read_bytes(),
+        headers={**HEADERS, "X-Academy-Confirm": "restore"},
+    )
+    assert response.status_code == 422
+    assert "foreign-key constraints" in response.json()["detail"]
+
+
+def test_metadata_cache_survives_provider_failure(workspace, monkeypatch):
+    from datetime import timedelta
+
+    from sqlalchemy import select
+
+    from academy.models import ImportPreview, now
+
+    client, app, _ = workspace
+    rid = next(
+        item["id"]
+        for item in client.get("/api/catalog/resource").json()["items"]
+        if item["resource_type"] == "youtube_video"
+    )
+    calls = []
+
+    async def success(url):
+        calls.append(url)
+        return {"title": "Mocked official response", "comments": None}
+
+    monkeypatch.setattr(integrations, "youtube_metadata", success)
+    assert client.post(f"/api/resources/{rid}/metadata", headers=HEADERS).status_code == 200
+    assert client.post(f"/api/resources/{rid}/metadata", headers=HEADERS).json()["stale"] is False
+    assert len(calls) == 1
+    with app.state.factory.begin() as session:
+        session.scalar(select(ImportPreview).where(ImportPreview.kind == "youtube_cache")).created_at = (
+            now() - timedelta(days=2)
+        )
+
+    async def failure(url):
+        raise HTTPException(502, "Quota exhausted")
+
+    monkeypatch.setattr(integrations, "youtube_metadata", failure)
+    assert client.get(f"/api/resources/{rid}/metadata").json()["stale"] is True
+    assert (
+        client.post(f"/api/resources/{rid}/metadata", headers=HEADERS).json()["refresh_error"]
+        == "Quota exhausted"
+    )

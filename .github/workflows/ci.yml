@@ -1,7 +1,9 @@
 name: Academy CI
 on:
   push:
+    paths: ["backend/**", "frontend/**", "research/**", "scripts/**", ".github/workflows/**", "compose.yml", ".dockerignore", ".gitattributes"]
   pull_request:
+    paths: ["backend/**", "frontend/**", "research/**", "scripts/**", ".github/workflows/**", "compose.yml", ".dockerignore", ".gitattributes"]
 permissions:
   contents: read
 jobs:

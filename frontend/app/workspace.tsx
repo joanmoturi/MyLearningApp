@@ -460,6 +460,19 @@ export default function Workspace() {
           >
             Refresh metadata
           </button>
+          <button
+            onClick={() =>
+              void run(
+                async () =>
+                  setIntegrationResult(
+                    await api(`resources/${resource.id}/metadata`),
+                  ),
+                "Cached provider metadata loaded; the stale flag is explicit.",
+              )
+            }
+          >
+            View cached metadata
+          </button>
         </div>
         {editing?.kind === "resource" && editing.id === resource.id && (
           <div className="stack">

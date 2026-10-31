@@ -5,7 +5,17 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 from fastapi import HTTPException
-from sqlalchemy import JSON, Boolean, DateTime, Integer, String, select
+from sqlalchemy import (
+    JSON,
+    Boolean,
+    CheckConstraint,
+    DateTime,
+    Integer,
+    String,
+    UniqueConstraint,
+    inspect,
+    select,
+)
 from sqlalchemy.orm import Session
 
 from .models import (
@@ -353,13 +363,66 @@ def restore_sqlite(engine, path: Path, data: bytes, research_root: Path):
                 if connection.execute("PRAGMA foreign_key_check").fetchall():
                     raise HTTPException(422, "Backup relationships are inconsistent.")
                 for table in Base.metadata.sorted_tables:
-                    columns = {row[1] for row in connection.execute(f'PRAGMA table_info("{table.name}")')}
+                    info = connection.execute(f'PRAGMA table_xinfo("{table.name}")').fetchall()
+                    columns = {row[1] for row in info}
                     if columns != set(table.columns.keys()):
                         raise HTTPException(422, "Backup columns differ from the application schema.")
+                    primary = list(table.primary_key.columns.keys())
+                    for row in info:
+                        column = table.columns[row[1]]
+                        if (
+                            row[2].upper() != column.type.compile(dialect=engine.dialect).upper()
+                            or bool(row[3]) != (not column.nullable)
+                            or row[6] != 0
+                            or row[5] != (primary.index(row[1]) + 1 if row[1] in primary else 0)
+                        ):
+                            raise HTTPException(422, "Backup column types or primary constraints differ.")
+                    actual_foreign = {
+                        (row[3], row[2], row[4], row[6])
+                        for row in connection.execute(f'PRAGMA foreign_key_list("{table.name}")')
+                    }
+                    expected_foreign = {
+                        (
+                            column.name,
+                            foreign.column.table.name,
+                            foreign.column.name,
+                            foreign.ondelete or "NO ACTION",
+                        )
+                        for column in table.columns
+                        for foreign in column.foreign_keys
+                    }
+                    if actual_foreign != expected_foreign:
+                        raise HTTPException(422, "Backup foreign-key constraints differ.")
             from .database import make_database
 
             candidate_engine, factory = make_database("sqlite:///" + str(candidate))
             try:
+                inspector = inspect(candidate_engine)
+
+                def normalize(value):
+                    return "".join(value.lower().split()).replace('"', "")
+
+                for table in Base.metadata.sorted_tables:
+                    expected_unique = {
+                        tuple(constraint.columns.keys())
+                        for constraint in table.constraints
+                        if isinstance(constraint, UniqueConstraint)
+                    }
+                    actual_unique = {
+                        tuple(constraint["column_names"])
+                        for constraint in inspector.get_unique_constraints(table.name)
+                    }
+                    expected_checks = {
+                        normalize(str(constraint.sqltext))
+                        for constraint in table.constraints
+                        if isinstance(constraint, CheckConstraint)
+                    }
+                    actual_checks = {
+                        normalize(constraint["sqltext"])
+                        for constraint in inspector.get_check_constraints(table.name)
+                    }
+                    if expected_unique != actual_unique or expected_checks != actual_checks:
+                        raise HTTPException(422, "Backup uniqueness or check constraints differ.")
                 with factory() as session:
                     validate_backup(export_bundle(session), research_root)
             finally:

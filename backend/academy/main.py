@@ -669,7 +669,10 @@ def create_app(database_url: str | None = None, research_root: Path | None = Non
         }
 
     @app.post("/api/resources/{resource_id}/metadata")
-    async def refresh_metadata(resource_id: str, session=Depends(database, scope="function")):
+    @app.get("/api/resources/{resource_id}/metadata")
+    async def refresh_metadata(
+        resource_id: str, request: Request, session=Depends(database, scope="function")
+    ):
         record = get_research(session, resource_id, "resource")
         cache = next(
             (
@@ -680,14 +683,26 @@ def create_app(database_url: str | None = None, research_root: Path | None = Non
                     .order_by(ImportPreview.created_at.desc())
                 )
                 if item.data.get("resource_id") == resource_id
-                and item.created_at >= now() - timedelta(hours=24)
             ),
             None,
         )
-        if cache:
-            return cache.data["metadata"]
-        metadata = await integrations.youtube_metadata(record.data["url"])
-        payload = {"resource_id": resource_id, "metadata": metadata}
+        stale = bool(
+            cache
+            and (
+                cache.created_at < now() - timedelta(hours=24) or cache.data.get("url") != record.data["url"]
+            )
+        )
+        if cache and (request.method == "GET" or not stale):
+            return {**cache.data["metadata"], "stale": stale}
+        if request.method == "GET":
+            raise HTTPException(409, "No provider metadata is cached. Stored research remains available.")
+        try:
+            metadata = await integrations.youtube_metadata(record.data["url"])
+        except HTTPException as error:
+            if cache:
+                return {**cache.data["metadata"], "stale": True, "refresh_error": error.detail}
+            raise
+        payload = {"resource_id": resource_id, "url": record.data["url"], "metadata": metadata}
         session.add(
             ImportPreview(user_id=LOCAL_USER, kind="youtube_cache", data=payload, digest=digest(payload))
         )
