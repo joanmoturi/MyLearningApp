@@ -4,6 +4,8 @@ A local-first engineering learning and career workspace for experienced engineer
 
 **No API key, cloud subscription or paid service is required for core features.** Videos and documentation open at their original publishers. The included research has explicit limitations; resource scores are not verified hiring predictions.
 
+For step-by-step Windows startup instructions, see [RUN_INSTRUCTIONS.md](RUN_INSTRUCTIONS.md).
+
 ## Features
 
 - Senior software, cloud, DevOps/platform, AI and agent/MCP tracks.
