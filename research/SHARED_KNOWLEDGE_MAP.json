@@ -1,0 +1,1534 @@
+{
+  "$schema": "schemas/package.schema.json",
+  "dataset_type": "shared",
+  "research_version": "1.0.0",
+  "research_date": "2026-10-31",
+  "knowledge_units": [
+    {
+      "id": "knowledge-adr",
+      "skill_id": "skill-adr",
+      "track_ids": [
+        "track-agent",
+        "track-ai",
+        "track-cloud",
+        "track-devops",
+        "track-swe"
+      ],
+      "canonical_lesson_id": "lesson-swe-14-13",
+      "lesson_ids": [
+        "lesson-swe-14-13",
+        "lesson-cloud-14-14",
+        "lesson-devops-14-13",
+        "lesson-ai-14-14",
+        "lesson-agent-14-14",
+        "lesson-swe-30-19",
+        "lesson-swe-30-29",
+        "lesson-cloud-30-20",
+        "lesson-cloud-30-30",
+        "lesson-devops-30-19",
+        "lesson-devops-30-29",
+        "lesson-ai-30-20",
+        "lesson-ai-30-30",
+        "lesson-agent-30-20",
+        "lesson-agent-30-30",
+        "lesson-swe-60-55",
+        "lesson-swe-60-56",
+        "lesson-swe-60-57",
+        "lesson-cloud-60-58",
+        "lesson-cloud-60-59",
+        "lesson-cloud-60-60",
+        "lesson-devops-60-55",
+        "lesson-devops-60-56",
+        "lesson-devops-60-57",
+        "lesson-ai-60-58",
+        "lesson-ai-60-59",
+        "lesson-ai-60-60",
+        "lesson-agent-60-58",
+        "lesson-agent-60-59",
+        "lesson-agent-60-60"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-agent-deployment",
+      "skill_id": "skill-agent-deployment",
+      "track_ids": [
+        "track-agent"
+      ],
+      "canonical_lesson_id": "lesson-agent-14-13",
+      "lesson_ids": [
+        "lesson-agent-14-13",
+        "lesson-agent-30-19",
+        "lesson-agent-30-29",
+        "lesson-agent-60-55",
+        "lesson-agent-60-56",
+        "lesson-agent-60-57"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-agents",
+      "skill_id": "skill-agents",
+      "track_ids": [
+        "track-agent"
+      ],
+      "canonical_lesson_id": "lesson-agent-14-01",
+      "lesson_ids": [
+        "lesson-agent-14-01",
+        "lesson-agent-30-01",
+        "lesson-agent-60-01",
+        "lesson-agent-60-02",
+        "lesson-agent-60-03"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-ai-security",
+      "skill_id": "skill-ai-security",
+      "track_ids": [
+        "track-agent",
+        "track-ai"
+      ],
+      "canonical_lesson_id": "lesson-ai-14-12",
+      "lesson_ids": [
+        "lesson-ai-14-12",
+        "lesson-agent-14-12",
+        "lesson-ai-30-13",
+        "lesson-ai-30-23",
+        "lesson-agent-30-17",
+        "lesson-agent-30-27",
+        "lesson-ai-60-37",
+        "lesson-ai-60-38",
+        "lesson-ai-60-39",
+        "lesson-agent-60-49",
+        "lesson-agent-60-50",
+        "lesson-agent-60-51"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-api",
+      "skill_id": "skill-api",
+      "track_ids": [
+        "track-swe"
+      ],
+      "canonical_lesson_id": "lesson-swe-14-02",
+      "lesson_ids": [
+        "lesson-swe-14-02",
+        "lesson-swe-30-02",
+        "lesson-swe-60-04",
+        "lesson-swe-60-05",
+        "lesson-swe-60-06"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-approval",
+      "skill_id": "skill-approval",
+      "track_ids": [
+        "track-agent"
+      ],
+      "canonical_lesson_id": "lesson-agent-14-10",
+      "lesson_ids": [
+        "lesson-agent-14-10",
+        "lesson-agent-30-13",
+        "lesson-agent-30-23",
+        "lesson-agent-60-37",
+        "lesson-agent-60-38",
+        "lesson-agent-60-39"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-architecture",
+      "skill_id": "skill-architecture",
+      "track_ids": [
+        "track-cloud",
+        "track-swe"
+      ],
+      "canonical_lesson_id": "lesson-swe-14-01",
+      "lesson_ids": [
+        "lesson-swe-14-01",
+        "lesson-cloud-14-01",
+        "lesson-swe-30-01",
+        "lesson-cloud-30-01",
+        "lesson-swe-60-01",
+        "lesson-swe-60-02",
+        "lesson-swe-60-03",
+        "lesson-cloud-60-01",
+        "lesson-cloud-60-02",
+        "lesson-cloud-60-03"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-automation",
+      "skill_id": "skill-automation",
+      "track_ids": [
+        "track-devops"
+      ],
+      "canonical_lesson_id": "lesson-devops-30-17",
+      "lesson_ids": [
+        "lesson-devops-30-17",
+        "lesson-devops-30-27",
+        "lesson-devops-60-49",
+        "lesson-devops-60-50",
+        "lesson-devops-60-51"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-aws",
+      "skill_id": "skill-aws",
+      "track_ids": [
+        "track-cloud"
+      ],
+      "canonical_lesson_id": "lesson-cloud-14-05",
+      "lesson_ids": [
+        "lesson-cloud-14-05",
+        "lesson-cloud-30-05",
+        "lesson-cloud-60-13",
+        "lesson-cloud-60-14",
+        "lesson-cloud-60-15"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-azure",
+      "skill_id": "skill-azure",
+      "track_ids": [
+        "track-cloud"
+      ],
+      "canonical_lesson_id": "lesson-cloud-14-04",
+      "lesson_ids": [
+        "lesson-cloud-14-04",
+        "lesson-cloud-30-04",
+        "lesson-cloud-60-10",
+        "lesson-cloud-60-11",
+        "lesson-cloud-60-12"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-azure-pipelines",
+      "skill_id": "skill-azure-pipelines",
+      "track_ids": [
+        "track-devops"
+      ],
+      "canonical_lesson_id": "lesson-devops-30-09",
+      "lesson_ids": [
+        "lesson-devops-30-09",
+        "lesson-devops-60-25",
+        "lesson-devops-60-26",
+        "lesson-devops-60-27"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-cache",
+      "skill_id": "skill-cache",
+      "track_ids": [
+        "track-swe"
+      ],
+      "canonical_lesson_id": "lesson-swe-14-05",
+      "lesson_ids": [
+        "lesson-swe-14-05",
+        "lesson-swe-30-05",
+        "lesson-swe-60-13",
+        "lesson-swe-60-14",
+        "lesson-swe-60-15"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-cicd",
+      "skill_id": "skill-cicd",
+      "track_ids": [
+        "track-devops"
+      ],
+      "canonical_lesson_id": "lesson-devops-14-08",
+      "lesson_ids": [
+        "lesson-devops-14-08",
+        "lesson-devops-30-08",
+        "lesson-devops-60-22",
+        "lesson-devops-60-23",
+        "lesson-devops-60-24"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-cluster-recovery",
+      "skill_id": "skill-cluster-recovery",
+      "track_ids": [
+        "track-devops"
+      ],
+      "canonical_lesson_id": "lesson-devops-30-18",
+      "lesson_ids": [
+        "lesson-devops-30-18",
+        "lesson-devops-30-28",
+        "lesson-devops-60-52",
+        "lesson-devops-60-53",
+        "lesson-devops-60-54"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-compute",
+      "skill_id": "skill-compute",
+      "track_ids": [
+        "track-cloud"
+      ],
+      "canonical_lesson_id": "lesson-cloud-30-07",
+      "lesson_ids": [
+        "lesson-cloud-30-07",
+        "lesson-cloud-60-19",
+        "lesson-cloud-60-20",
+        "lesson-cloud-60-21"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-concurrency",
+      "skill_id": "skill-concurrency",
+      "track_ids": [
+        "track-swe"
+      ],
+      "canonical_lesson_id": "lesson-swe-14-09",
+      "lesson_ids": [
+        "lesson-swe-14-09",
+        "lesson-swe-30-09",
+        "lesson-swe-60-25",
+        "lesson-swe-60-26",
+        "lesson-swe-60-27"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-cost",
+      "skill_id": "skill-cost",
+      "track_ids": [
+        "track-ai",
+        "track-cloud"
+      ],
+      "canonical_lesson_id": "lesson-cloud-14-13",
+      "lesson_ids": [
+        "lesson-cloud-14-13",
+        "lesson-cloud-30-19",
+        "lesson-cloud-30-29",
+        "lesson-ai-30-17",
+        "lesson-ai-30-27",
+        "lesson-cloud-60-55",
+        "lesson-cloud-60-56",
+        "lesson-cloud-60-57",
+        "lesson-ai-60-49",
+        "lesson-ai-60-50",
+        "lesson-ai-60-51"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-database",
+      "skill_id": "skill-database",
+      "track_ids": [
+        "track-cloud",
+        "track-swe"
+      ],
+      "canonical_lesson_id": "lesson-swe-14-03",
+      "lesson_ids": [
+        "lesson-swe-14-03",
+        "lesson-cloud-14-08",
+        "lesson-swe-30-03",
+        "lesson-cloud-30-09",
+        "lesson-swe-60-07",
+        "lesson-swe-60-08",
+        "lesson-swe-60-09",
+        "lesson-cloud-60-25",
+        "lesson-cloud-60-26",
+        "lesson-cloud-60-27"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-deployment",
+      "skill_id": "skill-deployment",
+      "track_ids": [
+        "track-devops"
+      ],
+      "canonical_lesson_id": "lesson-devops-14-10",
+      "lesson_ids": [
+        "lesson-devops-14-10",
+        "lesson-devops-30-11",
+        "lesson-devops-30-21",
+        "lesson-devops-60-31",
+        "lesson-devops-60-32",
+        "lesson-devops-60-33"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-disaster-recovery",
+      "skill_id": "skill-disaster-recovery",
+      "track_ids": [
+        "track-cloud"
+      ],
+      "canonical_lesson_id": "lesson-cloud-14-12",
+      "lesson_ids": [
+        "lesson-cloud-14-12",
+        "lesson-cloud-30-14",
+        "lesson-cloud-30-24",
+        "lesson-cloud-60-40",
+        "lesson-cloud-60-41",
+        "lesson-cloud-60-42"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-distributed",
+      "skill_id": "skill-distributed",
+      "track_ids": [
+        "track-swe"
+      ],
+      "canonical_lesson_id": "lesson-swe-14-07",
+      "lesson_ids": [
+        "lesson-swe-14-07",
+        "lesson-swe-30-07",
+        "lesson-swe-60-19",
+        "lesson-swe-60-20",
+        "lesson-swe-60-21"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-docker",
+      "skill_id": "skill-docker",
+      "track_ids": [
+        "track-devops"
+      ],
+      "canonical_lesson_id": "lesson-devops-14-04",
+      "lesson_ids": [
+        "lesson-devops-14-04",
+        "lesson-devops-30-04",
+        "lesson-devops-60-10",
+        "lesson-devops-60-11",
+        "lesson-devops-60-12"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-embeddings",
+      "skill_id": "skill-embeddings",
+      "track_ids": [
+        "track-ai"
+      ],
+      "canonical_lesson_id": "lesson-ai-14-08",
+      "lesson_ids": [
+        "lesson-ai-14-08",
+        "lesson-ai-30-08",
+        "lesson-ai-60-22",
+        "lesson-ai-60-23",
+        "lesson-ai-60-24"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-evaluation",
+      "skill_id": "skill-evaluation",
+      "track_ids": [
+        "track-agent",
+        "track-ai"
+      ],
+      "canonical_lesson_id": "lesson-ai-14-11",
+      "lesson_ids": [
+        "lesson-ai-14-11",
+        "lesson-agent-14-11",
+        "lesson-ai-30-12",
+        "lesson-ai-30-22",
+        "lesson-agent-30-16",
+        "lesson-agent-30-26",
+        "lesson-ai-60-34",
+        "lesson-ai-60-35",
+        "lesson-ai-60-36",
+        "lesson-agent-60-46",
+        "lesson-agent-60-47",
+        "lesson-agent-60-48"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-finetuning",
+      "skill_id": "skill-finetuning",
+      "track_ids": [
+        "track-ai"
+      ],
+      "canonical_lesson_id": "lesson-ai-30-18",
+      "lesson_ids": [
+        "lesson-ai-30-18",
+        "lesson-ai-30-28",
+        "lesson-ai-60-52",
+        "lesson-ai-60-53",
+        "lesson-ai-60-54"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-gcp",
+      "skill_id": "skill-gcp",
+      "track_ids": [
+        "track-cloud"
+      ],
+      "canonical_lesson_id": "lesson-cloud-14-06",
+      "lesson_ids": [
+        "lesson-cloud-14-06",
+        "lesson-cloud-30-06",
+        "lesson-cloud-60-16",
+        "lesson-cloud-60-17",
+        "lesson-cloud-60-18"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-gitops",
+      "skill_id": "skill-gitops",
+      "track_ids": [
+        "track-devops"
+      ],
+      "canonical_lesson_id": "lesson-devops-14-09",
+      "lesson_ids": [
+        "lesson-devops-14-09",
+        "lesson-devops-30-10",
+        "lesson-devops-60-28",
+        "lesson-devops-60-29",
+        "lesson-devops-60-30"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-helm",
+      "skill_id": "skill-helm",
+      "track_ids": [
+        "track-devops"
+      ],
+      "canonical_lesson_id": "lesson-devops-14-06",
+      "lesson_ids": [
+        "lesson-devops-14-06",
+        "lesson-devops-30-06",
+        "lesson-devops-60-16",
+        "lesson-devops-60-17",
+        "lesson-devops-60-18"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-iac",
+      "skill_id": "skill-iac",
+      "track_ids": [
+        "track-cloud",
+        "track-devops"
+      ],
+      "canonical_lesson_id": "lesson-devops-14-07",
+      "lesson_ids": [
+        "lesson-devops-14-07",
+        "lesson-cloud-30-16",
+        "lesson-cloud-30-26",
+        "lesson-devops-30-07",
+        "lesson-cloud-60-46",
+        "lesson-cloud-60-47",
+        "lesson-cloud-60-48",
+        "lesson-devops-60-19",
+        "lesson-devops-60-20",
+        "lesson-devops-60-21"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-idempotency",
+      "skill_id": "skill-idempotency",
+      "track_ids": [
+        "track-swe"
+      ],
+      "canonical_lesson_id": "lesson-swe-14-08",
+      "lesson_ids": [
+        "lesson-swe-14-08",
+        "lesson-swe-30-08",
+        "lesson-swe-60-22",
+        "lesson-swe-60-23",
+        "lesson-swe-60-24"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-identity",
+      "skill_id": "skill-identity",
+      "track_ids": [
+        "track-cloud"
+      ],
+      "canonical_lesson_id": "lesson-cloud-14-03",
+      "lesson_ids": [
+        "lesson-cloud-14-03",
+        "lesson-cloud-30-03",
+        "lesson-cloud-60-07",
+        "lesson-cloud-60-08",
+        "lesson-cloud-60-09"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-incident",
+      "skill_id": "skill-incident",
+      "track_ids": [
+        "track-devops",
+        "track-swe"
+      ],
+      "canonical_lesson_id": "lesson-swe-30-18",
+      "lesson_ids": [
+        "lesson-swe-30-18",
+        "lesson-swe-30-28",
+        "lesson-devops-30-14",
+        "lesson-devops-30-24",
+        "lesson-swe-60-52",
+        "lesson-swe-60-53",
+        "lesson-swe-60-54",
+        "lesson-devops-60-40",
+        "lesson-devops-60-41",
+        "lesson-devops-60-42"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-inference",
+      "skill_id": "skill-inference",
+      "track_ids": [
+        "track-ai"
+      ],
+      "canonical_lesson_id": "lesson-ai-30-16",
+      "lesson_ids": [
+        "lesson-ai-30-16",
+        "lesson-ai-30-26",
+        "lesson-ai-60-46",
+        "lesson-ai-60-47",
+        "lesson-ai-60-48"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-integration",
+      "skill_id": "skill-integration",
+      "track_ids": [
+        "track-agent"
+      ],
+      "canonical_lesson_id": "lesson-agent-14-07",
+      "lesson_ids": [
+        "lesson-agent-14-07",
+        "lesson-agent-30-09",
+        "lesson-agent-60-25",
+        "lesson-agent-60-26",
+        "lesson-agent-60-27"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-kubernetes",
+      "skill_id": "skill-kubernetes",
+      "track_ids": [
+        "track-cloud",
+        "track-devops"
+      ],
+      "canonical_lesson_id": "lesson-devops-14-05",
+      "lesson_ids": [
+        "lesson-devops-14-05",
+        "lesson-cloud-30-11",
+        "lesson-cloud-30-21",
+        "lesson-devops-30-05",
+        "lesson-cloud-60-31",
+        "lesson-cloud-60-32",
+        "lesson-cloud-60-33",
+        "lesson-devops-60-13",
+        "lesson-devops-60-14",
+        "lesson-devops-60-15"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-leadership",
+      "skill_id": "skill-leadership",
+      "track_ids": [
+        "track-devops",
+        "track-swe"
+      ],
+      "canonical_lesson_id": "lesson-swe-14-14",
+      "lesson_ids": [
+        "lesson-swe-14-14",
+        "lesson-devops-14-14",
+        "lesson-swe-30-20",
+        "lesson-swe-30-30",
+        "lesson-devops-30-20",
+        "lesson-devops-30-30",
+        "lesson-swe-60-58",
+        "lesson-swe-60-59",
+        "lesson-swe-60-60",
+        "lesson-devops-60-58",
+        "lesson-devops-60-59",
+        "lesson-devops-60-60"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-linux",
+      "skill_id": "skill-linux",
+      "track_ids": [
+        "track-devops"
+      ],
+      "canonical_lesson_id": "lesson-devops-14-01",
+      "lesson_ids": [
+        "lesson-devops-14-01",
+        "lesson-devops-30-01",
+        "lesson-devops-60-01",
+        "lesson-devops-60-02",
+        "lesson-devops-60-03"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-llm",
+      "skill_id": "skill-llm",
+      "track_ids": [
+        "track-ai"
+      ],
+      "canonical_lesson_id": "lesson-ai-14-03",
+      "lesson_ids": [
+        "lesson-ai-14-03",
+        "lesson-ai-30-03",
+        "lesson-ai-60-07",
+        "lesson-ai-60-08",
+        "lesson-ai-60-09"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-mcp",
+      "skill_id": "skill-mcp",
+      "track_ids": [
+        "track-agent"
+      ],
+      "canonical_lesson_id": "lesson-agent-14-03",
+      "lesson_ids": [
+        "lesson-agent-14-03",
+        "lesson-agent-30-03",
+        "lesson-agent-60-07",
+        "lesson-agent-60-08",
+        "lesson-agent-60-09"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-mcp-auth",
+      "skill_id": "skill-mcp-auth",
+      "track_ids": [
+        "track-agent"
+      ],
+      "canonical_lesson_id": "lesson-agent-14-06",
+      "lesson_ids": [
+        "lesson-agent-14-06",
+        "lesson-agent-30-08",
+        "lesson-agent-60-22",
+        "lesson-agent-60-23",
+        "lesson-agent-60-24"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-mcp-client",
+      "skill_id": "skill-mcp-client",
+      "track_ids": [
+        "track-agent"
+      ],
+      "canonical_lesson_id": "lesson-agent-30-05",
+      "lesson_ids": [
+        "lesson-agent-30-05",
+        "lesson-agent-60-13",
+        "lesson-agent-60-14",
+        "lesson-agent-60-15"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-mcp-resources",
+      "skill_id": "skill-mcp-resources",
+      "track_ids": [
+        "track-agent"
+      ],
+      "canonical_lesson_id": "lesson-agent-30-06",
+      "lesson_ids": [
+        "lesson-agent-30-06",
+        "lesson-agent-60-16",
+        "lesson-agent-60-17",
+        "lesson-agent-60-18"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-mcp-server",
+      "skill_id": "skill-mcp-server",
+      "track_ids": [
+        "track-agent"
+      ],
+      "canonical_lesson_id": "lesson-agent-14-04",
+      "lesson_ids": [
+        "lesson-agent-14-04",
+        "lesson-agent-30-04",
+        "lesson-agent-60-10",
+        "lesson-agent-60-11",
+        "lesson-agent-60-12"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-mcp-transport",
+      "skill_id": "skill-mcp-transport",
+      "track_ids": [
+        "track-agent"
+      ],
+      "canonical_lesson_id": "lesson-agent-14-05",
+      "lesson_ids": [
+        "lesson-agent-14-05",
+        "lesson-agent-30-07",
+        "lesson-agent-60-19",
+        "lesson-agent-60-20",
+        "lesson-agent-60-21"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-memory",
+      "skill_id": "skill-memory",
+      "track_ids": [
+        "track-agent"
+      ],
+      "canonical_lesson_id": "lesson-agent-30-11",
+      "lesson_ids": [
+        "lesson-agent-30-11",
+        "lesson-agent-30-21",
+        "lesson-agent-60-31",
+        "lesson-agent-60-32",
+        "lesson-agent-60-33"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-messaging",
+      "skill_id": "skill-messaging",
+      "track_ids": [
+        "track-swe"
+      ],
+      "canonical_lesson_id": "lesson-swe-14-06",
+      "lesson_ids": [
+        "lesson-swe-14-06",
+        "lesson-swe-30-06",
+        "lesson-swe-60-16",
+        "lesson-swe-60-17",
+        "lesson-swe-60-18"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-migration",
+      "skill_id": "skill-migration",
+      "track_ids": [
+        "track-cloud",
+        "track-swe"
+      ],
+      "canonical_lesson_id": "lesson-swe-30-17",
+      "lesson_ids": [
+        "lesson-swe-30-17",
+        "lesson-swe-30-27",
+        "lesson-cloud-30-18",
+        "lesson-cloud-30-28",
+        "lesson-swe-60-49",
+        "lesson-swe-60-50",
+        "lesson-swe-60-51",
+        "lesson-cloud-60-52",
+        "lesson-cloud-60-53",
+        "lesson-cloud-60-54"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-ml",
+      "skill_id": "skill-ml",
+      "track_ids": [
+        "track-ai"
+      ],
+      "canonical_lesson_id": "lesson-ai-14-02",
+      "lesson_ids": [
+        "lesson-ai-14-02",
+        "lesson-ai-30-02",
+        "lesson-ai-60-04",
+        "lesson-ai-60-05",
+        "lesson-ai-60-06"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-models",
+      "skill_id": "skill-models",
+      "track_ids": [
+        "track-ai"
+      ],
+      "canonical_lesson_id": "lesson-ai-14-04",
+      "lesson_ids": [
+        "lesson-ai-14-04",
+        "lesson-ai-30-04",
+        "lesson-ai-60-10",
+        "lesson-ai-60-11",
+        "lesson-ai-60-12"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-monitoring",
+      "skill_id": "skill-monitoring",
+      "track_ids": [
+        "track-devops"
+      ],
+      "canonical_lesson_id": "lesson-devops-30-12",
+      "lesson_ids": [
+        "lesson-devops-30-12",
+        "lesson-devops-30-22",
+        "lesson-devops-60-34",
+        "lesson-devops-60-35",
+        "lesson-devops-60-36"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-multi-agent",
+      "skill_id": "skill-multi-agent",
+      "track_ids": [
+        "track-agent"
+      ],
+      "canonical_lesson_id": "lesson-agent-30-15",
+      "lesson_ids": [
+        "lesson-agent-30-15",
+        "lesson-agent-30-25",
+        "lesson-agent-60-43",
+        "lesson-agent-60-44",
+        "lesson-agent-60-45"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-multi-region",
+      "skill_id": "skill-multi-region",
+      "track_ids": [
+        "track-cloud"
+      ],
+      "canonical_lesson_id": "lesson-cloud-30-15",
+      "lesson_ids": [
+        "lesson-cloud-30-15",
+        "lesson-cloud-30-25",
+        "lesson-cloud-60-43",
+        "lesson-cloud-60-44",
+        "lesson-cloud-60-45"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-networking",
+      "skill_id": "skill-networking",
+      "track_ids": [
+        "track-cloud",
+        "track-devops"
+      ],
+      "canonical_lesson_id": "lesson-cloud-14-02",
+      "lesson_ids": [
+        "lesson-cloud-14-02",
+        "lesson-devops-14-03",
+        "lesson-cloud-30-02",
+        "lesson-devops-30-03",
+        "lesson-cloud-60-04",
+        "lesson-cloud-60-05",
+        "lesson-cloud-60-06",
+        "lesson-devops-60-07",
+        "lesson-devops-60-08",
+        "lesson-devops-60-09"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-observability",
+      "skill_id": "skill-observability",
+      "track_ids": [
+        "track-agent",
+        "track-ai",
+        "track-cloud",
+        "track-devops",
+        "track-swe"
+      ],
+      "canonical_lesson_id": "lesson-swe-14-11",
+      "lesson_ids": [
+        "lesson-swe-14-11",
+        "lesson-devops-14-11",
+        "lesson-swe-30-13",
+        "lesson-swe-30-23",
+        "lesson-cloud-30-17",
+        "lesson-cloud-30-27",
+        "lesson-devops-30-13",
+        "lesson-devops-30-23",
+        "lesson-ai-30-15",
+        "lesson-ai-30-25",
+        "lesson-agent-30-18",
+        "lesson-agent-30-28",
+        "lesson-swe-60-37",
+        "lesson-swe-60-38",
+        "lesson-swe-60-39",
+        "lesson-cloud-60-49",
+        "lesson-cloud-60-50",
+        "lesson-cloud-60-51",
+        "lesson-devops-60-37",
+        "lesson-devops-60-38",
+        "lesson-devops-60-39",
+        "lesson-ai-60-43",
+        "lesson-ai-60-44",
+        "lesson-ai-60-45",
+        "lesson-agent-60-52",
+        "lesson-agent-60-53",
+        "lesson-agent-60-54"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-orchestration",
+      "skill_id": "skill-orchestration",
+      "track_ids": [
+        "track-agent"
+      ],
+      "canonical_lesson_id": "lesson-agent-30-14",
+      "lesson_ids": [
+        "lesson-agent-30-14",
+        "lesson-agent-30-24",
+        "lesson-agent-60-40",
+        "lesson-agent-60-41",
+        "lesson-agent-60-42"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-patterns",
+      "skill_id": "skill-patterns",
+      "track_ids": [
+        "track-swe"
+      ],
+      "canonical_lesson_id": "lesson-swe-30-16",
+      "lesson_ids": [
+        "lesson-swe-30-16",
+        "lesson-swe-30-26",
+        "lesson-swe-60-46",
+        "lesson-swe-60-47",
+        "lesson-swe-60-48"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-performance",
+      "skill_id": "skill-performance",
+      "track_ids": [
+        "track-swe"
+      ],
+      "canonical_lesson_id": "lesson-swe-30-10",
+      "lesson_ids": [
+        "lesson-swe-30-10",
+        "lesson-swe-60-28",
+        "lesson-swe-60-29",
+        "lesson-swe-60-30"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-planning",
+      "skill_id": "skill-planning",
+      "track_ids": [
+        "track-agent"
+      ],
+      "canonical_lesson_id": "lesson-agent-14-09",
+      "lesson_ids": [
+        "lesson-agent-14-09",
+        "lesson-agent-30-12",
+        "lesson-agent-30-22",
+        "lesson-agent-60-34",
+        "lesson-agent-60-35",
+        "lesson-agent-60-36"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-platform",
+      "skill_id": "skill-platform",
+      "track_ids": [
+        "track-devops"
+      ],
+      "canonical_lesson_id": "lesson-devops-30-16",
+      "lesson_ids": [
+        "lesson-devops-30-16",
+        "lesson-devops-30-26",
+        "lesson-devops-60-46",
+        "lesson-devops-60-47",
+        "lesson-devops-60-48"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-privacy",
+      "skill_id": "skill-privacy",
+      "track_ids": [
+        "track-ai"
+      ],
+      "canonical_lesson_id": "lesson-ai-30-14",
+      "lesson_ids": [
+        "lesson-ai-30-14",
+        "lesson-ai-30-24",
+        "lesson-ai-60-40",
+        "lesson-ai-60-41",
+        "lesson-ai-60-42"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-production-ai",
+      "skill_id": "skill-production-ai",
+      "track_ids": [
+        "track-ai"
+      ],
+      "canonical_lesson_id": "lesson-ai-14-13",
+      "lesson_ids": [
+        "lesson-ai-14-13",
+        "lesson-ai-30-19",
+        "lesson-ai-30-29",
+        "lesson-ai-60-55",
+        "lesson-ai-60-56",
+        "lesson-ai-60-57"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-prompting",
+      "skill_id": "skill-prompting",
+      "track_ids": [
+        "track-ai"
+      ],
+      "canonical_lesson_id": "lesson-ai-14-05",
+      "lesson_ids": [
+        "lesson-ai-14-05",
+        "lesson-ai-30-05",
+        "lesson-ai-60-13",
+        "lesson-ai-60-14",
+        "lesson-ai-60-15"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-python",
+      "skill_id": "skill-python",
+      "track_ids": [
+        "track-ai"
+      ],
+      "canonical_lesson_id": "lesson-ai-14-01",
+      "lesson_ids": [
+        "lesson-ai-14-01",
+        "lesson-ai-30-01",
+        "lesson-ai-60-01",
+        "lesson-ai-60-02",
+        "lesson-ai-60-03"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-rag",
+      "skill_id": "skill-rag",
+      "track_ids": [
+        "track-ai"
+      ],
+      "canonical_lesson_id": "lesson-ai-14-10",
+      "lesson_ids": [
+        "lesson-ai-14-10",
+        "lesson-ai-30-10",
+        "lesson-ai-60-28",
+        "lesson-ai-60-29",
+        "lesson-ai-60-30"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-reliability",
+      "skill_id": "skill-reliability",
+      "track_ids": [
+        "track-cloud",
+        "track-swe"
+      ],
+      "canonical_lesson_id": "lesson-swe-14-10",
+      "lesson_ids": [
+        "lesson-swe-14-10",
+        "lesson-cloud-14-11",
+        "lesson-swe-30-12",
+        "lesson-swe-30-22",
+        "lesson-cloud-30-13",
+        "lesson-cloud-30-23",
+        "lesson-swe-60-34",
+        "lesson-swe-60-35",
+        "lesson-swe-60-36",
+        "lesson-cloud-60-37",
+        "lesson-cloud-60-38",
+        "lesson-cloud-60-39"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-reranking",
+      "skill_id": "skill-reranking",
+      "track_ids": [
+        "track-ai"
+      ],
+      "canonical_lesson_id": "lesson-ai-30-11",
+      "lesson_ids": [
+        "lesson-ai-30-11",
+        "lesson-ai-30-21",
+        "lesson-ai-60-31",
+        "lesson-ai-60-32",
+        "lesson-ai-60-33"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-scalability",
+      "skill_id": "skill-scalability",
+      "track_ids": [
+        "track-swe"
+      ],
+      "canonical_lesson_id": "lesson-swe-30-11",
+      "lesson_ids": [
+        "lesson-swe-30-11",
+        "lesson-swe-30-21",
+        "lesson-swe-60-31",
+        "lesson-swe-60-32",
+        "lesson-swe-60-33"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-secrets",
+      "skill_id": "skill-secrets",
+      "track_ids": [
+        "track-devops"
+      ],
+      "canonical_lesson_id": "lesson-devops-14-12",
+      "lesson_ids": [
+        "lesson-devops-14-12",
+        "lesson-devops-30-15",
+        "lesson-devops-30-25",
+        "lesson-devops-60-43",
+        "lesson-devops-60-44",
+        "lesson-devops-60-45"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-security",
+      "skill_id": "skill-security",
+      "track_ids": [
+        "track-cloud",
+        "track-swe"
+      ],
+      "canonical_lesson_id": "lesson-swe-14-12",
+      "lesson_ids": [
+        "lesson-swe-14-12",
+        "lesson-cloud-14-10",
+        "lesson-swe-30-14",
+        "lesson-swe-30-24",
+        "lesson-cloud-30-12",
+        "lesson-cloud-30-22",
+        "lesson-swe-60-40",
+        "lesson-swe-60-41",
+        "lesson-swe-60-42",
+        "lesson-cloud-60-34",
+        "lesson-cloud-60-35",
+        "lesson-cloud-60-36"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-serverless",
+      "skill_id": "skill-serverless",
+      "track_ids": [
+        "track-cloud"
+      ],
+      "canonical_lesson_id": "lesson-cloud-14-09",
+      "lesson_ids": [
+        "lesson-cloud-14-09",
+        "lesson-cloud-30-10",
+        "lesson-cloud-60-28",
+        "lesson-cloud-60-29",
+        "lesson-cloud-60-30"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-shell",
+      "skill_id": "skill-shell",
+      "track_ids": [
+        "track-devops"
+      ],
+      "canonical_lesson_id": "lesson-devops-14-02",
+      "lesson_ids": [
+        "lesson-devops-14-02",
+        "lesson-devops-30-02",
+        "lesson-devops-60-04",
+        "lesson-devops-60-05",
+        "lesson-devops-60-06"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-state",
+      "skill_id": "skill-state",
+      "track_ids": [
+        "track-agent"
+      ],
+      "canonical_lesson_id": "lesson-agent-14-08",
+      "lesson_ids": [
+        "lesson-agent-14-08",
+        "lesson-agent-30-10",
+        "lesson-agent-60-28",
+        "lesson-agent-60-29",
+        "lesson-agent-60-30"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-storage",
+      "skill_id": "skill-storage",
+      "track_ids": [
+        "track-cloud"
+      ],
+      "canonical_lesson_id": "lesson-cloud-14-07",
+      "lesson_ids": [
+        "lesson-cloud-14-07",
+        "lesson-cloud-30-08",
+        "lesson-cloud-60-22",
+        "lesson-cloud-60-23",
+        "lesson-cloud-60-24"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-structured",
+      "skill_id": "skill-structured",
+      "track_ids": [
+        "track-ai"
+      ],
+      "canonical_lesson_id": "lesson-ai-14-06",
+      "lesson_ids": [
+        "lesson-ai-14-06",
+        "lesson-ai-30-06",
+        "lesson-ai-60-16",
+        "lesson-ai-60-17",
+        "lesson-ai-60-18"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-testing",
+      "skill_id": "skill-testing",
+      "track_ids": [
+        "track-swe"
+      ],
+      "canonical_lesson_id": "lesson-swe-30-15",
+      "lesson_ids": [
+        "lesson-swe-30-15",
+        "lesson-swe-30-25",
+        "lesson-swe-60-43",
+        "lesson-swe-60-44",
+        "lesson-swe-60-45"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-tools",
+      "skill_id": "skill-tools",
+      "track_ids": [
+        "track-agent",
+        "track-ai"
+      ],
+      "canonical_lesson_id": "lesson-ai-14-07",
+      "lesson_ids": [
+        "lesson-ai-14-07",
+        "lesson-agent-14-02",
+        "lesson-ai-30-07",
+        "lesson-agent-30-02",
+        "lesson-ai-60-19",
+        "lesson-ai-60-20",
+        "lesson-ai-60-21",
+        "lesson-agent-60-04",
+        "lesson-agent-60-05",
+        "lesson-agent-60-06"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-transactions",
+      "skill_id": "skill-transactions",
+      "track_ids": [
+        "track-swe"
+      ],
+      "canonical_lesson_id": "lesson-swe-14-04",
+      "lesson_ids": [
+        "lesson-swe-14-04",
+        "lesson-swe-30-04",
+        "lesson-swe-60-10",
+        "lesson-swe-60-11",
+        "lesson-swe-60-12"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    },
+    {
+      "id": "knowledge-vector",
+      "skill_id": "skill-vector",
+      "track_ids": [
+        "track-ai"
+      ],
+      "canonical_lesson_id": "lesson-ai-14-09",
+      "lesson_ids": [
+        "lesson-ai-14-09",
+        "lesson-ai-30-09",
+        "lesson-ai-60-25",
+        "lesson-ai-60-26",
+        "lesson-ai-60-27"
+      ],
+      "waiver_criteria": "Learner explains the invariant/trade-off and supplies a passing relevant artifact; course attendance alone does not waive knowledge.",
+      "reuse_boundary": "Reuse concept assessment and existing equivalent artifacts; new provider, security or failure-context exercises remain required."
+    }
+  ],
+  "shared_core_priority": [
+    "skill-api",
+    "skill-networking",
+    "skill-security",
+    "skill-observability",
+    "skill-reliability",
+    "skill-database",
+    "skill-cicd"
+  ],
+  "equivalence_policy": "Completion is keyed to knowledge ID plus evidence scope. Resource and skill metadata live only in their catalogs; track-specific applied work is not automatically identical.",
+  "provider_comparison": [
+    {
+      "concept": "Resource hierarchy and IAM",
+      "azure": "Tenant/subscription/resource scopes and Entra/workload identity",
+      "aws": "Organization/account/resource scopes and IAM role/policy design",
+      "gcp": "Organization/folder/project/resource scopes and service accounts",
+      "transfer": "Least privilege and federation transfer; effective permission evaluation must be verified separately",
+      "source_ids": [
+        "source-doc-azure-waf",
+        "source-doc-aws-waf",
+        "source-doc-gcp-waf"
+      ]
+    },
+    {
+      "concept": "Networking",
+      "azure": "VNet/subnet and provider-specific routing/private endpoint design",
+      "aws": "VPC/subnet and provider-specific routing/endpoint design",
+      "gcp": "VPC/subnet and provider-specific scope/routing design",
+      "transfer": "DNS, packet paths, address planning and trust boundaries transfer; scope/defaults do not",
+      "source_ids": [
+        "source-doc-azure-architecture",
+        "source-doc-aws-waf",
+        "source-doc-gcp-waf"
+      ]
+    },
+    {
+      "concept": "Resilience, data and cost",
+      "azure": "WAF pillars and workload requirements",
+      "aws": "Well-Architected questions and service-specific behavior",
+      "gcp": "Well-Architected pillars and workload perspectives",
+      "transfer": "SLIs/RTO/RPO, recovery tests and unit economics transfer; price, quotas, SLAs and service behavior require fresh verification",
+      "source_ids": [
+        "source-doc-azure-waf",
+        "source-doc-aws-waf",
+        "source-doc-gcp-waf"
+      ]
+    }
+  ]
+}

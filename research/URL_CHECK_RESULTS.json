@@ -1,0 +1,1171 @@
+{
+  "checked_at": "2026-10-31T15:38:50.884098+00:00",
+  "unique_requests": 109,
+  "method": "One ordinary public GET per unique URL, bounded to 25 seconds; official oEmbed for YouTube. No retries or alternate routes for denied endpoints.",
+  "content_verification": "Separate earlier reviewed content evidence is preserved; HTTP 200 alone does not confirm course completeness, job availability or free runtime.",
+  "reachable_count": 100,
+  "unavailable_count": 9,
+  "results": [
+    {
+      "entity_id": "source-doc-azure-waf",
+      "verification_target": "https://learn.microsoft.com/en-us/azure/well-architected/",
+      "url": "https://learn.microsoft.com/en-us/azure/well-architected/",
+      "http_status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/azure/well-architected/",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-azure-architecture",
+      "verification_target": "https://learn.microsoft.com/en-us/azure/architecture/",
+      "url": "https://learn.microsoft.com/en-us/azure/architecture/",
+      "http_status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/azure/architecture/",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-api-design",
+      "verification_target": "https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design",
+      "url": "https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design",
+      "http_status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-aws-waf",
+      "verification_target": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html",
+      "url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html",
+      "http_status": 200,
+      "final_url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-gcp-waf",
+      "verification_target": "https://docs.cloud.google.com/architecture/framework",
+      "url": "https://docs.cloud.google.com/architecture/framework",
+      "http_status": 200,
+      "final_url": "https://docs.cloud.google.com/architecture/framework",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-postgres-indexes",
+      "verification_target": "https://www.postgresql.org/docs/current/indexes.html",
+      "url": "https://www.postgresql.org/docs/current/indexes.html",
+      "http_status": 200,
+      "final_url": "https://www.postgresql.org/docs/current/indexes.html",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-postgres-isolation",
+      "verification_target": "https://www.postgresql.org/docs/current/transaction-iso.html",
+      "url": "https://www.postgresql.org/docs/current/transaction-iso.html",
+      "http_status": 200,
+      "final_url": "https://www.postgresql.org/docs/current/transaction-iso.html",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-redis",
+      "verification_target": "https://redis.io/docs/latest/develop/",
+      "url": "https://redis.io/docs/latest/develop/",
+      "http_status": 200,
+      "final_url": "https://redis.io/docs/latest/develop/",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-kafka",
+      "verification_target": "https://kafka.apache.org/quickstart/",
+      "url": "https://kafka.apache.org/quickstart/",
+      "http_status": 200,
+      "final_url": "https://kafka.apache.org/quickstart/",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-sre-book",
+      "verification_target": "https://sre.google/sre-book/table-of-contents/",
+      "url": "https://sre.google/sre-book/table-of-contents/",
+      "http_status": 200,
+      "final_url": "https://sre.google/sre-book/table-of-contents/",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-sre-workbook",
+      "verification_target": "https://sre.google/workbook/table-of-contents/",
+      "url": "https://sre.google/workbook/table-of-contents/",
+      "http_status": 200,
+      "final_url": "https://sre.google/workbook/table-of-contents/",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-kubernetes",
+      "verification_target": "https://kubernetes.io/docs/concepts/",
+      "url": "https://kubernetes.io/docs/concepts/",
+      "http_status": 200,
+      "final_url": "https://kubernetes.io/docs/concepts/",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-terraform",
+      "verification_target": "https://developer.hashicorp.com/terraform/tutorials/docker-get-started",
+      "url": "https://developer.hashicorp.com/terraform/tutorials/docker-get-started",
+      "http_status": 200,
+      "final_url": "https://developer.hashicorp.com/terraform/tutorials/docker-get-started",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-docker",
+      "verification_target": "https://docs.docker.com/get-started/tutorials/run-an-app/",
+      "url": "https://docs.docker.com/get-started/tutorials/run-an-app/",
+      "http_status": 200,
+      "final_url": "https://docs.docker.com/get-started/tutorials/run-an-app/",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-actions",
+      "verification_target": "https://docs.github.com/en/actions",
+      "url": "https://docs.github.com/en/actions",
+      "http_status": 200,
+      "final_url": "https://docs.github.com/en/actions",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-pipelines",
+      "verification_target": "https://learn.microsoft.com/en-us/azure/devops/pipelines/?view=azure-devops",
+      "url": "https://learn.microsoft.com/en-us/azure/devops/pipelines/?view=azure-devops",
+      "http_status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/azure/devops/pipelines/?view=azure-devops",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-helm",
+      "verification_target": "https://helm.sh/docs/chart_template_guide/getting_started/",
+      "url": "https://helm.sh/docs/chart_template_guide/getting_started/",
+      "http_status": 200,
+      "final_url": "https://helm.sh/docs/chart_template_guide/getting_started/",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-argocd",
+      "verification_target": "https://argo-cd.readthedocs.io/en/stable/getting_started/",
+      "url": "https://argo-cd.readthedocs.io/en/stable/getting_started/",
+      "http_status": 200,
+      "final_url": "https://argo-cd.readthedocs.io/en/stable/getting_started/",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-otel",
+      "verification_target": "https://opentelemetry.io/docs/",
+      "url": "https://opentelemetry.io/docs/",
+      "http_status": 200,
+      "final_url": "https://opentelemetry.io/docs/",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-prometheus",
+      "verification_target": "https://prometheus.io/docs/introduction/overview/",
+      "url": "https://prometheus.io/docs/introduction/overview/",
+      "http_status": 200,
+      "final_url": "https://prometheus.io/docs/introduction/overview/",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-grafana",
+      "verification_target": "https://grafana.com/docs/grafana/latest/",
+      "url": "https://grafana.com/docs/grafana/latest/",
+      "http_status": 200,
+      "final_url": "https://grafana.com/docs/grafana/latest/",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-backstage",
+      "verification_target": "https://backstage.io/docs/overview/what-is-backstage/",
+      "url": "https://backstage.io/docs/overview/what-is-backstage/",
+      "http_status": 200,
+      "final_url": "https://backstage.io/docs/overview/what-is-backstage/",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-hf-llm",
+      "verification_target": "https://huggingface.co/learn/llm-course/chapter1/1",
+      "url": "https://huggingface.co/learn/llm-course/chapter1/1",
+      "http_status": 200,
+      "final_url": "https://huggingface.co/learn/llm-course/chapter1/1",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-hf-agents",
+      "verification_target": "https://huggingface.co/learn/agents-course/en/unit0/introduction",
+      "url": "https://huggingface.co/learn/agents-course/en/unit0/introduction",
+      "http_status": 200,
+      "final_url": "https://huggingface.co/learn/agents-course/en/unit0/introduction",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-hf-mcp",
+      "verification_target": "https://huggingface.co/learn/mcp-course/en/unit0/introduction",
+      "url": "https://huggingface.co/learn/mcp-course/en/unit0/introduction",
+      "http_status": 200,
+      "final_url": "https://huggingface.co/learn/mcp-course/en/unit0/introduction",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-hf-evaluate",
+      "verification_target": "https://huggingface.co/docs/evaluate/index",
+      "url": "https://huggingface.co/docs/evaluate/index",
+      "http_status": 200,
+      "final_url": "https://huggingface.co/docs/evaluate/index",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-structured",
+      "verification_target": "https://developers.openai.com/api/docs/guides/structured-outputs",
+      "url": "https://developers.openai.com/api/docs/guides/structured-outputs",
+      "http_status": 200,
+      "final_url": "https://developers.openai.com/api/docs/guides/structured-outputs",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-langgraph",
+      "verification_target": "https://docs.langchain.com/oss/python/langgraph/overview",
+      "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+      "http_status": 200,
+      "final_url": "https://docs.langchain.com/oss/python/langgraph/overview",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-injection",
+      "verification_target": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
+      "http_status": 200,
+      "final_url": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-agent-patterns",
+      "verification_target": "https://www.anthropic.com/research/building-effective-agents",
+      "url": "https://www.anthropic.com/research/building-effective-agents",
+      "http_status": 200,
+      "final_url": "https://www.anthropic.com/research/building-effective-agents",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-mcp-architecture",
+      "verification_target": "https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture.md",
+      "url": "https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture.md",
+      "http_status": 200,
+      "final_url": "https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture.md",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-mcp-spec",
+      "verification_target": "https://modelcontextprotocol.io/specification/2026-07-28.md",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28.md",
+      "http_status": 200,
+      "final_url": "https://modelcontextprotocol.io/specification/2026-07-28.md",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-mcp-server",
+      "verification_target": "https://modelcontextprotocol.io/docs/2026-07-28/develop/build-server.md",
+      "url": "https://modelcontextprotocol.io/docs/2026-07-28/develop/build-server.md",
+      "http_status": 200,
+      "final_url": "https://modelcontextprotocol.io/docs/2026-07-28/develop/build-server.md",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-mcp-transports",
+      "verification_target": "https://modelcontextprotocol.io/specification/2026-07-28/basic/transports",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/transports",
+      "http_status": 200,
+      "final_url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/transports",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-doc-mcp-auth",
+      "verification_target": "https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization",
+      "http_status": 200,
+      "final_url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-video-distributed-talk",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DY6Ev8GIlbxc&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DY6Ev8GIlbxc&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DY6Ev8GIlbxc&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-oembed-distributed-talk",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DY6Ev8GIlbxc&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DY6Ev8GIlbxc&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DY6Ev8GIlbxc&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-video-system-design",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DC842vFY5kRo&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DC842vFY5kRo&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DC842vFY5kRo&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-oembed-system-design",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DC842vFY5kRo&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DC842vFY5kRo&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DC842vFY5kRo&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-video-system-interview",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DF2FmTdLtb_4&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DF2FmTdLtb_4&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DF2FmTdLtb_4&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-oembed-system-interview",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DF2FmTdLtb_4&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DF2FmTdLtb_4&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DF2FmTdLtb_4&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-video-azure-cram",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dvq9LuCM4YP4&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dvq9LuCM4YP4&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dvq9LuCM4YP4&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-oembed-azure-cram",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dvq9LuCM4YP4&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dvq9LuCM4YP4&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dvq9LuCM4YP4&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-video-aws-course",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dc3Cn4xYfxJY&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dc3Cn4xYfxJY&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dc3Cn4xYfxJY&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-oembed-aws-course",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dc3Cn4xYfxJY&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dc3Cn4xYfxJY&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dc3Cn4xYfxJY&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-video-gcp-course",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DOlAmyf8_4O4&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DOlAmyf8_4O4&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DOlAmyf8_4O4&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-oembed-gcp-course",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DOlAmyf8_4O4&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DOlAmyf8_4O4&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DOlAmyf8_4O4&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-video-k8s-nana",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DX48VuDVv0do&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DX48VuDVv0do&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DX48VuDVv0do&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-oembed-k8s-nana",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DX48VuDVv0do&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DX48VuDVv0do&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DX48VuDVv0do&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-video-k8s-directive",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D2T86xAtR6Fo&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D2T86xAtR6Fo&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D2T86xAtR6Fo&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-oembed-k8s-directive",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D2T86xAtR6Fo&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D2T86xAtR6Fo&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D2T86xAtR6Fo&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-video-linux",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DWMy3OzvBWc0&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DWMy3OzvBWc0&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DWMy3OzvBWc0&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-oembed-linux",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DWMy3OzvBWc0&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DWMy3OzvBWc0&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DWMy3OzvBWc0&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-video-docker-video",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D3c-iBn73dDE&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D3c-iBn73dDE&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D3c-iBn73dDE&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-oembed-docker-video",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D3c-iBn73dDE&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D3c-iBn73dDE&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D3c-iBn73dDE&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-video-terraform-video",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DSLB_c_ayRMo&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DSLB_c_ayRMo&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DSLB_c_ayRMo&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-oembed-terraform-video",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DSLB_c_ayRMo&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DSLB_c_ayRMo&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DSLB_c_ayRMo&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-video-terraform-gcp",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DVCayKl82Lt8&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DVCayKl82Lt8&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DVCayKl82Lt8&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-oembed-terraform-gcp",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DVCayKl82Lt8&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DVCayKl82Lt8&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DVCayKl82Lt8&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-video-actions-video",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DXwpi0ITkL3U&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DXwpi0ITkL3U&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DXwpi0ITkL3U&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-oembed-actions-video",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DXwpi0ITkL3U&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DXwpi0ITkL3U&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DXwpi0ITkL3U&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-video-argo-video",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DMeU5_k9ssrs&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DMeU5_k9ssrs&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DMeU5_k9ssrs&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-oembed-argo-video",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DMeU5_k9ssrs&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DMeU5_k9ssrs&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DMeU5_k9ssrs&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-video-gpt-code",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DkCc8FmEb1nY&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DkCc8FmEb1nY&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DkCc8FmEb1nY&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-oembed-gpt-code",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DkCc8FmEb1nY&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DkCc8FmEb1nY&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DkCc8FmEb1nY&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-video-rag-video",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DsVcwVQRHIc8&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DsVcwVQRHIc8&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DsVcwVQRHIc8&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-oembed-rag-video",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DsVcwVQRHIc8&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DsVcwVQRHIc8&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DsVcwVQRHIc8&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-video-mcp-video",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DDosHnyq78xY&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DDosHnyq78xY&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DDosHnyq78xY&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-oembed-mcp-video",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DDosHnyq78xY&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DDosHnyq78xY&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DDosHnyq78xY&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-video-langgraph-video",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DjGg_1h0qzaM&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DjGg_1h0qzaM&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DjGg_1h0qzaM&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-oembed-langgraph-video",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DjGg_1h0qzaM&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DjGg_1h0qzaM&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DjGg_1h0qzaM&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-video-mcp-security-video",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DgYXLRMycVMk&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DgYXLRMycVMk&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DgYXLRMycVMk&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-oembed-mcp-security-video",
+      "verification_target": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DgYXLRMycVMk&format=json",
+      "url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DgYXLRMycVMk&format=json",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DgYXLRMycVMk&format=json",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-excluded-1",
+      "verification_target": "https://www.deeplearning.ai/short-courses/mcp-build-rich-context-ai-apps-with-anthropic/",
+      "url": "https://www.deeplearning.ai/short-courses/mcp-build-rich-context-ai-apps-with-anthropic/",
+      "http_status": 403,
+      "final_url": "https://www.deeplearning.ai/short-courses/mcp-build-rich-context-ai-apps-with-anthropic/",
+      "access_status": "blocked_or_unavailable",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "entity_id": "source-excluded-2",
+      "verification_target": "https://developers.openai.com/api/docs/guides/evals",
+      "url": "https://developers.openai.com/api/docs/guides/evals",
+      "http_status": 200,
+      "final_url": "https://developers.openai.com/api/docs/guides/evals",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-excluded-3",
+      "verification_target": "https://developers.openai.com/api/docs/guides/evaluation-getting-started",
+      "url": "https://developers.openai.com/api/docs/guides/evaluation-getting-started",
+      "http_status": 200,
+      "final_url": "https://developers.openai.com/api/docs/guides/evaluation-getting-started",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-excluded-4",
+      "verification_target": "https://sre.google/books/",
+      "url": "https://sre.google/books/",
+      "http_status": 200,
+      "final_url": "https://sre.google/books/",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-excluded-5",
+      "verification_target": "https://www.skills.google/",
+      "url": "https://www.skills.google/",
+      "http_status": 200,
+      "final_url": "https://www.skills.google/",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-excluded-6",
+      "verification_target": "https://aws.amazon.com/training/digital/",
+      "url": "https://aws.amazon.com/training/digital/",
+      "http_status": 200,
+      "final_url": "https://aws.amazon.com/training/digital/",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-excluded-7",
+      "verification_target": "https://training.linuxfoundation.org/resources/?_sft_content_type=free-course",
+      "url": "https://training.linuxfoundation.org/resources/?_sft_content_type=free-course",
+      "http_status": 200,
+      "final_url": "https://training.linuxfoundation.org/resources/?_sft_content_type=free-course",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-excluded-8",
+      "verification_target": "https://amazon.jobs/en/jobs/10375898/cloud-support-engineer-bigdata",
+      "url": "https://amazon.jobs/en/jobs/10375898/cloud-support-engineer-bigdata",
+      "http_status": 404,
+      "final_url": "https://amazon.jobs/en/jobs/10375898/cloud-support-engineer-bigdata",
+      "access_status": "blocked_or_unavailable",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "entity_id": "source-excluded-9",
+      "verification_target": "https://job-boards.greenhouse.io/cloudflare/jobs/8066716",
+      "url": "https://job-boards.greenhouse.io/cloudflare/jobs/8066716",
+      "http_status": 200,
+      "final_url": "https://www.cloudflare.com/careers/#open-roles",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-excluded-10",
+      "verification_target": "https://job-boards.greenhouse.io/vanguardlabs/jobs/5120820008",
+      "url": "https://job-boards.greenhouse.io/vanguardlabs/jobs/5120820008",
+      "http_status": 404,
+      "final_url": "https://job-boards.greenhouse.io/vanguardlabs?error=true",
+      "access_status": "blocked_or_unavailable",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "entity_id": "source-excluded-11",
+      "verification_target": "https://job-boards.greenhouse.io/fairing/jobs/5052468008",
+      "url": "https://job-boards.greenhouse.io/fairing/jobs/5052468008",
+      "http_status": 404,
+      "final_url": "https://job-boards.greenhouse.io/fairing?error=true",
+      "access_status": "blocked_or_unavailable",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "entity_id": "source-excluded-12",
+      "verification_target": "https://job-boards.greenhouse.io/khealthcareers/jobs/6194444004",
+      "url": "https://job-boards.greenhouse.io/khealthcareers/jobs/6194444004",
+      "http_status": 200,
+      "final_url": "https://job-boards.greenhouse.io/khealthcareers/jobs/6194444004",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-excluded-13",
+      "verification_target": "https://jobs.ashbyhq.com/Deepgram/f424ef6a-c27f-4984-9e77-40a1ad16ae28",
+      "url": "https://jobs.ashbyhq.com/Deepgram/f424ef6a-c27f-4984-9e77-40a1ad16ae28",
+      "http_status": 404,
+      "final_url": "https://jobs.ashbyhq.com/Deepgram/f424ef6a-c27f-4984-9e77-40a1ad16ae28",
+      "access_status": "blocked_or_unavailable",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "entity_id": "source-excluded-14",
+      "verification_target": "https://job-boards.eu.greenhouse.io/litmos/jobs/4982590101",
+      "url": "https://job-boards.eu.greenhouse.io/litmos/jobs/4982590101",
+      "http_status": 200,
+      "final_url": "https://job-boards.eu.greenhouse.io/litmos?error=true",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-excluded-15",
+      "verification_target": "https://martin.kleppmann.com/2021/02/17/distributed-systems-lectures.html",
+      "url": "https://martin.kleppmann.com/2021/02/17/distributed-systems-lectures.html",
+      "http_status": 404,
+      "final_url": "https://martin.kleppmann.com/2021/02/17/distributed-systems-lectures.html",
+      "access_status": "blocked_or_unavailable",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "entity_id": "source-excluded-16",
+      "verification_target": "https://redis.io/docs/latest/develop/use/",
+      "url": "https://redis.io/docs/latest/develop/use/",
+      "http_status": 200,
+      "final_url": "https://redis.io/docs/latest/develop/use/",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-job-001",
+      "verification_target": "https://job-boards.greenhouse.io/sureify/jobs/5170323008",
+      "url": "https://job-boards.greenhouse.io/sureify/jobs/5170323008",
+      "http_status": 200,
+      "final_url": "https://job-boards.greenhouse.io/sureify/jobs/5170323008",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-job-002",
+      "verification_target": "https://job-boards.greenhouse.io/privateidentity/jobs/4193542009",
+      "url": "https://job-boards.greenhouse.io/privateidentity/jobs/4193542009",
+      "http_status": 200,
+      "final_url": "https://job-boards.greenhouse.io/privateidentity/jobs/4193542009",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-job-003",
+      "verification_target": "https://job-boards.greenhouse.io/purestorage/jobs/8002123",
+      "url": "https://job-boards.greenhouse.io/purestorage/jobs/8002123",
+      "http_status": 200,
+      "final_url": "https://job-boards.greenhouse.io/purestorage/jobs/8002123",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-job-004",
+      "verification_target": "https://job-boards.greenhouse.io/weedmaps77/jobs/8861322002",
+      "url": "https://job-boards.greenhouse.io/weedmaps77/jobs/8861322002",
+      "http_status": 200,
+      "final_url": "https://job-boards.greenhouse.io/weedmaps77/jobs/8861322002",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-job-005",
+      "verification_target": "https://job-boards.greenhouse.io/anthropic/jobs/5238637008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5238637008",
+      "http_status": 200,
+      "final_url": "https://job-boards.greenhouse.io/anthropic/jobs/5238637008",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-job-006",
+      "verification_target": "https://job-boards.greenhouse.io/reddit/jobs/8022441",
+      "url": "https://job-boards.greenhouse.io/reddit/jobs/8022441",
+      "http_status": 200,
+      "final_url": "https://job-boards.greenhouse.io/reddit/jobs/8022441",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-job-007",
+      "verification_target": "https://job-boards.greenhouse.io/customerio/jobs/7778291",
+      "url": "https://job-boards.greenhouse.io/customerio/jobs/7778291",
+      "http_status": 200,
+      "final_url": "https://job-boards.greenhouse.io/customerio/jobs/7778291",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-job-008",
+      "verification_target": "https://job-boards.eu.greenhouse.io/joblogic/jobs/4906857101",
+      "url": "https://job-boards.eu.greenhouse.io/joblogic/jobs/4906857101",
+      "http_status": 200,
+      "final_url": "https://job-boards.eu.greenhouse.io/joblogic/jobs/4906857101",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-job-009",
+      "verification_target": "https://job-boards.greenhouse.io/typeform/jobs/8220046",
+      "url": "https://job-boards.greenhouse.io/typeform/jobs/8220046",
+      "http_status": 200,
+      "final_url": "https://job-boards.greenhouse.io/typeform/jobs/8220046",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-job-010",
+      "verification_target": "https://job-boards.greenhouse.io/temus/jobs/5233697008",
+      "url": "https://job-boards.greenhouse.io/temus/jobs/5233697008",
+      "http_status": 200,
+      "final_url": "https://job-boards.greenhouse.io/temus/jobs/5233697008",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-job-011",
+      "verification_target": "https://job-boards.eu.greenhouse.io/isaraerospace/jobs/4974351101",
+      "url": "https://job-boards.eu.greenhouse.io/isaraerospace/jobs/4974351101",
+      "http_status": 200,
+      "final_url": "https://job-boards.eu.greenhouse.io/isaraerospace/jobs/4974351101",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "source-job-012",
+      "verification_target": "https://www.myjobmag.co.ke/job/senior-solutions-architect-digital-platforms-safaricom-kenya",
+      "url": "https://www.myjobmag.co.ke/job/senior-solutions-architect-digital-platforms-safaricom-kenya",
+      "http_status": 200,
+      "final_url": "https://www.myjobmag.co.ke/job/senior-solutions-architect-digital-platforms-safaricom-kenya",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "portal-employer-microsoft",
+      "verification_target": "https://careers.microsoft.com/",
+      "url": "https://careers.microsoft.com/",
+      "http_status": 200,
+      "final_url": "https://careers.microsoft.com/v2/global/en/home.html",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "portal-employer-google",
+      "verification_target": "https://www.google.com/about/careers/applications/jobs/results/",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/",
+      "http_status": 200,
+      "final_url": "https://www.google.com/about/careers/applications/jobs/results/",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "portal-employer-amazon",
+      "verification_target": "https://www.amazon.jobs/en/",
+      "url": "https://www.amazon.jobs/en/",
+      "http_status": 200,
+      "final_url": "https://www.amazon.jobs/en/",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "portal-employer-meta",
+      "verification_target": "https://www.metacareers.com/jobs/",
+      "url": "https://www.metacareers.com/jobs/",
+      "http_status": 200,
+      "final_url": "https://www.metacareers.com/jobsearch/",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "portal-employer-cloudflare",
+      "verification_target": "https://www.cloudflare.com/careers/jobs/",
+      "url": "https://www.cloudflare.com/careers/jobs/",
+      "http_status": 200,
+      "final_url": "https://www.cloudflare.com/careers/jobs/",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "portal-employer-github",
+      "verification_target": "https://www.github.careers/careers-home",
+      "url": "https://www.github.careers/careers-home",
+      "http_status": 200,
+      "final_url": "https://www.github.careers/careers-home",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "portal-employer-datadog",
+      "verification_target": "https://careers.datadoghq.com/",
+      "url": "https://careers.datadoghq.com/",
+      "http_status": 200,
+      "final_url": "https://careers.datadoghq.com/",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "portal-employer-nvidia",
+      "verification_target": "https://www.nvidia.com/en-us/about-nvidia/careers/",
+      "url": "https://www.nvidia.com/en-us/about-nvidia/careers/",
+      "http_status": 200,
+      "final_url": "https://www.nvidia.com/en-us/about-nvidia/careers/",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "portal-employer-openai",
+      "verification_target": "https://openai.com/careers/",
+      "url": "https://openai.com/careers/",
+      "http_status": 200,
+      "final_url": "https://openai.com/careers/",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "portal-employer-anthropic",
+      "verification_target": "https://job-boards.greenhouse.io/anthropic",
+      "url": "https://job-boards.greenhouse.io/anthropic",
+      "http_status": 200,
+      "final_url": "https://job-boards.greenhouse.io/anthropic",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "portal-employer-safaricom",
+      "verification_target": "https://www.safaricom.co.ke/careers",
+      "url": "https://www.safaricom.co.ke/careers",
+      "http_status": 403,
+      "final_url": "https://www.safaricom.co.ke/careers",
+      "access_status": "blocked_or_unavailable",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "entity_id": "portal-employer-mpesa",
+      "verification_target": "https://www.safaricom.co.ke/careers",
+      "url": "https://www.safaricom.co.ke/careers",
+      "http_status": 403,
+      "final_url": "https://www.safaricom.co.ke/careers",
+      "access_status": "blocked_or_unavailable",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "entity_id": "portal-employer-andela",
+      "verification_target": "https://www.andela.com/careers",
+      "url": "https://www.andela.com/careers",
+      "http_status": 200,
+      "final_url": "https://www.andela.com/for-talent",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "portal-employer-undp",
+      "verification_target": "https://www.undp.org/careers",
+      "url": "https://www.undp.org/careers",
+      "http_status": 403,
+      "final_url": "https://www.undp.org/careers",
+      "access_status": "blocked_or_unavailable",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "entity_id": "portal-employer-unicef",
+      "verification_target": "https://jobs.unicef.org/",
+      "url": "https://jobs.unicef.org/",
+      "http_status": 200,
+      "final_url": "https://jobs.unicef.org/en-us/listing/",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "portal-employer-unops",
+      "verification_target": "https://jobs.unops.org/",
+      "url": "https://jobs.unops.org/",
+      "http_status": null,
+      "final_url": null,
+      "access_status": "network_error",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)>"
+    },
+    {
+      "entity_id": "portal-employer-worldbank",
+      "verification_target": "https://www.worldbank.org/en/about/careers",
+      "url": "https://www.worldbank.org/en/about/careers",
+      "http_status": 200,
+      "final_url": "https://www.worldbank.org/ext/en/careers",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "portal-employer-sureify",
+      "verification_target": "https://job-boards.greenhouse.io/sureify",
+      "url": "https://job-boards.greenhouse.io/sureify",
+      "http_status": 200,
+      "final_url": "https://job-boards.greenhouse.io/sureify",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "portal-employer-privateid",
+      "verification_target": "https://job-boards.greenhouse.io/privateidentity",
+      "url": "https://job-boards.greenhouse.io/privateidentity",
+      "http_status": 200,
+      "final_url": "https://job-boards.greenhouse.io/privateidentity",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "portal-employer-everpure",
+      "verification_target": "https://job-boards.greenhouse.io/purestorage",
+      "url": "https://job-boards.greenhouse.io/purestorage",
+      "http_status": 200,
+      "final_url": "https://job-boards.greenhouse.io/purestorage",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "portal-employer-weedmaps",
+      "verification_target": "https://job-boards.greenhouse.io/weedmaps77",
+      "url": "https://job-boards.greenhouse.io/weedmaps77",
+      "http_status": 200,
+      "final_url": "https://job-boards.greenhouse.io/weedmaps77",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "portal-employer-reddit",
+      "verification_target": "https://job-boards.greenhouse.io/reddit",
+      "url": "https://job-boards.greenhouse.io/reddit",
+      "http_status": 200,
+      "final_url": "https://job-boards.greenhouse.io/reddit",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "portal-employer-customerio",
+      "verification_target": "https://job-boards.greenhouse.io/customerio",
+      "url": "https://job-boards.greenhouse.io/customerio",
+      "http_status": 200,
+      "final_url": "https://job-boards.greenhouse.io/customerio",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "portal-employer-joblogic",
+      "verification_target": "https://job-boards.eu.greenhouse.io/joblogic",
+      "url": "https://job-boards.eu.greenhouse.io/joblogic",
+      "http_status": 200,
+      "final_url": "https://job-boards.eu.greenhouse.io/joblogic",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "portal-employer-typeform",
+      "verification_target": "https://job-boards.greenhouse.io/typeform",
+      "url": "https://job-boards.greenhouse.io/typeform",
+      "http_status": 200,
+      "final_url": "https://job-boards.greenhouse.io/typeform",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "portal-employer-temus",
+      "verification_target": "https://job-boards.greenhouse.io/temus",
+      "url": "https://job-boards.greenhouse.io/temus",
+      "http_status": 200,
+      "final_url": "https://job-boards.greenhouse.io/temus",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "portal-employer-isar",
+      "verification_target": "https://job-boards.eu.greenhouse.io/isaraerospace",
+      "url": "https://job-boards.eu.greenhouse.io/isaraerospace",
+      "http_status": 200,
+      "final_url": "https://job-boards.eu.greenhouse.io/isaraerospace",
+      "access_status": "reachable",
+      "error": null
+    },
+    {
+      "entity_id": "portal-employer-canonical",
+      "verification_target": "https://job-boards.greenhouse.io/canonical",
+      "url": "https://job-boards.greenhouse.io/canonical",
+      "http_status": 200,
+      "final_url": "https://job-boards.greenhouse.io/canonical",
+      "access_status": "reachable",
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,3070 @@
+{
+  "$schema": "schemas/package.schema.json",
+  "dataset_type": "skills",
+  "research_version": "1.0.0",
+  "research_date": "2026-10-31",
+  "skills": [
+    {
+      "id": "skill-adr",
+      "name": "ADRs and engineering trade-offs",
+      "track_ids": [
+        "track-agent",
+        "track-ai",
+        "track-cloud",
+        "track-devops",
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "alternatives",
+        "build versus buy",
+        "business outcomes",
+        "business value",
+        "decision context",
+        "decision records",
+        "least autonomy",
+        "multi-tenancy",
+        "operability",
+        "paved road",
+        "policy exceptions",
+        "portability versus lock-in",
+        "production ownership",
+        "reversal cost",
+        "risk"
+      ],
+      "sample_required_count": 2,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 2,
+      "sample_job_ids": [
+        "job-011",
+        "job-012"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "The ADR contains rejected alternatives, consequences and revisit triggers"
+    },
+    {
+      "id": "skill-agent-deployment",
+      "name": "Production agent deployment and conformance",
+      "track_ids": [
+        "track-agent"
+      ],
+      "topic_concepts": [
+        "SDK pinning",
+        "protocol versions",
+        "rollout"
+      ],
+      "sample_required_count": 0,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 0,
+      "sample_job_ids": [],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Recorded compatibility matrix names actual SDK/protocol versions and unsupported clients"
+    },
+    {
+      "id": "skill-agents",
+      "name": "LLM apps, workflows and tool-using agents",
+      "track_ids": [
+        "track-agent",
+        "track-ai",
+        "track-devops",
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "autonomy",
+        "fixed paths",
+        "model-directed control"
+      ],
+      "sample_required_count": 5,
+      "sample_preferred_count": 3,
+      "sample_mention_count": 8,
+      "sample_job_ids": [
+        "job-003",
+        "job-004",
+        "job-005",
+        "job-007",
+        "job-009",
+        "job-010",
+        "job-011",
+        "job-012"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Compare failure cases and step counts without assuming agentic complexity is better"
+    },
+    {
+      "id": "skill-ai-security",
+      "name": "Prompt injection and untrusted data",
+      "track_ids": [
+        "track-agent",
+        "track-ai"
+      ],
+      "topic_concepts": [
+        "exfiltration",
+        "indirect injection",
+        "isolation",
+        "memory poisoning",
+        "tool poisoning",
+        "trust boundary"
+      ],
+      "sample_required_count": 1,
+      "sample_preferred_count": 1,
+      "sample_mention_count": 2,
+      "sample_job_ids": [
+        "job-004",
+        "job-009"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "A proposed unauthorized action is rejected by the service regardless of model output"
+    },
+    {
+      "id": "skill-api",
+      "name": "API contracts and versioning",
+      "track_ids": [
+        "track-agent",
+        "track-ai",
+        "track-cloud",
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "REST versus gRPC",
+        "compatibility",
+        "pagination"
+      ],
+      "sample_required_count": 5,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 5,
+      "sample_job_ids": [
+        "job-003",
+        "job-005",
+        "job-006",
+        "job-008",
+        "job-012"
+      ],
+      "learner_leverage": "Self-reported adjacent production/identity/Azure experience; verify using a practical diagnostic.",
+      "practice_requirement": "Old client fixtures still pass after adding a field and cursor"
+    },
+    {
+      "id": "skill-approval",
+      "name": "Human approval workflows and replay safety",
+      "track_ids": [
+        "track-agent"
+      ],
+      "topic_concepts": [
+        "approval binding",
+        "changed parameters",
+        "expiration"
+      ],
+      "sample_required_count": 0,
+      "sample_preferred_count": 1,
+      "sample_mention_count": 1,
+      "sample_job_ids": [
+        "job-005"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Unapproved, expired or changed requests do not execute"
+    },
+    {
+      "id": "skill-architecture",
+      "name": "Requirements and senior design judgment",
+      "track_ids": [
+        "track-agent",
+        "track-cloud",
+        "track-devops",
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "capacity estimates",
+        "failure domains",
+        "functional requirements",
+        "latency budget",
+        "managed services",
+        "shared responsibility"
+      ],
+      "sample_required_count": 4,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 4,
+      "sample_job_ids": [
+        "job-004",
+        "job-007",
+        "job-011",
+        "job-012"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "A capacity worksheet and ADR compare a modular monolith with service extraction"
+    },
+    {
+      "id": "skill-automation",
+      "name": "Production automation and change safety",
+      "track_ids": [
+        "track-devops"
+      ],
+      "topic_concepts": [
+        "dry runs",
+        "rate limits",
+        "scoped changes"
+      ],
+      "sample_required_count": 0,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 0,
+      "sample_job_ids": [],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Dry run reports exact resources and rollback before any mutation"
+    },
+    {
+      "id": "skill-aws",
+      "name": "AWS translation for Azure-experienced engineers",
+      "track_ids": [
+        "track-agent",
+        "track-ai",
+        "track-cloud",
+        "track-devops",
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "IAM roles",
+        "VPC",
+        "accounts",
+        "service mapping"
+      ],
+      "sample_required_count": 6,
+      "sample_preferred_count": 2,
+      "sample_mention_count": 8,
+      "sample_job_ids": [
+        "job-001",
+        "job-002",
+        "job-004",
+        "job-006",
+        "job-007",
+        "job-009",
+        "job-010",
+        "job-012"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Map identity, networking and data services while documenting semantic differences"
+    },
+    {
+      "id": "skill-azure",
+      "name": "Azure architecture and operational gaps",
+      "track_ids": [
+        "track-ai",
+        "track-cloud",
+        "track-devops",
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "Entra identity",
+        "resource governance",
+        "subscriptions"
+      ],
+      "sample_required_count": 3,
+      "sample_preferred_count": 2,
+      "sample_mention_count": 5,
+      "sample_job_ids": [
+        "job-002",
+        "job-008",
+        "job-010",
+        "job-011",
+        "job-012"
+      ],
+      "learner_leverage": "Self-reported adjacent production/identity/Azure experience; verify using a practical diagnostic.",
+      "practice_requirement": "Design names identity boundaries, private connectivity and rollback ownership"
+    },
+    {
+      "id": "skill-azure-pipelines",
+      "name": "Azure DevOps pipelines and reusable delivery",
+      "track_ids": [
+        "track-devops"
+      ],
+      "topic_concepts": [
+        "approvals",
+        "environments",
+        "templates"
+      ],
+      "sample_required_count": 0,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 0,
+      "sample_job_ids": [],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Comparison preserves build/test order, artifact identity and approval boundaries"
+    },
+    {
+      "id": "skill-cache",
+      "name": "Caching, invalidation and stampedes",
+      "track_ids": [
+        "track-ai",
+        "track-cloud",
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "TTL jitter",
+        "cache-aside",
+        "freshness"
+      ],
+      "sample_required_count": 1,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 1,
+      "sample_job_ids": [
+        "job-008"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "A concurrent cold-cache test shows one refresh and documented staleness"
+    },
+    {
+      "id": "skill-cicd",
+      "name": "CI/CD design and secure automation",
+      "track_ids": [
+        "track-agent",
+        "track-ai",
+        "track-cloud",
+        "track-devops"
+      ],
+      "topic_concepts": [
+        "OIDC",
+        "artifacts",
+        "deployment gates"
+      ],
+      "sample_required_count": 7,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 7,
+      "sample_job_ids": [
+        "job-001",
+        "job-002",
+        "job-004",
+        "job-008",
+        "job-009",
+        "job-010",
+        "job-011"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Artifacts are immutable and deployment identity is least-privilege with no static credential"
+    },
+    {
+      "id": "skill-cluster-recovery",
+      "name": "Cluster upgrades, storage and recovery",
+      "track_ids": [
+        "track-devops"
+      ],
+      "topic_concepts": [
+        "disruption budgets",
+        "drains",
+        "persistent volumes"
+      ],
+      "sample_required_count": 0,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 0,
+      "sample_job_ids": [],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Workload recovers with integrity checks and documented limitations of the local topology"
+    },
+    {
+      "id": "skill-compute",
+      "name": "Compute, scaling and placement",
+      "track_ids": [
+        "track-cloud"
+      ],
+      "topic_concepts": [
+        "VM versus containers",
+        "autoscaling",
+        "quota"
+      ],
+      "sample_required_count": 1,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 1,
+      "sample_job_ids": [
+        "job-008"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Capacity graph shows the delay and chosen headroom without assuming instant scaling"
+    },
+    {
+      "id": "skill-concurrency",
+      "name": "Concurrency and parallelism",
+      "track_ids": [
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "cancellation",
+        "event loop",
+        "worker isolation"
+      ],
+      "sample_required_count": 0,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 0,
+      "sample_job_ids": [],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Concurrency never exceeds the configured limit and permits are released on failures"
+    },
+    {
+      "id": "skill-cost",
+      "name": "Cloud cost and performance economics",
+      "track_ids": [
+        "track-ai",
+        "track-cloud",
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "cache hit rate",
+        "egress",
+        "idle capacity",
+        "quality tiers",
+        "tokens per task",
+        "unit cost"
+      ],
+      "sample_required_count": 2,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 2,
+      "sample_job_ids": [
+        "job-008",
+        "job-009"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Every input is labeled assumption or provider price requiring refresh"
+    },
+    {
+      "id": "skill-database",
+      "name": "SQL internals and access paths",
+      "track_ids": [
+        "track-agent",
+        "track-ai",
+        "track-cloud",
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "B-tree indexes",
+        "backup verification",
+        "connection pools",
+        "query plans",
+        "replicas",
+        "write amplification"
+      ],
+      "sample_required_count": 2,
+      "sample_preferred_count": 2,
+      "sample_mention_count": 4,
+      "sample_job_ids": [
+        "job-005",
+        "job-007",
+        "job-008",
+        "job-009"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "EXPLAIN output and timing include dataset size, warmup and index write cost"
+    },
+    {
+      "id": "skill-deployment",
+      "name": "Canary, blue-green and progressive delivery",
+      "track_ids": [
+        "track-cloud",
+        "track-devops",
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "promotion metrics",
+        "rollback",
+        "schema compatibility"
+      ],
+      "sample_required_count": 0,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 0,
+      "sample_job_ids": [],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "A deliberate error-rate regression blocks promotion and restores old routing"
+    },
+    {
+      "id": "skill-disaster-recovery",
+      "name": "Disaster recovery, RTO and RPO",
+      "track_ids": [
+        "track-cloud"
+      ],
+      "topic_concepts": [
+        "data loss window",
+        "recovery drills",
+        "restore sequencing"
+      ],
+      "sample_required_count": 0,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 0,
+      "sample_job_ids": [],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Measured local RTO and simulated RPO are distinguished from production guarantees"
+    },
+    {
+      "id": "skill-distributed",
+      "name": "Distributed failure and consistency",
+      "track_ids": [
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "clocks",
+        "partial failure",
+        "quorum"
+      ],
+      "sample_required_count": 2,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 2,
+      "sample_job_ids": [
+        "job-006",
+        "job-007"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Tests distinguish stale reads, rejected writes and recovery convergence"
+    },
+    {
+      "id": "skill-docker",
+      "name": "Containers and reproducible images",
+      "track_ids": [
+        "track-ai",
+        "track-cloud",
+        "track-devops"
+      ],
+      "topic_concepts": [
+        "layers",
+        "multi-stage build",
+        "non-root users"
+      ],
+      "sample_required_count": 4,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 4,
+      "sample_job_ids": [
+        "job-001",
+        "job-008",
+        "job-009",
+        "job-010"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Image starts without elevated privilege and has a reproducible dependency lock"
+    },
+    {
+      "id": "skill-embeddings",
+      "name": "Embeddings and semantic search",
+      "track_ids": [
+        "track-agent",
+        "track-ai"
+      ],
+      "topic_concepts": [
+        "multilingual data",
+        "normalization",
+        "similarity"
+      ],
+      "sample_required_count": 2,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 2,
+      "sample_job_ids": [
+        "job-004",
+        "job-009"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Recall on labeled queries is reported including Kenyan English/Swahili fixtures where available"
+    },
+    {
+      "id": "skill-evaluation",
+      "name": "RAG and model evaluation",
+      "track_ids": [
+        "track-agent",
+        "track-ai"
+      ],
+      "topic_concepts": [
+        "golden set",
+        "grader bias",
+        "holdout",
+        "task success",
+        "trajectory checks",
+        "unsafe effects"
+      ],
+      "sample_required_count": 3,
+      "sample_preferred_count": 1,
+      "sample_mention_count": 4,
+      "sample_job_ids": [
+        "job-004",
+        "job-005",
+        "job-009",
+        "job-010"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "CI-style exit status fails on regressions; graders are calibrated against manually labeled fixtures"
+    },
+    {
+      "id": "skill-finetuning",
+      "name": "Fine-tuning fundamentals and when not to tune",
+      "track_ids": [
+        "track-ai"
+      ],
+      "topic_concepts": [
+        "adapters",
+        "dataset hygiene",
+        "evaluation"
+      ],
+      "sample_required_count": 1,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 1,
+      "sample_job_ids": [
+        "job-010"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Plan defines holdouts, privacy, baseline and stop criteria; expensive training is optional"
+    },
+    {
+      "id": "skill-gcp",
+      "name": "GCP architecture and project boundaries",
+      "track_ids": [
+        "track-ai",
+        "track-cloud",
+        "track-devops",
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "VPC scope",
+        "projects",
+        "service accounts"
+      ],
+      "sample_required_count": 4,
+      "sample_preferred_count": 1,
+      "sample_mention_count": 5,
+      "sample_job_ids": [
+        "job-002",
+        "job-006",
+        "job-007",
+        "job-010",
+        "job-012"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Comparison identifies organization/project permissions and the selected networking scope"
+    },
+    {
+      "id": "skill-gitops",
+      "name": "GitOps and Argo CD reconciliation",
+      "track_ids": [
+        "track-devops"
+      ],
+      "topic_concepts": [
+        "desired state",
+        "drift",
+        "sync boundaries"
+      ],
+      "sample_required_count": 2,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 2,
+      "sample_job_ids": [
+        "job-002",
+        "job-011"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "An out-of-band deployment change is detected and rollback follows source-controlled desired state"
+    },
+    {
+      "id": "skill-go",
+      "name": "Go",
+      "track_ids": [
+        "track-swe"
+      ],
+      "topic_concepts": [],
+      "sample_required_count": 2,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 2,
+      "sample_job_ids": [
+        "job-006",
+        "job-007"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Select a role-relevant bounded exercise and require reproducible evidence before claiming proficiency."
+    },
+    {
+      "id": "skill-helm",
+      "name": "Helm chart design and release semantics",
+      "track_ids": [
+        "track-cloud",
+        "track-devops"
+      ],
+      "topic_concepts": [
+        "chart versioning",
+        "templates",
+        "values"
+      ],
+      "sample_required_count": 2,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 2,
+      "sample_job_ids": [
+        "job-002",
+        "job-011"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Rendered manifests pass validation and contain no embedded secrets"
+    },
+    {
+      "id": "skill-iac",
+      "name": "Infrastructure as code and drift",
+      "track_ids": [
+        "track-ai",
+        "track-cloud",
+        "track-devops"
+      ],
+      "topic_concepts": [
+        "drift",
+        "module boundaries",
+        "plan review",
+        "plan versus apply",
+        "state",
+        "state locking"
+      ],
+      "sample_required_count": 5,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 5,
+      "sample_job_ids": [
+        "job-001",
+        "job-002",
+        "job-009",
+        "job-010",
+        "job-011"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Plan captures the diff; state is protected and cleanup is scoped to lab resources"
+    },
+    {
+      "id": "skill-idempotency",
+      "name": "Retries, outbox and idempotency",
+      "track_ids": [
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "idempotency key",
+        "retry budget",
+        "transactional outbox"
+      ],
+      "sample_required_count": 0,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 0,
+      "sample_job_ids": [],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Replaying the same event produces one logical side effect"
+    },
+    {
+      "id": "skill-identity",
+      "name": "IAM and workload identity",
+      "track_ids": [
+        "track-agent",
+        "track-cloud",
+        "track-devops",
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "federation",
+        "least privilege",
+        "service identities"
+      ],
+      "sample_required_count": 4,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 4,
+      "sample_job_ids": [
+        "job-002",
+        "job-003",
+        "job-011",
+        "job-012"
+      ],
+      "learner_leverage": "Self-reported adjacent production/identity/Azure experience; verify using a practical diagnostic.",
+      "practice_requirement": "A denied-action test plan exists and no static credentials are required"
+    },
+    {
+      "id": "skill-incident",
+      "name": "Production debugging and incident command",
+      "track_ids": [
+        "track-cloud",
+        "track-devops",
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "SLIs",
+        "hypothesis testing",
+        "mitigation first",
+        "postmortem",
+        "postmortems",
+        "runbooks"
+      ],
+      "sample_required_count": 5,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 5,
+      "sample_job_ids": [
+        "job-001",
+        "job-002",
+        "job-007",
+        "job-008",
+        "job-011"
+      ],
+      "learner_leverage": "Self-reported adjacent production/identity/Azure experience; verify using a practical diagnostic.",
+      "practice_requirement": "Evidence distinguishes the trigger from root cause and includes a safe mitigation"
+    },
+    {
+      "id": "skill-inference",
+      "name": "Inference and latency optimization",
+      "track_ids": [
+        "track-ai"
+      ],
+      "topic_concepts": [
+        "batching",
+        "caching",
+        "quantization",
+        "streaming"
+      ],
+      "sample_required_count": 0,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 0,
+      "sample_job_ids": [],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Report p95, first-token latency and hardware assumptions separately"
+    },
+    {
+      "id": "skill-integration",
+      "name": "External APIs and secure integrations",
+      "track_ids": [
+        "track-agent"
+      ],
+      "topic_concepts": [
+        "rate limits",
+        "tenant mapping",
+        "timeouts"
+      ],
+      "sample_required_count": 0,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 0,
+      "sample_job_ids": [],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Throttling is bounded and tenant identifiers are derived from authorized context"
+    },
+    {
+      "id": "skill-kubernetes",
+      "name": "Managed Kubernetes trade-offs",
+      "track_ids": [
+        "track-ai",
+        "track-cloud",
+        "track-devops",
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "control plane versus worker",
+        "node lifecycle",
+        "readiness versus liveness",
+        "reconciliation",
+        "scheduling"
+      ],
+      "sample_required_count": 5,
+      "sample_preferred_count": 1,
+      "sample_mention_count": 6,
+      "sample_job_ids": [
+        "job-001",
+        "job-002",
+        "job-006",
+        "job-008",
+        "job-009",
+        "job-011"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Deleting a pod recovers service; node responsibilities are explicitly recorded"
+    },
+    {
+      "id": "skill-leadership",
+      "name": "Technical leadership and interview evidence",
+      "track_ids": [
+        "track-agent",
+        "track-cloud",
+        "track-devops",
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "adoption",
+        "influence",
+        "measurable impact",
+        "mentorship",
+        "operational ownership",
+        "service boundaries"
+      ],
+      "sample_required_count": 4,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 4,
+      "sample_job_ids": [
+        "job-003",
+        "job-006",
+        "job-007",
+        "job-012"
+      ],
+      "learner_leverage": "Self-reported adjacent production/identity/Azure experience; verify using a practical diagnostic.",
+      "practice_requirement": "Story separates individual contribution, team outcome and uncertainty without inventing metrics"
+    },
+    {
+      "id": "skill-linux",
+      "name": "Linux operating-system diagnostics",
+      "track_ids": [
+        "track-devops"
+      ],
+      "topic_concepts": [
+        "permissions",
+        "processes",
+        "systemd"
+      ],
+      "sample_required_count": 2,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 2,
+      "sample_job_ids": [
+        "job-001",
+        "job-011"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Capture journal, process state and the minimal permissions fix"
+    },
+    {
+      "id": "skill-llm",
+      "name": "Transformers, tokens and context windows",
+      "track_ids": [
+        "track-agent",
+        "track-ai"
+      ],
+      "topic_concepts": [
+        "attention",
+        "context budget",
+        "tokenization"
+      ],
+      "sample_required_count": 2,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 2,
+      "sample_job_ids": [
+        "job-005",
+        "job-009"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Tests preserve mandatory instructions and expose lost context rather than silently dropping it"
+    },
+    {
+      "id": "skill-mcp",
+      "name": "MCP host, client, server and primitives",
+      "track_ids": [
+        "track-agent"
+      ],
+      "topic_concepts": [
+        "JSON-RPC",
+        "discovery",
+        "tools/resources/prompts"
+      ],
+      "sample_required_count": 1,
+      "sample_preferred_count": 1,
+      "sample_mention_count": 2,
+      "sample_job_ids": [
+        "job-003",
+        "job-004"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Protocol trace names version 2026-07-28 and does not mix legacy initialization semantics"
+    },
+    {
+      "id": "skill-mcp-auth",
+      "name": "MCP authorization and permission boundaries",
+      "track_ids": [
+        "track-agent",
+        "track-ai"
+      ],
+      "topic_concepts": [
+        "protected-resource discovery",
+        "resource server",
+        "token audience"
+      ],
+      "sample_required_count": 0,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 0,
+      "sample_job_ids": [],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Both invalid cases are denied before the protected integration executes"
+    },
+    {
+      "id": "skill-mcp-client",
+      "name": "MCP clients and interoperability tests",
+      "track_ids": [
+        "track-agent"
+      ],
+      "topic_concepts": [
+        "capabilities",
+        "discovery",
+        "request metadata"
+      ],
+      "sample_required_count": 0,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 0,
+      "sample_job_ids": [],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Supported calls resolve and unsupported capabilities return explicit errors"
+    },
+    {
+      "id": "skill-mcp-resources",
+      "name": "Tools, resources and prompts as separate contracts",
+      "track_ids": [
+        "track-agent"
+      ],
+      "topic_concepts": [
+        "resource identifiers",
+        "templates",
+        "tool effects"
+      ],
+      "sample_required_count": 0,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 0,
+      "sample_job_ids": [],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Resource reads remain read-only and prompt templates do not acquire tool permissions"
+    },
+    {
+      "id": "skill-mcp-server",
+      "name": "Develop an MCP server with a real boundary",
+      "track_ids": [
+        "track-agent"
+      ],
+      "topic_concepts": [
+        "SDK abstraction",
+        "error handling",
+        "validation"
+      ],
+      "sample_required_count": 1,
+      "sample_preferred_count": 1,
+      "sample_mention_count": 2,
+      "sample_job_ids": [
+        "job-003",
+        "job-004"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "One valid call succeeds; invalid input fails; stdio logs do not corrupt protocol output"
+    },
+    {
+      "id": "skill-mcp-transport",
+      "name": "stdio and Streamable HTTP transports",
+      "track_ids": [
+        "track-agent"
+      ],
+      "topic_concepts": [
+        "cancellation",
+        "framing",
+        "per-request metadata"
+      ],
+      "sample_required_count": 0,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 0,
+      "sample_job_ids": [],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Transport tests check framing and current cancellation behavior without assuming persistent session semantics"
+    },
+    {
+      "id": "skill-memory",
+      "name": "Agent memory and retrieval lifecycle",
+      "track_ids": [
+        "track-agent"
+      ],
+      "topic_concepts": [
+        "eviction",
+        "provenance",
+        "working versus durable memory"
+      ],
+      "sample_required_count": 0,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 0,
+      "sample_job_ids": [],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Expired and cross-tenant entries are never retrieved; provenance is preserved"
+    },
+    {
+      "id": "skill-messaging",
+      "name": "Queues, streams and backpressure",
+      "track_ids": [
+        "track-ai",
+        "track-devops",
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "consumer offsets",
+        "partition ordering",
+        "poison messages"
+      ],
+      "sample_required_count": 2,
+      "sample_preferred_count": 1,
+      "sample_mention_count": 3,
+      "sample_job_ids": [
+        "job-009",
+        "job-011",
+        "job-012"
+      ],
+      "learner_leverage": "Self-reported adjacent production/identity/Azure experience; verify using a practical diagnostic.",
+      "practice_requirement": "Record lag, key ordering and quarantine evidence for a replayed batch"
+    },
+    {
+      "id": "skill-migration",
+      "name": "Safe migrations and compatibility",
+      "track_ids": [
+        "track-cloud",
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "cutover",
+        "dependency inventory",
+        "dual reads",
+        "expand-contract",
+        "rollback",
+        "strangler pattern"
+      ],
+      "sample_required_count": 0,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 0,
+      "sample_job_ids": [],
+      "learner_leverage": "Self-reported adjacent production/identity/Azure experience; verify using a practical diagnostic.",
+      "practice_requirement": "Old and new clients work during overlap; rollback avoids data loss"
+    },
+    {
+      "id": "skill-ml",
+      "name": "ML fundamentals for application engineers",
+      "track_ids": [
+        "track-ai"
+      ],
+      "topic_concepts": [
+        "leakage",
+        "train/test split",
+        "training versus inference"
+      ],
+      "sample_required_count": 2,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 2,
+      "sample_job_ids": [
+        "job-009",
+        "job-010"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Report baseline errors and identify leakage risks without claiming real-world accuracy"
+    },
+    {
+      "id": "skill-models",
+      "name": "Model selection and open-model deployment",
+      "track_ids": [
+        "track-ai"
+      ],
+      "topic_concepts": [
+        "capability",
+        "hardware constraints",
+        "license"
+      ],
+      "sample_required_count": 1,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 1,
+      "sample_job_ids": [
+        "job-009"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Report task results, RAM assumptions and license checks; fixtures are not model-quality evidence"
+    },
+    {
+      "id": "skill-monitoring",
+      "name": "Prometheus, Grafana and alert quality",
+      "track_ids": [
+        "track-cloud",
+        "track-devops"
+      ],
+      "topic_concepts": [
+        "burn-rate alerts",
+        "histograms",
+        "labels"
+      ],
+      "sample_required_count": 1,
+      "sample_preferred_count": 1,
+      "sample_mention_count": 2,
+      "sample_job_ids": [
+        "job-002",
+        "job-008"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Dashboard distinguishes p99 and saturation; alerts have actionable runbooks"
+    },
+    {
+      "id": "skill-multi-agent",
+      "name": "Multi-agent architecture and coordination",
+      "track_ids": [
+        "track-agent"
+      ],
+      "topic_concepts": [
+        "failure amplification",
+        "handoff",
+        "shared state"
+      ],
+      "sample_required_count": 0,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 0,
+      "sample_job_ids": [],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Report success, steps and errors; do not claim superiority without results"
+    },
+    {
+      "id": "skill-multi-region",
+      "name": "Multi-region data and traffic routing",
+      "track_ids": [
+        "track-cloud"
+      ],
+      "topic_concepts": [
+        "data residency",
+        "failover",
+        "split brain"
+      ],
+      "sample_required_count": 0,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 0,
+      "sample_job_ids": [],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "No concurrent writer becomes authoritative during the modeled partition"
+    },
+    {
+      "id": "skill-networking",
+      "name": "Cloud networking and packet paths",
+      "track_ids": [
+        "track-cloud",
+        "track-devops",
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "CIDR",
+        "NAT versus private endpoints",
+        "certificates",
+        "name resolution",
+        "packet path",
+        "routing"
+      ],
+      "sample_required_count": 2,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 2,
+      "sample_job_ids": [
+        "job-002",
+        "job-011"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Routes show inbound/outbound boundaries and no unexplained public database access"
+    },
+    {
+      "id": "skill-observability",
+      "name": "Tracing, metrics and structured logging",
+      "track_ids": [
+        "track-agent",
+        "track-ai",
+        "track-cloud",
+        "track-devops",
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "cardinality",
+        "collector",
+        "effect IDs",
+        "model version",
+        "platform versus application telemetry",
+        "prompt version",
+        "propagation",
+        "redaction",
+        "sampling",
+        "task traces",
+        "token usage",
+        "trace context",
+        "trace linkage"
+      ],
+      "sample_required_count": 6,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 6,
+      "sample_job_ids": [
+        "job-001",
+        "job-004",
+        "job-005",
+        "job-007",
+        "job-009",
+        "job-011"
+      ],
+      "learner_leverage": "Self-reported adjacent production/identity/Azure experience; verify using a practical diagnostic.",
+      "practice_requirement": "One trace correlates logs without including user tokens or unbounded metric labels"
+    },
+    {
+      "id": "skill-orchestration",
+      "name": "Workflow and graph orchestration",
+      "track_ids": [
+        "track-agent",
+        "track-ai"
+      ],
+      "topic_concepts": [
+        "branching",
+        "deterministic stages",
+        "durable execution"
+      ],
+      "sample_required_count": 2,
+      "sample_preferred_count": 2,
+      "sample_mention_count": 4,
+      "sample_job_ids": [
+        "job-003",
+        "job-005",
+        "job-009",
+        "job-010"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Each branch has a test and checkpoints survive simulated interruption"
+    },
+    {
+      "id": "skill-patterns",
+      "name": "Architecture patterns and code quality",
+      "track_ids": [
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "dependency inversion",
+        "hexagonal boundaries",
+        "modular monolith"
+      ],
+      "sample_required_count": 0,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 0,
+      "sample_job_ids": [],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Contract tests pass and an ADR explains the boundary rather than a pattern checklist"
+    },
+    {
+      "id": "skill-performance",
+      "name": "Performance engineering and profiling",
+      "track_ids": [
+        "track-ai",
+        "track-cloud",
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "flame graphs",
+        "p50 versus p99",
+        "saturation"
+      ],
+      "sample_required_count": 5,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 5,
+      "sample_job_ids": [
+        "job-006",
+        "job-007",
+        "job-008",
+        "job-009",
+        "job-012"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Baseline and changed result use the same workload and disclose measurement noise"
+    },
+    {
+      "id": "skill-planning",
+      "name": "Planning, execution and stopping conditions",
+      "track_ids": [
+        "track-agent"
+      ],
+      "topic_concepts": [
+        "deadlines",
+        "max steps",
+        "retry budgets"
+      ],
+      "sample_required_count": 0,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 0,
+      "sample_job_ids": [],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Looping fixtures halt with an explicit incomplete result and no extra effects"
+    },
+    {
+      "id": "skill-platform",
+      "name": "Internal developer platforms and portals",
+      "track_ids": [
+        "track-agent",
+        "track-devops",
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "golden paths",
+        "product metrics",
+        "service catalog"
+      ],
+      "sample_required_count": 2,
+      "sample_preferred_count": 2,
+      "sample_mention_count": 4,
+      "sample_job_ids": [
+        "job-002",
+        "job-004",
+        "job-011",
+        "job-012"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Template has owners, operational defaults and an escape hatch for justified exceptions"
+    },
+    {
+      "id": "skill-privacy",
+      "name": "Data privacy and tenant-aware retrieval",
+      "track_ids": [
+        "track-ai"
+      ],
+      "topic_concepts": [
+        "consent",
+        "minimization",
+        "retention"
+      ],
+      "sample_required_count": 0,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 0,
+      "sample_job_ids": [],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "No cross-tenant retrieval occurs and logs are redacted by tests"
+    },
+    {
+      "id": "skill-production-ai",
+      "name": "Production AI service architecture",
+      "track_ids": [
+        "track-ai"
+      ],
+      "topic_concepts": [
+        "model failure",
+        "release gates",
+        "timeouts"
+      ],
+      "sample_required_count": 0,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 0,
+      "sample_job_ids": [],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Dependency timeout, refusal and bad retrieval produce safe explicit outcomes"
+    },
+    {
+      "id": "skill-prompting",
+      "name": "Prompt engineering as versioned code",
+      "track_ids": [
+        "track-ai"
+      ],
+      "topic_concepts": [
+        "examples",
+        "regression tests",
+        "task instructions"
+      ],
+      "sample_required_count": 0,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 0,
+      "sample_job_ids": [],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Changes show a before/after error analysis on a held-out set"
+    },
+    {
+      "id": "skill-python",
+      "name": "Python engineering bridge from TypeScript",
+      "track_ids": [
+        "track-agent",
+        "track-ai",
+        "track-cloud",
+        "track-devops",
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "async I/O",
+        "dependency locking",
+        "typing"
+      ],
+      "sample_required_count": 7,
+      "sample_preferred_count": 1,
+      "sample_mention_count": 8,
+      "sample_job_ids": [
+        "job-001",
+        "job-002",
+        "job-003",
+        "job-004",
+        "job-006",
+        "job-008",
+        "job-009",
+        "job-011"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Adapter validates responses and releases resources on cancellation"
+    },
+    {
+      "id": "skill-rag",
+      "name": "RAG architecture and ingestion",
+      "track_ids": [
+        "track-agent",
+        "track-ai"
+      ],
+      "topic_concepts": [
+        "chunking",
+        "incremental indexing",
+        "provenance"
+      ],
+      "sample_required_count": 3,
+      "sample_preferred_count": 1,
+      "sample_mention_count": 4,
+      "sample_job_ids": [
+        "job-003",
+        "job-004",
+        "job-009",
+        "job-010"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Re-ingestion updates changed documents without duplicate chunks"
+    },
+    {
+      "id": "skill-reliability",
+      "name": "SLOs, error budgets and overload",
+      "track_ids": [
+        "track-agent",
+        "track-cloud",
+        "track-devops",
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "SLI",
+        "burn rate",
+        "dependency redundancy",
+        "health checks",
+        "load shedding",
+        "zone failure"
+      ],
+      "sample_required_count": 3,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 3,
+      "sample_job_ids": [
+        "job-005",
+        "job-006",
+        "job-012"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "A load burst yields explicit overload responses rather than cascading timeouts"
+    },
+    {
+      "id": "skill-reranking",
+      "name": "Retrieval tuning and query processing",
+      "track_ids": [
+        "track-ai"
+      ],
+      "topic_concepts": [
+        "query decomposition",
+        "recall@k",
+        "reranking"
+      ],
+      "sample_required_count": 0,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 0,
+      "sample_job_ids": [],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "An ablation table separates retrieval metrics from generation metrics"
+    },
+    {
+      "id": "skill-scalability",
+      "name": "Sharding, replicas and hot partitions",
+      "track_ids": [
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "fan-out",
+        "partition key",
+        "replication lag"
+      ],
+      "sample_required_count": 0,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 0,
+      "sample_job_ids": [],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "A routing test and capacity sheet quantify hot-tenant skew and migration cost"
+    },
+    {
+      "id": "skill-secrets",
+      "name": "Secrets, RBAC and supply-chain security",
+      "track_ids": [
+        "track-devops"
+      ],
+      "topic_concepts": [
+        "provenance",
+        "rotation",
+        "workload identity"
+      ],
+      "sample_required_count": 0,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 0,
+      "sample_job_ids": [],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "No secret enters logs, image layers or repository; revoked access fails"
+    },
+    {
+      "id": "skill-security",
+      "name": "Identity-aware application security",
+      "track_ids": [
+        "track-agent",
+        "track-ai",
+        "track-cloud",
+        "track-devops",
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "authentication versus authorization",
+        "private access",
+        "secret rotation",
+        "tenant isolation",
+        "threat model",
+        "trust boundaries"
+      ],
+      "sample_required_count": 5,
+      "sample_preferred_count": 1,
+      "sample_mention_count": 6,
+      "sample_job_ids": [
+        "job-002",
+        "job-004",
+        "job-008",
+        "job-009",
+        "job-011",
+        "job-012"
+      ],
+      "learner_leverage": "Self-reported adjacent production/identity/Azure experience; verify using a practical diagnostic.",
+      "practice_requirement": "Unauthorized and cross-tenant reads fail before data leaves the service"
+    },
+    {
+      "id": "skill-serverless",
+      "name": "Serverless systems and asynchronous execution",
+      "track_ids": [
+        "track-ai",
+        "track-cloud"
+      ],
+      "topic_concepts": [
+        "cold starts",
+        "event duplication",
+        "execution limits"
+      ],
+      "sample_required_count": 2,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 2,
+      "sample_job_ids": [
+        "job-008",
+        "job-010"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Repeated events have one logical effect and poison payloads are isolated"
+    },
+    {
+      "id": "skill-shell",
+      "name": "Reliable shell and automation scripts",
+      "track_ids": [
+        "track-devops"
+      ],
+      "topic_concepts": [
+        "exit codes",
+        "idempotence",
+        "quoting"
+      ],
+      "sample_required_count": 3,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 3,
+      "sample_job_ids": [
+        "job-001",
+        "job-002",
+        "job-011"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Repeated execution is safe and missing dependencies cause explicit failures"
+    },
+    {
+      "id": "skill-state",
+      "name": "Agent state and durable checkpoints",
+      "track_ids": [
+        "track-agent"
+      ],
+      "topic_concepts": [
+        "checkpoint",
+        "effect ledger",
+        "replay"
+      ],
+      "sample_required_count": 0,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 0,
+      "sample_job_ids": [],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Recovery resumes safely without repeating the logical mutation"
+    },
+    {
+      "id": "skill-storage",
+      "name": "Object, block and file storage",
+      "track_ids": [
+        "track-cloud",
+        "track-devops"
+      ],
+      "topic_concepts": [
+        "durability versus availability",
+        "encryption",
+        "lifecycle"
+      ],
+      "sample_required_count": 1,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 1,
+      "sample_job_ids": [
+        "job-011"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Matrix separates durability, restore capability, access control and retention"
+    },
+    {
+      "id": "skill-structured",
+      "name": "Structured outputs and semantic validation",
+      "track_ids": [
+        "track-agent",
+        "track-ai"
+      ],
+      "topic_concepts": [
+        "JSON Schema",
+        "business invariants",
+        "refusals"
+      ],
+      "sample_required_count": 1,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 1,
+      "sample_job_ids": [
+        "job-004"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Malformed, refused and semantically impossible outputs fail closed with distinct reasons"
+    },
+    {
+      "id": "skill-testing",
+      "name": "Testing strategy and maintainability",
+      "track_ids": [
+        "track-ai",
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "contracts",
+        "deterministic failures",
+        "unit versus integration"
+      ],
+      "sample_required_count": 3,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 3,
+      "sample_job_ids": [
+        "job-006",
+        "job-007",
+        "job-010"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Each test catches a different introduced defect and can run independently"
+    },
+    {
+      "id": "skill-tools",
+      "name": "Function calling and deterministic action boundaries",
+      "track_ids": [
+        "track-agent",
+        "track-ai"
+      ],
+      "topic_concepts": [
+        "arguments",
+        "idempotency",
+        "read-only versus mutation",
+        "schemas",
+        "side effects",
+        "tool schema"
+      ],
+      "sample_required_count": 2,
+      "sample_preferred_count": 2,
+      "sample_mention_count": 4,
+      "sample_job_ids": [
+        "job-004",
+        "job-005",
+        "job-009",
+        "job-010"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "An unsafe tool request never reaches the external adapter"
+    },
+    {
+      "id": "skill-transactions",
+      "name": "Transactions and concurrent correctness",
+      "track_ids": [
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "MVCC",
+        "isolation anomalies",
+        "retries"
+      ],
+      "sample_required_count": 0,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 0,
+      "sample_job_ids": [],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "A concurrent test never exceeds available capacity and logs serialization retries"
+    },
+    {
+      "id": "skill-typescript",
+      "name": "Typescript",
+      "track_ids": [
+        "track-agent"
+      ],
+      "topic_concepts": [],
+      "sample_required_count": 2,
+      "sample_preferred_count": 0,
+      "sample_mention_count": 2,
+      "sample_job_ids": [
+        "job-003",
+        "job-004"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Select a role-relevant bounded exercise and require reproducible evidence before claiming proficiency."
+    },
+    {
+      "id": "skill-vector",
+      "name": "Vector databases and hybrid retrieval",
+      "track_ids": [
+        "track-agent",
+        "track-ai",
+        "track-swe"
+      ],
+      "topic_concepts": [
+        "ANN",
+        "filters",
+        "keyword fusion"
+      ],
+      "sample_required_count": 2,
+      "sample_preferred_count": 1,
+      "sample_mention_count": 3,
+      "sample_job_ids": [
+        "job-003",
+        "job-004",
+        "job-009"
+      ],
+      "learner_leverage": "Competence not established by supplied profile; require new practical evidence.",
+      "practice_requirement": "Unauthorized documents are excluded before answer generation; compare retrieval errors"
+    }
+  ],
+  "track_analyses": [
+    {
+      "track_id": "track-swe",
+      "sample_size": 3,
+      "job_ids": [
+        "job-006",
+        "job-007",
+        "job-012"
+      ],
+      "frequency_rows": [
+        {
+          "skill_id": "skill-aws",
+          "mention_count": 3,
+          "required_count": 3,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-gcp",
+          "mention_count": 3,
+          "required_count": 3,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-leadership",
+          "mention_count": 3,
+          "required_count": 3,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-performance",
+          "mention_count": 3,
+          "required_count": 3,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-agents",
+          "mention_count": 2,
+          "required_count": 1,
+          "preferred_only_count": 1,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-api",
+          "mention_count": 2,
+          "required_count": 2,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-architecture",
+          "mention_count": 2,
+          "required_count": 2,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-distributed",
+          "mention_count": 2,
+          "required_count": 2,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-go",
+          "mention_count": 2,
+          "required_count": 2,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-reliability",
+          "mention_count": 2,
+          "required_count": 2,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-testing",
+          "mention_count": 2,
+          "required_count": 2,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-adr",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-azure",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-database",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-identity",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-incident",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-kubernetes",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-messaging",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-observability",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-platform",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-python",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-security",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 3
+        }
+      ],
+      "core_skills_in_sample": [
+        "skill-aws",
+        "skill-gcp",
+        "skill-leadership",
+        "skill-performance",
+        "skill-agents",
+        "skill-api",
+        "skill-architecture",
+        "skill-distributed",
+        "skill-go",
+        "skill-reliability",
+        "skill-testing"
+      ],
+      "senior_expectations": "Architecture ownership, failure analysis, security and defensible trade-offs; see individual posting scope rather than treating title/years alone as seniority.",
+      "emerging_skills": [
+        "skill-agents"
+      ],
+      "emerging_evidence_status": "Contemporary observed requirements, not statistically demonstrated growth.",
+      "niche_skills": [
+        "skill-adr",
+        "skill-azure",
+        "skill-database",
+        "skill-identity",
+        "skill-incident",
+        "skill-kubernetes",
+        "skill-messaging",
+        "skill-observability",
+        "skill-platform",
+        "skill-python",
+        "skill-security"
+      ],
+      "niche_interpretation": "Single occurrence in this small sample does not establish market niche status; domain-specific SDK/payment/media expertise separately noted in posting summaries.",
+      "declining_skills": [],
+      "decline_status": "Not measurable from a one-day cross-sectional sample. Jenkins and established CI tools remain relevant where requested; no invented decline trend.",
+      "overlapping_skill_ids": [
+        "skill-architecture",
+        "skill-api",
+        "skill-database",
+        "skill-cache",
+        "skill-messaging",
+        "skill-performance",
+        "skill-reliability",
+        "skill-observability",
+        "skill-security",
+        "skill-testing",
+        "skill-migration",
+        "skill-incident",
+        "skill-adr",
+        "skill-leadership"
+      ],
+      "leverage_skill_ids": [
+        "skill-api",
+        "skill-messaging",
+        "skill-observability",
+        "skill-migration",
+        "skill-incident"
+      ],
+      "new_practice_skill_ids": [
+        "skill-architecture",
+        "skill-database",
+        "skill-transactions",
+        "skill-cache",
+        "skill-distributed",
+        "skill-idempotency",
+        "skill-concurrency",
+        "skill-performance",
+        "skill-scalability",
+        "skill-reliability",
+        "skill-security",
+        "skill-testing",
+        "skill-patterns",
+        "skill-adr",
+        "skill-leadership"
+      ],
+      "limitations": "Purposive sample, not representative. Cloud category has only one posting; senior category includes one expired Kenyan stretch architecture role. Categories are disjoint; alternatives count as mentions, not mandatory mastery of every option."
+    },
+    {
+      "track_id": "track-cloud",
+      "sample_size": 1,
+      "job_ids": [
+        "job-008"
+      ],
+      "frequency_rows": [
+        {
+          "skill_id": "skill-api",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 1
+        },
+        {
+          "skill_id": "skill-azure",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 1
+        },
+        {
+          "skill_id": "skill-cache",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 1
+        },
+        {
+          "skill_id": "skill-cicd",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 1
+        },
+        {
+          "skill_id": "skill-compute",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 1
+        },
+        {
+          "skill_id": "skill-cost",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 1
+        },
+        {
+          "skill_id": "skill-database",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 1
+        },
+        {
+          "skill_id": "skill-docker",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 1
+        },
+        {
+          "skill_id": "skill-incident",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 1
+        },
+        {
+          "skill_id": "skill-kubernetes",
+          "mention_count": 1,
+          "required_count": 0,
+          "preferred_only_count": 1,
+          "denominator": 1
+        },
+        {
+          "skill_id": "skill-monitoring",
+          "mention_count": 1,
+          "required_count": 0,
+          "preferred_only_count": 1,
+          "denominator": 1
+        },
+        {
+          "skill_id": "skill-performance",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 1
+        },
+        {
+          "skill_id": "skill-python",
+          "mention_count": 1,
+          "required_count": 0,
+          "preferred_only_count": 1,
+          "denominator": 1
+        },
+        {
+          "skill_id": "skill-security",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 1
+        },
+        {
+          "skill_id": "skill-serverless",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 1
+        }
+      ],
+      "core_skills_in_sample": [],
+      "senior_expectations": "Architecture ownership, failure analysis, security and defensible trade-offs; see individual posting scope rather than treating title/years alone as seniority.",
+      "emerging_skills": [],
+      "emerging_evidence_status": "Contemporary observed requirements, not statistically demonstrated growth.",
+      "niche_skills": [
+        "skill-api",
+        "skill-azure",
+        "skill-cache",
+        "skill-cicd",
+        "skill-compute",
+        "skill-cost",
+        "skill-database",
+        "skill-docker",
+        "skill-incident",
+        "skill-kubernetes",
+        "skill-monitoring",
+        "skill-performance",
+        "skill-python",
+        "skill-security",
+        "skill-serverless"
+      ],
+      "niche_interpretation": "Single occurrence in this small sample does not establish market niche status; domain-specific SDK/payment/media expertise separately noted in posting summaries.",
+      "declining_skills": [],
+      "decline_status": "Not measurable from a one-day cross-sectional sample. Jenkins and established CI tools remain relevant where requested; no invented decline trend.",
+      "overlapping_skill_ids": [
+        "skill-architecture",
+        "skill-networking",
+        "skill-identity",
+        "skill-azure",
+        "skill-aws",
+        "skill-gcp",
+        "skill-storage",
+        "skill-database",
+        "skill-serverless",
+        "skill-kubernetes",
+        "skill-security",
+        "skill-reliability",
+        "skill-iac",
+        "skill-observability",
+        "skill-migration",
+        "skill-cost",
+        "skill-adr"
+      ],
+      "leverage_skill_ids": [
+        "skill-identity",
+        "skill-azure",
+        "skill-observability",
+        "skill-migration"
+      ],
+      "new_practice_skill_ids": [
+        "skill-architecture",
+        "skill-networking",
+        "skill-aws",
+        "skill-gcp",
+        "skill-compute",
+        "skill-storage",
+        "skill-database",
+        "skill-serverless",
+        "skill-kubernetes",
+        "skill-security",
+        "skill-reliability",
+        "skill-disaster-recovery",
+        "skill-multi-region",
+        "skill-iac",
+        "skill-cost",
+        "skill-adr"
+      ],
+      "limitations": "Purposive sample, not representative. Cloud category has only one posting; senior category includes one expired Kenyan stretch architecture role. Categories are disjoint; alternatives count as mentions, not mandatory mastery of every option."
+    },
+    {
+      "track_id": "track-devops",
+      "sample_size": 3,
+      "job_ids": [
+        "job-001",
+        "job-002",
+        "job-011"
+      ],
+      "frequency_rows": [
+        {
+          "skill_id": "skill-cicd",
+          "mention_count": 3,
+          "required_count": 3,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-iac",
+          "mention_count": 3,
+          "required_count": 3,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-incident",
+          "mention_count": 3,
+          "required_count": 3,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-kubernetes",
+          "mention_count": 3,
+          "required_count": 3,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-python",
+          "mention_count": 3,
+          "required_count": 3,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-shell",
+          "mention_count": 3,
+          "required_count": 3,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-aws",
+          "mention_count": 2,
+          "required_count": 2,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-azure",
+          "mention_count": 2,
+          "required_count": 1,
+          "preferred_only_count": 1,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-gitops",
+          "mention_count": 2,
+          "required_count": 2,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-helm",
+          "mention_count": 2,
+          "required_count": 2,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-identity",
+          "mention_count": 2,
+          "required_count": 2,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-linux",
+          "mention_count": 2,
+          "required_count": 2,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-networking",
+          "mention_count": 2,
+          "required_count": 2,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-observability",
+          "mention_count": 2,
+          "required_count": 2,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-platform",
+          "mention_count": 2,
+          "required_count": 1,
+          "preferred_only_count": 1,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-security",
+          "mention_count": 2,
+          "required_count": 2,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-adr",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-agents",
+          "mention_count": 1,
+          "required_count": 0,
+          "preferred_only_count": 1,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-architecture",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-docker",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-gcp",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-messaging",
+          "mention_count": 1,
+          "required_count": 0,
+          "preferred_only_count": 1,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-monitoring",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-storage",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 3
+        }
+      ],
+      "core_skills_in_sample": [
+        "skill-cicd",
+        "skill-iac",
+        "skill-incident",
+        "skill-kubernetes",
+        "skill-python",
+        "skill-shell",
+        "skill-aws",
+        "skill-azure",
+        "skill-gitops",
+        "skill-helm",
+        "skill-identity",
+        "skill-linux",
+        "skill-networking",
+        "skill-observability",
+        "skill-platform",
+        "skill-security"
+      ],
+      "senior_expectations": "Architecture ownership, failure analysis, security and defensible trade-offs; see individual posting scope rather than treating title/years alone as seniority.",
+      "emerging_skills": [
+        "skill-agents"
+      ],
+      "emerging_evidence_status": "Contemporary observed requirements, not statistically demonstrated growth.",
+      "niche_skills": [
+        "skill-adr",
+        "skill-agents",
+        "skill-architecture",
+        "skill-docker",
+        "skill-gcp",
+        "skill-messaging",
+        "skill-monitoring",
+        "skill-storage"
+      ],
+      "niche_interpretation": "Single occurrence in this small sample does not establish market niche status; domain-specific SDK/payment/media expertise separately noted in posting summaries.",
+      "declining_skills": [],
+      "decline_status": "Not measurable from a one-day cross-sectional sample. Jenkins and established CI tools remain relevant where requested; no invented decline trend.",
+      "overlapping_skill_ids": [
+        "skill-networking",
+        "skill-docker",
+        "skill-kubernetes",
+        "skill-helm",
+        "skill-iac",
+        "skill-cicd",
+        "skill-deployment",
+        "skill-monitoring",
+        "skill-observability",
+        "skill-incident",
+        "skill-platform",
+        "skill-adr",
+        "skill-leadership"
+      ],
+      "leverage_skill_ids": [
+        "skill-observability",
+        "skill-incident"
+      ],
+      "new_practice_skill_ids": [
+        "skill-linux",
+        "skill-shell",
+        "skill-networking",
+        "skill-docker",
+        "skill-kubernetes",
+        "skill-helm",
+        "skill-iac",
+        "skill-cicd",
+        "skill-azure-pipelines",
+        "skill-gitops",
+        "skill-deployment",
+        "skill-monitoring",
+        "skill-secrets",
+        "skill-platform",
+        "skill-automation",
+        "skill-cluster-recovery",
+        "skill-adr",
+        "skill-leadership"
+      ],
+      "limitations": "Purposive sample, not representative. Cloud category has only one posting; senior category includes one expired Kenyan stretch architecture role. Categories are disjoint; alternatives count as mentions, not mandatory mastery of every option."
+    },
+    {
+      "track_id": "track-ai",
+      "sample_size": 2,
+      "job_ids": [
+        "job-009",
+        "job-010"
+      ],
+      "frequency_rows": [
+        {
+          "skill_id": "skill-agents",
+          "mention_count": 2,
+          "required_count": 1,
+          "preferred_only_count": 1,
+          "denominator": 2
+        },
+        {
+          "skill_id": "skill-aws",
+          "mention_count": 2,
+          "required_count": 1,
+          "preferred_only_count": 1,
+          "denominator": 2
+        },
+        {
+          "skill_id": "skill-cicd",
+          "mention_count": 2,
+          "required_count": 2,
+          "preferred_only_count": 0,
+          "denominator": 2
+        },
+        {
+          "skill_id": "skill-docker",
+          "mention_count": 2,
+          "required_count": 2,
+          "preferred_only_count": 0,
+          "denominator": 2
+        },
+        {
+          "skill_id": "skill-evaluation",
+          "mention_count": 2,
+          "required_count": 2,
+          "preferred_only_count": 0,
+          "denominator": 2
+        },
+        {
+          "skill_id": "skill-iac",
+          "mention_count": 2,
+          "required_count": 2,
+          "preferred_only_count": 0,
+          "denominator": 2
+        },
+        {
+          "skill_id": "skill-ml",
+          "mention_count": 2,
+          "required_count": 2,
+          "preferred_only_count": 0,
+          "denominator": 2
+        },
+        {
+          "skill_id": "skill-orchestration",
+          "mention_count": 2,
+          "required_count": 1,
+          "preferred_only_count": 1,
+          "denominator": 2
+        },
+        {
+          "skill_id": "skill-rag",
+          "mention_count": 2,
+          "required_count": 1,
+          "preferred_only_count": 1,
+          "denominator": 2
+        },
+        {
+          "skill_id": "skill-tools",
+          "mention_count": 2,
+          "required_count": 1,
+          "preferred_only_count": 1,
+          "denominator": 2
+        },
+        {
+          "skill_id": "skill-ai-security",
+          "mention_count": 1,
+          "required_count": 0,
+          "preferred_only_count": 1,
+          "denominator": 2
+        },
+        {
+          "skill_id": "skill-azure",
+          "mention_count": 1,
+          "required_count": 0,
+          "preferred_only_count": 1,
+          "denominator": 2
+        },
+        {
+          "skill_id": "skill-cost",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 2
+        },
+        {
+          "skill_id": "skill-database",
+          "mention_count": 1,
+          "required_count": 0,
+          "preferred_only_count": 1,
+          "denominator": 2
+        },
+        {
+          "skill_id": "skill-embeddings",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 2
+        },
+        {
+          "skill_id": "skill-finetuning",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 2
+        },
+        {
+          "skill_id": "skill-gcp",
+          "mention_count": 1,
+          "required_count": 0,
+          "preferred_only_count": 1,
+          "denominator": 2
+        },
+        {
+          "skill_id": "skill-kubernetes",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 2
+        },
+        {
+          "skill_id": "skill-llm",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 2
+        },
+        {
+          "skill_id": "skill-messaging",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 2
+        },
+        {
+          "skill_id": "skill-models",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 2
+        },
+        {
+          "skill_id": "skill-observability",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 2
+        },
+        {
+          "skill_id": "skill-performance",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 2
+        },
+        {
+          "skill_id": "skill-python",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 2
+        },
+        {
+          "skill_id": "skill-security",
+          "mention_count": 1,
+          "required_count": 0,
+          "preferred_only_count": 1,
+          "denominator": 2
+        },
+        {
+          "skill_id": "skill-serverless",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 2
+        },
+        {
+          "skill_id": "skill-testing",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 2
+        },
+        {
+          "skill_id": "skill-vector",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 2
+        }
+      ],
+      "core_skills_in_sample": [
+        "skill-agents",
+        "skill-aws",
+        "skill-cicd",
+        "skill-docker",
+        "skill-evaluation",
+        "skill-iac",
+        "skill-ml",
+        "skill-orchestration",
+        "skill-rag",
+        "skill-tools"
+      ],
+      "senior_expectations": "Architecture ownership, failure analysis, security and defensible trade-offs; see individual posting scope rather than treating title/years alone as seniority.",
+      "emerging_skills": [
+        "skill-agents",
+        "skill-evaluation",
+        "skill-ai-security"
+      ],
+      "emerging_evidence_status": "Contemporary observed requirements, not statistically demonstrated growth.",
+      "niche_skills": [
+        "skill-ai-security",
+        "skill-azure",
+        "skill-cost",
+        "skill-database",
+        "skill-embeddings",
+        "skill-finetuning",
+        "skill-gcp",
+        "skill-kubernetes",
+        "skill-llm",
+        "skill-messaging",
+        "skill-models",
+        "skill-observability",
+        "skill-performance",
+        "skill-python",
+        "skill-security",
+        "skill-serverless",
+        "skill-testing",
+        "skill-vector"
+      ],
+      "niche_interpretation": "Single occurrence in this small sample does not establish market niche status; domain-specific SDK/payment/media expertise separately noted in posting summaries.",
+      "declining_skills": [],
+      "decline_status": "Not measurable from a one-day cross-sectional sample. Jenkins and established CI tools remain relevant where requested; no invented decline trend.",
+      "overlapping_skill_ids": [
+        "skill-python",
+        "skill-llm",
+        "skill-structured",
+        "skill-tools",
+        "skill-embeddings",
+        "skill-vector",
+        "skill-rag",
+        "skill-evaluation",
+        "skill-ai-security",
+        "skill-observability",
+        "skill-cost",
+        "skill-adr"
+      ],
+      "leverage_skill_ids": [
+        "skill-observability"
+      ],
+      "new_practice_skill_ids": [
+        "skill-python",
+        "skill-ml",
+        "skill-llm",
+        "skill-models",
+        "skill-prompting",
+        "skill-structured",
+        "skill-tools",
+        "skill-embeddings",
+        "skill-vector",
+        "skill-rag",
+        "skill-reranking",
+        "skill-evaluation",
+        "skill-ai-security",
+        "skill-privacy",
+        "skill-inference",
+        "skill-cost",
+        "skill-finetuning",
+        "skill-production-ai",
+        "skill-adr"
+      ],
+      "limitations": "Purposive sample, not representative. Cloud category has only one posting; senior category includes one expired Kenyan stretch architecture role. Categories are disjoint; alternatives count as mentions, not mandatory mastery of every option."
+    },
+    {
+      "track_id": "track-agent",
+      "sample_size": 3,
+      "job_ids": [
+        "job-003",
+        "job-004",
+        "job-005"
+      ],
+      "frequency_rows": [
+        {
+          "skill_id": "skill-agents",
+          "mention_count": 3,
+          "required_count": 3,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-api",
+          "mention_count": 2,
+          "required_count": 2,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-evaluation",
+          "mention_count": 2,
+          "required_count": 1,
+          "preferred_only_count": 1,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-mcp",
+          "mention_count": 2,
+          "required_count": 1,
+          "preferred_only_count": 1,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-mcp-server",
+          "mention_count": 2,
+          "required_count": 1,
+          "preferred_only_count": 1,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-observability",
+          "mention_count": 2,
+          "required_count": 2,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-orchestration",
+          "mention_count": 2,
+          "required_count": 1,
+          "preferred_only_count": 1,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-python",
+          "mention_count": 2,
+          "required_count": 2,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-rag",
+          "mention_count": 2,
+          "required_count": 2,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-tools",
+          "mention_count": 2,
+          "required_count": 1,
+          "preferred_only_count": 1,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-typescript",
+          "mention_count": 2,
+          "required_count": 2,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-vector",
+          "mention_count": 2,
+          "required_count": 1,
+          "preferred_only_count": 1,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-ai-security",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-approval",
+          "mention_count": 1,
+          "required_count": 0,
+          "preferred_only_count": 1,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-architecture",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-aws",
+          "mention_count": 1,
+          "required_count": 0,
+          "preferred_only_count": 1,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-cicd",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-database",
+          "mention_count": 1,
+          "required_count": 0,
+          "preferred_only_count": 1,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-embeddings",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-identity",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-leadership",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-llm",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-platform",
+          "mention_count": 1,
+          "required_count": 0,
+          "preferred_only_count": 1,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-reliability",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-security",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 3
+        },
+        {
+          "skill_id": "skill-structured",
+          "mention_count": 1,
+          "required_count": 1,
+          "preferred_only_count": 0,
+          "denominator": 3
+        }
+      ],
+      "core_skills_in_sample": [
+        "skill-agents",
+        "skill-api",
+        "skill-evaluation",
+        "skill-mcp",
+        "skill-mcp-server",
+        "skill-observability",
+        "skill-orchestration",
+        "skill-python",
+        "skill-rag",
+        "skill-tools",
+        "skill-typescript",
+        "skill-vector"
+      ],
+      "senior_expectations": "Architecture ownership, failure analysis, security and defensible trade-offs; see individual posting scope rather than treating title/years alone as seniority.",
+      "emerging_skills": [
+        "skill-agents",
+        "skill-evaluation",
+        "skill-mcp",
+        "skill-ai-security",
+        "skill-structured"
+      ],
+      "emerging_evidence_status": "Contemporary observed requirements, not statistically demonstrated growth.",
+      "niche_skills": [
+        "skill-ai-security",
+        "skill-approval",
+        "skill-architecture",
+        "skill-aws",
+        "skill-cicd",
+        "skill-database",
+        "skill-embeddings",
+        "skill-identity",
+        "skill-leadership",
+        "skill-llm",
+        "skill-platform",
+        "skill-reliability",
+        "skill-security",
+        "skill-structured"
+      ],
+      "niche_interpretation": "Single occurrence in this small sample does not establish market niche status; domain-specific SDK/payment/media expertise separately noted in posting summaries.",
+      "declining_skills": [],
+      "decline_status": "Not measurable from a one-day cross-sectional sample. Jenkins and established CI tools remain relevant where requested; no invented decline trend.",
+      "overlapping_skill_ids": [
+        "skill-agents",
+        "skill-tools",
+        "skill-mcp-auth",
+        "skill-orchestration",
+        "skill-evaluation",
+        "skill-ai-security",
+        "skill-observability",
+        "skill-adr"
+      ],
+      "leverage_skill_ids": [
+        "skill-observability"
+      ],
+      "new_practice_skill_ids": [
+        "skill-agents",
+        "skill-tools",
+        "skill-mcp",
+        "skill-mcp-server",
+        "skill-mcp-client",
+        "skill-mcp-resources",
+        "skill-mcp-transport",
+        "skill-mcp-auth",
+        "skill-integration",
+        "skill-state",
+        "skill-memory",
+        "skill-planning",
+        "skill-approval",
+        "skill-orchestration",
+        "skill-multi-agent",
+        "skill-evaluation",
+        "skill-ai-security",
+        "skill-agent-deployment",
+        "skill-adr"
+      ],
+      "limitations": "Purposive sample, not representative. Cloud category has only one posting; senior category includes one expired Kenyan stretch architecture role. Categories are disjoint; alternatives count as mentions, not mandatory mastery of every option."
+    }
+  ],
+  "methodology": {
+    "sample_size": 12,
+    "collection_start": "2026-10-31",
+    "collection_end": "2026-10-31",
+    "posting_date_range": "Most publication dates unavailable; one observed posting is October 26, 2026. Live descriptions are contemporary observations, not verified recently posted vacancies.",
+    "sampling": "Purposive public-source discovery across six role categories; 11 employer-hosted ATS descriptions and one Kenyan secondary-board expired description.",
+    "coding": "Manual required/preferred coding; aliases normalized to capabilities; each skill counted once per posting; required alternatives retained as mentions; preferred-only is mention minus required.",
+    "denominator_policy": "Overall denominator is all 12 postings; track denominator is disjoint primary categories. Skill absence means not observed, not not-valued.",
+    "geographic_limits": "Only one Kenyan posting, no representative development-organization sample and several country-restricted remote roles.",
+    "trend_limits": "No salary, hiring-volume, growth, decline or role-demand ranking statistics inferred.",
+    "refresh_policy": "Re-check candidate vacancy on application day; refresh sampled roles within 14 days and version snapshots rather than silently replacing history."
+  }
+}

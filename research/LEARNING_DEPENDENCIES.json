@@ -1,0 +1,3220 @@
+{
+  "$schema": "schemas/package.schema.json",
+  "dataset_type": "dependencies",
+  "research_version": "1.0.0",
+  "research_date": "2026-10-31",
+  "skill_dependencies": [
+    {
+      "skill_id": "skill-transactions",
+      "requires_skill_ids": [
+        "skill-database"
+      ]
+    },
+    {
+      "skill_id": "skill-cache",
+      "requires_skill_ids": [
+        "skill-api",
+        "skill-database"
+      ]
+    },
+    {
+      "skill_id": "skill-idempotency",
+      "requires_skill_ids": [
+        "skill-messaging",
+        "skill-transactions"
+      ]
+    },
+    {
+      "skill_id": "skill-scalability",
+      "requires_skill_ids": [
+        "skill-database",
+        "skill-distributed"
+      ]
+    },
+    {
+      "skill_id": "skill-reranking",
+      "requires_skill_ids": [
+        "skill-rag",
+        "skill-embeddings"
+      ]
+    },
+    {
+      "skill_id": "skill-rag",
+      "requires_skill_ids": [
+        "skill-embeddings",
+        "skill-vector"
+      ]
+    },
+    {
+      "skill_id": "skill-vector",
+      "requires_skill_ids": [
+        "skill-embeddings"
+      ]
+    },
+    {
+      "skill_id": "skill-finetuning",
+      "requires_skill_ids": [
+        "skill-ml",
+        "skill-evaluation"
+      ]
+    },
+    {
+      "skill_id": "skill-mcp-client",
+      "requires_skill_ids": [
+        "skill-mcp",
+        "skill-mcp-server"
+      ]
+    },
+    {
+      "skill_id": "skill-mcp-server",
+      "requires_skill_ids": [
+        "skill-mcp",
+        "skill-tools"
+      ]
+    },
+    {
+      "skill_id": "skill-mcp-auth",
+      "requires_skill_ids": [
+        "skill-mcp-transport"
+      ]
+    },
+    {
+      "skill_id": "skill-mcp-transport",
+      "requires_skill_ids": [
+        "skill-mcp"
+      ]
+    },
+    {
+      "skill_id": "skill-approval",
+      "requires_skill_ids": [
+        "skill-state",
+        "skill-planning"
+      ]
+    },
+    {
+      "skill_id": "skill-multi-agent",
+      "requires_skill_ids": [
+        "skill-orchestration",
+        "skill-planning"
+      ]
+    },
+    {
+      "skill_id": "skill-helm",
+      "requires_skill_ids": [
+        "skill-kubernetes"
+      ]
+    },
+    {
+      "skill_id": "skill-gitops",
+      "requires_skill_ids": [
+        "skill-kubernetes",
+        "skill-cicd"
+      ]
+    },
+    {
+      "skill_id": "skill-cluster-recovery",
+      "requires_skill_ids": [
+        "skill-kubernetes"
+      ]
+    }
+  ],
+  "lesson_dependencies": [
+    {
+      "lesson_id": "lesson-swe-14-01",
+      "requires_lesson_ids": []
+    },
+    {
+      "lesson_id": "lesson-swe-14-02",
+      "requires_lesson_ids": [
+        "lesson-swe-14-01"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-14-03",
+      "requires_lesson_ids": [
+        "lesson-swe-14-02"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-14-04",
+      "requires_lesson_ids": [
+        "lesson-swe-14-03"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-14-05",
+      "requires_lesson_ids": [
+        "lesson-swe-14-04"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-14-06",
+      "requires_lesson_ids": [
+        "lesson-swe-14-05"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-14-07",
+      "requires_lesson_ids": [
+        "lesson-swe-14-06"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-14-08",
+      "requires_lesson_ids": [
+        "lesson-swe-14-07"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-14-09",
+      "requires_lesson_ids": [
+        "lesson-swe-14-08"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-14-10",
+      "requires_lesson_ids": [
+        "lesson-swe-14-09"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-14-11",
+      "requires_lesson_ids": [
+        "lesson-swe-14-10"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-14-12",
+      "requires_lesson_ids": [
+        "lesson-swe-14-11"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-14-13",
+      "requires_lesson_ids": [
+        "lesson-swe-14-12"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-14-14",
+      "requires_lesson_ids": [
+        "lesson-swe-14-13"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-14-01",
+      "requires_lesson_ids": []
+    },
+    {
+      "lesson_id": "lesson-cloud-14-02",
+      "requires_lesson_ids": [
+        "lesson-cloud-14-01"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-14-03",
+      "requires_lesson_ids": [
+        "lesson-cloud-14-02"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-14-04",
+      "requires_lesson_ids": [
+        "lesson-cloud-14-03"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-14-05",
+      "requires_lesson_ids": [
+        "lesson-cloud-14-04"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-14-06",
+      "requires_lesson_ids": [
+        "lesson-cloud-14-05"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-14-07",
+      "requires_lesson_ids": [
+        "lesson-cloud-14-06"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-14-08",
+      "requires_lesson_ids": [
+        "lesson-cloud-14-07"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-14-09",
+      "requires_lesson_ids": [
+        "lesson-cloud-14-08"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-14-10",
+      "requires_lesson_ids": [
+        "lesson-cloud-14-09"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-14-11",
+      "requires_lesson_ids": [
+        "lesson-cloud-14-10"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-14-12",
+      "requires_lesson_ids": [
+        "lesson-cloud-14-11"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-14-13",
+      "requires_lesson_ids": [
+        "lesson-cloud-14-12"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-14-14",
+      "requires_lesson_ids": [
+        "lesson-cloud-14-13"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-14-01",
+      "requires_lesson_ids": []
+    },
+    {
+      "lesson_id": "lesson-devops-14-02",
+      "requires_lesson_ids": [
+        "lesson-devops-14-01"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-14-03",
+      "requires_lesson_ids": [
+        "lesson-devops-14-02"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-14-04",
+      "requires_lesson_ids": [
+        "lesson-devops-14-03"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-14-05",
+      "requires_lesson_ids": [
+        "lesson-devops-14-04"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-14-06",
+      "requires_lesson_ids": [
+        "lesson-devops-14-05"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-14-07",
+      "requires_lesson_ids": [
+        "lesson-devops-14-06"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-14-08",
+      "requires_lesson_ids": [
+        "lesson-devops-14-07"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-14-09",
+      "requires_lesson_ids": [
+        "lesson-devops-14-08"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-14-10",
+      "requires_lesson_ids": [
+        "lesson-devops-14-09"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-14-11",
+      "requires_lesson_ids": [
+        "lesson-devops-14-10"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-14-12",
+      "requires_lesson_ids": [
+        "lesson-devops-14-11"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-14-13",
+      "requires_lesson_ids": [
+        "lesson-devops-14-12"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-14-14",
+      "requires_lesson_ids": [
+        "lesson-devops-14-13"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-14-01",
+      "requires_lesson_ids": []
+    },
+    {
+      "lesson_id": "lesson-ai-14-02",
+      "requires_lesson_ids": [
+        "lesson-ai-14-01"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-14-03",
+      "requires_lesson_ids": [
+        "lesson-ai-14-02"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-14-04",
+      "requires_lesson_ids": [
+        "lesson-ai-14-03"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-14-05",
+      "requires_lesson_ids": [
+        "lesson-ai-14-04"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-14-06",
+      "requires_lesson_ids": [
+        "lesson-ai-14-05"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-14-07",
+      "requires_lesson_ids": [
+        "lesson-ai-14-06"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-14-08",
+      "requires_lesson_ids": [
+        "lesson-ai-14-07"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-14-09",
+      "requires_lesson_ids": [
+        "lesson-ai-14-08"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-14-10",
+      "requires_lesson_ids": [
+        "lesson-ai-14-09"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-14-11",
+      "requires_lesson_ids": [
+        "lesson-ai-14-10"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-14-12",
+      "requires_lesson_ids": [
+        "lesson-ai-14-11"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-14-13",
+      "requires_lesson_ids": [
+        "lesson-ai-14-12"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-14-14",
+      "requires_lesson_ids": [
+        "lesson-ai-14-13"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-14-01",
+      "requires_lesson_ids": []
+    },
+    {
+      "lesson_id": "lesson-agent-14-02",
+      "requires_lesson_ids": [
+        "lesson-agent-14-01"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-14-03",
+      "requires_lesson_ids": [
+        "lesson-agent-14-02"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-14-04",
+      "requires_lesson_ids": [
+        "lesson-agent-14-03"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-14-05",
+      "requires_lesson_ids": [
+        "lesson-agent-14-04"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-14-06",
+      "requires_lesson_ids": [
+        "lesson-agent-14-05"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-14-07",
+      "requires_lesson_ids": [
+        "lesson-agent-14-06"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-14-08",
+      "requires_lesson_ids": [
+        "lesson-agent-14-07"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-14-09",
+      "requires_lesson_ids": [
+        "lesson-agent-14-08"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-14-10",
+      "requires_lesson_ids": [
+        "lesson-agent-14-09"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-14-11",
+      "requires_lesson_ids": [
+        "lesson-agent-14-10"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-14-12",
+      "requires_lesson_ids": [
+        "lesson-agent-14-11"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-14-13",
+      "requires_lesson_ids": [
+        "lesson-agent-14-12"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-14-14",
+      "requires_lesson_ids": [
+        "lesson-agent-14-13"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-30-01",
+      "requires_lesson_ids": []
+    },
+    {
+      "lesson_id": "lesson-swe-30-02",
+      "requires_lesson_ids": [
+        "lesson-swe-30-01"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-30-03",
+      "requires_lesson_ids": [
+        "lesson-swe-30-02"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-30-04",
+      "requires_lesson_ids": [
+        "lesson-swe-30-03"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-30-05",
+      "requires_lesson_ids": [
+        "lesson-swe-30-04"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-30-06",
+      "requires_lesson_ids": [
+        "lesson-swe-30-05"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-30-07",
+      "requires_lesson_ids": [
+        "lesson-swe-30-06"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-30-08",
+      "requires_lesson_ids": [
+        "lesson-swe-30-07"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-30-09",
+      "requires_lesson_ids": [
+        "lesson-swe-30-08"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-30-10",
+      "requires_lesson_ids": [
+        "lesson-swe-30-09"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-30-11",
+      "requires_lesson_ids": [
+        "lesson-swe-30-10"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-30-12",
+      "requires_lesson_ids": [
+        "lesson-swe-30-11"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-30-13",
+      "requires_lesson_ids": [
+        "lesson-swe-30-12"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-30-14",
+      "requires_lesson_ids": [
+        "lesson-swe-30-13"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-30-15",
+      "requires_lesson_ids": [
+        "lesson-swe-30-14"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-30-16",
+      "requires_lesson_ids": [
+        "lesson-swe-30-15"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-30-17",
+      "requires_lesson_ids": [
+        "lesson-swe-30-16"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-30-18",
+      "requires_lesson_ids": [
+        "lesson-swe-30-17"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-30-19",
+      "requires_lesson_ids": [
+        "lesson-swe-30-18"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-30-20",
+      "requires_lesson_ids": [
+        "lesson-swe-30-19"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-30-21",
+      "requires_lesson_ids": [
+        "lesson-swe-30-20"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-30-22",
+      "requires_lesson_ids": [
+        "lesson-swe-30-21"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-30-23",
+      "requires_lesson_ids": [
+        "lesson-swe-30-22"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-30-24",
+      "requires_lesson_ids": [
+        "lesson-swe-30-23"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-30-25",
+      "requires_lesson_ids": [
+        "lesson-swe-30-24"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-30-26",
+      "requires_lesson_ids": [
+        "lesson-swe-30-25"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-30-27",
+      "requires_lesson_ids": [
+        "lesson-swe-30-26"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-30-28",
+      "requires_lesson_ids": [
+        "lesson-swe-30-27"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-30-29",
+      "requires_lesson_ids": [
+        "lesson-swe-30-28"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-30-30",
+      "requires_lesson_ids": [
+        "lesson-swe-30-29"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-30-01",
+      "requires_lesson_ids": []
+    },
+    {
+      "lesson_id": "lesson-cloud-30-02",
+      "requires_lesson_ids": [
+        "lesson-cloud-30-01"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-30-03",
+      "requires_lesson_ids": [
+        "lesson-cloud-30-02"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-30-04",
+      "requires_lesson_ids": [
+        "lesson-cloud-30-03"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-30-05",
+      "requires_lesson_ids": [
+        "lesson-cloud-30-04"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-30-06",
+      "requires_lesson_ids": [
+        "lesson-cloud-30-05"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-30-07",
+      "requires_lesson_ids": [
+        "lesson-cloud-30-06"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-30-08",
+      "requires_lesson_ids": [
+        "lesson-cloud-30-07"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-30-09",
+      "requires_lesson_ids": [
+        "lesson-cloud-30-08"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-30-10",
+      "requires_lesson_ids": [
+        "lesson-cloud-30-09"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-30-11",
+      "requires_lesson_ids": [
+        "lesson-cloud-30-10"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-30-12",
+      "requires_lesson_ids": [
+        "lesson-cloud-30-11"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-30-13",
+      "requires_lesson_ids": [
+        "lesson-cloud-30-12"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-30-14",
+      "requires_lesson_ids": [
+        "lesson-cloud-30-13"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-30-15",
+      "requires_lesson_ids": [
+        "lesson-cloud-30-14"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-30-16",
+      "requires_lesson_ids": [
+        "lesson-cloud-30-15"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-30-17",
+      "requires_lesson_ids": [
+        "lesson-cloud-30-16"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-30-18",
+      "requires_lesson_ids": [
+        "lesson-cloud-30-17"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-30-19",
+      "requires_lesson_ids": [
+        "lesson-cloud-30-18"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-30-20",
+      "requires_lesson_ids": [
+        "lesson-cloud-30-19"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-30-21",
+      "requires_lesson_ids": [
+        "lesson-cloud-30-20"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-30-22",
+      "requires_lesson_ids": [
+        "lesson-cloud-30-21"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-30-23",
+      "requires_lesson_ids": [
+        "lesson-cloud-30-22"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-30-24",
+      "requires_lesson_ids": [
+        "lesson-cloud-30-23"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-30-25",
+      "requires_lesson_ids": [
+        "lesson-cloud-30-24"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-30-26",
+      "requires_lesson_ids": [
+        "lesson-cloud-30-25"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-30-27",
+      "requires_lesson_ids": [
+        "lesson-cloud-30-26"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-30-28",
+      "requires_lesson_ids": [
+        "lesson-cloud-30-27"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-30-29",
+      "requires_lesson_ids": [
+        "lesson-cloud-30-28"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-30-30",
+      "requires_lesson_ids": [
+        "lesson-cloud-30-29"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-30-01",
+      "requires_lesson_ids": []
+    },
+    {
+      "lesson_id": "lesson-devops-30-02",
+      "requires_lesson_ids": [
+        "lesson-devops-30-01"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-30-03",
+      "requires_lesson_ids": [
+        "lesson-devops-30-02"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-30-04",
+      "requires_lesson_ids": [
+        "lesson-devops-30-03"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-30-05",
+      "requires_lesson_ids": [
+        "lesson-devops-30-04"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-30-06",
+      "requires_lesson_ids": [
+        "lesson-devops-30-05"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-30-07",
+      "requires_lesson_ids": [
+        "lesson-devops-30-06"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-30-08",
+      "requires_lesson_ids": [
+        "lesson-devops-30-07"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-30-09",
+      "requires_lesson_ids": [
+        "lesson-devops-30-08"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-30-10",
+      "requires_lesson_ids": [
+        "lesson-devops-30-09"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-30-11",
+      "requires_lesson_ids": [
+        "lesson-devops-30-10"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-30-12",
+      "requires_lesson_ids": [
+        "lesson-devops-30-11"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-30-13",
+      "requires_lesson_ids": [
+        "lesson-devops-30-12"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-30-14",
+      "requires_lesson_ids": [
+        "lesson-devops-30-13"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-30-15",
+      "requires_lesson_ids": [
+        "lesson-devops-30-14"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-30-16",
+      "requires_lesson_ids": [
+        "lesson-devops-30-15"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-30-17",
+      "requires_lesson_ids": [
+        "lesson-devops-30-16"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-30-18",
+      "requires_lesson_ids": [
+        "lesson-devops-30-17"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-30-19",
+      "requires_lesson_ids": [
+        "lesson-devops-30-18"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-30-20",
+      "requires_lesson_ids": [
+        "lesson-devops-30-19"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-30-21",
+      "requires_lesson_ids": [
+        "lesson-devops-30-20"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-30-22",
+      "requires_lesson_ids": [
+        "lesson-devops-30-21"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-30-23",
+      "requires_lesson_ids": [
+        "lesson-devops-30-22"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-30-24",
+      "requires_lesson_ids": [
+        "lesson-devops-30-23"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-30-25",
+      "requires_lesson_ids": [
+        "lesson-devops-30-24"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-30-26",
+      "requires_lesson_ids": [
+        "lesson-devops-30-25"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-30-27",
+      "requires_lesson_ids": [
+        "lesson-devops-30-26"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-30-28",
+      "requires_lesson_ids": [
+        "lesson-devops-30-27"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-30-29",
+      "requires_lesson_ids": [
+        "lesson-devops-30-28"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-30-30",
+      "requires_lesson_ids": [
+        "lesson-devops-30-29"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-30-01",
+      "requires_lesson_ids": []
+    },
+    {
+      "lesson_id": "lesson-ai-30-02",
+      "requires_lesson_ids": [
+        "lesson-ai-30-01"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-30-03",
+      "requires_lesson_ids": [
+        "lesson-ai-30-02"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-30-04",
+      "requires_lesson_ids": [
+        "lesson-ai-30-03"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-30-05",
+      "requires_lesson_ids": [
+        "lesson-ai-30-04"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-30-06",
+      "requires_lesson_ids": [
+        "lesson-ai-30-05"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-30-07",
+      "requires_lesson_ids": [
+        "lesson-ai-30-06"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-30-08",
+      "requires_lesson_ids": [
+        "lesson-ai-30-07"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-30-09",
+      "requires_lesson_ids": [
+        "lesson-ai-30-08"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-30-10",
+      "requires_lesson_ids": [
+        "lesson-ai-30-09"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-30-11",
+      "requires_lesson_ids": [
+        "lesson-ai-30-10"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-30-12",
+      "requires_lesson_ids": [
+        "lesson-ai-30-11"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-30-13",
+      "requires_lesson_ids": [
+        "lesson-ai-30-12"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-30-14",
+      "requires_lesson_ids": [
+        "lesson-ai-30-13"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-30-15",
+      "requires_lesson_ids": [
+        "lesson-ai-30-14"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-30-16",
+      "requires_lesson_ids": [
+        "lesson-ai-30-15"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-30-17",
+      "requires_lesson_ids": [
+        "lesson-ai-30-16"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-30-18",
+      "requires_lesson_ids": [
+        "lesson-ai-30-17"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-30-19",
+      "requires_lesson_ids": [
+        "lesson-ai-30-18"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-30-20",
+      "requires_lesson_ids": [
+        "lesson-ai-30-19"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-30-21",
+      "requires_lesson_ids": [
+        "lesson-ai-30-20"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-30-22",
+      "requires_lesson_ids": [
+        "lesson-ai-30-21"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-30-23",
+      "requires_lesson_ids": [
+        "lesson-ai-30-22"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-30-24",
+      "requires_lesson_ids": [
+        "lesson-ai-30-23"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-30-25",
+      "requires_lesson_ids": [
+        "lesson-ai-30-24"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-30-26",
+      "requires_lesson_ids": [
+        "lesson-ai-30-25"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-30-27",
+      "requires_lesson_ids": [
+        "lesson-ai-30-26"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-30-28",
+      "requires_lesson_ids": [
+        "lesson-ai-30-27"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-30-29",
+      "requires_lesson_ids": [
+        "lesson-ai-30-28"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-30-30",
+      "requires_lesson_ids": [
+        "lesson-ai-30-29"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-30-01",
+      "requires_lesson_ids": []
+    },
+    {
+      "lesson_id": "lesson-agent-30-02",
+      "requires_lesson_ids": [
+        "lesson-agent-30-01"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-30-03",
+      "requires_lesson_ids": [
+        "lesson-agent-30-02"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-30-04",
+      "requires_lesson_ids": [
+        "lesson-agent-30-03"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-30-05",
+      "requires_lesson_ids": [
+        "lesson-agent-30-04"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-30-06",
+      "requires_lesson_ids": [
+        "lesson-agent-30-05"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-30-07",
+      "requires_lesson_ids": [
+        "lesson-agent-30-06"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-30-08",
+      "requires_lesson_ids": [
+        "lesson-agent-30-07"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-30-09",
+      "requires_lesson_ids": [
+        "lesson-agent-30-08"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-30-10",
+      "requires_lesson_ids": [
+        "lesson-agent-30-09"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-30-11",
+      "requires_lesson_ids": [
+        "lesson-agent-30-10"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-30-12",
+      "requires_lesson_ids": [
+        "lesson-agent-30-11"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-30-13",
+      "requires_lesson_ids": [
+        "lesson-agent-30-12"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-30-14",
+      "requires_lesson_ids": [
+        "lesson-agent-30-13"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-30-15",
+      "requires_lesson_ids": [
+        "lesson-agent-30-14"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-30-16",
+      "requires_lesson_ids": [
+        "lesson-agent-30-15"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-30-17",
+      "requires_lesson_ids": [
+        "lesson-agent-30-16"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-30-18",
+      "requires_lesson_ids": [
+        "lesson-agent-30-17"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-30-19",
+      "requires_lesson_ids": [
+        "lesson-agent-30-18"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-30-20",
+      "requires_lesson_ids": [
+        "lesson-agent-30-19"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-30-21",
+      "requires_lesson_ids": [
+        "lesson-agent-30-20"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-30-22",
+      "requires_lesson_ids": [
+        "lesson-agent-30-21"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-30-23",
+      "requires_lesson_ids": [
+        "lesson-agent-30-22"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-30-24",
+      "requires_lesson_ids": [
+        "lesson-agent-30-23"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-30-25",
+      "requires_lesson_ids": [
+        "lesson-agent-30-24"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-30-26",
+      "requires_lesson_ids": [
+        "lesson-agent-30-25"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-30-27",
+      "requires_lesson_ids": [
+        "lesson-agent-30-26"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-30-28",
+      "requires_lesson_ids": [
+        "lesson-agent-30-27"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-30-29",
+      "requires_lesson_ids": [
+        "lesson-agent-30-28"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-30-30",
+      "requires_lesson_ids": [
+        "lesson-agent-30-29"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-01",
+      "requires_lesson_ids": []
+    },
+    {
+      "lesson_id": "lesson-swe-60-02",
+      "requires_lesson_ids": [
+        "lesson-swe-60-01"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-03",
+      "requires_lesson_ids": [
+        "lesson-swe-60-02"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-04",
+      "requires_lesson_ids": [
+        "lesson-swe-60-03"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-05",
+      "requires_lesson_ids": [
+        "lesson-swe-60-04"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-06",
+      "requires_lesson_ids": [
+        "lesson-swe-60-05"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-07",
+      "requires_lesson_ids": [
+        "lesson-swe-60-06"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-08",
+      "requires_lesson_ids": [
+        "lesson-swe-60-07"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-09",
+      "requires_lesson_ids": [
+        "lesson-swe-60-08"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-10",
+      "requires_lesson_ids": [
+        "lesson-swe-60-09"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-11",
+      "requires_lesson_ids": [
+        "lesson-swe-60-10"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-12",
+      "requires_lesson_ids": [
+        "lesson-swe-60-11"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-13",
+      "requires_lesson_ids": [
+        "lesson-swe-60-12"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-14",
+      "requires_lesson_ids": [
+        "lesson-swe-60-13"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-15",
+      "requires_lesson_ids": [
+        "lesson-swe-60-14"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-16",
+      "requires_lesson_ids": [
+        "lesson-swe-60-15"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-17",
+      "requires_lesson_ids": [
+        "lesson-swe-60-16"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-18",
+      "requires_lesson_ids": [
+        "lesson-swe-60-17"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-19",
+      "requires_lesson_ids": [
+        "lesson-swe-60-18"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-20",
+      "requires_lesson_ids": [
+        "lesson-swe-60-19"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-21",
+      "requires_lesson_ids": [
+        "lesson-swe-60-20"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-22",
+      "requires_lesson_ids": [
+        "lesson-swe-60-21"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-23",
+      "requires_lesson_ids": [
+        "lesson-swe-60-22"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-24",
+      "requires_lesson_ids": [
+        "lesson-swe-60-23"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-25",
+      "requires_lesson_ids": [
+        "lesson-swe-60-24"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-26",
+      "requires_lesson_ids": [
+        "lesson-swe-60-25"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-27",
+      "requires_lesson_ids": [
+        "lesson-swe-60-26"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-28",
+      "requires_lesson_ids": [
+        "lesson-swe-60-27"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-29",
+      "requires_lesson_ids": [
+        "lesson-swe-60-28"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-30",
+      "requires_lesson_ids": [
+        "lesson-swe-60-29"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-31",
+      "requires_lesson_ids": [
+        "lesson-swe-60-30"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-32",
+      "requires_lesson_ids": [
+        "lesson-swe-60-31"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-33",
+      "requires_lesson_ids": [
+        "lesson-swe-60-32"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-34",
+      "requires_lesson_ids": [
+        "lesson-swe-60-33"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-35",
+      "requires_lesson_ids": [
+        "lesson-swe-60-34"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-36",
+      "requires_lesson_ids": [
+        "lesson-swe-60-35"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-37",
+      "requires_lesson_ids": [
+        "lesson-swe-60-36"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-38",
+      "requires_lesson_ids": [
+        "lesson-swe-60-37"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-39",
+      "requires_lesson_ids": [
+        "lesson-swe-60-38"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-40",
+      "requires_lesson_ids": [
+        "lesson-swe-60-39"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-41",
+      "requires_lesson_ids": [
+        "lesson-swe-60-40"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-42",
+      "requires_lesson_ids": [
+        "lesson-swe-60-41"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-43",
+      "requires_lesson_ids": [
+        "lesson-swe-60-42"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-44",
+      "requires_lesson_ids": [
+        "lesson-swe-60-43"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-45",
+      "requires_lesson_ids": [
+        "lesson-swe-60-44"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-46",
+      "requires_lesson_ids": [
+        "lesson-swe-60-45"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-47",
+      "requires_lesson_ids": [
+        "lesson-swe-60-46"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-48",
+      "requires_lesson_ids": [
+        "lesson-swe-60-47"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-49",
+      "requires_lesson_ids": [
+        "lesson-swe-60-48"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-50",
+      "requires_lesson_ids": [
+        "lesson-swe-60-49"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-51",
+      "requires_lesson_ids": [
+        "lesson-swe-60-50"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-52",
+      "requires_lesson_ids": [
+        "lesson-swe-60-51"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-53",
+      "requires_lesson_ids": [
+        "lesson-swe-60-52"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-54",
+      "requires_lesson_ids": [
+        "lesson-swe-60-53"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-55",
+      "requires_lesson_ids": [
+        "lesson-swe-60-54"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-56",
+      "requires_lesson_ids": [
+        "lesson-swe-60-55"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-57",
+      "requires_lesson_ids": [
+        "lesson-swe-60-56"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-58",
+      "requires_lesson_ids": [
+        "lesson-swe-60-57"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-59",
+      "requires_lesson_ids": [
+        "lesson-swe-60-58"
+      ]
+    },
+    {
+      "lesson_id": "lesson-swe-60-60",
+      "requires_lesson_ids": [
+        "lesson-swe-60-59"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-01",
+      "requires_lesson_ids": []
+    },
+    {
+      "lesson_id": "lesson-cloud-60-02",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-01"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-03",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-02"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-04",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-03"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-05",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-04"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-06",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-05"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-07",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-06"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-08",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-07"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-09",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-08"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-10",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-09"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-11",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-10"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-12",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-11"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-13",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-12"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-14",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-13"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-15",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-14"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-16",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-15"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-17",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-16"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-18",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-17"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-19",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-18"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-20",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-19"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-21",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-20"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-22",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-21"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-23",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-22"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-24",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-23"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-25",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-24"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-26",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-25"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-27",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-26"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-28",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-27"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-29",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-28"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-30",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-29"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-31",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-30"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-32",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-31"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-33",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-32"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-34",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-33"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-35",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-34"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-36",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-35"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-37",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-36"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-38",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-37"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-39",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-38"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-40",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-39"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-41",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-40"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-42",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-41"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-43",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-42"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-44",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-43"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-45",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-44"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-46",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-45"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-47",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-46"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-48",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-47"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-49",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-48"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-50",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-49"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-51",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-50"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-52",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-51"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-53",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-52"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-54",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-53"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-55",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-54"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-56",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-55"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-57",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-56"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-58",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-57"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-59",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-58"
+      ]
+    },
+    {
+      "lesson_id": "lesson-cloud-60-60",
+      "requires_lesson_ids": [
+        "lesson-cloud-60-59"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-01",
+      "requires_lesson_ids": []
+    },
+    {
+      "lesson_id": "lesson-devops-60-02",
+      "requires_lesson_ids": [
+        "lesson-devops-60-01"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-03",
+      "requires_lesson_ids": [
+        "lesson-devops-60-02"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-04",
+      "requires_lesson_ids": [
+        "lesson-devops-60-03"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-05",
+      "requires_lesson_ids": [
+        "lesson-devops-60-04"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-06",
+      "requires_lesson_ids": [
+        "lesson-devops-60-05"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-07",
+      "requires_lesson_ids": [
+        "lesson-devops-60-06"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-08",
+      "requires_lesson_ids": [
+        "lesson-devops-60-07"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-09",
+      "requires_lesson_ids": [
+        "lesson-devops-60-08"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-10",
+      "requires_lesson_ids": [
+        "lesson-devops-60-09"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-11",
+      "requires_lesson_ids": [
+        "lesson-devops-60-10"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-12",
+      "requires_lesson_ids": [
+        "lesson-devops-60-11"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-13",
+      "requires_lesson_ids": [
+        "lesson-devops-60-12"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-14",
+      "requires_lesson_ids": [
+        "lesson-devops-60-13"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-15",
+      "requires_lesson_ids": [
+        "lesson-devops-60-14"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-16",
+      "requires_lesson_ids": [
+        "lesson-devops-60-15"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-17",
+      "requires_lesson_ids": [
+        "lesson-devops-60-16"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-18",
+      "requires_lesson_ids": [
+        "lesson-devops-60-17"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-19",
+      "requires_lesson_ids": [
+        "lesson-devops-60-18"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-20",
+      "requires_lesson_ids": [
+        "lesson-devops-60-19"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-21",
+      "requires_lesson_ids": [
+        "lesson-devops-60-20"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-22",
+      "requires_lesson_ids": [
+        "lesson-devops-60-21"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-23",
+      "requires_lesson_ids": [
+        "lesson-devops-60-22"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-24",
+      "requires_lesson_ids": [
+        "lesson-devops-60-23"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-25",
+      "requires_lesson_ids": [
+        "lesson-devops-60-24"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-26",
+      "requires_lesson_ids": [
+        "lesson-devops-60-25"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-27",
+      "requires_lesson_ids": [
+        "lesson-devops-60-26"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-28",
+      "requires_lesson_ids": [
+        "lesson-devops-60-27"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-29",
+      "requires_lesson_ids": [
+        "lesson-devops-60-28"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-30",
+      "requires_lesson_ids": [
+        "lesson-devops-60-29"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-31",
+      "requires_lesson_ids": [
+        "lesson-devops-60-30"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-32",
+      "requires_lesson_ids": [
+        "lesson-devops-60-31"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-33",
+      "requires_lesson_ids": [
+        "lesson-devops-60-32"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-34",
+      "requires_lesson_ids": [
+        "lesson-devops-60-33"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-35",
+      "requires_lesson_ids": [
+        "lesson-devops-60-34"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-36",
+      "requires_lesson_ids": [
+        "lesson-devops-60-35"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-37",
+      "requires_lesson_ids": [
+        "lesson-devops-60-36"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-38",
+      "requires_lesson_ids": [
+        "lesson-devops-60-37"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-39",
+      "requires_lesson_ids": [
+        "lesson-devops-60-38"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-40",
+      "requires_lesson_ids": [
+        "lesson-devops-60-39"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-41",
+      "requires_lesson_ids": [
+        "lesson-devops-60-40"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-42",
+      "requires_lesson_ids": [
+        "lesson-devops-60-41"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-43",
+      "requires_lesson_ids": [
+        "lesson-devops-60-42"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-44",
+      "requires_lesson_ids": [
+        "lesson-devops-60-43"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-45",
+      "requires_lesson_ids": [
+        "lesson-devops-60-44"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-46",
+      "requires_lesson_ids": [
+        "lesson-devops-60-45"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-47",
+      "requires_lesson_ids": [
+        "lesson-devops-60-46"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-48",
+      "requires_lesson_ids": [
+        "lesson-devops-60-47"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-49",
+      "requires_lesson_ids": [
+        "lesson-devops-60-48"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-50",
+      "requires_lesson_ids": [
+        "lesson-devops-60-49"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-51",
+      "requires_lesson_ids": [
+        "lesson-devops-60-50"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-52",
+      "requires_lesson_ids": [
+        "lesson-devops-60-51"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-53",
+      "requires_lesson_ids": [
+        "lesson-devops-60-52"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-54",
+      "requires_lesson_ids": [
+        "lesson-devops-60-53"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-55",
+      "requires_lesson_ids": [
+        "lesson-devops-60-54"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-56",
+      "requires_lesson_ids": [
+        "lesson-devops-60-55"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-57",
+      "requires_lesson_ids": [
+        "lesson-devops-60-56"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-58",
+      "requires_lesson_ids": [
+        "lesson-devops-60-57"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-59",
+      "requires_lesson_ids": [
+        "lesson-devops-60-58"
+      ]
+    },
+    {
+      "lesson_id": "lesson-devops-60-60",
+      "requires_lesson_ids": [
+        "lesson-devops-60-59"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-01",
+      "requires_lesson_ids": []
+    },
+    {
+      "lesson_id": "lesson-ai-60-02",
+      "requires_lesson_ids": [
+        "lesson-ai-60-01"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-03",
+      "requires_lesson_ids": [
+        "lesson-ai-60-02"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-04",
+      "requires_lesson_ids": [
+        "lesson-ai-60-03"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-05",
+      "requires_lesson_ids": [
+        "lesson-ai-60-04"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-06",
+      "requires_lesson_ids": [
+        "lesson-ai-60-05"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-07",
+      "requires_lesson_ids": [
+        "lesson-ai-60-06"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-08",
+      "requires_lesson_ids": [
+        "lesson-ai-60-07"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-09",
+      "requires_lesson_ids": [
+        "lesson-ai-60-08"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-10",
+      "requires_lesson_ids": [
+        "lesson-ai-60-09"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-11",
+      "requires_lesson_ids": [
+        "lesson-ai-60-10"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-12",
+      "requires_lesson_ids": [
+        "lesson-ai-60-11"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-13",
+      "requires_lesson_ids": [
+        "lesson-ai-60-12"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-14",
+      "requires_lesson_ids": [
+        "lesson-ai-60-13"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-15",
+      "requires_lesson_ids": [
+        "lesson-ai-60-14"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-16",
+      "requires_lesson_ids": [
+        "lesson-ai-60-15"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-17",
+      "requires_lesson_ids": [
+        "lesson-ai-60-16"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-18",
+      "requires_lesson_ids": [
+        "lesson-ai-60-17"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-19",
+      "requires_lesson_ids": [
+        "lesson-ai-60-18"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-20",
+      "requires_lesson_ids": [
+        "lesson-ai-60-19"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-21",
+      "requires_lesson_ids": [
+        "lesson-ai-60-20"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-22",
+      "requires_lesson_ids": [
+        "lesson-ai-60-21"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-23",
+      "requires_lesson_ids": [
+        "lesson-ai-60-22"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-24",
+      "requires_lesson_ids": [
+        "lesson-ai-60-23"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-25",
+      "requires_lesson_ids": [
+        "lesson-ai-60-24"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-26",
+      "requires_lesson_ids": [
+        "lesson-ai-60-25"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-27",
+      "requires_lesson_ids": [
+        "lesson-ai-60-26"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-28",
+      "requires_lesson_ids": [
+        "lesson-ai-60-27"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-29",
+      "requires_lesson_ids": [
+        "lesson-ai-60-28"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-30",
+      "requires_lesson_ids": [
+        "lesson-ai-60-29"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-31",
+      "requires_lesson_ids": [
+        "lesson-ai-60-30"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-32",
+      "requires_lesson_ids": [
+        "lesson-ai-60-31"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-33",
+      "requires_lesson_ids": [
+        "lesson-ai-60-32"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-34",
+      "requires_lesson_ids": [
+        "lesson-ai-60-33"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-35",
+      "requires_lesson_ids": [
+        "lesson-ai-60-34"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-36",
+      "requires_lesson_ids": [
+        "lesson-ai-60-35"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-37",
+      "requires_lesson_ids": [
+        "lesson-ai-60-36"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-38",
+      "requires_lesson_ids": [
+        "lesson-ai-60-37"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-39",
+      "requires_lesson_ids": [
+        "lesson-ai-60-38"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-40",
+      "requires_lesson_ids": [
+        "lesson-ai-60-39"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-41",
+      "requires_lesson_ids": [
+        "lesson-ai-60-40"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-42",
+      "requires_lesson_ids": [
+        "lesson-ai-60-41"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-43",
+      "requires_lesson_ids": [
+        "lesson-ai-60-42"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-44",
+      "requires_lesson_ids": [
+        "lesson-ai-60-43"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-45",
+      "requires_lesson_ids": [
+        "lesson-ai-60-44"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-46",
+      "requires_lesson_ids": [
+        "lesson-ai-60-45"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-47",
+      "requires_lesson_ids": [
+        "lesson-ai-60-46"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-48",
+      "requires_lesson_ids": [
+        "lesson-ai-60-47"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-49",
+      "requires_lesson_ids": [
+        "lesson-ai-60-48"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-50",
+      "requires_lesson_ids": [
+        "lesson-ai-60-49"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-51",
+      "requires_lesson_ids": [
+        "lesson-ai-60-50"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-52",
+      "requires_lesson_ids": [
+        "lesson-ai-60-51"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-53",
+      "requires_lesson_ids": [
+        "lesson-ai-60-52"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-54",
+      "requires_lesson_ids": [
+        "lesson-ai-60-53"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-55",
+      "requires_lesson_ids": [
+        "lesson-ai-60-54"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-56",
+      "requires_lesson_ids": [
+        "lesson-ai-60-55"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-57",
+      "requires_lesson_ids": [
+        "lesson-ai-60-56"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-58",
+      "requires_lesson_ids": [
+        "lesson-ai-60-57"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-59",
+      "requires_lesson_ids": [
+        "lesson-ai-60-58"
+      ]
+    },
+    {
+      "lesson_id": "lesson-ai-60-60",
+      "requires_lesson_ids": [
+        "lesson-ai-60-59"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-01",
+      "requires_lesson_ids": []
+    },
+    {
+      "lesson_id": "lesson-agent-60-02",
+      "requires_lesson_ids": [
+        "lesson-agent-60-01"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-03",
+      "requires_lesson_ids": [
+        "lesson-agent-60-02"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-04",
+      "requires_lesson_ids": [
+        "lesson-agent-60-03"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-05",
+      "requires_lesson_ids": [
+        "lesson-agent-60-04"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-06",
+      "requires_lesson_ids": [
+        "lesson-agent-60-05"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-07",
+      "requires_lesson_ids": [
+        "lesson-agent-60-06"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-08",
+      "requires_lesson_ids": [
+        "lesson-agent-60-07"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-09",
+      "requires_lesson_ids": [
+        "lesson-agent-60-08"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-10",
+      "requires_lesson_ids": [
+        "lesson-agent-60-09"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-11",
+      "requires_lesson_ids": [
+        "lesson-agent-60-10"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-12",
+      "requires_lesson_ids": [
+        "lesson-agent-60-11"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-13",
+      "requires_lesson_ids": [
+        "lesson-agent-60-12"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-14",
+      "requires_lesson_ids": [
+        "lesson-agent-60-13"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-15",
+      "requires_lesson_ids": [
+        "lesson-agent-60-14"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-16",
+      "requires_lesson_ids": [
+        "lesson-agent-60-15"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-17",
+      "requires_lesson_ids": [
+        "lesson-agent-60-16"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-18",
+      "requires_lesson_ids": [
+        "lesson-agent-60-17"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-19",
+      "requires_lesson_ids": [
+        "lesson-agent-60-18"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-20",
+      "requires_lesson_ids": [
+        "lesson-agent-60-19"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-21",
+      "requires_lesson_ids": [
+        "lesson-agent-60-20"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-22",
+      "requires_lesson_ids": [
+        "lesson-agent-60-21"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-23",
+      "requires_lesson_ids": [
+        "lesson-agent-60-22"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-24",
+      "requires_lesson_ids": [
+        "lesson-agent-60-23"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-25",
+      "requires_lesson_ids": [
+        "lesson-agent-60-24"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-26",
+      "requires_lesson_ids": [
+        "lesson-agent-60-25"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-27",
+      "requires_lesson_ids": [
+        "lesson-agent-60-26"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-28",
+      "requires_lesson_ids": [
+        "lesson-agent-60-27"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-29",
+      "requires_lesson_ids": [
+        "lesson-agent-60-28"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-30",
+      "requires_lesson_ids": [
+        "lesson-agent-60-29"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-31",
+      "requires_lesson_ids": [
+        "lesson-agent-60-30"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-32",
+      "requires_lesson_ids": [
+        "lesson-agent-60-31"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-33",
+      "requires_lesson_ids": [
+        "lesson-agent-60-32"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-34",
+      "requires_lesson_ids": [
+        "lesson-agent-60-33"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-35",
+      "requires_lesson_ids": [
+        "lesson-agent-60-34"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-36",
+      "requires_lesson_ids": [
+        "lesson-agent-60-35"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-37",
+      "requires_lesson_ids": [
+        "lesson-agent-60-36"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-38",
+      "requires_lesson_ids": [
+        "lesson-agent-60-37"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-39",
+      "requires_lesson_ids": [
+        "lesson-agent-60-38"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-40",
+      "requires_lesson_ids": [
+        "lesson-agent-60-39"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-41",
+      "requires_lesson_ids": [
+        "lesson-agent-60-40"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-42",
+      "requires_lesson_ids": [
+        "lesson-agent-60-41"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-43",
+      "requires_lesson_ids": [
+        "lesson-agent-60-42"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-44",
+      "requires_lesson_ids": [
+        "lesson-agent-60-43"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-45",
+      "requires_lesson_ids": [
+        "lesson-agent-60-44"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-46",
+      "requires_lesson_ids": [
+        "lesson-agent-60-45"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-47",
+      "requires_lesson_ids": [
+        "lesson-agent-60-46"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-48",
+      "requires_lesson_ids": [
+        "lesson-agent-60-47"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-49",
+      "requires_lesson_ids": [
+        "lesson-agent-60-48"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-50",
+      "requires_lesson_ids": [
+        "lesson-agent-60-49"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-51",
+      "requires_lesson_ids": [
+        "lesson-agent-60-50"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-52",
+      "requires_lesson_ids": [
+        "lesson-agent-60-51"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-53",
+      "requires_lesson_ids": [
+        "lesson-agent-60-52"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-54",
+      "requires_lesson_ids": [
+        "lesson-agent-60-53"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-55",
+      "requires_lesson_ids": [
+        "lesson-agent-60-54"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-56",
+      "requires_lesson_ids": [
+        "lesson-agent-60-55"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-57",
+      "requires_lesson_ids": [
+        "lesson-agent-60-56"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-58",
+      "requires_lesson_ids": [
+        "lesson-agent-60-57"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-59",
+      "requires_lesson_ids": [
+        "lesson-agent-60-58"
+      ]
+    },
+    {
+      "lesson_id": "lesson-agent-60-60",
+      "requires_lesson_ids": [
+        "lesson-agent-60-59"
+      ]
+    }
+  ],
+  "sequencing_policy": "Within each selected plan, explicit prior-day artifacts are prerequisites; skill DAG expresses selected direct conceptual prerequisites, not all knowledge required for every career.",
+  "external_prerequisites": [
+    "Professional programming, Git, typed API and tests",
+    "Local container/Linux environment if required",
+    "Python bridge unit before AI data/model implementation"
+  ],
+  "reentry_policy": "On switching tracks or plans, assess canonical knowledge units and carry relevant artifacts; re-run context-specific access/failure tests."
+}

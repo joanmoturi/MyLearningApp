@@ -1,0 +1,1289 @@
+{
+  "$schema": "schemas/package.schema.json",
+  "dataset_type": "employers",
+  "research_version": "1.0.0",
+  "research_date": "2026-10-31",
+  "employers": [
+    {
+      "id": "employer-microsoft",
+      "name": "Microsoft",
+      "enabled": true,
+      "career_url": "https://careers.microsoft.com/",
+      "watch_keywords": [
+        "senior software",
+        "cloud",
+        "DevOps",
+        "platform",
+        "AI",
+        "MCP",
+        "agent"
+      ],
+      "target_locations": [
+        "Kenya",
+        "international",
+        "remote"
+      ],
+      "research_status": "portal_searched",
+      "portal_content_last_verified_at": null,
+      "job_ids": [],
+      "source_ids": [],
+      "observed_requirements": [],
+      "limitations": "No reviewed posting"
+    },
+    {
+      "id": "employer-google",
+      "name": "Google",
+      "enabled": true,
+      "career_url": "https://www.google.com/about/careers/applications/jobs/results/",
+      "watch_keywords": [
+        "senior software",
+        "cloud",
+        "DevOps",
+        "platform",
+        "AI",
+        "MCP",
+        "agent"
+      ],
+      "target_locations": [
+        "Kenya",
+        "international",
+        "remote"
+      ],
+      "research_status": "portal_searched",
+      "portal_content_last_verified_at": null,
+      "job_ids": [],
+      "source_ids": [],
+      "observed_requirements": [],
+      "limitations": "No reviewed posting"
+    },
+    {
+      "id": "employer-amazon",
+      "name": "Amazon",
+      "enabled": true,
+      "career_url": "https://www.amazon.jobs/en/",
+      "watch_keywords": [
+        "senior software",
+        "cloud",
+        "DevOps",
+        "platform",
+        "AI",
+        "MCP",
+        "agent"
+      ],
+      "target_locations": [
+        "Kenya",
+        "international",
+        "remote"
+      ],
+      "research_status": "portal_searched",
+      "portal_content_last_verified_at": null,
+      "job_ids": [],
+      "source_ids": [],
+      "observed_requirements": [],
+      "limitations": "No reviewed posting"
+    },
+    {
+      "id": "employer-meta",
+      "name": "Meta",
+      "enabled": true,
+      "career_url": "https://www.metacareers.com/jobs/",
+      "watch_keywords": [
+        "senior software",
+        "cloud",
+        "DevOps",
+        "platform",
+        "AI",
+        "MCP",
+        "agent"
+      ],
+      "target_locations": [
+        "Kenya",
+        "international",
+        "remote"
+      ],
+      "research_status": "watchlist_only",
+      "portal_content_last_verified_at": null,
+      "job_ids": [],
+      "source_ids": [],
+      "observed_requirements": [],
+      "limitations": "No reviewed posting"
+    },
+    {
+      "id": "employer-cloudflare",
+      "name": "Cloudflare",
+      "enabled": true,
+      "career_url": "https://www.cloudflare.com/careers/jobs/",
+      "watch_keywords": [
+        "senior software",
+        "cloud",
+        "DevOps",
+        "platform",
+        "AI",
+        "MCP",
+        "agent"
+      ],
+      "target_locations": [
+        "Kenya",
+        "international",
+        "remote"
+      ],
+      "research_status": "portal_reviewed",
+      "portal_content_last_verified_at": "2026-10-31",
+      "job_ids": [],
+      "source_ids": [],
+      "observed_requirements": [],
+      "limitations": "No reviewed posting"
+    },
+    {
+      "id": "employer-github",
+      "name": "GitHub",
+      "enabled": true,
+      "career_url": "https://www.github.careers/careers-home",
+      "watch_keywords": [
+        "senior software",
+        "cloud",
+        "DevOps",
+        "platform",
+        "AI",
+        "MCP",
+        "agent"
+      ],
+      "target_locations": [
+        "Kenya",
+        "international",
+        "remote"
+      ],
+      "research_status": "watchlist_only",
+      "portal_content_last_verified_at": null,
+      "job_ids": [],
+      "source_ids": [],
+      "observed_requirements": [],
+      "limitations": "No reviewed posting"
+    },
+    {
+      "id": "employer-datadog",
+      "name": "Datadog",
+      "enabled": true,
+      "career_url": "https://careers.datadoghq.com/",
+      "watch_keywords": [
+        "senior software",
+        "cloud",
+        "DevOps",
+        "platform",
+        "AI",
+        "MCP",
+        "agent"
+      ],
+      "target_locations": [
+        "Kenya",
+        "international",
+        "remote"
+      ],
+      "research_status": "watchlist_only",
+      "portal_content_last_verified_at": null,
+      "job_ids": [],
+      "source_ids": [],
+      "observed_requirements": [],
+      "limitations": "No reviewed posting"
+    },
+    {
+      "id": "employer-nvidia",
+      "name": "NVIDIA",
+      "enabled": true,
+      "career_url": "https://www.nvidia.com/en-us/about-nvidia/careers/",
+      "watch_keywords": [
+        "senior software",
+        "cloud",
+        "DevOps",
+        "platform",
+        "AI",
+        "MCP",
+        "agent"
+      ],
+      "target_locations": [
+        "Kenya",
+        "international",
+        "remote"
+      ],
+      "research_status": "watchlist_only",
+      "portal_content_last_verified_at": null,
+      "job_ids": [],
+      "source_ids": [],
+      "observed_requirements": [],
+      "limitations": "No reviewed posting"
+    },
+    {
+      "id": "employer-openai",
+      "name": "OpenAI",
+      "enabled": true,
+      "career_url": "https://openai.com/careers/",
+      "watch_keywords": [
+        "senior software",
+        "cloud",
+        "DevOps",
+        "platform",
+        "AI",
+        "MCP",
+        "agent"
+      ],
+      "target_locations": [
+        "Kenya",
+        "international",
+        "remote"
+      ],
+      "research_status": "watchlist_only",
+      "portal_content_last_verified_at": null,
+      "job_ids": [],
+      "source_ids": [],
+      "observed_requirements": [],
+      "limitations": "No reviewed posting"
+    },
+    {
+      "id": "employer-anthropic",
+      "name": "Anthropic",
+      "enabled": true,
+      "career_url": "https://job-boards.greenhouse.io/anthropic",
+      "watch_keywords": [
+        "senior software",
+        "cloud",
+        "DevOps",
+        "platform",
+        "AI",
+        "MCP",
+        "agent"
+      ],
+      "target_locations": [
+        "Kenya",
+        "international",
+        "remote"
+      ],
+      "research_status": "posting_reviewed",
+      "portal_content_last_verified_at": null,
+      "job_ids": [
+        "job-005"
+      ],
+      "source_ids": [
+        "source-job-005"
+      ],
+      "observed_requirements": [
+        "Ship end-to-end products; improve agent harness reliability; instrumentation and user feedback; evals preferred."
+      ],
+      "limitations": "Observed role requirements only; role availability and eligibility require employer confirmation."
+    },
+    {
+      "id": "employer-safaricom",
+      "name": "Safaricom",
+      "enabled": true,
+      "career_url": "https://www.safaricom.co.ke/careers",
+      "watch_keywords": [
+        "senior software",
+        "cloud",
+        "DevOps",
+        "platform",
+        "AI",
+        "MCP",
+        "agent"
+      ],
+      "target_locations": [
+        "Kenya",
+        "international",
+        "remote"
+      ],
+      "research_status": "secondary_posting_reviewed",
+      "portal_content_last_verified_at": null,
+      "job_ids": [],
+      "source_ids": [],
+      "observed_requirements": [],
+      "limitations": "No reviewed posting"
+    },
+    {
+      "id": "employer-mpesa",
+      "name": "M-Pesa Africa",
+      "enabled": true,
+      "career_url": "https://www.safaricom.co.ke/careers",
+      "watch_keywords": [
+        "senior software",
+        "cloud",
+        "DevOps",
+        "platform",
+        "AI",
+        "MCP",
+        "agent"
+      ],
+      "target_locations": [
+        "Kenya",
+        "international",
+        "remote"
+      ],
+      "research_status": "secondary_posting_reviewed",
+      "portal_content_last_verified_at": null,
+      "job_ids": [
+        "job-012"
+      ],
+      "source_ids": [
+        "source-job-012"
+      ],
+      "observed_requirements": [
+        "Stretch architecture role beyond learner's nominal years; SDK lifecycle, API-first events, security, governance and mentorship."
+      ],
+      "limitations": "Observed role requirements only; role availability and eligibility require employer confirmation."
+    },
+    {
+      "id": "employer-andela",
+      "name": "Andela",
+      "enabled": true,
+      "career_url": "https://www.andela.com/careers",
+      "watch_keywords": [
+        "senior software",
+        "cloud",
+        "DevOps",
+        "platform",
+        "AI",
+        "MCP",
+        "agent"
+      ],
+      "target_locations": [
+        "Kenya",
+        "international",
+        "remote"
+      ],
+      "research_status": "watchlist_only",
+      "portal_content_last_verified_at": null,
+      "job_ids": [],
+      "source_ids": [],
+      "observed_requirements": [],
+      "limitations": "No reviewed posting"
+    },
+    {
+      "id": "employer-undp",
+      "name": "UNDP",
+      "enabled": true,
+      "career_url": "https://www.undp.org/careers",
+      "watch_keywords": [
+        "senior software",
+        "cloud",
+        "DevOps",
+        "platform",
+        "AI",
+        "MCP",
+        "agent"
+      ],
+      "target_locations": [
+        "Kenya",
+        "international",
+        "remote"
+      ],
+      "research_status": "portal_searched",
+      "portal_content_last_verified_at": null,
+      "job_ids": [],
+      "source_ids": [],
+      "observed_requirements": [],
+      "limitations": "No reviewed posting"
+    },
+    {
+      "id": "employer-unicef",
+      "name": "UNICEF",
+      "enabled": true,
+      "career_url": "https://jobs.unicef.org/",
+      "watch_keywords": [
+        "senior software",
+        "cloud",
+        "DevOps",
+        "platform",
+        "AI",
+        "MCP",
+        "agent"
+      ],
+      "target_locations": [
+        "Kenya",
+        "international",
+        "remote"
+      ],
+      "research_status": "portal_searched",
+      "portal_content_last_verified_at": null,
+      "job_ids": [],
+      "source_ids": [],
+      "observed_requirements": [],
+      "limitations": "No reviewed posting"
+    },
+    {
+      "id": "employer-unops",
+      "name": "UNOPS",
+      "enabled": true,
+      "career_url": "https://jobs.unops.org/",
+      "watch_keywords": [
+        "senior software",
+        "cloud",
+        "DevOps",
+        "platform",
+        "AI",
+        "MCP",
+        "agent"
+      ],
+      "target_locations": [
+        "Kenya",
+        "international",
+        "remote"
+      ],
+      "research_status": "portal_searched",
+      "portal_content_last_verified_at": null,
+      "job_ids": [],
+      "source_ids": [],
+      "observed_requirements": [],
+      "limitations": "No reviewed posting"
+    },
+    {
+      "id": "employer-worldbank",
+      "name": "World Bank",
+      "enabled": true,
+      "career_url": "https://www.worldbank.org/en/about/careers",
+      "watch_keywords": [
+        "senior software",
+        "cloud",
+        "DevOps",
+        "platform",
+        "AI",
+        "MCP",
+        "agent"
+      ],
+      "target_locations": [
+        "Kenya",
+        "international",
+        "remote"
+      ],
+      "research_status": "watchlist_only",
+      "portal_content_last_verified_at": null,
+      "job_ids": [],
+      "source_ids": [],
+      "observed_requirements": [],
+      "limitations": "No reviewed posting"
+    },
+    {
+      "id": "employer-sureify",
+      "name": "Sureify",
+      "enabled": true,
+      "career_url": "https://job-boards.greenhouse.io/sureify",
+      "watch_keywords": [
+        "senior software",
+        "cloud",
+        "DevOps",
+        "platform",
+        "AI",
+        "MCP",
+        "agent"
+      ],
+      "target_locations": [
+        "Kenya",
+        "international",
+        "remote"
+      ],
+      "research_status": "posting_reviewed",
+      "portal_content_last_verified_at": null,
+      "job_ids": [
+        "job-001"
+      ],
+      "source_ids": [
+        "source-job-001"
+      ],
+      "observed_requirements": [
+        "Operate AWS; Terraform and CI/CD; production troubleshooting and root cause analysis."
+      ],
+      "limitations": "Observed role requirements only; role availability and eligibility require employer confirmation."
+    },
+    {
+      "id": "employer-privateid",
+      "name": "PrivateID",
+      "enabled": true,
+      "career_url": "https://job-boards.greenhouse.io/privateidentity",
+      "watch_keywords": [
+        "senior software",
+        "cloud",
+        "DevOps",
+        "platform",
+        "AI",
+        "MCP",
+        "agent"
+      ],
+      "target_locations": [
+        "Kenya",
+        "international",
+        "remote"
+      ],
+      "research_status": "posting_reviewed",
+      "portal_content_last_verified_at": null,
+      "job_ids": [
+        "job-002"
+      ],
+      "source_ids": [
+        "source-job-002"
+      ],
+      "observed_requirements": [
+        "Execute multi-cloud infrastructure, on-call, reusable workflows, per-client isolation and least-privilege access."
+      ],
+      "limitations": "Observed role requirements only; role availability and eligibility require employer confirmation."
+    },
+    {
+      "id": "employer-everpure",
+      "name": "Everpure (posting hosted on Pure Storage board)",
+      "enabled": true,
+      "career_url": "https://job-boards.greenhouse.io/purestorage",
+      "watch_keywords": [
+        "senior software",
+        "cloud",
+        "DevOps",
+        "platform",
+        "AI",
+        "MCP",
+        "agent"
+      ],
+      "target_locations": [
+        "Kenya",
+        "international",
+        "remote"
+      ],
+      "research_status": "posting_reviewed",
+      "portal_content_last_verified_at": null,
+      "job_ids": [
+        "job-003"
+      ],
+      "source_ids": [
+        "source-job-003"
+      ],
+      "observed_requirements": [
+        "Build enterprise MCP integrations and agents; Python plus JavaScript/TypeScript or Java; REST and OAuth required."
+      ],
+      "limitations": "Observed role requirements only; role availability and eligibility require employer confirmation."
+    },
+    {
+      "id": "employer-weedmaps",
+      "name": "Weedmaps",
+      "enabled": true,
+      "career_url": "https://job-boards.greenhouse.io/weedmaps77",
+      "watch_keywords": [
+        "senior software",
+        "cloud",
+        "DevOps",
+        "platform",
+        "AI",
+        "MCP",
+        "agent"
+      ],
+      "target_locations": [
+        "Kenya",
+        "international",
+        "remote"
+      ],
+      "research_status": "posting_reviewed",
+      "portal_content_last_verified_at": null,
+      "job_ids": [
+        "job-004"
+      ],
+      "source_ids": [
+        "source-job-004"
+      ],
+      "observed_requirements": [
+        "One year shipping LLM features additionally required; evaluated retrieval, permissioned agents, cost and latency ownership."
+      ],
+      "limitations": "Observed role requirements only; role availability and eligibility require employer confirmation."
+    },
+    {
+      "id": "employer-reddit",
+      "name": "Reddit",
+      "enabled": true,
+      "career_url": "https://job-boards.greenhouse.io/reddit",
+      "watch_keywords": [
+        "senior software",
+        "cloud",
+        "DevOps",
+        "platform",
+        "AI",
+        "MCP",
+        "agent"
+      ],
+      "target_locations": [
+        "Kenya",
+        "international",
+        "remote"
+      ],
+      "research_status": "posting_reviewed",
+      "portal_content_last_verified_at": null,
+      "job_ids": [
+        "job-006"
+      ],
+      "source_ids": [
+        "source-job-006"
+      ],
+      "observed_requirements": [
+        "Five years large-scale distributed systems; maintainable APIs; mentor engineers; build and operate critical services."
+      ],
+      "limitations": "Observed role requirements only; role availability and eligibility require employer confirmation."
+    },
+    {
+      "id": "employer-customerio",
+      "name": "Customer.io",
+      "enabled": true,
+      "career_url": "https://job-boards.greenhouse.io/customerio",
+      "watch_keywords": [
+        "senior software",
+        "cloud",
+        "DevOps",
+        "platform",
+        "AI",
+        "MCP",
+        "agent"
+      ],
+      "target_locations": [
+        "Kenya",
+        "international",
+        "remote"
+      ],
+      "research_status": "posting_reviewed",
+      "portal_content_last_verified_at": null,
+      "job_ids": [
+        "job-007"
+      ],
+      "source_ids": [
+        "source-job-007"
+      ],
+      "observed_requirements": [
+        "Own architecture through monitoring; Go or comparable statically typed language; on-call; verify AI-agent code changes."
+      ],
+      "limitations": "Observed role requirements only; role availability and eligibility require employer confirmation."
+    },
+    {
+      "id": "employer-joblogic",
+      "name": "Joblogic",
+      "enabled": true,
+      "career_url": "https://job-boards.eu.greenhouse.io/joblogic",
+      "watch_keywords": [
+        "senior software",
+        "cloud",
+        "DevOps",
+        "platform",
+        "AI",
+        "MCP",
+        "agent"
+      ],
+      "target_locations": [
+        "Kenya",
+        "international",
+        "remote"
+      ],
+      "research_status": "posting_reviewed",
+      "portal_content_last_verified_at": null,
+      "job_ids": [
+        "job-008"
+      ],
+      "source_ids": [
+        "source-job-008"
+      ],
+      "observed_requirements": [
+        "Maintain Python Functions and .NET microservices; optimize Azure, SQL and Redis; Azure DevOps delivery and troubleshooting."
+      ],
+      "limitations": "Observed role requirements only; role availability and eligibility require employer confirmation."
+    },
+    {
+      "id": "employer-typeform",
+      "name": "Typeform",
+      "enabled": true,
+      "career_url": "https://job-boards.greenhouse.io/typeform",
+      "watch_keywords": [
+        "senior software",
+        "cloud",
+        "DevOps",
+        "platform",
+        "AI",
+        "MCP",
+        "agent"
+      ],
+      "target_locations": [
+        "Kenya",
+        "international",
+        "remote"
+      ],
+      "research_status": "posting_reviewed",
+      "portal_content_last_verified_at": null,
+      "job_ids": [
+        "job-009"
+      ],
+      "source_ids": [
+        "source-job-009"
+      ],
+      "observed_requirements": [
+        "Four years production AI/ML specifically; enterprise RAG, automated evals, infrastructure and operational ownership."
+      ],
+      "limitations": "Observed role requirements only; role availability and eligibility require employer confirmation."
+    },
+    {
+      "id": "employer-temus",
+      "name": "Temus",
+      "enabled": true,
+      "career_url": "https://job-boards.greenhouse.io/temus",
+      "watch_keywords": [
+        "senior software",
+        "cloud",
+        "DevOps",
+        "platform",
+        "AI",
+        "MCP",
+        "agent"
+      ],
+      "target_locations": [
+        "Kenya",
+        "international",
+        "remote"
+      ],
+      "research_status": "posting_reviewed",
+      "portal_content_last_verified_at": null,
+      "job_ids": [
+        "job-010"
+      ],
+      "source_ids": [
+        "source-job-010"
+      ],
+      "observed_requirements": [
+        "AI-engineering or ML-engineering strength; one deployed AI solution; three years serverless, CI/CD, containers and IaC."
+      ],
+      "limitations": "Observed role requirements only; role availability and eligibility require employer confirmation."
+    },
+    {
+      "id": "employer-isar",
+      "name": "Isar Aerospace",
+      "enabled": true,
+      "career_url": "https://job-boards.eu.greenhouse.io/isaraerospace",
+      "watch_keywords": [
+        "senior software",
+        "cloud",
+        "DevOps",
+        "platform",
+        "AI",
+        "MCP",
+        "agent"
+      ],
+      "target_locations": [
+        "Kenya",
+        "international",
+        "remote"
+      ],
+      "research_status": "posting_reviewed",
+      "portal_content_last_verified_at": null,
+      "job_ids": [
+        "job-011"
+      ],
+      "source_ids": [
+        "source-job-011"
+      ],
+      "observed_requirements": [
+        "Own cluster substrate and developer experience; upgrades, recovery, certificates, reusable delivery and defensible ADRs."
+      ],
+      "limitations": "Observed role requirements only; role availability and eligibility require employer confirmation."
+    },
+    {
+      "id": "employer-canonical",
+      "name": "Canonical",
+      "enabled": true,
+      "career_url": "https://job-boards.greenhouse.io/canonical",
+      "watch_keywords": [
+        "senior software",
+        "cloud",
+        "DevOps",
+        "platform",
+        "AI",
+        "MCP",
+        "agent"
+      ],
+      "target_locations": [
+        "Kenya",
+        "international",
+        "remote"
+      ],
+      "research_status": "portal_reviewed",
+      "portal_content_last_verified_at": "2026-10-31",
+      "job_ids": [],
+      "source_ids": [],
+      "observed_requirements": [],
+      "limitations": "No reviewed posting"
+    }
+  ],
+  "job_postings": [
+    {
+      "id": "job-001",
+      "employer_id": "employer-sureify",
+      "title": "Senior DevOps Engineer",
+      "primary_role_category": "devops",
+      "url": "https://job-boards.greenhouse.io/sureify/jobs/5170323008",
+      "source_id": "source-job-001",
+      "source_authority": "primary",
+      "collected_at": "2026-10-31",
+      "posted_at": null,
+      "closes_at": null,
+      "status": "live_description",
+      "location_and_remote_policy": "Americas; remote-first",
+      "kenya_remote_eligibility": "not_verified",
+      "minimum_years": 6,
+      "maximum_years": 10,
+      "required_skill_ids": [
+        "skill-aws",
+        "skill-kubernetes",
+        "skill-docker",
+        "skill-iac",
+        "skill-cicd",
+        "skill-observability",
+        "skill-incident",
+        "skill-linux",
+        "skill-python",
+        "skill-shell"
+      ],
+      "preferred_skill_ids": [],
+      "requirements_summary": "Operate AWS; Terraform and CI/CD; production troubleshooting and root cause analysis.",
+      "coding_notes": "Language/cloud alternatives count as mentioned requirements, not a requirement to know every listed alternative. Examples are normalized to capabilities; no inferred requirements added.",
+      "seniority_basis": "Senior title/ownership scope or explicit experience; nominal years do not substitute for production competence.",
+      "interview_evidence": "No role-specific interview sequence available in reviewed body; use mock scenarios as authored preparation, not employer claims."
+    },
+    {
+      "id": "job-002",
+      "employer_id": "employer-privateid",
+      "title": "DevOps Engineer",
+      "primary_role_category": "devops",
+      "url": "https://job-boards.greenhouse.io/privateidentity/jobs/4193542009",
+      "source_id": "source-job-002",
+      "source_authority": "primary",
+      "collected_at": "2026-10-31",
+      "posted_at": null,
+      "closes_at": null,
+      "status": "live_description",
+      "location_and_remote_policy": "Remote-first; eligible countries not established",
+      "kenya_remote_eligibility": "not_verified",
+      "minimum_years": 7,
+      "maximum_years": null,
+      "required_skill_ids": [
+        "skill-aws",
+        "skill-gcp",
+        "skill-kubernetes",
+        "skill-helm",
+        "skill-iac",
+        "skill-cicd",
+        "skill-gitops",
+        "skill-incident",
+        "skill-monitoring",
+        "skill-identity",
+        "skill-security",
+        "skill-python",
+        "skill-shell",
+        "skill-networking"
+      ],
+      "preferred_skill_ids": [
+        "skill-azure",
+        "skill-platform"
+      ],
+      "requirements_summary": "Execute multi-cloud infrastructure, on-call, reusable workflows, per-client isolation and least-privilege access.",
+      "coding_notes": "Language/cloud alternatives count as mentioned requirements, not a requirement to know every listed alternative. Examples are normalized to capabilities; no inferred requirements added.",
+      "seniority_basis": "Senior title/ownership scope or explicit experience; nominal years do not substitute for production competence.",
+      "interview_evidence": "No role-specific interview sequence available in reviewed body; use mock scenarios as authored preparation, not employer claims."
+    },
+    {
+      "id": "job-003",
+      "employer_id": "employer-everpure",
+      "title": "Application Engineer for AI Automation",
+      "primary_role_category": "agent",
+      "url": "https://job-boards.greenhouse.io/purestorage/jobs/8002123",
+      "source_id": "source-job-003",
+      "source_authority": "primary",
+      "collected_at": "2026-10-31",
+      "posted_at": null,
+      "closes_at": null,
+      "status": "live_description",
+      "location_and_remote_policy": "Onsite; exact location unavailable in fetched body",
+      "kenya_remote_eligibility": "not_verified",
+      "minimum_years": 5,
+      "maximum_years": null,
+      "required_skill_ids": [
+        "skill-python",
+        "skill-typescript",
+        "skill-mcp",
+        "skill-mcp-server",
+        "skill-rag",
+        "skill-agents",
+        "skill-orchestration",
+        "skill-api",
+        "skill-identity",
+        "skill-leadership"
+      ],
+      "preferred_skill_ids": [
+        "skill-vector"
+      ],
+      "requirements_summary": "Build enterprise MCP integrations and agents; Python plus JavaScript/TypeScript or Java; REST and OAuth required.",
+      "coding_notes": "Language/cloud alternatives count as mentioned requirements, not a requirement to know every listed alternative. Examples are normalized to capabilities; no inferred requirements added.",
+      "seniority_basis": "Senior title/ownership scope or explicit experience; nominal years do not substitute for production competence.",
+      "interview_evidence": "No role-specific interview sequence available in reviewed body; use mock scenarios as authored preparation, not employer claims."
+    },
+    {
+      "id": "job-004",
+      "employer_id": "employer-weedmaps",
+      "title": "Senior Software Engineer, AI Platform",
+      "primary_role_category": "agent",
+      "url": "https://job-boards.greenhouse.io/weedmaps77/jobs/8861322002",
+      "source_id": "source-job-004",
+      "source_authority": "primary",
+      "collected_at": "2026-10-31",
+      "posted_at": null,
+      "closes_at": null,
+      "status": "live_description",
+      "location_and_remote_policy": "Remote; US benefit context, Kenya eligibility unverified",
+      "kenya_remote_eligibility": "not_verified",
+      "minimum_years": 6,
+      "maximum_years": null,
+      "required_skill_ids": [
+        "skill-python",
+        "skill-typescript",
+        "skill-rag",
+        "skill-embeddings",
+        "skill-vector",
+        "skill-evaluation",
+        "skill-structured",
+        "skill-tools",
+        "skill-agents",
+        "skill-ai-security",
+        "skill-security",
+        "skill-observability",
+        "skill-cicd",
+        "skill-architecture"
+      ],
+      "preferred_skill_ids": [
+        "skill-aws",
+        "skill-mcp",
+        "skill-mcp-server",
+        "skill-platform"
+      ],
+      "requirements_summary": "One year shipping LLM features additionally required; evaluated retrieval, permissioned agents, cost and latency ownership.",
+      "coding_notes": "Language/cloud alternatives count as mentioned requirements, not a requirement to know every listed alternative. Examples are normalized to capabilities; no inferred requirements added.",
+      "seniority_basis": "Senior title/ownership scope or explicit experience; nominal years do not substitute for production competence.",
+      "interview_evidence": "No role-specific interview sequence available in reviewed body; use mock scenarios as authored preparation, not employer claims."
+    },
+    {
+      "id": "job-005",
+      "employer_id": "employer-anthropic",
+      "title": "Product Engineer, Computer Use",
+      "primary_role_category": "agent",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5238637008",
+      "source_id": "source-job-005",
+      "source_authority": "primary",
+      "collected_at": "2026-10-31",
+      "posted_at": null,
+      "closes_at": null,
+      "status": "live_description",
+      "location_and_remote_policy": "Office hybrid; posting describes minimum office attendance",
+      "kenya_remote_eligibility": "not_verified",
+      "minimum_years": null,
+      "maximum_years": null,
+      "required_skill_ids": [
+        "skill-api",
+        "skill-llm",
+        "skill-agents",
+        "skill-reliability",
+        "skill-observability"
+      ],
+      "preferred_skill_ids": [
+        "skill-evaluation",
+        "skill-orchestration",
+        "skill-tools",
+        "skill-approval",
+        "skill-database"
+      ],
+      "requirements_summary": "Ship end-to-end products; improve agent harness reliability; instrumentation and user feedback; evals preferred.",
+      "coding_notes": "Language/cloud alternatives count as mentioned requirements, not a requirement to know every listed alternative. Examples are normalized to capabilities; no inferred requirements added.",
+      "seniority_basis": "Senior title/ownership scope or explicit experience; nominal years do not substitute for production competence.",
+      "interview_evidence": "No role-specific interview sequence available in reviewed body; use mock scenarios as authored preparation, not employer claims."
+    },
+    {
+      "id": "job-006",
+      "employer_id": "employer-reddit",
+      "title": "Senior Software Engineer, Core Systems / Media Platform",
+      "primary_role_category": "senior",
+      "url": "https://job-boards.greenhouse.io/reddit/jobs/8022441",
+      "source_id": "source-job-006",
+      "source_authority": "primary",
+      "collected_at": "2026-10-31",
+      "posted_at": null,
+      "closes_at": null,
+      "status": "live_description",
+      "location_and_remote_policy": "Remote; country eligibility unverified",
+      "kenya_remote_eligibility": "not_verified",
+      "minimum_years": 5,
+      "maximum_years": null,
+      "required_skill_ids": [
+        "skill-python",
+        "skill-go",
+        "skill-distributed",
+        "skill-api",
+        "skill-testing",
+        "skill-performance",
+        "skill-reliability",
+        "skill-leadership",
+        "skill-kubernetes",
+        "skill-aws",
+        "skill-gcp"
+      ],
+      "preferred_skill_ids": [],
+      "requirements_summary": "Five years large-scale distributed systems; maintainable APIs; mentor engineers; build and operate critical services.",
+      "coding_notes": "Language/cloud alternatives count as mentioned requirements, not a requirement to know every listed alternative. Examples are normalized to capabilities; no inferred requirements added.",
+      "seniority_basis": "Senior title/ownership scope or explicit experience; nominal years do not substitute for production competence.",
+      "interview_evidence": "No role-specific interview sequence available in reviewed body; use mock scenarios as authored preparation, not employer claims."
+    },
+    {
+      "id": "job-007",
+      "employer_id": "employer-customerio",
+      "title": "Experienced Backend Engineer",
+      "primary_role_category": "senior",
+      "url": "https://job-boards.greenhouse.io/customerio/jobs/7778291",
+      "source_id": "source-job-007",
+      "source_authority": "primary",
+      "collected_at": "2026-10-31",
+      "posted_at": null,
+      "closes_at": null,
+      "status": "live_description",
+      "location_and_remote_policy": "Remote environment; country eligibility unverified",
+      "kenya_remote_eligibility": "not_verified",
+      "minimum_years": 7,
+      "maximum_years": null,
+      "required_skill_ids": [
+        "skill-go",
+        "skill-distributed",
+        "skill-aws",
+        "skill-gcp",
+        "skill-database",
+        "skill-performance",
+        "skill-observability",
+        "skill-incident",
+        "skill-architecture",
+        "skill-testing",
+        "skill-leadership",
+        "skill-agents"
+      ],
+      "preferred_skill_ids": [],
+      "requirements_summary": "Own architecture through monitoring; Go or comparable statically typed language; on-call; verify AI-agent code changes.",
+      "coding_notes": "Language/cloud alternatives count as mentioned requirements, not a requirement to know every listed alternative. Examples are normalized to capabilities; no inferred requirements added.",
+      "seniority_basis": "Senior title/ownership scope or explicit experience; nominal years do not substitute for production competence.",
+      "interview_evidence": "Posting explicitly describes recruiter call, end-to-end ownership discussion plus AI-assisted coding, collaborative system design, realistic take-home and review."
+    },
+    {
+      "id": "job-008",
+      "employer_id": "employer-joblogic",
+      "title": "Azure Cloud Engineer / DevOps Engineer",
+      "primary_role_category": "cloud",
+      "url": "https://job-boards.eu.greenhouse.io/joblogic/jobs/4906857101",
+      "source_id": "source-job-008",
+      "source_authority": "primary",
+      "collected_at": "2026-10-31",
+      "posted_at": null,
+      "closes_at": null,
+      "status": "live_description",
+      "location_and_remote_policy": "Onsite, Gulberg and Thokar offices; not Kenya-remote evidence",
+      "kenya_remote_eligibility": "not_verified",
+      "minimum_years": null,
+      "maximum_years": null,
+      "required_skill_ids": [
+        "skill-azure",
+        "skill-compute",
+        "skill-serverless",
+        "skill-database",
+        "skill-cache",
+        "skill-docker",
+        "skill-cicd",
+        "skill-api",
+        "skill-performance",
+        "skill-security",
+        "skill-cost",
+        "skill-incident"
+      ],
+      "preferred_skill_ids": [
+        "skill-python",
+        "skill-kubernetes",
+        "skill-monitoring"
+      ],
+      "requirements_summary": "Maintain Python Functions and .NET microservices; optimize Azure, SQL and Redis; Azure DevOps delivery and troubleshooting.",
+      "coding_notes": "Language/cloud alternatives count as mentioned requirements, not a requirement to know every listed alternative. Examples are normalized to capabilities; no inferred requirements added.",
+      "seniority_basis": "Senior title/ownership scope or explicit experience; nominal years do not substitute for production competence.",
+      "interview_evidence": "Posting describes screening, online test, team interview, in-house technical assessment and manager interview."
+    },
+    {
+      "id": "job-009",
+      "employer_id": "employer-typeform",
+      "title": "Senior AI Engineer",
+      "primary_role_category": "ai",
+      "url": "https://job-boards.greenhouse.io/typeform/jobs/8220046",
+      "source_id": "source-job-009",
+      "source_authority": "primary",
+      "collected_at": "2026-10-31",
+      "posted_at": null,
+      "closes_at": null,
+      "status": "live_description",
+      "location_and_remote_policy": "Remote, US Eastern timezone candidates in the US",
+      "kenya_remote_eligibility": "not_verified",
+      "minimum_years": 4,
+      "maximum_years": null,
+      "required_skill_ids": [
+        "skill-python",
+        "skill-ml",
+        "skill-llm",
+        "skill-rag",
+        "skill-vector",
+        "skill-embeddings",
+        "skill-evaluation",
+        "skill-agents",
+        "skill-tools",
+        "skill-orchestration",
+        "skill-aws",
+        "skill-docker",
+        "skill-kubernetes",
+        "skill-iac",
+        "skill-cicd",
+        "skill-observability",
+        "skill-messaging",
+        "skill-models",
+        "skill-cost",
+        "skill-performance"
+      ],
+      "preferred_skill_ids": [
+        "skill-ai-security",
+        "skill-security",
+        "skill-database"
+      ],
+      "requirements_summary": "Four years production AI/ML specifically; enterprise RAG, automated evals, infrastructure and operational ownership.",
+      "coding_notes": "Language/cloud alternatives count as mentioned requirements, not a requirement to know every listed alternative. Examples are normalized to capabilities; no inferred requirements added.",
+      "seniority_basis": "Senior title/ownership scope or explicit experience; nominal years do not substitute for production competence.",
+      "interview_evidence": "No role-specific interview sequence available in reviewed body; use mock scenarios as authored preparation, not employer claims."
+    },
+    {
+      "id": "job-010",
+      "employer_id": "employer-temus",
+      "title": "AI / ML Engineering role",
+      "primary_role_category": "ai",
+      "url": "https://job-boards.greenhouse.io/temus/jobs/5233697008",
+      "source_id": "source-job-010",
+      "source_authority": "primary",
+      "collected_at": "2026-10-31",
+      "posted_at": null,
+      "closes_at": null,
+      "status": "live_description",
+      "location_and_remote_policy": "Singapore headquartered; exact role work policy unavailable",
+      "kenya_remote_eligibility": "not_verified",
+      "minimum_years": 3,
+      "maximum_years": null,
+      "required_skill_ids": [
+        "skill-ml",
+        "skill-evaluation",
+        "skill-finetuning",
+        "skill-serverless",
+        "skill-cicd",
+        "skill-docker",
+        "skill-iac",
+        "skill-testing"
+      ],
+      "preferred_skill_ids": [
+        "skill-agents",
+        "skill-rag",
+        "skill-orchestration",
+        "skill-tools",
+        "skill-aws",
+        "skill-azure",
+        "skill-gcp"
+      ],
+      "requirements_summary": "AI-engineering or ML-engineering strength; one deployed AI solution; three years serverless, CI/CD, containers and IaC.",
+      "coding_notes": "Language/cloud alternatives count as mentioned requirements, not a requirement to know every listed alternative. Examples are normalized to capabilities; no inferred requirements added.",
+      "seniority_basis": "Senior title/ownership scope or explicit experience; nominal years do not substitute for production competence.",
+      "interview_evidence": "No role-specific interview sequence available in reviewed body; use mock scenarios as authored preparation, not employer claims."
+    },
+    {
+      "id": "job-011",
+      "employer_id": "employer-isar",
+      "title": "Senior DevOps Platform Engineer",
+      "primary_role_category": "platform",
+      "url": "https://job-boards.eu.greenhouse.io/isaraerospace/jobs/4974351101",
+      "source_id": "source-job-011",
+      "source_authority": "primary",
+      "collected_at": "2026-10-31",
+      "posted_at": null,
+      "closes_at": null,
+      "status": "live_description",
+      "location_and_remote_policy": "Work policy not established; security clearance restrictions mentioned",
+      "kenya_remote_eligibility": "not_verified",
+      "minimum_years": 5,
+      "maximum_years": null,
+      "required_skill_ids": [
+        "skill-linux",
+        "skill-shell",
+        "skill-python",
+        "skill-kubernetes",
+        "skill-networking",
+        "skill-storage",
+        "skill-helm",
+        "skill-gitops",
+        "skill-cicd",
+        "skill-azure",
+        "skill-identity",
+        "skill-security",
+        "skill-iac",
+        "skill-architecture",
+        "skill-adr",
+        "skill-platform",
+        "skill-incident",
+        "skill-observability"
+      ],
+      "preferred_skill_ids": [
+        "skill-agents",
+        "skill-messaging"
+      ],
+      "requirements_summary": "Own cluster substrate and developer experience; upgrades, recovery, certificates, reusable delivery and defensible ADRs.",
+      "coding_notes": "Language/cloud alternatives count as mentioned requirements, not a requirement to know every listed alternative. Examples are normalized to capabilities; no inferred requirements added.",
+      "seniority_basis": "Senior title/ownership scope or explicit experience; nominal years do not substitute for production competence.",
+      "interview_evidence": "No role-specific interview sequence available in reviewed body; use mock scenarios as authored preparation, not employer claims."
+    },
+    {
+      "id": "job-012",
+      "employer_id": "employer-mpesa",
+      "title": "Senior Solutions Architect (Digital Platforms)",
+      "primary_role_category": "senior",
+      "url": "https://www.myjobmag.co.ke/job/senior-solutions-architect-digital-platforms-safaricom-kenya",
+      "source_id": "source-job-012",
+      "source_authority": "secondary",
+      "collected_at": "2026-10-31",
+      "posted_at": "2026-10-26",
+      "closes_at": "2026-10-30",
+      "status": "expired",
+      "location_and_remote_policy": "Nairobi, Kenya",
+      "kenya_remote_eligibility": "local_kenya_role",
+      "minimum_years": 8,
+      "maximum_years": null,
+      "required_skill_ids": [
+        "skill-architecture",
+        "skill-api",
+        "skill-messaging",
+        "skill-identity",
+        "skill-security",
+        "skill-adr",
+        "skill-platform",
+        "skill-reliability",
+        "skill-performance",
+        "skill-leadership",
+        "skill-aws",
+        "skill-azure",
+        "skill-gcp"
+      ],
+      "preferred_skill_ids": [
+        "skill-agents"
+      ],
+      "requirements_summary": "Stretch architecture role beyond learner's nominal years; SDK lifecycle, API-first events, security, governance and mentorship.",
+      "coding_notes": "Language/cloud alternatives count as mentioned requirements, not a requirement to know every listed alternative. Examples are normalized to capabilities; no inferred requirements added.",
+      "seniority_basis": "Senior title/ownership scope or explicit experience; nominal years do not substitute for production competence.",
+      "interview_evidence": "No role-specific interview sequence available in reviewed body; use mock scenarios as authored preparation, not employer claims."
+    }
+  ],
+  "configuration_contract": {
+    "operation": "Edit employer records in data, not application code; enabled=false removes from active watchlist without deleting historical job evidence.",
+    "add_employer": "Append unique employer ID, name, career URL, keywords and target locations; no hardcoded company switch statements.",
+    "add_job_description": "Store supplied description provenance and consent, assign job ID/source ID, code required/preferred skills with human review and update counts using documented denominator.",
+    "refresh_interval_days": 14,
+    "eligibility_policy": "Never infer worldwide remote eligibility from the word remote; preserve country, time-zone and onsite constraints."
+  }
+}

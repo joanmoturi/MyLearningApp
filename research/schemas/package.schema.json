@@ -1,0 +1,4672 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://engineering-academy.invalid/research/package.schema.json",
+  "title": "Engineering Academy research datasets",
+  "description": "Explicit structural contracts; semantic IDs, ordering, counts and evidence checks are enforced by tools/validate.py. No remote schema resolution needed.",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "const": "schemas/package.schema.json"
+        },
+        "dataset_type": {
+          "const": "learner"
+        },
+        "research_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "research_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "profile": {
+          "type": "object",
+          "properties": {
+            "professional_experience_years": {
+              "type": "object",
+              "properties": {
+                "minimum": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "maximum": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "evidence": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "minimum",
+                "maximum",
+                "evidence"
+              ],
+              "additionalProperties": false
+            },
+            "professional_context": {
+              "type": "string",
+              "minLength": 1
+            },
+            "existing_exposure": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 0,
+              "uniqueItems": false
+            },
+            "assess_before_skipping": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 0,
+              "uniqueItems": false
+            },
+            "target_roles": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 0,
+              "uniqueItems": false
+            },
+            "target_markets": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 0,
+              "uniqueItems": false
+            },
+            "daily_study_minutes": {
+              "type": "object",
+              "properties": {
+                "minimum": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "default": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "maximum": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "minimum",
+                "default",
+                "maximum"
+              ],
+              "additionalProperties": false
+            },
+            "learning_preferences": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 0,
+              "uniqueItems": false
+            },
+            "assessment_gate": {
+              "type": "string",
+              "minLength": 1
+            },
+            "privacy": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "professional_experience_years",
+            "professional_context",
+            "existing_exposure",
+            "assess_before_skipping",
+            "target_roles",
+            "target_markets",
+            "daily_study_minutes",
+            "learning_preferences",
+            "assessment_gate",
+            "privacy"
+          ],
+          "additionalProperties": false
+        },
+        "tracks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]+$"
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "target_role_categories": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 0,
+                "uniqueItems": false
+              },
+              "priority": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "baseline_assessment": {
+                "type": "string",
+                "minLength": 1
+              },
+              "skill_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "target_role_categories",
+              "priority",
+              "baseline_assessment",
+              "skill_ids"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 5,
+          "uniqueItems": false
+        },
+        "active_track_configuration": {
+          "type": "object",
+          "properties": {
+            "active_track_id": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9-]+$"
+            },
+            "allow_track_switching": {
+              "type": "boolean"
+            },
+            "default_plan_days": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "completion_storage_design": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "active_track_id",
+            "allow_track_switching",
+            "default_plan_days",
+            "completion_storage_design"
+          ],
+          "additionalProperties": false
+        },
+        "recommendation": {
+          "type": "object",
+          "properties": {
+            "priority_order": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]+$"
+              },
+              "minItems": 0,
+              "uniqueItems": true
+            },
+            "status": {
+              "type": "string",
+              "minLength": 1
+            },
+            "rationale": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "priority_order",
+            "status",
+            "rationale"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "$schema",
+        "dataset_type",
+        "research_version",
+        "research_date",
+        "profile",
+        "tracks",
+        "active_track_configuration",
+        "recommendation"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "const": "schemas/package.schema.json"
+        },
+        "dataset_type": {
+          "const": "employers"
+        },
+        "research_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "research_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "employers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]+$"
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "enabled": {
+                "type": "boolean"
+              },
+              "career_url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "watch_keywords": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 0,
+                "uniqueItems": false
+              },
+              "target_locations": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 0,
+                "uniqueItems": false
+              },
+              "research_status": {
+                "type": "string",
+                "minLength": 1
+              },
+              "portal_content_last_verified_at": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "job_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              },
+              "source_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              },
+              "observed_requirements": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 0,
+                "uniqueItems": false
+              },
+              "limitations": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "enabled",
+              "career_url",
+              "watch_keywords",
+              "target_locations",
+              "research_status",
+              "portal_content_last_verified_at",
+              "job_ids",
+              "source_ids",
+              "observed_requirements",
+              "limitations"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "job_postings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]+$"
+              },
+              "employer_id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]+$"
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "primary_role_category": {
+                "enum": [
+                  "senior",
+                  "cloud",
+                  "devops",
+                  "platform",
+                  "ai",
+                  "agent"
+                ]
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "source_id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]+$"
+              },
+              "source_authority": {
+                "enum": [
+                  "primary",
+                  "secondary"
+                ]
+              },
+              "collected_at": {
+                "type": "string",
+                "format": "date"
+              },
+              "posted_at": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "closes_at": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "status": {
+                "enum": [
+                  "live_description",
+                  "expired"
+                ]
+              },
+              "location_and_remote_policy": {
+                "type": "string",
+                "minLength": 1
+              },
+              "kenya_remote_eligibility": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minimum_years": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "maximum_years": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "required_skill_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              },
+              "preferred_skill_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              },
+              "requirements_summary": {
+                "type": "string",
+                "minLength": 1
+              },
+              "coding_notes": {
+                "type": "string",
+                "minLength": 1
+              },
+              "seniority_basis": {
+                "type": "string",
+                "minLength": 1
+              },
+              "interview_evidence": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "id",
+              "employer_id",
+              "title",
+              "primary_role_category",
+              "url",
+              "source_id",
+              "source_authority",
+              "collected_at",
+              "posted_at",
+              "closes_at",
+              "status",
+              "location_and_remote_policy",
+              "kenya_remote_eligibility",
+              "minimum_years",
+              "maximum_years",
+              "required_skill_ids",
+              "preferred_skill_ids",
+              "requirements_summary",
+              "coding_notes",
+              "seniority_basis",
+              "interview_evidence"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "configuration_contract": {
+          "type": "object",
+          "properties": {
+            "operation": {
+              "type": "string",
+              "minLength": 1
+            },
+            "add_employer": {
+              "type": "string",
+              "minLength": 1
+            },
+            "add_job_description": {
+              "type": "string",
+              "minLength": 1
+            },
+            "refresh_interval_days": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "eligibility_policy": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "operation",
+            "add_employer",
+            "add_job_description",
+            "refresh_interval_days",
+            "eligibility_policy"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "$schema",
+        "dataset_type",
+        "research_version",
+        "research_date",
+        "employers",
+        "job_postings",
+        "configuration_contract"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "const": "schemas/package.schema.json"
+        },
+        "dataset_type": {
+          "const": "resources"
+        },
+        "research_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "research_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "resources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]+$"
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "resource_type": {
+                "enum": [
+                  "official_documentation",
+                  "free_course",
+                  "youtube_video"
+                ]
+              },
+              "provider": {
+                "type": "string",
+                "minLength": 1
+              },
+              "creator": {
+                "type": "string",
+                "minLength": 1
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "track_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              },
+              "skill_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              },
+              "difficulty": {
+                "type": "string",
+                "minLength": 1
+              },
+              "duration_minutes": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "duration_status": {
+                "enum": [
+                  "publisher_stated",
+                  "unavailable"
+                ]
+              },
+              "free_status": {
+                "enum": [
+                  "fully_free",
+                  "free_audit",
+                  "free_documentation",
+                  "free_introductory",
+                  "free_optional_paid_certification",
+                  "paid"
+                ]
+              },
+              "free_evidence": {
+                "type": "string",
+                "minLength": 1
+              },
+              "execution_cost": {
+                "type": "string",
+                "minLength": 1
+              },
+              "published_at": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "last_verified_at": {
+                "type": "string",
+                "format": "date"
+              },
+              "verification_scope": {
+                "type": "string",
+                "minLength": 1
+              },
+              "view_count": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "like_count": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "comment_count": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "playlist_size": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "community_feedback_summary": {
+                "type": "string",
+                "minLength": 1
+              },
+              "technical_quality_score": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 100
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "relevance_score": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 100
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "public_metadata_observations": {
+                "type": "object",
+                "properties": {
+                  "observed_at": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "view_count_display": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "like_count_display": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "published_age_display": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "interpretation": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "observed_at",
+                  "view_count_display",
+                  "like_count_display",
+                  "published_age_display",
+                  "interpretation"
+                ],
+                "additionalProperties": false
+              },
+              "overall_score": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 100
+              },
+              "score_upper_bound": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 100
+              },
+              "score_breakdown": {
+                "type": "object",
+                "properties": {
+                  "technical_correctness": {
+                    "anyOf": [
+                      {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 25
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "role_relevance": {
+                    "anyOf": [
+                      {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 20
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "depth_completeness": {
+                    "anyOf": [
+                      {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 15
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "practical_implementation": {
+                    "anyOf": [
+                      {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 15
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "publisher_credibility": {
+                    "anyOf": [
+                      {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 10
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "community_feedback": {
+                    "anyOf": [
+                      {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 10
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "recency": {
+                    "anyOf": [
+                      {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 5
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "technical_correctness",
+                  "role_relevance",
+                  "depth_completeness",
+                  "practical_implementation",
+                  "publisher_credibility",
+                  "community_feedback",
+                  "recency"
+                ],
+                "additionalProperties": false
+              },
+              "score_rationale": {
+                "type": "object",
+                "properties": {
+                  "technical_correctness": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "role_relevance": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "depth_completeness": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "practical_implementation": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "publisher_credibility": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "community_feedback": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "recency": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "technical_correctness",
+                  "role_relevance",
+                  "depth_completeness",
+                  "practical_implementation",
+                  "publisher_credibility",
+                  "community_feedback",
+                  "recency"
+                ],
+                "additionalProperties": false
+              },
+              "confidence": {
+                "enum": [
+                  "low",
+                  "medium",
+                  "high"
+                ]
+              },
+              "selection_reason": {
+                "type": "string",
+                "minLength": 1
+              },
+              "technical_relevance": {
+                "type": "string",
+                "minLength": 1
+              },
+              "implementation_demonstration": {
+                "type": "string",
+                "minLength": 1
+              },
+              "limitations": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 0,
+                "uniqueItems": false
+              },
+              "verification_sources": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              },
+              "verified_chapters": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "start_seconds": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "label": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "verification": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "start_seconds",
+                    "label",
+                    "verification"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0,
+                "uniqueItems": false
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "resource_type",
+              "provider",
+              "creator",
+              "url",
+              "track_ids",
+              "skill_ids",
+              "difficulty",
+              "duration_minutes",
+              "duration_status",
+              "free_status",
+              "free_evidence",
+              "execution_cost",
+              "published_at",
+              "last_verified_at",
+              "verification_scope",
+              "view_count",
+              "like_count",
+              "comment_count",
+              "playlist_size",
+              "community_feedback_summary",
+              "technical_quality_score",
+              "relevance_score",
+              "public_metadata_observations",
+              "overall_score",
+              "score_upper_bound",
+              "score_breakdown",
+              "score_rationale",
+              "confidence",
+              "selection_reason",
+              "technical_relevance",
+              "implementation_demonstration",
+              "limitations",
+              "verification_sources",
+              "verified_chapters"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "topic_rankings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "skill_id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]+$"
+              },
+              "resource_ids_in_order": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              },
+              "interpretation": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "skill_id",
+              "resource_ids_in_order",
+              "interpretation"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "$schema",
+        "dataset_type",
+        "research_version",
+        "research_date",
+        "resources",
+        "topic_rankings"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "const": "schemas/package.schema.json"
+        },
+        "dataset_type": {
+          "const": "sources"
+        },
+        "research_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "research_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]+$"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source_type": {
+                "type": "string",
+                "minLength": 1
+              },
+              "collection_date": {
+                "type": "string",
+                "format": "date"
+              },
+              "published_at": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "method": {
+                "type": "string",
+                "minLength": 1
+              },
+              "content_status": {
+                "type": "string",
+                "minLength": 1
+              },
+              "http_status": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "final_url": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "url_last_checked_at": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "findings_summary": {
+                "type": "string",
+                "minLength": 1
+              },
+              "limitations": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "id",
+              "url",
+              "title",
+              "source_type",
+              "collection_date",
+              "published_at",
+              "method",
+              "content_status",
+              "http_status",
+              "final_url",
+              "url_last_checked_at",
+              "findings_summary",
+              "limitations"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "verification_policy": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "$schema",
+        "dataset_type",
+        "research_version",
+        "research_date",
+        "sources",
+        "verification_policy"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "const": "schemas/package.schema.json"
+        },
+        "dataset_type": {
+          "const": "skills"
+        },
+        "research_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "research_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "skills": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]+$"
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "track_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              },
+              "topic_concepts": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 0,
+                "uniqueItems": false
+              },
+              "sample_required_count": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "sample_preferred_count": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "sample_mention_count": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "sample_job_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              },
+              "learner_leverage": {
+                "type": "string",
+                "minLength": 1
+              },
+              "practice_requirement": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "track_ids",
+              "topic_concepts",
+              "sample_required_count",
+              "sample_preferred_count",
+              "sample_mention_count",
+              "sample_job_ids",
+              "learner_leverage",
+              "practice_requirement"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "track_analyses": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "track_id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]+$"
+              },
+              "sample_size": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "job_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              },
+              "frequency_rows": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "skill_id": {
+                      "type": "string",
+                      "pattern": "^[a-z][a-z0-9-]+$"
+                    },
+                    "mention_count": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "required_count": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "preferred_only_count": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "denominator": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  },
+                  "required": [
+                    "skill_id",
+                    "mention_count",
+                    "required_count",
+                    "preferred_only_count",
+                    "denominator"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0,
+                "uniqueItems": false
+              },
+              "core_skills_in_sample": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              },
+              "senior_expectations": {
+                "type": "string",
+                "minLength": 1
+              },
+              "emerging_skills": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              },
+              "emerging_evidence_status": {
+                "type": "string",
+                "minLength": 1
+              },
+              "niche_skills": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              },
+              "niche_interpretation": {
+                "type": "string",
+                "minLength": 1
+              },
+              "declining_skills": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              },
+              "decline_status": {
+                "type": "string",
+                "minLength": 1
+              },
+              "overlapping_skill_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              },
+              "leverage_skill_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              },
+              "new_practice_skill_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              },
+              "limitations": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "track_id",
+              "sample_size",
+              "job_ids",
+              "frequency_rows",
+              "core_skills_in_sample",
+              "senior_expectations",
+              "emerging_skills",
+              "emerging_evidence_status",
+              "niche_skills",
+              "niche_interpretation",
+              "declining_skills",
+              "decline_status",
+              "overlapping_skill_ids",
+              "leverage_skill_ids",
+              "new_practice_skill_ids",
+              "limitations"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "methodology": {
+          "type": "object",
+          "properties": {
+            "sample_size": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "collection_start": {
+              "type": "string",
+              "format": "date"
+            },
+            "collection_end": {
+              "type": "string",
+              "format": "date"
+            },
+            "posting_date_range": {
+              "type": "string",
+              "minLength": 1
+            },
+            "sampling": {
+              "type": "string",
+              "minLength": 1
+            },
+            "coding": {
+              "type": "string",
+              "minLength": 1
+            },
+            "denominator_policy": {
+              "type": "string",
+              "minLength": 1
+            },
+            "geographic_limits": {
+              "type": "string",
+              "minLength": 1
+            },
+            "trend_limits": {
+              "type": "string",
+              "minLength": 1
+            },
+            "refresh_policy": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "sample_size",
+            "collection_start",
+            "collection_end",
+            "posting_date_range",
+            "sampling",
+            "coding",
+            "denominator_policy",
+            "geographic_limits",
+            "trend_limits",
+            "refresh_policy"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "$schema",
+        "dataset_type",
+        "research_version",
+        "research_date",
+        "skills",
+        "track_analyses",
+        "methodology"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "const": "schemas/package.schema.json"
+        },
+        "dataset_type": {
+          "const": "projects"
+        },
+        "research_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "research_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "projects": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]+$"
+              },
+              "track_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              },
+              "level": {
+                "enum": [
+                  "exercise",
+                  "intermediate",
+                  "advanced",
+                  "capstone"
+                ]
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "problem_statement": {
+                "type": "string",
+                "minLength": 1
+              },
+              "architecture": {
+                "type": "string",
+                "minLength": 1
+              },
+              "technologies": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 0,
+                "uniqueItems": false
+              },
+              "skill_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              },
+              "engineering_requirements": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 0,
+                "uniqueItems": false
+              },
+              "acceptance_criteria": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 0,
+                "uniqueItems": false
+              },
+              "milestones": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[a-z][a-z0-9-]+$"
+                    },
+                    "title": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "deliverables": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "minItems": 0,
+                      "uniqueItems": false
+                    },
+                    "estimated_hours": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "title",
+                    "deliverables",
+                    "estimated_hours"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 1,
+                "uniqueItems": false
+              },
+              "estimated_hours": {
+                "type": "number",
+                "minimum": 0
+              },
+              "testing_strategy": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 0,
+                "uniqueItems": false
+              },
+              "security_considerations": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 0,
+                "uniqueItems": false
+              },
+              "deployment_requirements": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 0,
+                "uniqueItems": false
+              },
+              "github_deliverables": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 0,
+                "uniqueItems": false
+              },
+              "interview_discussion_points": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 0,
+                "uniqueItems": false
+              },
+              "resource_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              },
+              "cross_track_extensions": {
+                "type": "string",
+                "minLength": 1
+              },
+              "curriculum_scope_note": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "id",
+              "track_ids",
+              "level",
+              "title",
+              "problem_statement",
+              "architecture",
+              "technologies",
+              "skill_ids",
+              "engineering_requirements",
+              "acceptance_criteria",
+              "milestones",
+              "estimated_hours",
+              "testing_strategy",
+              "security_considerations",
+              "deployment_requirements",
+              "github_deliverables",
+              "interview_discussion_points",
+              "resource_ids",
+              "cross_track_extensions",
+              "curriculum_scope_note"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "$schema",
+        "dataset_type",
+        "research_version",
+        "research_date",
+        "projects"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "const": "schemas/package.schema.json"
+        },
+        "dataset_type": {
+          "const": "questions"
+        },
+        "research_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "research_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]+$"
+              },
+              "track_id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]+$"
+              },
+              "skill_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              },
+              "difficulty": {
+                "enum": [
+                  "foundational",
+                  "intermediate",
+                  "advanced",
+                  "senior"
+                ]
+              },
+              "category": {
+                "type": "string",
+                "minLength": 1
+              },
+              "question": {
+                "type": "string",
+                "minLength": 1
+              },
+              "expected_answer_elements": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 0,
+                "uniqueItems": false
+              },
+              "detailed_explanation": {
+                "type": "string",
+                "minLength": 1
+              },
+              "follow_up_questions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 0,
+                "uniqueItems": false
+              },
+              "evaluation_rubric": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "criterion": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "max_points": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "full_credit": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "criterion",
+                    "max_points",
+                    "full_credit"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 1,
+                "uniqueItems": false
+              },
+              "common_mistakes": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 0,
+                "uniqueItems": false
+              },
+              "source_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              },
+              "authorship": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "id",
+              "track_id",
+              "skill_ids",
+              "difficulty",
+              "category",
+              "question",
+              "expected_answer_elements",
+              "detailed_explanation",
+              "follow_up_questions",
+              "evaluation_rubric",
+              "common_mistakes",
+              "source_ids",
+              "authorship"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "mock_interviews": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]+$"
+              },
+              "track_id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]+$"
+              },
+              "duration_minutes": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "scenario": {
+                "type": "string",
+                "minLength": 1
+              },
+              "stages": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "minutes": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "task": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "minutes",
+                    "task"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0,
+                "uniqueItems": false
+              },
+              "question_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              },
+              "rubric": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "id",
+              "track_id",
+              "duration_minutes",
+              "scenario",
+              "stages",
+              "question_ids",
+              "rubric"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "$schema",
+        "dataset_type",
+        "research_version",
+        "research_date",
+        "questions",
+        "mock_interviews"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "const": "schemas/package.schema.json"
+        },
+        "dataset_type": {
+          "const": "curricula"
+        },
+        "research_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "research_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "plan_days": {
+          "enum": [
+            14,
+            30,
+            60
+          ]
+        },
+        "curricula": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]+$"
+              },
+              "track_id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]+$"
+              },
+              "duration_days": {
+                "enum": [
+                  14,
+                  30,
+                  60
+                ]
+              },
+              "daily_minutes": {
+                "type": "integer",
+                "minimum": 180,
+                "maximum": 240
+              },
+              "total_hours": {
+                "type": "number",
+                "minimum": 0
+              },
+              "scope": {
+                "type": "string",
+                "minLength": 1
+              },
+              "deliverable_project_id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]+$"
+              },
+              "capstone_completion_level": {
+                "type": "string",
+                "minLength": 1
+              },
+              "adjustment_policy": {
+                "type": "object",
+                "properties": {
+                  "180_minutes": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "240_minutes": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "unfinished_work": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "waiver": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "180_minutes",
+                  "240_minutes",
+                  "unfinished_work",
+                  "waiver"
+                ],
+                "additionalProperties": false
+              },
+              "lessons": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[a-z][a-z0-9-]+$"
+                    },
+                    "day": {
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 60
+                    },
+                    "track_id": {
+                      "type": "string",
+                      "pattern": "^[a-z][a-z0-9-]+$"
+                    },
+                    "topic": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "knowledge_unit_id": {
+                      "type": "string",
+                      "pattern": "^[a-z][a-z0-9-]+$"
+                    },
+                    "skill_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9-]+$"
+                      },
+                      "minItems": 0,
+                      "uniqueItems": true
+                    },
+                    "learning_objectives": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "minItems": 0,
+                      "uniqueItems": false
+                    },
+                    "why_it_matters": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "prerequisites": {
+                      "type": "object",
+                      "properties": {
+                        "lesson_ids": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "pattern": "^[a-z][a-z0-9-]+$"
+                          },
+                          "minItems": 0,
+                          "uniqueItems": true
+                        },
+                        "skill_ids": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "pattern": "^[a-z][a-z0-9-]+$"
+                          },
+                          "minItems": 0,
+                          "uniqueItems": true
+                        },
+                        "baseline_knowledge": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "minItems": 0,
+                          "uniqueItems": false
+                        },
+                        "knowledge_to_check": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "minItems": 0,
+                          "uniqueItems": false
+                        },
+                        "gap_policy": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "lesson_ids",
+                        "skill_ids",
+                        "baseline_knowledge",
+                        "knowledge_to_check",
+                        "gap_policy"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "recommended_youtube_resource_id": {
+                      "type": "string",
+                      "pattern": "^[a-z][a-z0-9-]+$"
+                    },
+                    "video_duration_minutes": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "planned_video_minutes": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 45
+                    },
+                    "video_selection": {
+                      "type": "object",
+                      "properties": {
+                        "selection_method": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "focus": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "verified_timestamp_seconds": {
+                          "anyOf": [
+                            {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "timestamp_status": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "coverage_limit": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "selection_method",
+                        "focus",
+                        "verified_timestamp_seconds",
+                        "timestamp_status",
+                        "coverage_limit"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "supplementary_reading_resource_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9-]+$"
+                      },
+                      "minItems": 0,
+                      "uniqueItems": true
+                    },
+                    "reading_focus": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "practical_implementation_exercise": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "interview_question_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9-]+$"
+                      },
+                      "minItems": 0,
+                      "uniqueItems": true
+                    },
+                    "revision_exercise": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "study_guide": {
+                      "type": "object",
+                      "properties": {
+                        "before_video": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "minItems": 0,
+                          "uniqueItems": false
+                        },
+                        "during_video": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "minItems": 0,
+                          "uniqueItems": false
+                        },
+                        "after_video": {
+                          "type": "object",
+                          "properties": {
+                            "comprehension_questions": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "minItems": 0,
+                              "uniqueItems": false
+                            },
+                            "practice": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "validate_understanding": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "minItems": 0,
+                              "uniqueItems": false
+                            }
+                          },
+                          "required": [
+                            "comprehension_questions",
+                            "practice",
+                            "validate_understanding"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "required": [
+                        "before_video",
+                        "during_video",
+                        "after_video"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "time_budget_minutes": {
+                      "type": "object",
+                      "properties": {
+                        "preparation": {
+                          "type": "integer",
+                          "minimum": 0
+                        },
+                        "video": {
+                          "type": "integer",
+                          "minimum": 0
+                        },
+                        "reading": {
+                          "type": "integer",
+                          "minimum": 0
+                        },
+                        "implementation": {
+                          "type": "integer",
+                          "minimum": 0
+                        },
+                        "interview": {
+                          "type": "integer",
+                          "minimum": 0
+                        },
+                        "revision": {
+                          "type": "integer",
+                          "minimum": 0
+                        }
+                      },
+                      "required": [
+                        "preparation",
+                        "video",
+                        "reading",
+                        "implementation",
+                        "interview",
+                        "revision"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "estimated_total_study_minutes": {
+                      "type": "integer",
+                      "minimum": 180,
+                      "maximum": 240
+                    },
+                    "expected_outcome": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "completion_criteria": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "minItems": 0,
+                      "uniqueItems": false
+                    },
+                    "project_id": {
+                      "type": "string",
+                      "pattern": "^[a-z][a-z0-9-]+$"
+                    },
+                    "phase": {
+                      "enum": [
+                        "concept_and_slice",
+                        "comparative_implementation",
+                        "failure_and_revision",
+                        "capstone_integration"
+                      ]
+                    },
+                    "assessment_status": {
+                      "enum": [
+                        "authored_plan_not_learner_executed"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "day",
+                    "track_id",
+                    "topic",
+                    "knowledge_unit_id",
+                    "skill_ids",
+                    "learning_objectives",
+                    "why_it_matters",
+                    "prerequisites",
+                    "recommended_youtube_resource_id",
+                    "video_duration_minutes",
+                    "planned_video_minutes",
+                    "video_selection",
+                    "supplementary_reading_resource_ids",
+                    "reading_focus",
+                    "practical_implementation_exercise",
+                    "interview_question_ids",
+                    "revision_exercise",
+                    "study_guide",
+                    "time_budget_minutes",
+                    "estimated_total_study_minutes",
+                    "expected_outcome",
+                    "completion_criteria",
+                    "project_id",
+                    "phase",
+                    "assessment_status"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 14,
+                "uniqueItems": false
+              }
+            },
+            "required": [
+              "id",
+              "track_id",
+              "duration_days",
+              "daily_minutes",
+              "total_hours",
+              "scope",
+              "deliverable_project_id",
+              "capstone_completion_level",
+              "adjustment_policy",
+              "lessons"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 5,
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "$schema",
+        "dataset_type",
+        "research_version",
+        "research_date",
+        "plan_days",
+        "curricula"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "const": "schemas/package.schema.json"
+        },
+        "dataset_type": {
+          "const": "dependencies"
+        },
+        "research_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "research_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "skill_dependencies": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "skill_id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]+$"
+              },
+              "requires_skill_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "skill_id",
+              "requires_skill_ids"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "lesson_dependencies": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "lesson_id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]+$"
+              },
+              "requires_lesson_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "lesson_id",
+              "requires_lesson_ids"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "sequencing_policy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "external_prerequisites": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "reentry_policy": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "$schema",
+        "dataset_type",
+        "research_version",
+        "research_date",
+        "skill_dependencies",
+        "lesson_dependencies",
+        "sequencing_policy",
+        "external_prerequisites",
+        "reentry_policy"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "const": "schemas/package.schema.json"
+        },
+        "dataset_type": {
+          "const": "shared"
+        },
+        "research_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "research_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "knowledge_units": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]+$"
+              },
+              "skill_id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]+$"
+              },
+              "track_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              },
+              "canonical_lesson_id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]+$"
+              },
+              "lesson_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              },
+              "waiver_criteria": {
+                "type": "string",
+                "minLength": 1
+              },
+              "reuse_boundary": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "id",
+              "skill_id",
+              "track_ids",
+              "canonical_lesson_id",
+              "lesson_ids",
+              "waiver_criteria",
+              "reuse_boundary"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "shared_core_priority": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]+$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "equivalence_policy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "provider_comparison": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "concept": {
+                "type": "string",
+                "minLength": 1
+              },
+              "azure": {
+                "type": "string",
+                "minLength": 1
+              },
+              "aws": {
+                "type": "string",
+                "minLength": 1
+              },
+              "gcp": {
+                "type": "string",
+                "minLength": 1
+              },
+              "transfer": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]+$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "concept",
+              "azure",
+              "aws",
+              "gcp",
+              "transfer",
+              "source_ids"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "$schema",
+        "dataset_type",
+        "research_version",
+        "research_date",
+        "knowledge_units",
+        "shared_core_priority",
+        "equivalence_policy",
+        "provider_comparison"
+      ],
+      "additionalProperties": false
+    }
+  ],
+  "$defs": {
+    "Resource": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]+$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "resource_type": {
+          "enum": [
+            "official_documentation",
+            "free_course",
+            "youtube_video"
+          ]
+        },
+        "provider": {
+          "type": "string",
+          "minLength": 1
+        },
+        "creator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "track_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]+$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "skill_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]+$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "difficulty": {
+          "type": "string",
+          "minLength": 1
+        },
+        "duration_minutes": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "duration_status": {
+          "enum": [
+            "publisher_stated",
+            "unavailable"
+          ]
+        },
+        "free_status": {
+          "enum": [
+            "fully_free",
+            "free_audit",
+            "free_documentation",
+            "free_introductory",
+            "free_optional_paid_certification",
+            "paid"
+          ]
+        },
+        "free_evidence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "execution_cost": {
+          "type": "string",
+          "minLength": 1
+        },
+        "published_at": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "last_verified_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "verification_scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "view_count": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "like_count": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "comment_count": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "playlist_size": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "community_feedback_summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "technical_quality_score": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "relevance_score": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "public_metadata_observations": {
+          "type": "object",
+          "properties": {
+            "observed_at": {
+              "type": "string",
+              "format": "date"
+            },
+            "view_count_display": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "like_count_display": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "published_age_display": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "interpretation": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "observed_at",
+            "view_count_display",
+            "like_count_display",
+            "published_age_display",
+            "interpretation"
+          ],
+          "additionalProperties": false
+        },
+        "overall_score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "score_upper_bound": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "score_breakdown": {
+          "type": "object",
+          "properties": {
+            "technical_correctness": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 25
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "role_relevance": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 20
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "depth_completeness": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 15
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "practical_implementation": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 15
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "publisher_credibility": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 10
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "community_feedback": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 10
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "recency": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 5
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "technical_correctness",
+            "role_relevance",
+            "depth_completeness",
+            "practical_implementation",
+            "publisher_credibility",
+            "community_feedback",
+            "recency"
+          ],
+          "additionalProperties": false
+        },
+        "score_rationale": {
+          "type": "object",
+          "properties": {
+            "technical_correctness": {
+              "type": "string",
+              "minLength": 1
+            },
+            "role_relevance": {
+              "type": "string",
+              "minLength": 1
+            },
+            "depth_completeness": {
+              "type": "string",
+              "minLength": 1
+            },
+            "practical_implementation": {
+              "type": "string",
+              "minLength": 1
+            },
+            "publisher_credibility": {
+              "type": "string",
+              "minLength": 1
+            },
+            "community_feedback": {
+              "type": "string",
+              "minLength": 1
+            },
+            "recency": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "technical_correctness",
+            "role_relevance",
+            "depth_completeness",
+            "practical_implementation",
+            "publisher_credibility",
+            "community_feedback",
+            "recency"
+          ],
+          "additionalProperties": false
+        },
+        "confidence": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "selection_reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "technical_relevance": {
+          "type": "string",
+          "minLength": 1
+        },
+        "implementation_demonstration": {
+          "type": "string",
+          "minLength": 1
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "verification_sources": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]+$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "verified_chapters": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "start_seconds": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "verification": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "start_seconds",
+              "label",
+              "verification"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "resource_type",
+        "provider",
+        "creator",
+        "url",
+        "track_ids",
+        "skill_ids",
+        "difficulty",
+        "duration_minutes",
+        "duration_status",
+        "free_status",
+        "free_evidence",
+        "execution_cost",
+        "published_at",
+        "last_verified_at",
+        "verification_scope",
+        "view_count",
+        "like_count",
+        "comment_count",
+        "playlist_size",
+        "community_feedback_summary",
+        "technical_quality_score",
+        "relevance_score",
+        "public_metadata_observations",
+        "overall_score",
+        "score_upper_bound",
+        "score_breakdown",
+        "score_rationale",
+        "confidence",
+        "selection_reason",
+        "technical_relevance",
+        "implementation_demonstration",
+        "limitations",
+        "verification_sources",
+        "verified_chapters"
+      ],
+      "additionalProperties": false
+    },
+    "Lesson": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]+$"
+        },
+        "day": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 60
+        },
+        "track_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]+$"
+        },
+        "topic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "knowledge_unit_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]+$"
+        },
+        "skill_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]+$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "learning_objectives": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "why_it_matters": {
+          "type": "string",
+          "minLength": 1
+        },
+        "prerequisites": {
+          "type": "object",
+          "properties": {
+            "lesson_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]+$"
+              },
+              "minItems": 0,
+              "uniqueItems": true
+            },
+            "skill_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]+$"
+              },
+              "minItems": 0,
+              "uniqueItems": true
+            },
+            "baseline_knowledge": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 0,
+              "uniqueItems": false
+            },
+            "knowledge_to_check": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 0,
+              "uniqueItems": false
+            },
+            "gap_policy": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "lesson_ids",
+            "skill_ids",
+            "baseline_knowledge",
+            "knowledge_to_check",
+            "gap_policy"
+          ],
+          "additionalProperties": false
+        },
+        "recommended_youtube_resource_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]+$"
+        },
+        "video_duration_minutes": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "planned_video_minutes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 45
+        },
+        "video_selection": {
+          "type": "object",
+          "properties": {
+            "selection_method": {
+              "type": "string",
+              "minLength": 1
+            },
+            "focus": {
+              "type": "string",
+              "minLength": 1
+            },
+            "verified_timestamp_seconds": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "timestamp_status": {
+              "type": "string",
+              "minLength": 1
+            },
+            "coverage_limit": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "selection_method",
+            "focus",
+            "verified_timestamp_seconds",
+            "timestamp_status",
+            "coverage_limit"
+          ],
+          "additionalProperties": false
+        },
+        "supplementary_reading_resource_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]+$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "reading_focus": {
+          "type": "string",
+          "minLength": 1
+        },
+        "practical_implementation_exercise": {
+          "type": "string",
+          "minLength": 1
+        },
+        "interview_question_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]+$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "revision_exercise": {
+          "type": "string",
+          "minLength": 1
+        },
+        "study_guide": {
+          "type": "object",
+          "properties": {
+            "before_video": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 0,
+              "uniqueItems": false
+            },
+            "during_video": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 0,
+              "uniqueItems": false
+            },
+            "after_video": {
+              "type": "object",
+              "properties": {
+                "comprehension_questions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "minItems": 0,
+                  "uniqueItems": false
+                },
+                "practice": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "validate_understanding": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "minItems": 0,
+                  "uniqueItems": false
+                }
+              },
+              "required": [
+                "comprehension_questions",
+                "practice",
+                "validate_understanding"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "before_video",
+            "during_video",
+            "after_video"
+          ],
+          "additionalProperties": false
+        },
+        "time_budget_minutes": {
+          "type": "object",
+          "properties": {
+            "preparation": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "video": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "reading": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "implementation": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "interview": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "preparation",
+            "video",
+            "reading",
+            "implementation",
+            "interview",
+            "revision"
+          ],
+          "additionalProperties": false
+        },
+        "estimated_total_study_minutes": {
+          "type": "integer",
+          "minimum": 180,
+          "maximum": 240
+        },
+        "expected_outcome": {
+          "type": "string",
+          "minLength": 1
+        },
+        "completion_criteria": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "project_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]+$"
+        },
+        "phase": {
+          "enum": [
+            "concept_and_slice",
+            "comparative_implementation",
+            "failure_and_revision",
+            "capstone_integration"
+          ]
+        },
+        "assessment_status": {
+          "enum": [
+            "authored_plan_not_learner_executed"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "day",
+        "track_id",
+        "topic",
+        "knowledge_unit_id",
+        "skill_ids",
+        "learning_objectives",
+        "why_it_matters",
+        "prerequisites",
+        "recommended_youtube_resource_id",
+        "video_duration_minutes",
+        "planned_video_minutes",
+        "video_selection",
+        "supplementary_reading_resource_ids",
+        "reading_focus",
+        "practical_implementation_exercise",
+        "interview_question_ids",
+        "revision_exercise",
+        "study_guide",
+        "time_budget_minutes",
+        "estimated_total_study_minutes",
+        "expected_outcome",
+        "completion_criteria",
+        "project_id",
+        "phase",
+        "assessment_status"
+      ],
+      "additionalProperties": false
+    },
+    "Project": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]+$"
+        },
+        "track_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]+$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "level": {
+          "enum": [
+            "exercise",
+            "intermediate",
+            "advanced",
+            "capstone"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "problem_statement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "architecture": {
+          "type": "string",
+          "minLength": 1
+        },
+        "technologies": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "skill_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]+$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "engineering_requirements": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "acceptance_criteria": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "milestones": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]+$"
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "deliverables": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 0,
+                "uniqueItems": false
+              },
+              "estimated_hours": {
+                "type": "number",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "deliverables",
+              "estimated_hours"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "uniqueItems": false
+        },
+        "estimated_hours": {
+          "type": "number",
+          "minimum": 0
+        },
+        "testing_strategy": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "security_considerations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "deployment_requirements": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "github_deliverables": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "interview_discussion_points": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "resource_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]+$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "cross_track_extensions": {
+          "type": "string",
+          "minLength": 1
+        },
+        "curriculum_scope_note": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "track_ids",
+        "level",
+        "title",
+        "problem_statement",
+        "architecture",
+        "technologies",
+        "skill_ids",
+        "engineering_requirements",
+        "acceptance_criteria",
+        "milestones",
+        "estimated_hours",
+        "testing_strategy",
+        "security_considerations",
+        "deployment_requirements",
+        "github_deliverables",
+        "interview_discussion_points",
+        "resource_ids",
+        "cross_track_extensions",
+        "curriculum_scope_note"
+      ],
+      "additionalProperties": false
+    },
+    "Question": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]+$"
+        },
+        "track_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]+$"
+        },
+        "skill_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]+$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "difficulty": {
+          "enum": [
+            "foundational",
+            "intermediate",
+            "advanced",
+            "senior"
+          ]
+        },
+        "category": {
+          "type": "string",
+          "minLength": 1
+        },
+        "question": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expected_answer_elements": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "detailed_explanation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "follow_up_questions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "evaluation_rubric": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "criterion": {
+                "type": "string",
+                "minLength": 1
+              },
+              "max_points": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "full_credit": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "criterion",
+              "max_points",
+              "full_credit"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "uniqueItems": false
+        },
+        "common_mistakes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]+$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "authorship": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "track_id",
+        "skill_ids",
+        "difficulty",
+        "category",
+        "question",
+        "expected_answer_elements",
+        "detailed_explanation",
+        "follow_up_questions",
+        "evaluation_rubric",
+        "common_mistakes",
+        "source_ids",
+        "authorship"
+      ],
+      "additionalProperties": false
+    },
+    "Job": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]+$"
+        },
+        "employer_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]+$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "primary_role_category": {
+          "enum": [
+            "senior",
+            "cloud",
+            "devops",
+            "platform",
+            "ai",
+            "agent"
+          ]
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "source_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]+$"
+        },
+        "source_authority": {
+          "enum": [
+            "primary",
+            "secondary"
+          ]
+        },
+        "collected_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "posted_at": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "closes_at": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": {
+          "enum": [
+            "live_description",
+            "expired"
+          ]
+        },
+        "location_and_remote_policy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kenya_remote_eligibility": {
+          "type": "string",
+          "minLength": 1
+        },
+        "minimum_years": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "maximum_years": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "required_skill_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]+$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "preferred_skill_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]+$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "requirements_summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "coding_notes": {
+          "type": "string",
+          "minLength": 1
+        },
+        "seniority_basis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "interview_evidence": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "employer_id",
+        "title",
+        "primary_role_category",
+        "url",
+        "source_id",
+        "source_authority",
+        "collected_at",
+        "posted_at",
+        "closes_at",
+        "status",
+        "location_and_remote_policy",
+        "kenya_remote_eligibility",
+        "minimum_years",
+        "maximum_years",
+        "required_skill_ids",
+        "preferred_skill_ids",
+        "requirements_summary",
+        "coding_notes",
+        "seniority_basis",
+        "interview_evidence"
+      ],
+      "additionalProperties": false
+    },
+    "Source": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]+$"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "collection_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "published_at": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "content_status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "http_status": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "final_url": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "url_last_checked_at": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "findings_summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "limitations": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "url",
+        "title",
+        "source_type",
+        "collection_date",
+        "published_at",
+        "method",
+        "content_status",
+        "http_status",
+        "final_url",
+        "url_last_checked_at",
+        "findings_summary",
+        "limitations"
+      ],
+      "additionalProperties": false
+    },
+    "Skill": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]+$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "track_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]+$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "topic_concepts": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "sample_required_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sample_preferred_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sample_mention_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sample_job_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]+$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "learner_leverage": {
+          "type": "string",
+          "minLength": 1
+        },
+        "practice_requirement": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "track_ids",
+        "topic_concepts",
+        "sample_required_count",
+        "sample_preferred_count",
+        "sample_mention_count",
+        "sample_job_ids",
+        "learner_leverage",
+        "practice_requirement"
+      ],
+      "additionalProperties": false
+    },
+    "Employer": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]+$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "career_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "watch_keywords": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "target_locations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "research_status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "portal_content_last_verified_at": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "job_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]+$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]+$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "observed_requirements": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "limitations": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "enabled",
+        "career_url",
+        "watch_keywords",
+        "target_locations",
+        "research_status",
+        "portal_content_last_verified_at",
+        "job_ids",
+        "source_ids",
+        "observed_requirements",
+        "limitations"
+      ],
+      "additionalProperties": false
+    },
+    "ValidationResult": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "passed",
+            "failed"
+          ]
+        },
+        "research_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "research_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "validated_dataset_files": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "counts": {
+          "type": "object",
+          "properties": {
+            "track": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "resource": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "skill": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "employer": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "job": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "project": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "question": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "source": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "knowledge": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "lesson": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "track",
+            "resource",
+            "skill",
+            "employer",
+            "job",
+            "project",
+            "question",
+            "source",
+            "knowledge",
+            "lesson"
+          ],
+          "additionalProperties": false
+        },
+        "curriculum_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "schema_draft": {
+          "type": "string",
+          "minLength": 1
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "errors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "status",
+        "research_date",
+        "research_version",
+        "validated_dataset_files",
+        "counts",
+        "curriculum_count",
+        "schema_draft",
+        "checks",
+        "limitations",
+        "errors"
+      ],
+      "additionalProperties": false
+    },
+    "URLCheckResults": {
+      "type": "object",
+      "properties": {
+        "checked_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "unique_requests": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "content_verification": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reachable_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unavailable_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "entity_id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]+$"
+              },
+              "verification_target": {
+                "type": "string",
+                "format": "uri"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "http_status": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "final_url": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "access_status": {
+                "enum": [
+                  "reachable",
+                  "blocked_or_unavailable",
+                  "network_error"
+                ]
+              },
+              "error": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "entity_id",
+              "verification_target",
+              "url",
+              "http_status",
+              "final_url",
+              "access_status",
+              "error"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "checked_at",
+        "unique_requests",
+        "method",
+        "content_verification",
+        "reachable_count",
+        "unavailable_count",
+        "results"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

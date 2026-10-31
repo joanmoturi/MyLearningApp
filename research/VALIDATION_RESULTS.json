@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "research_date": "2026-10-31",
+  "research_version": "1.0.0",
+  "validated_dataset_files": 12,
+  "counts": {
+    "track": 5,
+    "resource": 54,
+    "skill": 80,
+    "employer": 28,
+    "job": 12,
+    "project": 40,
+    "question": 325,
+    "source": 101,
+    "knowledge": 78,
+    "lesson": 520
+  },
+  "curriculum_count": 15,
+  "schema_draft": "2020-12",
+  "checks": [
+    "Explicit JSON schemas with date/URI formats and no unknown fields",
+    "Unique entity IDs and all typed internal references",
+    "15 independent plans, contiguous days, 210-minute budgets and final deliverables",
+    "Lesson/skill dependency ordering and acyclic graphs",
+    "At least 3 exercises, 2 intermediate, 2 advanced and 1 capstone per track",
+    "All interview categories, ten-point rubrics and mock-time sums",
+    "Free-core labels and provenance, unavailable community/recency scores",
+    "Recomputed job frequencies and denominators, duplicate resource URLs",
+    "Referenced resource track associations and available validation-artifact schemas"
+  ],
+  "limitations": [
+    "Structural and editorial validation, not learner execution or proof of curriculum timing in practice",
+    "URL access results recorded separately; failures never converted into successful content verification",
+    "Full video playback, exact metadata and community review unavailable"
+  ],
+  "errors": []
+}

@@ -1,0 +1,234 @@
+{
+  "$schema": "schemas/package.schema.json",
+  "dataset_type": "learner",
+  "research_version": "1.0.0",
+  "research_date": "2026-10-31",
+  "profile": {
+    "professional_experience_years": {
+      "minimum": 5,
+      "maximum": 7,
+      "evidence": "user_provided"
+    },
+    "professional_context": "User reports previous Microsoft software engineering and large-organization production experience; do not equate exposure with expertise.",
+    "existing_exposure": [
+      "Identity diagnostics and authentication/login debugging",
+      "Microsoft Graph and detector migration",
+      "Azure infrastructure and engineering systems",
+      "Production debugging and on-call",
+      "Backend APIs, reviews and pull requests",
+      "Integrations, automation and messaging",
+      "AI-assisted engineering tools"
+    ],
+    "assess_before_skipping": [
+      "Distributed consistency",
+      "Linux/networking depth",
+      "Kubernetes cluster operation",
+      "IaC ownership",
+      "Production LLM evaluation",
+      "MCP authorization and agent reliability"
+    ],
+    "target_roles": [
+      "Senior Software Engineer",
+      "Cloud Engineer / Senior Cloud Engineer",
+      "DevOps Engineer",
+      "Platform Engineer",
+      "AI Engineer",
+      "Agentic AI / MCP Engineer"
+    ],
+    "target_markets": [
+      "Kenya",
+      "international technology companies",
+      "eligible international remote roles",
+      "international development organizations"
+    ],
+    "daily_study_minutes": {
+      "minimum": 180,
+      "default": 210,
+      "maximum": 240
+    },
+    "learning_preferences": [
+      "YouTube implementation demonstrations",
+      "Official supplementary reading",
+      "Hands-on local exercises",
+      "Daily interview preparation",
+      "GitHub-publishable projects"
+    ],
+    "assessment_gate": "Use demonstrated artifacts to waive duplicated conceptual units; preserve new-context integration labs and interviews.",
+    "privacy": "Self-reported profile only, no confidential employer incidents, identities, tokens, private Graph data or production artifacts in projects."
+  },
+  "tracks": [
+    {
+      "id": "track-swe",
+      "name": "Senior Software Engineering",
+      "target_role_categories": [
+        "senior"
+      ],
+      "priority": 1,
+      "baseline_assessment": "Explain one production system you owned; implement a typed API with tests; diagnose one synthetic failure. Treat claimed experience as self-reported until demonstrated.",
+      "skill_ids": [
+        "skill-architecture",
+        "skill-api",
+        "skill-database",
+        "skill-transactions",
+        "skill-cache",
+        "skill-messaging",
+        "skill-distributed",
+        "skill-idempotency",
+        "skill-concurrency",
+        "skill-performance",
+        "skill-scalability",
+        "skill-reliability",
+        "skill-observability",
+        "skill-security",
+        "skill-testing",
+        "skill-patterns",
+        "skill-migration",
+        "skill-incident",
+        "skill-adr",
+        "skill-leadership"
+      ]
+    },
+    {
+      "id": "track-cloud",
+      "name": "Cloud Engineering",
+      "target_role_categories": [
+        "cloud"
+      ],
+      "priority": 2,
+      "baseline_assessment": "Explain one production system you owned; implement a typed API with tests; diagnose one synthetic failure. Treat claimed experience as self-reported until demonstrated.",
+      "skill_ids": [
+        "skill-architecture",
+        "skill-networking",
+        "skill-identity",
+        "skill-azure",
+        "skill-aws",
+        "skill-gcp",
+        "skill-compute",
+        "skill-storage",
+        "skill-database",
+        "skill-serverless",
+        "skill-kubernetes",
+        "skill-security",
+        "skill-reliability",
+        "skill-disaster-recovery",
+        "skill-multi-region",
+        "skill-iac",
+        "skill-observability",
+        "skill-migration",
+        "skill-cost",
+        "skill-adr"
+      ]
+    },
+    {
+      "id": "track-devops",
+      "name": "DevOps and Platform Engineering",
+      "target_role_categories": [
+        "devops",
+        "platform"
+      ],
+      "priority": 3,
+      "baseline_assessment": "Explain one production system you owned; implement a typed API with tests; diagnose one synthetic failure. Treat claimed experience as self-reported until demonstrated.",
+      "skill_ids": [
+        "skill-linux",
+        "skill-shell",
+        "skill-networking",
+        "skill-docker",
+        "skill-kubernetes",
+        "skill-helm",
+        "skill-iac",
+        "skill-cicd",
+        "skill-azure-pipelines",
+        "skill-gitops",
+        "skill-deployment",
+        "skill-monitoring",
+        "skill-observability",
+        "skill-incident",
+        "skill-secrets",
+        "skill-platform",
+        "skill-automation",
+        "skill-cluster-recovery",
+        "skill-adr",
+        "skill-leadership"
+      ]
+    },
+    {
+      "id": "track-ai",
+      "name": "AI Application Engineering",
+      "target_role_categories": [
+        "ai"
+      ],
+      "priority": 4,
+      "baseline_assessment": "Explain one production system you owned; implement a typed API with tests; diagnose one synthetic failure. Treat claimed experience as self-reported until demonstrated.",
+      "skill_ids": [
+        "skill-python",
+        "skill-ml",
+        "skill-llm",
+        "skill-models",
+        "skill-prompting",
+        "skill-structured",
+        "skill-tools",
+        "skill-embeddings",
+        "skill-vector",
+        "skill-rag",
+        "skill-reranking",
+        "skill-evaluation",
+        "skill-ai-security",
+        "skill-privacy",
+        "skill-observability",
+        "skill-inference",
+        "skill-cost",
+        "skill-finetuning",
+        "skill-production-ai",
+        "skill-adr"
+      ]
+    },
+    {
+      "id": "track-agent",
+      "name": "Agentic AI and MCP Engineering",
+      "target_role_categories": [
+        "agent"
+      ],
+      "priority": 5,
+      "baseline_assessment": "Explain one production system you owned; implement a typed API with tests; diagnose one synthetic failure. Treat claimed experience as self-reported until demonstrated.",
+      "skill_ids": [
+        "skill-agents",
+        "skill-tools",
+        "skill-mcp",
+        "skill-mcp-server",
+        "skill-mcp-client",
+        "skill-mcp-resources",
+        "skill-mcp-transport",
+        "skill-mcp-auth",
+        "skill-integration",
+        "skill-state",
+        "skill-memory",
+        "skill-planning",
+        "skill-approval",
+        "skill-orchestration",
+        "skill-multi-agent",
+        "skill-evaluation",
+        "skill-ai-security",
+        "skill-observability",
+        "skill-agent-deployment",
+        "skill-adr"
+      ]
+    }
+  ],
+  "active_track_configuration": {
+    "active_track_id": "track-swe",
+    "allow_track_switching": true,
+    "default_plan_days": 30,
+    "completion_storage_design": "Persist completion by canonical knowledge-unit ID plus evidence; keep plan/day progress separately."
+  },
+  "recommendation": {
+    "priority_order": [
+      "track-swe",
+      "track-cloud",
+      "track-devops",
+      "track-ai",
+      "track-agent"
+    ],
+    "status": "retain_initial_order_with_shared_core_and_AI_overlay",
+    "rationale": "Closest transition uses software ownership and diagnostics experience. Cloud/DevOps share infrastructure core; add evaluated AI features for differentiation after core foundations. Small biased sample cannot establish relative market demand."
+  }
+}
