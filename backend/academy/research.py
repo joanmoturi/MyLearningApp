@@ -68,6 +68,8 @@ def validate_documents(documents: dict, research_root: Path, allow_partial: bool
             raise HTTPException(422, "Duplicate research ID: " + data["id"])
         all_ids.add(data["id"])
         registry.setdefault(kind, set()).add(data["id"])
+        if len(registry[kind]) > 10000:
+            raise HTTPException(422, "Research collections cannot exceed 10000 records per entity type.")
     references = {
         "track_id": "track",
         "track_ids": "track",

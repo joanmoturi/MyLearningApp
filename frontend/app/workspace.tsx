@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import Markdown from "react-markdown";
 import {
   api,
+  catalogue,
   human,
   num,
   obj,
@@ -119,7 +120,7 @@ export default function Workspace() {
         const [bootstrap, ...data] = await Promise.all([
           reload(),
           ...["resource", "question", "project", "mock"].map((kind) =>
-            api(`catalog/${kind}?limit=400`),
+            catalogue(kind),
           ),
         ]);
         if (!alive) return;
@@ -2766,7 +2767,7 @@ export default function Workspace() {
                               setPreview({});
                               const data = await Promise.all(
                                 ["resource", "question", "project", "mock"].map(
-                                  (kind) => api(`catalog/${kind}?limit=400`),
+                                  (kind) => catalogue(kind),
                                 ),
                               );
                               setCatalog(

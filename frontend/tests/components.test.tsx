@@ -2,7 +2,7 @@ import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import Markdown from "react-markdown";
 import { Editor, External } from "../app/components";
-import { api, safeLink } from "../lib/data";
+import { api, catalogue, safeLink } from "../lib/data";
 
 describe("safe resource and note rendering", () => {
   it("rejects script URLs and credentials", () => {
@@ -108,4 +108,23 @@ describe("evidence forms", () => {
     await expect(api("bootstrap")).rejects.toThrow("Local API unavailable");
     vi.unstubAllGlobals();
   });
+});
+
+it("loads later catalogue pages rather than silently hiding imported questions", async () => {
+  const first = Array.from({ length: 400 }, (_, index) => ({
+    id: `question-${index}`,
+  }));
+  const second = [{ id: "question-400" }];
+  const fetch = vi
+    .fn()
+    .mockResolvedValueOnce(Response.json({ items: first, total: 401 }))
+    .mockResolvedValueOnce(Response.json({ items: second, total: 401 }));
+  vi.stubGlobal("fetch", fetch);
+  try {
+    const result = await catalogue("question");
+    expect(result.items).toHaveLength(401);
+    expect(fetch.mock.calls[1][0]).toContain("offset=400");
+  } finally {
+    vi.unstubAllGlobals();
+  }
 });

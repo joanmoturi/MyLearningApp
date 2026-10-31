@@ -70,3 +70,23 @@ export function safeLink(value: unknown): string | undefined {
     return undefined;
   }
 }
+
+export async function catalogue(kind: string): Promise<Row> {
+  const first = await api(`catalog/${kind}?limit=400&offset=0`);
+  const total = num(first.total);
+  if (total > 10000)
+    throw new Error(
+      "Catalogue exceeds the supported 10,000-record collection limit.",
+    );
+  const items = rows(first.items);
+  while (items.length < total) {
+    const page = await api(`catalog/${kind}?limit=400&offset=${items.length}`);
+    const batch = rows(page.items);
+    if (num(page.total) !== total || batch.length === 0)
+      throw new Error("Catalogue changed while loading. Retry the workspace.");
+    items.push(...batch);
+  }
+  if (new Set(items.map((item) => item.id)).size !== items.length)
+    throw new Error("Catalogue changed while loading. Retry the workspace.");
+  return { items, total };
+}
