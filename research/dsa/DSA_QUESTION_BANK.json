@@ -1,0 +1,4261 @@
+{
+  "$schema": "DSA_PACKAGE_SCHEMA.json",
+  "dataset_type": "dsa",
+  "research_version": "1.0.0",
+  "research_date": "2026-10-31",
+  "questions": [
+    {
+      "id": "question-dsa-01",
+      "track_id": "track-dsa",
+      "title": "Count triangular work",
+      "question": "Given an integer n, return the number of visits performed by loops i=0..n-1 and j=0..i. Do not execute the loops in your final implementation.",
+      "skill_ids": [
+        "skill-dsa-foundations"
+      ],
+      "pattern": "Summation",
+      "difficulty": "easy",
+      "category": "coding",
+      "constraints": [
+        "0 <= n <= 1000000; return an exact Number integer."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": 0,
+          "output": 0
+        },
+        {
+          "input": 4,
+          "output": 10
+        },
+        {
+          "input": 10,
+          "output": 55
+        }
+      ],
+      "hints": [
+        "Sum row lengths 1 through n."
+      ],
+      "expected_algorithm": "Summation",
+      "complexity": {
+        "time": "O(1)",
+        "space": "O(1)"
+      },
+      "solution_code": "function solve(n) { return n * (n + 1) / 2; }",
+      "detailed_explanation": "Loop counting is O(n^2); algebraic summation is constant-time under this bounded-number model. Sum row lengths 1 through n.",
+      "expected_answer_elements": [
+        "Sum row lengths 1 through n.",
+        "State the invariant.",
+        "Time: O(1); auxiliary space: O(1).",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: Sum row lengths 1 through n.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-02"
+      ],
+      "recommended_minutes": 20,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    },
+    {
+      "id": "question-dsa-02",
+      "track_id": "track-dsa",
+      "title": "Growth-copy accounting",
+      "question": "A dynamic buffer starts at capacity 1 with length 0. Before each append to a full buffer, double capacity and copy its current contents. Given n appends, return total copied items, excluding the new appends.",
+      "skill_ids": [
+        "skill-dsa-foundations"
+      ],
+      "pattern": "Amortized analysis",
+      "difficulty": "medium",
+      "category": "coding",
+      "constraints": [
+        "0 <= n <= 1000000; growth happens only when an append would exceed capacity."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": 0,
+          "output": 0
+        },
+        {
+          "input": 1,
+          "output": 0
+        },
+        {
+          "input": 5,
+          "output": 7
+        },
+        {
+          "input": 8,
+          "output": 7
+        }
+      ],
+      "hints": [
+        "Account for a geometric series of capacity copies."
+      ],
+      "expected_algorithm": "Amortized analysis",
+      "complexity": {
+        "time": "O(log n)",
+        "space": "O(1)"
+      },
+      "solution_code": "function solve(n) { let capacity = 1, copied = 0; while (capacity < n) { copied += capacity; capacity *= 2; } return copied; }",
+      "detailed_explanation": "Simulating all appends is O(n); summing growth events is O(log n). Total copying is less than 2n. Account for a geometric series of capacity copies.",
+      "expected_answer_elements": [
+        "Account for a geometric series of capacity copies.",
+        "State the invariant.",
+        "Time: O(log n); auxiliary space: O(1).",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: Account for a geometric series of capacity copies.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-01"
+      ],
+      "recommended_minutes": 30,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    },
+    {
+      "id": "question-dsa-03",
+      "track_id": "track-dsa",
+      "title": "Telemetry frequency table",
+      "question": "Given an array of lowercase event names, return [name,count] pairs sorted lexicographically by name. Treat repeated names as the same event type.",
+      "skill_ids": [
+        "skill-dsa-arrays"
+      ],
+      "pattern": "Frequency counting",
+      "difficulty": "easy",
+      "category": "coding",
+      "constraints": [
+        "0 <= events.length <= 100000; names contain only lowercase ASCII letters."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": [],
+          "output": []
+        },
+        {
+          "input": [
+            "login",
+            "reset",
+            "login"
+          ],
+          "output": [
+            [
+              "login",
+              2
+            ],
+            [
+              "reset",
+              1
+            ]
+          ]
+        },
+        {
+          "input": [
+            "b",
+            "a"
+          ],
+          "output": [
+            [
+              "a",
+              1
+            ],
+            [
+              "b",
+              1
+            ]
+          ]
+        }
+      ],
+      "hints": [
+        "Count with a map and sort only distinct names."
+      ],
+      "expected_algorithm": "Frequency counting",
+      "complexity": {
+        "time": "O(n + u log u)",
+        "space": "O(u)"
+      },
+      "solution_code": "function solve(events) { const counts = new Map(); for (const name of events) counts.set(name, (counts.get(name) || 0) + 1); return [...counts].sort((a,b) => a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0); }",
+      "detailed_explanation": "Repeated full-array scans are quadratic; hashing is expected linear before sorting u unique keys. Count with a map and sort only distinct names.",
+      "expected_answer_elements": [
+        "Count with a map and sort only distinct names.",
+        "State the invariant.",
+        "Time: O(n + u log u); auxiliary space: O(u).",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: Count with a map and sort only distinct names.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-04"
+      ],
+      "recommended_minutes": 20,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    },
+    {
+      "id": "question-dsa-04",
+      "track_id": "track-dsa",
+      "title": "Batched range totals",
+      "question": "Input is {values,queries}. Each query [left,right] uses inclusive zero-based bounds. Return each range sum in query order.",
+      "skill_ids": [
+        "skill-dsa-arrays"
+      ],
+      "pattern": "Prefix sums",
+      "difficulty": "medium",
+      "category": "coding",
+      "constraints": [
+        "0 <= values.length <= 100000; queries are valid nonempty ranges; integer sums remain safe integers."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": {
+            "values": [],
+            "queries": []
+          },
+          "output": []
+        },
+        {
+          "input": {
+            "values": [
+              2,
+              -1,
+              4
+            ],
+            "queries": [
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          },
+          "output": [
+            5,
+            -1
+          ]
+        }
+      ],
+      "hints": [
+        "Store a leading-zero prefix and subtract at the two boundaries."
+      ],
+      "expected_algorithm": "Prefix sums",
+      "complexity": {
+        "time": "O(n + q)",
+        "space": "O(n)"
+      },
+      "solution_code": "function solve({values,queries}) { const prefix=[0]; for (const value of values) prefix.push(prefix[prefix.length-1]+value); return queries.map(([l,r]) => prefix[r+1]-prefix[l]); }",
+      "detailed_explanation": "Scanning each range costs O(nq); preprocessing makes each valid query constant-time. Store a leading-zero prefix and subtract at the two boundaries.",
+      "expected_answer_elements": [
+        "Store a leading-zero prefix and subtract at the two boundaries.",
+        "State the invariant.",
+        "Time: O(n + q); auxiliary space: O(n).",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: Store a leading-zero prefix and subtract at the two boundaries.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-03"
+      ],
+      "recommended_minutes": 30,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    },
+    {
+      "id": "question-dsa-05",
+      "track_id": "track-dsa",
+      "title": "Unique-event window",
+      "question": "Given an array of event names, return the length of the longest contiguous block containing no repeated name.",
+      "skill_ids": [
+        "skill-dsa-patterns"
+      ],
+      "pattern": "Sliding window",
+      "difficulty": "medium",
+      "category": "coding",
+      "constraints": [
+        "0 <= events.length <= 100000; event identity is exact string equality."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": [],
+          "output": 0
+        },
+        {
+          "input": [
+            "a",
+            "b",
+            "a",
+            "c"
+          ],
+          "output": 3
+        },
+        {
+          "input": [
+            "a",
+            "a"
+          ],
+          "output": 1
+        }
+      ],
+      "hints": [
+        "Advance the left boundary past the last occurrence, never backwards."
+      ],
+      "expected_algorithm": "Sliding window",
+      "complexity": {
+        "time": "O(n) expected",
+        "space": "O(u)"
+      },
+      "solution_code": "function solve(events) { const seen=new Map(); let left=0,best=0; for(let right=0;right<events.length;right++){ if(seen.has(events[right])) left=Math.max(left,seen.get(events[right])+1); seen.set(events[right],right); best=Math.max(best,right-left+1); } return best; }",
+      "detailed_explanation": "Enumerating and checking every interval is superlinear; each boundary advances monotonically. Advance the left boundary past the last occurrence, never backwards.",
+      "expected_answer_elements": [
+        "Advance the left boundary past the last occurrence, never backwards.",
+        "State the invariant.",
+        "Time: O(n) expected; auxiliary space: O(u).",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: Advance the left boundary past the last occurrence, never backwards.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-06"
+      ],
+      "recommended_minutes": 30,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    },
+    {
+      "id": "question-dsa-06",
+      "track_id": "track-dsa",
+      "title": "Signed target windows",
+      "question": "Input is {values,target}. Return the number of nonempty contiguous subarrays whose sum equals target; values may be negative.",
+      "skill_ids": [
+        "skill-dsa-patterns"
+      ],
+      "pattern": "Prefix hashing",
+      "difficulty": "hard",
+      "category": "coding",
+      "constraints": [
+        "0 <= values.length <= 100000; values and counts remain safe integers."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": {
+            "values": [],
+            "target": 0
+          },
+          "output": 0
+        },
+        {
+          "input": {
+            "values": [
+              1,
+              -1,
+              1
+            ],
+            "target": 1
+          },
+          "output": 3
+        },
+        {
+          "input": {
+            "values": [
+              0,
+              0
+            ],
+            "target": 0
+          },
+          "output": 3
+        }
+      ],
+      "hints": [
+        "Count earlier prefixes equal to current prefix minus target."
+      ],
+      "expected_algorithm": "Prefix hashing",
+      "complexity": {
+        "time": "O(n) expected",
+        "space": "O(n)"
+      },
+      "solution_code": "function solve({values,target}) { const counts=new Map([[0,1]]); let prefix=0,result=0; for(const value of values){ prefix+=value; result+=counts.get(prefix-target)||0; counts.set(prefix,(counts.get(prefix)||0)+1); } return result; }",
+      "detailed_explanation": "A threshold sliding window is invalid with negative values; use prefix counts rather than enumerating all O(n^2) windows. Count earlier prefixes equal to current prefix minus target.",
+      "expected_answer_elements": [
+        "Count earlier prefixes equal to current prefix minus target.",
+        "State the invariant.",
+        "Time: O(n) expected; auxiliary space: O(n).",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: Count earlier prefixes equal to current prefix minus target.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-05"
+      ],
+      "recommended_minutes": 45,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    },
+    {
+      "id": "question-dsa-07",
+      "track_id": "track-dsa",
+      "title": "Reverse a node chain",
+      "question": "Input is the head of an acyclic singly linked list represented by nested {value,next} objects, or null. Return its reversed head by changing next links.",
+      "skill_ids": [
+        "skill-dsa-linked"
+      ],
+      "pattern": "Pointer reversal",
+      "difficulty": "easy",
+      "category": "coding",
+      "constraints": [
+        "At most 10000 nodes; final next is null; values may repeat."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": null,
+          "output": null
+        },
+        {
+          "input": {
+            "value": 1,
+            "next": {
+              "value": 2,
+              "next": null
+            }
+          },
+          "output": {
+            "value": 2,
+            "next": {
+              "value": 1,
+              "next": null
+            }
+          }
+        }
+      ],
+      "hints": [
+        "Save the next pointer before rewiring."
+      ],
+      "expected_algorithm": "Pointer reversal",
+      "complexity": {
+        "time": "O(n)",
+        "space": "O(1) auxiliary"
+      },
+      "solution_code": "function solve(head) { let previous=null,current=head; while(current!==null){ const next=current.next; current.next=previous; previous=current; current=next; } return previous; }",
+      "detailed_explanation": "An array copy uses O(n) auxiliary space; iterative pointer reversal uses a constant number of references. Save the next pointer before rewiring.",
+      "expected_answer_elements": [
+        "Save the next pointer before rewiring.",
+        "State the invariant.",
+        "Time: O(n); auxiliary space: O(1) auxiliary.",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: Save the next pointer before rewiring.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-08"
+      ],
+      "recommended_minutes": 20,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    },
+    {
+      "id": "question-dsa-08",
+      "track_id": "track-dsa",
+      "title": "Bounded recency cache",
+      "question": "Input is {capacity,operations}, where operations are ['put',key,value] or ['get',key]. Return an array containing each get result or null for a miss. A get or overwrite makes the key most recent; evict least recent on overflow.",
+      "skill_ids": [
+        "skill-dsa-linked"
+      ],
+      "pattern": "LRU cache",
+      "difficulty": "hard",
+      "category": "coding",
+      "constraints": [
+        "1 <= capacity <= 1000; keys are strings; up to 10000 operations; stored values are integers."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": {
+            "capacity": 1,
+            "operations": [
+              [
+                "put",
+                "a",
+                2
+              ],
+              [
+                "get",
+                "a"
+              ],
+              [
+                "put",
+                "b",
+                3
+              ],
+              [
+                "get",
+                "a"
+              ]
+            ]
+          },
+          "output": [
+            2,
+            null
+          ]
+        },
+        {
+          "input": {
+            "capacity": 2,
+            "operations": [
+              [
+                "get",
+                "x"
+              ],
+              [
+                "put",
+                "x",
+                1
+              ],
+              [
+                "put",
+                "x",
+                4
+              ],
+              [
+                "get",
+                "x"
+              ]
+            ]
+          },
+          "output": [
+            null,
+            4
+          ]
+        }
+      ],
+      "hints": [
+        "Refresh insertion order on both get and overwrite; then remove the first key on overflow."
+      ],
+      "expected_algorithm": "LRU cache",
+      "complexity": {
+        "time": "O(m) expected with insertion-ordered Map",
+        "space": "O(c) auxiliary"
+      },
+      "solution_code": "function solve({capacity,operations}) { const cache=new Map(),out=[]; for(const [action,key,value] of operations){ if(action==='get'){ if(!cache.has(key)){out.push(null);continue;} const saved=cache.get(key); cache.delete(key);cache.set(key,saved);out.push(saved); } else {cache.delete(key);cache.set(key,value); if(cache.size>capacity) cache.delete(cache.keys().next().value);} } return out; }",
+      "detailed_explanation": "The JavaScript reference uses Map order. Implement a hash map plus doubly linked nodes as the independent language-neutral variation; never claim Map provides a portable linked-list API. Refresh insertion order on both get and overwrite; then remove the first key on overflow.",
+      "expected_answer_elements": [
+        "Refresh insertion order on both get and overwrite; then remove the first key on overflow.",
+        "State the invariant.",
+        "Time: O(m) expected with insertion-ordered Map; auxiliary space: O(c) auxiliary.",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: Refresh insertion order on both get and overwrite; then remove the first key on overflow.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-07"
+      ],
+      "recommended_minutes": 45,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    },
+    {
+      "id": "question-dsa-09",
+      "track_id": "track-dsa",
+      "title": "Validate nested brackets",
+      "question": "Given a string consisting only of ()[]{}, return whether all brackets are correctly nested and matched.",
+      "skill_ids": [
+        "skill-dsa-stacks"
+      ],
+      "pattern": "Nested stack",
+      "difficulty": "easy",
+      "category": "coding",
+      "constraints": [
+        "Length <= 100000; the empty string is valid."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": "",
+          "output": true
+        },
+        {
+          "input": "([]{})",
+          "output": true
+        },
+        {
+          "input": "([)]",
+          "output": false
+        }
+      ],
+      "hints": [
+        "Keep the opening brackets that have not yet been closed."
+      ],
+      "expected_algorithm": "Nested stack",
+      "complexity": {
+        "time": "O(n)",
+        "space": "O(n)"
+      },
+      "solution_code": "function solve(value) { const stack=[],pairs={')':'(',']':'[','}':'{'}; for(const char of value){ if('([{'.includes(char)) stack.push(char); else if(stack.pop()!==pairs[char]) return false; } return stack.length===0; }",
+      "detailed_explanation": "Counting characters alone cannot validate nesting; the stack models unresolved structure. Keep the opening brackets that have not yet been closed.",
+      "expected_answer_elements": [
+        "Keep the opening brackets that have not yet been closed.",
+        "State the invariant.",
+        "Time: O(n); auxiliary space: O(n).",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: Keep the opening brackets that have not yet been closed.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-10"
+      ],
+      "recommended_minutes": 20,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    },
+    {
+      "id": "question-dsa-10",
+      "track_id": "track-dsa",
+      "title": "Next higher measurement",
+      "question": "Given integer measurements, return for each position the distance to the next strictly greater measurement, or 0 if none exists.",
+      "skill_ids": [
+        "skill-dsa-stacks"
+      ],
+      "pattern": "Monotonic stack",
+      "difficulty": "medium",
+      "category": "coding",
+      "constraints": [
+        "Length <= 100000; equal values are not greater."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": [],
+          "output": []
+        },
+        {
+          "input": [
+            4,
+            4,
+            6,
+            3
+          ],
+          "output": [
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "input": [
+            3,
+            2,
+            1
+          ],
+          "output": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "hints": [
+        "Retain unresolved indices in nonincreasing value order."
+      ],
+      "expected_algorithm": "Monotonic stack",
+      "complexity": {
+        "time": "O(n) amortized",
+        "space": "O(n)"
+      },
+      "solution_code": "function solve(values) { const out=Array(values.length).fill(0),stack=[]; for(let i=0;i<values.length;i++){ while(stack.length && values[i]>values[stack[stack.length-1]]){const old=stack.pop();out[old]=i-old;} stack.push(i); } return out; }",
+      "detailed_explanation": "Searching forward from every index is quadratic; each index is pushed and popped at most once. Retain unresolved indices in nonincreasing value order.",
+      "expected_answer_elements": [
+        "Retain unresolved indices in nonincreasing value order.",
+        "State the invariant.",
+        "Time: O(n) amortized; auxiliary space: O(n).",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: Retain unresolved indices in nonincreasing value order.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-09"
+      ],
+      "recommended_minutes": 30,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    },
+    {
+      "id": "question-dsa-11",
+      "track_id": "track-dsa",
+      "title": "Find the first permitted position",
+      "question": "Input is {values,target} with ascending integers. Return the first index whose value is at least target, or values.length if no such index exists.",
+      "skill_ids": [
+        "skill-dsa-sorting"
+      ],
+      "pattern": "Lower bound",
+      "difficulty": "easy",
+      "category": "coding",
+      "constraints": [
+        "Length <= 100000; duplicates are allowed."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": {
+            "values": [],
+            "target": 1
+          },
+          "output": 0
+        },
+        {
+          "input": {
+            "values": [
+              1,
+              2,
+              2,
+              5
+            ],
+            "target": 2
+          },
+          "output": 1
+        },
+        {
+          "input": {
+            "values": [
+              1,
+              2
+            ],
+            "target": 8
+          },
+          "output": 2
+        }
+      ],
+      "hints": [
+        "Maintain a half-open search interval and never discard a possible earlier boundary."
+      ],
+      "expected_algorithm": "Lower bound",
+      "complexity": {
+        "time": "O(log n)",
+        "space": "O(1)"
+      },
+      "solution_code": "function solve({values,target}) { let low=0,high=values.length; while(low<high){const mid=low+Math.floor((high-low)/2);if(values[mid]<target) low=mid+1;else high=mid;} return low; }",
+      "detailed_explanation": "Linear scanning is O(n); the sorted predicate permits binary boundary search. Maintain a half-open search interval and never discard a possible earlier boundary.",
+      "expected_answer_elements": [
+        "Maintain a half-open search interval and never discard a possible earlier boundary.",
+        "State the invariant.",
+        "Time: O(log n); auxiliary space: O(1).",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: Maintain a half-open search interval and never discard a possible earlier boundary.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-12"
+      ],
+      "recommended_minutes": 20,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    },
+    {
+      "id": "question-dsa-12",
+      "track_id": "track-dsa",
+      "title": "Stable merge ordering",
+      "question": "Given records {key,id}, return them sorted by ascending numeric key while preserving input order among equal keys. Implement merge sort rather than calling built-in sort.",
+      "skill_ids": [
+        "skill-dsa-sorting"
+      ],
+      "pattern": "Divide and conquer",
+      "difficulty": "medium",
+      "category": "coding",
+      "constraints": [
+        "At most 10000 records; ids are distinct strings."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": [],
+          "output": []
+        },
+        {
+          "input": [
+            {
+              "key": 2,
+              "id": "a"
+            },
+            {
+              "key": 1,
+              "id": "b"
+            },
+            {
+              "key": 2,
+              "id": "c"
+            }
+          ],
+          "output": [
+            {
+              "key": 1,
+              "id": "b"
+            },
+            {
+              "key": 2,
+              "id": "a"
+            },
+            {
+              "key": 2,
+              "id": "c"
+            }
+          ]
+        }
+      ],
+      "hints": [
+        "When keys tie, take from the left half first."
+      ],
+      "expected_algorithm": "Divide and conquer",
+      "complexity": {
+        "time": "O(n log n)",
+        "space": "O(n) peak auxiliary plus O(log n) stack"
+      },
+      "solution_code": "function solve(items) { if(items.length<2)return items.slice(); const mid=Math.floor(items.length/2),a=solve(items.slice(0,mid)),b=solve(items.slice(mid)),out=[];let i=0,j=0;while(i<a.length&&j<b.length)out.push(a[i].key<=b[j].key?a[i++]:b[j++]);return out.concat(a.slice(i),b.slice(j)); }",
+      "detailed_explanation": "Insertion sorting can be quadratic; balanced merge recursion gives predictable comparison growth. When keys tie, take from the left half first.",
+      "expected_answer_elements": [
+        "When keys tie, take from the left half first.",
+        "State the invariant.",
+        "Time: O(n log n); auxiliary space: O(n) peak auxiliary plus O(log n) stack.",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: When keys tie, take from the left half first.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-11"
+      ],
+      "recommended_minutes": 30,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    },
+    {
+      "id": "question-dsa-13",
+      "track_id": "track-dsa",
+      "title": "Depth of a diagnostics tree",
+      "question": "Input is a binary tree {value,left,right} with null missing children. Return the maximum number of nodes on a root-to-leaf path; an empty tree has depth 0.",
+      "skill_ids": [
+        "skill-dsa-trees"
+      ],
+      "pattern": "Tree DFS",
+      "difficulty": "easy",
+      "category": "coding",
+      "constraints": [
+        "At most 1000 nodes; height at most 500 in this browser exercise."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": null,
+          "output": 0
+        },
+        {
+          "input": {
+            "value": 1,
+            "left": {
+              "value": 2,
+              "left": null,
+              "right": null
+            },
+            "right": null
+          },
+          "output": 2
+        }
+      ],
+      "hints": [
+        "Compute child depths before combining their maximum."
+      ],
+      "expected_algorithm": "Tree DFS",
+      "complexity": {
+        "time": "O(n)",
+        "space": "O(h)"
+      },
+      "solution_code": "function solve(node) { return node===null?0:1+Math.max(solve(node.left),solve(node.right)); }",
+      "detailed_explanation": "Repeated subtree traversals waste work; one postorder traversal returns the needed summary. Compute child depths before combining their maximum.",
+      "expected_answer_elements": [
+        "Compute child depths before combining their maximum.",
+        "State the invariant.",
+        "Time: O(n); auxiliary space: O(h).",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: Compute child depths before combining their maximum.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-14"
+      ],
+      "recommended_minutes": 20,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    },
+    {
+      "id": "question-dsa-14",
+      "track_id": "track-dsa",
+      "title": "Validate global search bounds",
+      "question": "Given a binary tree {value,left,right}, return whether it is a strict binary search tree. All left descendants must be smaller and all right descendants greater; duplicates are invalid.",
+      "skill_ids": [
+        "skill-dsa-trees"
+      ],
+      "pattern": "Propagated bounds",
+      "difficulty": "medium",
+      "category": "coding",
+      "constraints": [
+        "At most 1000 nodes; finite safe integers."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": null,
+          "output": true
+        },
+        {
+          "input": {
+            "value": 5,
+            "left": {
+              "value": 3,
+              "left": null,
+              "right": null
+            },
+            "right": null
+          },
+          "output": true
+        },
+        {
+          "input": {
+            "value": 5,
+            "left": null,
+            "right": {
+              "value": 7,
+              "left": {
+                "value": 4,
+                "left": null,
+                "right": null
+              },
+              "right": null
+            }
+          },
+          "output": false
+        }
+      ],
+      "hints": [
+        "Pass ancestor constraints, not merely the immediate parent."
+      ],
+      "expected_algorithm": "Propagated bounds",
+      "complexity": {
+        "time": "O(n)",
+        "space": "O(h)"
+      },
+      "solution_code": "function solve(root) { function valid(node,low,high){return node===null || (node.value>low && node.value<high && valid(node.left,low,node.value)&&valid(node.right,node.value,high));}return valid(root,-Infinity,Infinity); }",
+      "detailed_explanation": "Checking only parent-child pairs misses violations several levels deep. Pass ancestor constraints, not merely the immediate parent.",
+      "expected_answer_elements": [
+        "Pass ancestor constraints, not merely the immediate parent.",
+        "State the invariant.",
+        "Time: O(n); auxiliary space: O(h).",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: Pass ancestor constraints, not merely the immediate parent.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-13"
+      ],
+      "recommended_minutes": 30,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    },
+    {
+      "id": "question-dsa-15",
+      "track_id": "track-dsa",
+      "title": "Retain the largest k readings",
+      "question": "Input is {values,k}. Return the k largest values including duplicates, in ascending order. Use a bounded min-heap rather than sorting every reading.",
+      "skill_ids": [
+        "skill-dsa-heaps"
+      ],
+      "pattern": "Bounded heap",
+      "difficulty": "medium",
+      "category": "coding",
+      "constraints": [
+        "0 <= k <= values.length <= 100000."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": {
+            "values": [],
+            "k": 0
+          },
+          "output": []
+        },
+        {
+          "input": {
+            "values": [
+              3,
+              1,
+              5,
+              5,
+              2
+            ],
+            "k": 3
+          },
+          "output": [
+            3,
+            5,
+            5
+          ]
+        }
+      ],
+      "hints": [
+        "The smallest retained value is the replacement boundary."
+      ],
+      "expected_algorithm": "Bounded heap",
+      "complexity": {
+        "time": "O(n log(k+1) + k log k)",
+        "space": "O(k)"
+      },
+      "solution_code": "function solve({values,k}) { if(k===0)return [];const heap=[];function push(v){heap.push(v);let i=heap.length-1;while(i>0){let p=Math.floor((i-1)/2);if(heap[p]<=heap[i])break;[heap[p],heap[i]]=[heap[i],heap[p]];i=p;}}function down(){let i=0;while(2*i+1<heap.length){let j=2*i+1;if(j+1<heap.length&&heap[j+1]<heap[j])j++;if(heap[i]<=heap[j])break;[heap[i],heap[j]]=[heap[j],heap[i]];i=j;}}for(const v of values){if(heap.length<k)push(v);else if(v>heap[0]){heap[0]=v;down();}}return heap.sort((a,b)=>a-b); }",
+      "detailed_explanation": "Sorting every input costs O(n log n); a bounded heap helps when k is much smaller than n. The smallest retained value is the replacement boundary.",
+      "expected_answer_elements": [
+        "The smallest retained value is the replacement boundary.",
+        "State the invariant.",
+        "Time: O(n log(k+1) + k log k); auxiliary space: O(k).",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: The smallest retained value is the replacement boundary.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-16"
+      ],
+      "recommended_minutes": 30,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    },
+    {
+      "id": "question-dsa-16",
+      "track_id": "track-dsa",
+      "title": "Merge sorted event streams",
+      "question": "Given an array of ascending numeric arrays, return one ascending array containing every value. Preserve duplicates. Use one frontier item per nonempty source in a min-heap.",
+      "skill_ids": [
+        "skill-dsa-heaps"
+      ],
+      "pattern": "K-way merge",
+      "difficulty": "hard",
+      "category": "coding",
+      "constraints": [
+        "At most 100 streams and 100000 total values."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": [],
+          "output": []
+        },
+        {
+          "input": [
+            [
+              1,
+              4
+            ],
+            [],
+            [
+              1,
+              3
+            ]
+          ],
+          "output": [
+            1,
+            1,
+            3,
+            4
+          ]
+        }
+      ],
+      "hints": [
+        "After removing one frontier item, advance only its source."
+      ],
+      "expected_algorithm": "K-way merge",
+      "complexity": {
+        "time": "O(N log(k+1))",
+        "space": "O(k) auxiliary excluding output"
+      },
+      "solution_code": "function solve(streams) { const heap=[],out=[];function push(x){heap.push(x);let i=heap.length-1;while(i>0){const p=(i-1)>>1;if(heap[p][0]<=heap[i][0])break;[heap[p],heap[i]]=[heap[i],heap[p]];i=p;}}function pop(){const first=heap[0],last=heap.pop();if(heap.length){heap[0]=last;let i=0;while(2*i+1<heap.length){let j=2*i+1;if(j+1<heap.length&&heap[j+1][0]<heap[j][0])j++;if(heap[i][0]<=heap[j][0])break;[heap[i],heap[j]]=[heap[j],heap[i]];i=j;}}return first;}streams.forEach((s,i)=>{if(s.length)push([s[0],i,0]);});while(heap.length){const [v,s,p]=pop();out.push(v);if(p+1<streams[s].length)push([streams[s][p+1],s,p+1]);}return out; }",
+      "detailed_explanation": "Flatten-and-sort ignores that each source is already ordered. After removing one frontier item, advance only its source.",
+      "expected_answer_elements": [
+        "After removing one frontier item, advance only its source.",
+        "State the invariant.",
+        "Time: O(N log(k+1)); auxiliary space: O(k) auxiliary excluding output.",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: After removing one frontier item, advance only its source.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-15"
+      ],
+      "recommended_minutes": 45,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    },
+    {
+      "id": "question-dsa-17",
+      "track_id": "track-dsa",
+      "title": "Merge occupied spans",
+      "question": "Given closed intervals [start,end], return their union as sorted disjoint intervals. Touching endpoints merge.",
+      "skill_ids": [
+        "skill-dsa-intervals"
+      ],
+      "pattern": "Sorted sweep",
+      "difficulty": "medium",
+      "category": "coding",
+      "constraints": [
+        "At most 10000 intervals; start <= end; integer endpoints."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": [],
+          "output": []
+        },
+        {
+          "input": [
+            [
+              3,
+              5
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              9,
+              10
+            ]
+          ],
+          "output": [
+            [
+              1,
+              5
+            ],
+            [
+              9,
+              10
+            ]
+          ]
+        }
+      ],
+      "hints": [
+        "Compare the next start with the active interval's maximum end."
+      ],
+      "expected_algorithm": "Sorted sweep",
+      "complexity": {
+        "time": "O(n log n)",
+        "space": "O(n)"
+      },
+      "solution_code": "function solve(intervals) { const sorted=intervals.map(x=>x.slice()).sort((a,b)=>a[0]-b[0]),out=[];for(const [a,b] of sorted){const last=out[out.length-1];if(last && a<=last[1])last[1]=Math.max(last[1],b);else out.push([a,b]);}return out; }",
+      "detailed_explanation": "Repeated pairwise merging can be quadratic and order-sensitive. Compare the next start with the active interval's maximum end.",
+      "expected_answer_elements": [
+        "Compare the next start with the active interval's maximum end.",
+        "State the invariant.",
+        "Time: O(n log n); auxiliary space: O(n).",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: Compare the next start with the active interval's maximum end.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-18"
+      ],
+      "recommended_minutes": 30,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    },
+    {
+      "id": "question-dsa-18",
+      "track_id": "track-dsa",
+      "title": "Provision meeting capacity",
+      "question": "Given half-open meetings [start,end), return the minimum number of rooms. A meeting ending at t releases its room before another starting at t.",
+      "skill_ids": [
+        "skill-dsa-intervals"
+      ],
+      "pattern": "Event sweep",
+      "difficulty": "medium",
+      "category": "coding",
+      "constraints": [
+        "At most 10000 intervals; start < end."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": [],
+          "output": 0
+        },
+        {
+          "input": [
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "output": 1
+        },
+        {
+          "input": [
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "output": 3
+        }
+      ],
+      "hints": [
+        "Sort departures before arrivals at an equal timestamp."
+      ],
+      "expected_algorithm": "Event sweep",
+      "complexity": {
+        "time": "O(n log n)",
+        "space": "O(n)"
+      },
+      "solution_code": "function solve(meetings) { const events=[];for(const [a,b] of meetings)events.push([a,1],[b,-1]);events.sort((a,b)=>a[0]-b[0]||a[1]-b[1]);let active=0,best=0;for(const [,delta]of events){active+=delta;best=Math.max(best,active);}return best; }",
+      "detailed_explanation": "Pairwise overlap counts do not directly yield maximum simultaneous demand. Sort departures before arrivals at an equal timestamp.",
+      "expected_answer_elements": [
+        "Sort departures before arrivals at an equal timestamp.",
+        "State the invariant.",
+        "Time: O(n log n); auxiliary space: O(n).",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: Sort departures before arrivals at an equal timestamp.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-17"
+      ],
+      "recommended_minutes": 30,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    },
+    {
+      "id": "question-dsa-19",
+      "track_id": "track-dsa",
+      "title": "Unweighted service hops",
+      "question": "Input is {adjacency,start}, with adjacency an array of outgoing neighbor arrays. Return each vertex's shortest hop count from start, or -1 if unreachable.",
+      "skill_ids": [
+        "skill-dsa-graphs"
+      ],
+      "pattern": "BFS",
+      "difficulty": "medium",
+      "category": "coding",
+      "constraints": [
+        "1 <= vertices <= 10000; start and all neighbors are valid indices; edges may be directed."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": {
+            "adjacency": [
+              []
+            ],
+            "start": 0
+          },
+          "output": [
+            0
+          ]
+        },
+        {
+          "input": {
+            "adjacency": [
+              [
+                1
+              ],
+              [
+                2
+              ],
+              [],
+              []
+            ],
+            "start": 0
+          },
+          "output": [
+            0,
+            1,
+            2,
+            -1
+          ]
+        }
+      ],
+      "hints": [
+        "Assign distance when enqueuing, not after removing."
+      ],
+      "expected_algorithm": "BFS",
+      "complexity": {
+        "time": "O(V + E)",
+        "space": "O(V)"
+      },
+      "solution_code": "function solve({adjacency,start}) { const distances=Array(adjacency.length).fill(-1),queue=[start];distances[start]=0;for(let head=0;head<queue.length;head++){const node=queue[head];for(const next of adjacency[node])if(distances[next]===-1){distances[next]=distances[node]+1;queue.push(next);}}return distances; }",
+      "detailed_explanation": "DFS discovery order is not a shortest-path guarantee; weighted edges require another algorithm. Assign distance when enqueuing, not after removing.",
+      "expected_answer_elements": [
+        "Assign distance when enqueuing, not after removing.",
+        "State the invariant.",
+        "Time: O(V + E); auxiliary space: O(V).",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: Assign distance when enqueuing, not after removing.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-20"
+      ],
+      "recommended_minutes": 30,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    },
+    {
+      "id": "question-dsa-20",
+      "track_id": "track-dsa",
+      "title": "Dependency release ordering",
+      "question": "Input is an adjacency list of directed dependencies: an edge u->v means u must finish before v. Return the deterministic FIFO Kahn order, initially enqueueing zero-indegree vertices in ascending index order; return null if cyclic.",
+      "skill_ids": [
+        "skill-dsa-graphs"
+      ],
+      "pattern": "Topological sorting",
+      "difficulty": "hard",
+      "category": "coding",
+      "constraints": [
+        "At most 10000 vertices; no duplicate edges; neighbors preserve input order."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": [],
+          "output": []
+        },
+        {
+          "input": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            []
+          ],
+          "output": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "input": [
+            [
+              1
+            ],
+            [
+              0
+            ]
+          ],
+          "output": null
+        }
+      ],
+      "hints": [
+        "Remove remaining indegrees as completed vertices release successors."
+      ],
+      "expected_algorithm": "Topological sorting",
+      "complexity": {
+        "time": "O(V + E)",
+        "space": "O(V)"
+      },
+      "solution_code": "function solve(adjacency) { const degree=Array(adjacency.length).fill(0),queue=[];for(const nexts of adjacency)for(const next of nexts)degree[next]++;degree.forEach((d,i)=>{if(!d)queue.push(i);});for(let head=0;head<queue.length;head++)for(const next of adjacency[queue[head]])if(--degree[next]===0)queue.push(next);return queue.length===adjacency.length?queue:null; }",
+      "detailed_explanation": "Sorting by numeric ID alone does not satisfy dependency edges; leftover vertices prove a cycle exists. Remove remaining indegrees as completed vertices release successors.",
+      "expected_answer_elements": [
+        "Remove remaining indegrees as completed vertices release successors.",
+        "State the invariant.",
+        "Time: O(V + E); auxiliary space: O(V).",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: Remove remaining indegrees as completed vertices release successors.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-19"
+      ],
+      "recommended_minutes": 45,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    },
+    {
+      "id": "question-dsa-21",
+      "track_id": "track-dsa",
+      "title": "Enumerate feature subsets",
+      "question": "Given distinct feature names, return every subset. Use include/exclude recursion, explore exclusion first, and preserve original order within a subset.",
+      "skill_ids": [
+        "skill-dsa-backtracking"
+      ],
+      "pattern": "Include/exclude",
+      "difficulty": "medium",
+      "category": "coding",
+      "constraints": [
+        "At most 12 names; return subsets in the specified recursion order."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": [],
+          "output": [
+            []
+          ]
+        },
+        {
+          "input": [
+            "a",
+            "b"
+          ],
+          "output": [
+            [],
+            [
+              "b"
+            ],
+            [
+              "a"
+            ],
+            [
+              "a",
+              "b"
+            ]
+          ]
+        }
+      ],
+      "hints": [
+        "Restore the path after exploring the included branch."
+      ],
+      "expected_algorithm": "Include/exclude",
+      "complexity": {
+        "time": "O(n 2^n) including output copies",
+        "space": "O(n) auxiliary excluding output"
+      },
+      "solution_code": "function solve(names) { const out=[],path=[];function visit(i){if(i===names.length){out.push(path.slice());return;}visit(i+1);path.push(names[i]);visit(i+1);path.pop();}visit(0);return out; }",
+      "detailed_explanation": "There are exponentially many requested outputs; no linear-time complete enumeration exists. Restore the path after exploring the included branch.",
+      "expected_answer_elements": [
+        "Restore the path after exploring the included branch.",
+        "State the invariant.",
+        "Time: O(n 2^n) including output copies; auxiliary space: O(n) auxiliary excluding output.",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: Restore the path after exploring the included branch.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-22"
+      ],
+      "recommended_minutes": 30,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    },
+    {
+      "id": "question-dsa-22",
+      "track_id": "track-dsa",
+      "title": "Reusable allocation combinations",
+      "question": "Input is {sizes,target}, where sizes are distinct positive integers. Return nondecreasing combinations summing to target, lexicographically by sorted choice exploration. A size may be reused. The target-zero result is [[]].",
+      "skill_ids": [
+        "skill-dsa-backtracking"
+      ],
+      "pattern": "Constraint backtracking",
+      "difficulty": "hard",
+      "category": "coding",
+      "constraints": [
+        "At most 8 sizes; 0 <= target <= 30; positive sizes prevent nonterminating recursion."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": {
+            "sizes": [
+              2,
+              3
+            ],
+            "target": 7
+          },
+          "output": [
+            [
+              2,
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "input": {
+            "sizes": [
+              2
+            ],
+            "target": 1
+          },
+          "output": []
+        },
+        {
+          "input": {
+            "sizes": [
+              2
+            ],
+            "target": 0
+          },
+          "output": [
+            []
+          ]
+        }
+      ],
+      "hints": [
+        "A start index prevents permutation duplicates; keep it unchanged to reuse a chosen size."
+      ],
+      "expected_algorithm": "Constraint backtracking",
+      "complexity": {
+        "time": "Output-sensitive exponential search; depth <= target/min(sizes)",
+        "space": "O(target/min(sizes)) auxiliary"
+      },
+      "solution_code": "function solve({sizes,target}) { const values=sizes.slice().sort((a,b)=>a-b),out=[],path=[];function visit(start,left){if(left===0){out.push(path.slice());return;}for(let i=start;i<values.length&&values[i]<=left;i++){path.push(values[i]);visit(i,left-values[i]);path.pop();}}visit(0,target);return out; }",
+      "detailed_explanation": "Generating arbitrary permutations wastes work; sorting permits safe remaining-target pruning. A start index prevents permutation duplicates; keep it unchanged to reuse a chosen size.",
+      "expected_answer_elements": [
+        "A start index prevents permutation duplicates; keep it unchanged to reuse a chosen size.",
+        "State the invariant.",
+        "Time: Output-sensitive exponential search; depth <= target/min(sizes); auxiliary space: O(target/min(sizes)) auxiliary.",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: A start index prevents permutation duplicates; keep it unchanged to reuse a chosen size.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-21"
+      ],
+      "recommended_minutes": 45,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    },
+    {
+      "id": "question-dsa-23",
+      "track_id": "track-dsa",
+      "title": "Minimum provisioning bundles",
+      "question": "Input is {sizes,target}. Return the minimum count of reusable positive bundle sizes that sums exactly to target, or -1 if impossible.",
+      "skill_ids": [
+        "skill-dsa-dp"
+      ],
+      "pattern": "1D dynamic programming",
+      "difficulty": "medium",
+      "category": "coding",
+      "constraints": [
+        "1 <= sizes.length <= 20; 0 <= target <= 10000; sizes are positive integers."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": {
+            "sizes": [
+              2,
+              5
+            ],
+            "target": 7
+          },
+          "output": 2
+        },
+        {
+          "input": {
+            "sizes": [
+              2
+            ],
+            "target": 3
+          },
+          "output": -1
+        },
+        {
+          "input": {
+            "sizes": [
+              3
+            ],
+            "target": 0
+          },
+          "output": 0
+        }
+      ],
+      "hints": [
+        "Define dp[a] as the minimum bundles for exact amount a; impossible states stay infinite."
+      ],
+      "expected_algorithm": "1D dynamic programming",
+      "complexity": {
+        "time": "O(target * sizes.length)",
+        "space": "O(target)"
+      },
+      "solution_code": "function solve({sizes,target}) { const dp=Array(target+1).fill(Infinity);dp[0]=0;for(let amount=1;amount<=target;amount++)for(const size of sizes)if(size<=amount)dp[amount]=Math.min(dp[amount],dp[amount-size]+1);return Number.isFinite(dp[target])?dp[target]:-1; }",
+      "detailed_explanation": "Largest-first greedy fails for some denomination sets; the recurrence examines every final bundle choice. Define dp[a] as the minimum bundles for exact amount a; impossible states stay infinite.",
+      "expected_answer_elements": [
+        "Define dp[a] as the minimum bundles for exact amount a; impossible states stay infinite.",
+        "State the invariant.",
+        "Time: O(target * sizes.length); auxiliary space: O(target).",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: Define dp[a] as the minimum bundles for exact amount a; impossible states stay infinite.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-24"
+      ],
+      "recommended_minutes": 30,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    },
+    {
+      "id": "question-dsa-24",
+      "track_id": "track-dsa",
+      "title": "Increasing release sequence",
+      "question": "Given integer release scores, return the length of the longest strictly increasing subsequence, not necessarily contiguous. Equal scores do not extend it.",
+      "skill_ids": [
+        "skill-dsa-dp"
+      ],
+      "pattern": "DP frontier with lower bound",
+      "difficulty": "hard",
+      "category": "coding",
+      "constraints": [
+        "Length <= 100000; finite safe integers."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": [],
+          "output": 0
+        },
+        {
+          "input": [
+            4,
+            2,
+            3,
+            1,
+            5
+          ],
+          "output": 3
+        },
+        {
+          "input": [
+            2,
+            2,
+            2
+          ],
+          "output": 1
+        }
+      ],
+      "hints": [
+        "tails[i] is the smallest possible final value of an increasing subsequence of length i+1."
+      ],
+      "expected_algorithm": "DP frontier with lower bound",
+      "complexity": {
+        "time": "O(n log n)",
+        "space": "O(n)"
+      },
+      "solution_code": "function solve(values) { const tails=[];for(const value of values){let low=0,high=tails.length;while(low<high){const mid=(low+high)>>1;if(tails[mid]<value)low=mid+1;else high=mid;}tails[low]=value;}return tails.length; }",
+      "detailed_explanation": "A quadratic predecessor DP is a useful oracle; a minimal-tail frontier supports binary search but does not itself reconstruct a valid subsequence. tails[i] is the smallest possible final value of an increasing subsequence of length i+1.",
+      "expected_answer_elements": [
+        "tails[i] is the smallest possible final value of an increasing subsequence of length i+1.",
+        "State the invariant.",
+        "Time: O(n log n); auxiliary space: O(n).",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: tails[i] is the smallest possible final value of an increasing subsequence of length i+1.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-23"
+      ],
+      "recommended_minutes": 45,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    },
+    {
+      "id": "question-dsa-25",
+      "track_id": "track-dsa",
+      "title": "Maximum compatible activities",
+      "question": "Given half-open activities [start,end), return the maximum number one worker can perform without overlap. Every activity has equal value.",
+      "skill_ids": [
+        "skill-dsa-greedy"
+      ],
+      "pattern": "Greedy exchange",
+      "difficulty": "medium",
+      "category": "coding",
+      "constraints": [
+        "At most 10000 activities; start < end."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": [],
+          "output": 0
+        },
+        {
+          "input": [
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "output": 3
+        }
+      ],
+      "hints": [
+        "Replace an optimal first choice with the earliest-finishing compatible activity without reducing future options."
+      ],
+      "expected_algorithm": "Greedy exchange",
+      "complexity": {
+        "time": "O(n log n)",
+        "space": "O(n) for input-preserving copy"
+      },
+      "solution_code": "function solve(activities) { const sorted=activities.slice().sort((a,b)=>a[1]-b[1]||a[0]-b[0]);let end=-Infinity,count=0;for(const [a,b]of sorted)if(a>=end){count++;end=b;}return count; }",
+      "detailed_explanation": "Earliest start and shortest duration are tempting but incorrect general heuristics; weighted activities need a different DP. Replace an optimal first choice with the earliest-finishing compatible activity without reducing future options.",
+      "expected_answer_elements": [
+        "Replace an optimal first choice with the earliest-finishing compatible activity without reducing future options.",
+        "State the invariant.",
+        "Time: O(n log n); auxiliary space: O(n) for input-preserving copy.",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: Replace an optimal first choice with the earliest-finishing compatible activity without reducing future options.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-26"
+      ],
+      "recommended_minutes": 30,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    },
+    {
+      "id": "question-dsa-26",
+      "track_id": "track-dsa",
+      "title": "Find a viable circular route",
+      "question": "Input is {supply,cost} of equal nonzero length. Return the candidate start produced by a left-to-right deficit reset that can complete the circle, or -1 if total supply is insufficient.",
+      "skill_ids": [
+        "skill-dsa-greedy"
+      ],
+      "pattern": "Greedy deficit elimination",
+      "difficulty": "hard",
+      "category": "coding",
+      "constraints": [
+        "At most 100000 stops; nonnegative finite integers; when several starts work, use the stated deterministic reset rule."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": {
+            "supply": [
+              1
+            ],
+            "cost": [
+              2
+            ]
+          },
+          "output": -1
+        },
+        {
+          "input": {
+            "supply": [
+              1,
+              2,
+              3
+            ],
+            "cost": [
+              2,
+              2,
+              1
+            ]
+          },
+          "output": 1
+        }
+      ],
+      "hints": [
+        "A negative accumulated segment eliminates every starting point inside that segment."
+      ],
+      "expected_algorithm": "Greedy deficit elimination",
+      "complexity": {
+        "time": "O(n)",
+        "space": "O(1)"
+      },
+      "solution_code": "function solve({supply,cost}) { let total=0,tank=0,start=0;for(let i=0;i<supply.length;i++){const delta=supply[i]-cost[i];total+=delta;tank+=delta;if(tank<0){start=i+1;tank=0;}}return total<0?-1:start%supply.length; }",
+      "detailed_explanation": "Testing each possible start is quadratic; the deficit argument safely skips a whole segment. A negative accumulated segment eliminates every starting point inside that segment.",
+      "expected_answer_elements": [
+        "A negative accumulated segment eliminates every starting point inside that segment.",
+        "State the invariant.",
+        "Time: O(n); auxiliary space: O(1).",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: A negative accumulated segment eliminates every starting point inside that segment.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-25"
+      ],
+      "recommended_minutes": 45,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    },
+    {
+      "id": "question-dsa-27",
+      "track_id": "track-dsa",
+      "title": "Count indexed prefixes",
+      "question": "Input is {words,prefixes}. Return for each prefix the number of inserted words beginning with it, counting duplicate insertions. Empty prefix counts all words. Build a trie.",
+      "skill_ids": [
+        "skill-dsa-advanced"
+      ],
+      "pattern": "Trie",
+      "difficulty": "medium",
+      "category": "coding",
+      "constraints": [
+        "At most 10000 words; lowercase ASCII; each word/prefix length <= 100."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": {
+            "words": [],
+            "prefixes": [
+              ""
+            ]
+          },
+          "output": [
+            0
+          ]
+        },
+        {
+          "input": {
+            "words": [
+              "api",
+              "app",
+              "api"
+            ],
+            "prefixes": [
+              "a",
+              "ap",
+              "api",
+              "b",
+              ""
+            ]
+          },
+          "output": [
+            3,
+            3,
+            2,
+            0,
+            3
+          ]
+        }
+      ],
+      "hints": [
+        "Increment counts once per inserted word along its path."
+      ],
+      "expected_algorithm": "Trie",
+      "complexity": {
+        "time": "O(total word characters + total prefix characters)",
+        "space": "O(total word characters)"
+      },
+      "solution_code": "function solve({words,prefixes}) { const root={count:0,next:new Map()};for(const word of words){let node=root;node.count++;for(const char of word){if(!node.next.has(char))node.next.set(char,{count:0,next:new Map()});node=node.next.get(char);node.count++;}}return prefixes.map(prefix=>{let node=root;for(const char of prefix){node=node.next.get(char);if(!node)return 0;}return node.count;}); }",
+      "detailed_explanation": "Scanning every word for every prefix repeats character work; the trie shares prefix traversal. Increment counts once per inserted word along its path.",
+      "expected_answer_elements": [
+        "Increment counts once per inserted word along its path.",
+        "State the invariant.",
+        "Time: O(total word characters + total prefix characters); auxiliary space: O(total word characters).",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: Increment counts once per inserted word along its path.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-28"
+      ],
+      "recommended_minutes": 30,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    },
+    {
+      "id": "question-dsa-28",
+      "track_id": "track-dsa",
+      "title": "Mutable range counter",
+      "question": "Input is {values,operations}. Operations are ['add',index,delta] or ['sum',left,right] with inclusive indices. Return each sum result. Use a Fenwick tree.",
+      "skill_ids": [
+        "skill-dsa-advanced"
+      ],
+      "pattern": "Fenwick tree",
+      "difficulty": "hard",
+      "category": "coding",
+      "constraints": [
+        "1 <= values.length <= 10000; at most 10000 valid operations; sums remain safe integers."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": {
+            "values": [
+              1,
+              2,
+              3
+            ],
+            "operations": [
+              [
+                "sum",
+                0,
+                2
+              ],
+              [
+                "add",
+                1,
+                5
+              ],
+              [
+                "sum",
+                1,
+                2
+              ]
+            ]
+          },
+          "output": [
+            6,
+            10
+          ]
+        },
+        {
+          "input": {
+            "values": [
+              0
+            ],
+            "operations": [
+              [
+                "add",
+                0,
+                -2
+              ],
+              [
+                "sum",
+                0,
+                0
+              ]
+            ]
+          },
+          "output": [
+            -2
+          ]
+        }
+      ],
+      "hints": [
+        "Convert external indices to one-based positions and define each low-bit range."
+      ],
+      "expected_algorithm": "Fenwick tree",
+      "complexity": {
+        "time": "O((n + q) log n) with this simple construction",
+        "space": "O(n)"
+      },
+      "solution_code": "function solve({values,operations}) { const tree=Array(values.length+1).fill(0),out=[];function add(i,d){for(i++;i<tree.length;i+=i&-i)tree[i]+=d;}function prefix(i){let sum=0;for(i++;i>0;i-=i&-i)sum+=tree[i];return sum;}values.forEach((v,i)=>add(i,v));for(const [kind,a,b]of operations){if(kind==='add')add(a,b);else out.push(prefix(b)-prefix(a-1));}return out; }",
+      "detailed_explanation": "Plain prefixes make updates linear; Fenwick partial sums balance updates and queries logarithmically. Convert external indices to one-based positions and define each low-bit range.",
+      "expected_answer_elements": [
+        "Convert external indices to one-based positions and define each low-bit range.",
+        "State the invariant.",
+        "Time: O((n + q) log n) with this simple construction; auxiliary space: O(n).",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: Convert external indices to one-based positions and define each low-bit range.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-27"
+      ],
+      "recommended_minutes": 45,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    },
+    {
+      "id": "question-dsa-29",
+      "track_id": "track-dsa",
+      "title": "Idempotent batch boundary",
+      "question": "Given events {id,value}, return {accepted,duplicates}. Accept only the first occurrence of each id in input order; duplicates is the number of later occurrences. Do not mutate the input.",
+      "skill_ids": [
+        "skill-dsa-senior"
+      ],
+      "pattern": "Practical API contract",
+      "difficulty": "medium",
+      "category": "coding",
+      "constraints": [
+        "At most 10000 events; ids are strings; values are integers; deduplication applies only within this batch."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": [],
+          "output": {
+            "accepted": [],
+            "duplicates": 0
+          }
+        },
+        {
+          "input": [
+            {
+              "id": "a",
+              "value": 1
+            },
+            {
+              "id": "a",
+              "value": 2
+            }
+          ],
+          "output": {
+            "accepted": [
+              {
+                "id": "a",
+                "value": 1
+              }
+            ],
+            "duplicates": 1
+          }
+        }
+      ],
+      "hints": [
+        "Specify duplicate identity, scope and ordering before choosing the storage structure."
+      ],
+      "expected_algorithm": "Practical API contract",
+      "complexity": {
+        "time": "O(n) expected",
+        "space": "O(n)"
+      },
+      "solution_code": "function solve(events) { const seen=new Set(),accepted=[];let duplicates=0;for(const event of events){if(seen.has(event.id)){duplicates++;continue;}seen.add(event.id);accepted.push({...event});}return {accepted,duplicates}; }",
+      "detailed_explanation": "This local function is not durable exactly-once delivery. Extend with transactional idempotency keys, validation and partial-failure tests in a separate API lab. Specify duplicate identity, scope and ordering before choosing the storage structure.",
+      "expected_answer_elements": [
+        "Specify duplicate identity, scope and ordering before choosing the storage structure.",
+        "State the invariant.",
+        "Time: O(n) expected; auxiliary space: O(n).",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: Specify duplicate identity, scope and ordering before choosing the storage structure.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-30"
+      ],
+      "recommended_minutes": 30,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    },
+    {
+      "id": "question-dsa-30",
+      "track_id": "track-dsa",
+      "title": "Bounded asynchronous work",
+      "question": "Input is {values,limit}. Simulate asynchronous doubling using a resolved Promise for each item. Return doubled values in original input order, using no more than limit worker loops. Do not launch one Promise per input item up front.",
+      "skill_ids": [
+        "skill-dsa-senior"
+      ],
+      "pattern": "Bounded async scheduling",
+      "difficulty": "hard",
+      "category": "coding",
+      "constraints": [
+        "1 <= limit <= 10; at most 1000 values; this exercise models scheduling, not network or CPU parallelism."
+      ],
+      "input_output": "Call solve(input) with the JSON input shape in each fixture; return a JSON-compatible result.",
+      "test_cases": [
+        {
+          "input": {
+            "values": [],
+            "limit": 2
+          },
+          "output": []
+        },
+        {
+          "input": {
+            "values": [
+              3,
+              1,
+              4
+            ],
+            "limit": 2
+          },
+          "output": [
+            6,
+            2,
+            8
+          ]
+        }
+      ],
+      "hints": [
+        "Claim an index before awaiting, and write its result back to that original index."
+      ],
+      "expected_algorithm": "Bounded async scheduling",
+      "complexity": {
+        "time": "O(n) work",
+        "space": "O(limit) worker state excluding output"
+      },
+      "solution_code": "async function solve({values,limit}) { let next=0;const out=Array(values.length);async function worker(){while(next<values.length){const index=next++;out[index]=await Promise.resolve(values[index]*2);}}await Promise.all(Array.from({length:Math.min(limit,values.length)},()=>worker()));return out; }",
+      "detailed_explanation": "Output fixtures alone cannot prove the concurrency bound. Instrument active work in your own tests and discuss rejection, cancellation and thread-based races. Claim an index before awaiting, and write its result back to that original index.",
+      "expected_answer_elements": [
+        "Claim an index before awaiting, and write its result back to that original index.",
+        "State the invariant.",
+        "Time: O(n) work; auxiliary space: O(limit) worker state excluding output.",
+        "Cover empty, boundary and adversarial inputs."
+      ],
+      "evaluation_rubric": [
+        {
+          "criterion": "understanding",
+          "max_points": 5,
+          "full_credit": "Clarifies input, output and constraints."
+        },
+        {
+          "criterion": "pattern",
+          "max_points": 5,
+          "full_credit": "Explains why the pattern applies rather than naming it."
+        },
+        {
+          "criterion": "algorithm",
+          "max_points": 5,
+          "full_credit": "Derives and compares a valid approach."
+        },
+        {
+          "criterion": "correctness",
+          "max_points": 5,
+          "full_credit": "Justifies invariant and checks against a tiny oracle."
+        },
+        {
+          "criterion": "quality",
+          "max_points": 5,
+          "full_credit": "Uses readable contracts and minimal mutable state."
+        },
+        {
+          "criterion": "time_complexity",
+          "max_points": 5,
+          "full_credit": "Derives input-dependent runtime including sorting/output."
+        },
+        {
+          "criterion": "space_complexity",
+          "max_points": 5,
+          "full_credit": "Separates auxiliary space, stack and output."
+        },
+        {
+          "criterion": "edge_cases",
+          "max_points": 5,
+          "full_credit": "Handles all stated boundary and malformed-input policies."
+        },
+        {
+          "criterion": "testing",
+          "max_points": 5,
+          "full_credit": "Runs representative and counterexample tests."
+        },
+        {
+          "criterion": "communication",
+          "max_points": 5,
+          "full_credit": "Explains decisions, uncertainty and trade-offs."
+        }
+      ],
+      "follow_up_questions": [
+        "Prove this claim: Claim an index before awaiting, and write its result back to that original index.",
+        "Build a brute-force oracle for small inputs and compare randomized valid cases.",
+        "Which changed constraint would invalidate this algorithm? Implement and analyze that harder variation."
+      ],
+      "common_mistakes": [
+        "Ignoring the precise input contract.",
+        "Treating sample tests as a full correctness proof.",
+        "Forgetting output size or recursive stack in complexity.",
+        "Claiming a company asks this original problem."
+      ],
+      "related_question_ids": [
+        "question-dsa-29"
+      ],
+      "recommended_minutes": 45,
+      "source_ids": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "source_url": null,
+      "company_relevance": "General practice mapped to researched preparation topics, not evidence this exercise was asked.",
+      "interview_stage": "coding_or_practical_screen",
+      "authorship": "Original Academy exercise and reference implementation. Difficulty is editorial, not employer- or platform-calibrated."
+    }
+  ],
+  "mock_interviews": [
+    {
+      "id": "mock-dsa-foundations",
+      "track_id": "track-dsa",
+      "title": "Algorithmic foundations coding conversation",
+      "question_ids": [
+        "question-dsa-01",
+        "question-dsa-02"
+      ],
+      "duration_minutes": 60,
+      "scenario": "Clarify, derive, implement, test, analyze complexity and discuss a changed constraint."
+    },
+    {
+      "id": "mock-dsa-arrays",
+      "track_id": "track-dsa",
+      "title": "Arrays and strings coding conversation",
+      "question_ids": [
+        "question-dsa-03",
+        "question-dsa-04"
+      ],
+      "duration_minutes": 60,
+      "scenario": "Clarify, derive, implement, test, analyze complexity and discuss a changed constraint."
+    },
+    {
+      "id": "mock-dsa-patterns",
+      "track_id": "track-dsa",
+      "title": "Problem-solving patterns coding conversation",
+      "question_ids": [
+        "question-dsa-05",
+        "question-dsa-06"
+      ],
+      "duration_minutes": 60,
+      "scenario": "Clarify, derive, implement, test, analyze complexity and discuss a changed constraint."
+    },
+    {
+      "id": "mock-dsa-linked",
+      "track_id": "track-dsa",
+      "title": "Linked lists and caches coding conversation",
+      "question_ids": [
+        "question-dsa-07",
+        "question-dsa-08"
+      ],
+      "duration_minutes": 60,
+      "scenario": "Clarify, derive, implement, test, analyze complexity and discuss a changed constraint."
+    },
+    {
+      "id": "mock-dsa-stacks",
+      "track_id": "track-dsa",
+      "title": "Stacks, queues and monotonic structures coding conversation",
+      "question_ids": [
+        "question-dsa-09",
+        "question-dsa-10"
+      ],
+      "duration_minutes": 60,
+      "scenario": "Clarify, derive, implement, test, analyze complexity and discuss a changed constraint."
+    },
+    {
+      "id": "mock-dsa-sorting",
+      "track_id": "track-dsa",
+      "title": "Searching and sorting coding conversation",
+      "question_ids": [
+        "question-dsa-11",
+        "question-dsa-12"
+      ],
+      "duration_minutes": 60,
+      "scenario": "Clarify, derive, implement, test, analyze complexity and discuss a changed constraint."
+    },
+    {
+      "id": "mock-dsa-trees",
+      "track_id": "track-dsa",
+      "title": "Trees and ordered indexes coding conversation",
+      "question_ids": [
+        "question-dsa-13",
+        "question-dsa-14"
+      ],
+      "duration_minutes": 60,
+      "scenario": "Clarify, derive, implement, test, analyze complexity and discuss a changed constraint."
+    },
+    {
+      "id": "mock-dsa-heaps",
+      "track_id": "track-dsa",
+      "title": "Heaps and priority queues coding conversation",
+      "question_ids": [
+        "question-dsa-15",
+        "question-dsa-16"
+      ],
+      "duration_minutes": 60,
+      "scenario": "Clarify, derive, implement, test, analyze complexity and discuss a changed constraint."
+    },
+    {
+      "id": "mock-dsa-intervals",
+      "track_id": "track-dsa",
+      "title": "Intervals and sweep lines coding conversation",
+      "question_ids": [
+        "question-dsa-17",
+        "question-dsa-18"
+      ],
+      "duration_minutes": 60,
+      "scenario": "Clarify, derive, implement, test, analyze complexity and discuss a changed constraint."
+    },
+    {
+      "id": "mock-dsa-graphs",
+      "track_id": "track-dsa",
+      "title": "Graphs and connectivity coding conversation",
+      "question_ids": [
+        "question-dsa-19",
+        "question-dsa-20"
+      ],
+      "duration_minutes": 60,
+      "scenario": "Clarify, derive, implement, test, analyze complexity and discuss a changed constraint."
+    },
+    {
+      "id": "mock-dsa-backtracking",
+      "track_id": "track-dsa",
+      "title": "Backtracking and constraint search coding conversation",
+      "question_ids": [
+        "question-dsa-21",
+        "question-dsa-22"
+      ],
+      "duration_minutes": 60,
+      "scenario": "Clarify, derive, implement, test, analyze complexity and discuss a changed constraint."
+    },
+    {
+      "id": "mock-dsa-dp",
+      "track_id": "track-dsa",
+      "title": "Dynamic programming coding conversation",
+      "question_ids": [
+        "question-dsa-23",
+        "question-dsa-24"
+      ],
+      "duration_minutes": 60,
+      "scenario": "Clarify, derive, implement, test, analyze complexity and discuss a changed constraint."
+    },
+    {
+      "id": "mock-dsa-greedy",
+      "track_id": "track-dsa",
+      "title": "Greedy algorithms and proofs coding conversation",
+      "question_ids": [
+        "question-dsa-25",
+        "question-dsa-26"
+      ],
+      "duration_minutes": 60,
+      "scenario": "Clarify, derive, implement, test, analyze complexity and discuss a changed constraint."
+    },
+    {
+      "id": "mock-dsa-advanced",
+      "track_id": "track-dsa",
+      "title": "Advanced data structures and algorithms coding conversation",
+      "question_ids": [
+        "question-dsa-27",
+        "question-dsa-28"
+      ],
+      "duration_minutes": 60,
+      "scenario": "Clarify, derive, implement, test, analyze complexity and discuss a changed constraint."
+    },
+    {
+      "id": "mock-dsa-senior",
+      "track_id": "track-dsa",
+      "title": "Senior engineering coding interviews coding conversation",
+      "question_ids": [
+        "question-dsa-29",
+        "question-dsa-30"
+      ],
+      "duration_minutes": 60,
+      "scenario": "Clarify, derive, implement, test, analyze complexity and discuss a changed constraint."
+    }
+  ]
+}

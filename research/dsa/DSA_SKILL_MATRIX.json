@@ -1,0 +1,864 @@
+{
+  "$schema": "DSA_PACKAGE_SCHEMA.json",
+  "dataset_type": "dsa",
+  "research_version": "1.0.0",
+  "research_date": "2026-10-31",
+  "tracks": [
+    {
+      "id": "track-dsa",
+      "name": "Data Structures and Algorithms - Big Tech Coding Interviews",
+      "priority": 6,
+      "target_role_categories": [
+        "senior",
+        "coding_interviews"
+      ],
+      "baseline_assessment": "Solve one array, tree and graph problem without hints; state complexity and write edge-case tests. Do not assume prior professional experience proves DSA fluency.",
+      "skill_ids": [
+        "skill-dsa-foundations",
+        "skill-dsa-arrays",
+        "skill-dsa-patterns",
+        "skill-dsa-linked",
+        "skill-dsa-stacks",
+        "skill-dsa-sorting",
+        "skill-dsa-trees",
+        "skill-dsa-heaps",
+        "skill-dsa-intervals",
+        "skill-dsa-graphs",
+        "skill-dsa-backtracking",
+        "skill-dsa-dp",
+        "skill-dsa-greedy",
+        "skill-dsa-advanced",
+        "skill-dsa-senior"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "id": "skill-dsa-foundations",
+      "name": "Algorithmic foundations",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "topic_concepts": [
+        "Big O",
+        "Big Theta",
+        "Big Omega",
+        "best/average/worst case",
+        "amortized analysis",
+        "recursion",
+        "iteration",
+        "divide and conquer"
+      ],
+      "sample_required_count": null,
+      "sample_preferred_count": null,
+      "sample_mention_count": null,
+      "sample_job_ids": [],
+      "learner_leverage": "Programming experience is leverage, not evidence of algorithm fluency.",
+      "practice_requirement": "For each loop, state the number of iterations as a function of input size; separate allocated storage from returned output."
+    },
+    {
+      "id": "skill-dsa-arrays",
+      "name": "Arrays and strings",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "topic_concepts": [
+        "arrays",
+        "strings",
+        "hash maps",
+        "hash sets",
+        "frequency counting",
+        "prefix sums",
+        "difference arrays",
+        "subarrays",
+        "matrix traversal"
+      ],
+      "sample_required_count": null,
+      "sample_preferred_count": null,
+      "sample_mention_count": null,
+      "sample_job_ids": [],
+      "learner_leverage": "Programming experience is leverage, not evidence of algorithm fluency.",
+      "practice_requirement": "At position i, the map or prefix table describes exactly the processed prefix."
+    },
+    {
+      "id": "skill-dsa-patterns",
+      "name": "Problem-solving patterns",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "topic_concepts": [
+        "two pointers",
+        "sliding window",
+        "fast/slow pointers",
+        "prefix/suffix",
+        "hashing",
+        "binary search on answers",
+        "in-place manipulation",
+        "sorting"
+      ],
+      "sample_required_count": null,
+      "sample_preferred_count": null,
+      "sample_mention_count": null,
+      "sample_job_ids": [],
+      "learner_leverage": "Programming experience is leverage, not evidence of algorithm fluency.",
+      "practice_requirement": "Each item enters and leaves the maintained state at most once; explain why moving a pointer cannot discard a valid better answer."
+    },
+    {
+      "id": "skill-dsa-linked",
+      "name": "Linked lists and caches",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "topic_concepts": [
+        "singly/doubly linked lists",
+        "reversal",
+        "cycle detection",
+        "merging",
+        "fast/slow pointers",
+        "LRU cache"
+      ],
+      "sample_required_count": null,
+      "sample_preferred_count": null,
+      "sample_mention_count": null,
+      "sample_job_ids": [],
+      "learner_leverage": "Programming experience is leverage, not evidence of algorithm fluency.",
+      "practice_requirement": "The processed prefix is valid and the unprocessed suffix remains reachable."
+    },
+    {
+      "id": "skill-dsa-stacks",
+      "name": "Stacks, queues and monotonic structures",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "topic_concepts": [
+        "stacks",
+        "queues",
+        "deques",
+        "monotonic stacks/queues",
+        "expression evaluation",
+        "parentheses",
+        "parsing"
+      ],
+      "sample_required_count": null,
+      "sample_preferred_count": null,
+      "sample_mention_count": null,
+      "sample_job_ids": [],
+      "learner_leverage": "Programming experience is leverage, not evidence of algorithm fluency.",
+      "practice_requirement": "Stack entries are unresolved candidates in a stated monotone order."
+    },
+    {
+      "id": "skill-dsa-sorting",
+      "name": "Searching and sorting",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "topic_concepts": [
+        "linear/binary search",
+        "lower/upper bounds",
+        "merge/quick/heap/counting sort",
+        "stability",
+        "sorting trade-offs"
+      ],
+      "sample_required_count": null,
+      "sample_preferred_count": null,
+      "sample_mention_count": null,
+      "sample_job_ids": [],
+      "learner_leverage": "Programming experience is leverage, not evidence of algorithm fluency.",
+      "practice_requirement": "All positions before low are known false and all positions at or after high are known true for the boundary predicate."
+    },
+    {
+      "id": "skill-dsa-trees",
+      "name": "Trees and ordered indexes",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "topic_concepts": [
+        "binary trees",
+        "BSTs",
+        "preorder/inorder/postorder/level order",
+        "DFS/BFS",
+        "height/depth",
+        "LCA",
+        "balanced trees",
+        "serialization"
+      ],
+      "sample_required_count": null,
+      "sample_preferred_count": null,
+      "sample_mention_count": null,
+      "sample_job_ids": [],
+      "learner_leverage": "Programming experience is leverage, not evidence of algorithm fluency.",
+      "practice_requirement": "Each recursive call receives valid bounds or returns a well-defined subtree summary."
+    },
+    {
+      "id": "skill-dsa-heaps",
+      "name": "Heaps and priority queues",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "topic_concepts": [
+        "min/max heaps",
+        "heapify",
+        "priority queues",
+        "Top K",
+        "K-way merge",
+        "streaming"
+      ],
+      "sample_required_count": null,
+      "sample_preferred_count": null,
+      "sample_mention_count": null,
+      "sample_job_ids": [],
+      "learner_leverage": "Programming experience is leverage, not evidence of algorithm fluency.",
+      "practice_requirement": "The retained heap represents the best k items of the processed prefix, or one frontier from each source."
+    },
+    {
+      "id": "skill-dsa-intervals",
+      "name": "Intervals and sweep lines",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "topic_concepts": [
+        "merging",
+        "overlap",
+        "meeting rooms",
+        "scheduling",
+        "sweep line",
+        "event sorting"
+      ],
+      "sample_required_count": null,
+      "sample_preferred_count": null,
+      "sample_mention_count": null,
+      "sample_job_ids": [],
+      "learner_leverage": "Programming experience is leverage, not evidence of algorithm fluency.",
+      "practice_requirement": "Completed merged intervals cannot overlap the active interval; active event count equals simultaneous demand."
+    },
+    {
+      "id": "skill-dsa-graphs",
+      "name": "Graphs and connectivity",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "topic_concepts": [
+        "adjacency lists/matrices",
+        "DFS/BFS",
+        "cycles",
+        "components",
+        "topological sort",
+        "Dijkstra",
+        "Bellman-Ford",
+        "MST",
+        "union-find",
+        "shortest paths"
+      ],
+      "sample_required_count": null,
+      "sample_preferred_count": null,
+      "sample_mention_count": null,
+      "sample_job_ids": [],
+      "learner_leverage": "Programming experience is leverage, not evidence of algorithm fluency.",
+      "practice_requirement": "A BFS vertex is enqueued once; a topological frontier contains only vertices with zero remaining indegree."
+    },
+    {
+      "id": "skill-dsa-backtracking",
+      "name": "Backtracking and constraint search",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "topic_concepts": [
+        "recursion trees",
+        "subsets",
+        "permutations",
+        "combinations",
+        "constraint satisfaction",
+        "pruning",
+        "N-Queens"
+      ],
+      "sample_required_count": null,
+      "sample_preferred_count": null,
+      "sample_mention_count": null,
+      "sample_job_ids": [],
+      "learner_leverage": "Programming experience is leverage, not evidence of algorithm fluency.",
+      "practice_requirement": "The current path is valid, and undo restores exactly the state before the choice."
+    },
+    {
+      "id": "skill-dsa-dp",
+      "name": "Dynamic programming",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "topic_concepts": [
+        "memoization",
+        "tabulation",
+        "states",
+        "recurrences",
+        "1D/2D DP",
+        "knapsack",
+        "grids",
+        "LCS",
+        "LIS",
+        "tree DP"
+      ],
+      "sample_required_count": null,
+      "sample_preferred_count": null,
+      "sample_mention_count": null,
+      "sample_job_ids": [],
+      "learner_leverage": "Programming experience is leverage, not evidence of algorithm fluency.",
+      "practice_requirement": "Every computed state depends only on already valid states and represents a complete optimum for its stated subproblem."
+    },
+    {
+      "id": "skill-dsa-greedy",
+      "name": "Greedy algorithms and proofs",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "topic_concepts": [
+        "greedy choice",
+        "interval/activity selection",
+        "priority optimization",
+        "correctness proofs",
+        "greedy versus DP"
+      ],
+      "sample_required_count": null,
+      "sample_preferred_count": null,
+      "sample_mention_count": null,
+      "sample_job_ids": [],
+      "learner_leverage": "Programming experience is leverage, not evidence of algorithm fluency.",
+      "practice_requirement": "A chosen prefix can be extended to an optimal solution without reducing the remaining feasible choices."
+    },
+    {
+      "id": "skill-dsa-advanced",
+      "name": "Advanced data structures and algorithms",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "topic_concepts": [
+        "tries",
+        "bits",
+        "bitmasks",
+        "DSU",
+        "advanced graphs",
+        "combinatorics",
+        "segment trees",
+        "Fenwick trees"
+      ],
+      "sample_required_count": null,
+      "sample_preferred_count": null,
+      "sample_mention_count": null,
+      "sample_job_ids": [],
+      "learner_leverage": "Programming experience is leverage, not evidence of algorithm fluency.",
+      "practice_requirement": "Each indexed aggregate covers a precisely defined range; trie counts represent inserted words, not traversals."
+    },
+    {
+      "id": "skill-dsa-senior",
+      "name": "Senior engineering coding interviews",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "topic_concepts": [
+        "OO design",
+        "interfaces",
+        "patterns",
+        "concurrency",
+        "thread safety",
+        "races",
+        "practical coding",
+        "refactoring",
+        "testing",
+        "debugging",
+        "APIs",
+        "data modeling"
+      ],
+      "sample_required_count": null,
+      "sample_preferred_count": null,
+      "sample_mention_count": null,
+      "sample_job_ids": [],
+      "learner_leverage": "Programming experience is leverage, not evidence of algorithm fluency.",
+      "practice_requirement": "Every output obeys the contract even on duplicates, malformed input or partial failure; bounded workers preserve input order."
+    }
+  ],
+  "modules": [
+    {
+      "id": "knowledge-dsa-foundations",
+      "title": "Algorithmic foundations",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "skill_ids": [
+        "skill-dsa-foundations"
+      ],
+      "explanation": "Count work before timing it. An asymptotic upper bound is not an exact runtime; identify the input variable and case. Geometric capacity growth makes append amortized constant despite occasional linear copies. A recursive implementation also consumes stack space.",
+      "invariant": "For each loop, state the number of iterations as a function of input size; separate allocated storage from returned output.",
+      "tradeoff": "Compare direct counting with algebraic summation; derive the recurrence rather than guessing from syntax.",
+      "concepts": [
+        "Big O",
+        "Big Theta",
+        "Big Omega",
+        "best/average/worst case",
+        "amortized analysis",
+        "recursion",
+        "iteration",
+        "divide and conquer"
+      ],
+      "advanced_labs": [
+        "Implement and test Big O on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test Big Theta on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test Big Omega on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test best/average/worst case on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test amortized analysis on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test recursion on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test iteration on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test divide and conquer on tiny synthetic inputs; state an invariant, a counterexample and complexity."
+      ]
+    },
+    {
+      "id": "knowledge-dsa-arrays",
+      "title": "Arrays and strings",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "skill_ids": [
+        "skill-dsa-arrays"
+      ],
+      "explanation": "Hashing replaces repeated searches with expected constant-time lookup, at a memory cost. Prefix sums turn a range sum into a difference of cumulative sums. Difference arrays batch range updates before one reconstruction pass. JavaScript strings require an explicit Unicode policy.",
+      "invariant": "At position i, the map or prefix table describes exactly the processed prefix.",
+      "tradeoff": "Compare scanning each query with preprocessing; distinguish expected hash behavior from worst-case guarantees.",
+      "concepts": [
+        "arrays",
+        "strings",
+        "hash maps",
+        "hash sets",
+        "frequency counting",
+        "prefix sums",
+        "difference arrays",
+        "subarrays",
+        "matrix traversal"
+      ],
+      "advanced_labs": [
+        "Implement and test arrays on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test strings on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test hash maps on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test hash sets on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test frequency counting on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test prefix sums on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test difference arrays on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test subarrays on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test matrix traversal on tiny synthetic inputs; state an invariant, a counterexample and complexity."
+      ]
+    },
+    {
+      "id": "knowledge-dsa-patterns",
+      "title": "Problem-solving patterns",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "skill_ids": [
+        "skill-dsa-patterns"
+      ],
+      "explanation": "A sliding window is justified by an invariant that can be repaired while its left edge moves monotonically. Negative numbers invalidate many sum-threshold window arguments. Binary search on answers requires a monotone feasibility predicate, not merely sorted-looking data.",
+      "invariant": "Each item enters and leaves the maintained state at most once; explain why moving a pointer cannot discard a valid better answer.",
+      "tradeoff": "Use brute force as an oracle on small cases, then prove the optimized window or search predicate.",
+      "concepts": [
+        "two pointers",
+        "sliding window",
+        "fast/slow pointers",
+        "prefix/suffix",
+        "hashing",
+        "binary search on answers",
+        "in-place manipulation",
+        "sorting"
+      ],
+      "advanced_labs": [
+        "Implement and test two pointers on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test sliding window on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test fast/slow pointers on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test prefix/suffix on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test hashing on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test binary search on answers on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test in-place manipulation on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test sorting on tiny synthetic inputs; state an invariant, a counterexample and complexity."
+      ]
+    },
+    {
+      "id": "knowledge-dsa-linked",
+      "title": "Linked lists and caches",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "skill_ids": [
+        "skill-dsa-linked"
+      ],
+      "explanation": "Pointer changes must preserve access to the unprocessed suffix. Floyd's two speeds detect a cycle without storing every node. A hash map plus doubly linked list supports lookup and recency changes without scanning; distinguish node identity from equal values.",
+      "invariant": "The processed prefix is valid and the unprocessed suffix remains reachable.",
+      "tradeoff": "Compare auxiliary arrays with pointer rewiring; a bounded cache must state eviction and recency semantics.",
+      "concepts": [
+        "singly/doubly linked lists",
+        "reversal",
+        "cycle detection",
+        "merging",
+        "fast/slow pointers",
+        "LRU cache"
+      ],
+      "advanced_labs": [
+        "Implement and test singly/doubly linked lists on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test reversal on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test cycle detection on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test merging on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test fast/slow pointers on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test LRU cache on tiny synthetic inputs; state an invariant, a counterexample and complexity."
+      ]
+    },
+    {
+      "id": "knowledge-dsa-stacks",
+      "title": "Stacks, queues and monotonic structures",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "skill_ids": [
+        "skill-dsa-stacks"
+      ],
+      "explanation": "Stacks model unfinished nested work; queues model arrival order. A monotonic stack discards candidates dominated by a later item. Its nested loop is amortized linear because every index is pushed and popped at most once. Avoid Array.shift in a hot queue.",
+      "invariant": "Stack entries are unresolved candidates in a stated monotone order.",
+      "tradeoff": "Compare scanning forward from each item with retaining only candidates that can still affect the answer.",
+      "concepts": [
+        "stacks",
+        "queues",
+        "deques",
+        "monotonic stacks/queues",
+        "expression evaluation",
+        "parentheses",
+        "parsing"
+      ],
+      "advanced_labs": [
+        "Implement and test stacks on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test queues on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test deques on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test monotonic stacks/queues on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test expression evaluation on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test parentheses on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test parsing on tiny synthetic inputs; state an invariant, a counterexample and complexity."
+      ]
+    },
+    {
+      "id": "knowledge-dsa-sorting",
+      "title": "Searching and sorting",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "skill_ids": [
+        "skill-dsa-sorting"
+      ],
+      "explanation": "Binary search is a boundary search over a half-open interval. Merge sort gives predictable comparison complexity and uses extra storage; quicksort needs pivot and worst-case analysis; counting sort depends on key range, not just item count. JavaScript numeric sort needs a comparator.",
+      "invariant": "All positions before low are known false and all positions at or after high are known true for the boundary predicate.",
+      "tradeoff": "Compare linear search with sorted search including preprocessing; explain stable ordering and worst-case behavior.",
+      "concepts": [
+        "linear/binary search",
+        "lower/upper bounds",
+        "merge/quick/heap/counting sort",
+        "stability",
+        "sorting trade-offs"
+      ],
+      "advanced_labs": [
+        "Implement and test linear/binary search on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test lower/upper bounds on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test merge/quick/heap/counting sort on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test stability on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test sorting trade-offs on tiny synthetic inputs; state an invariant, a counterexample and complexity."
+      ]
+    },
+    {
+      "id": "knowledge-dsa-trees",
+      "title": "Trees and ordered indexes",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "skill_ids": [
+        "skill-dsa-trees"
+      ],
+      "explanation": "A tree traversal combines results from children according to a contract. BST validity is a global bound, not just a parent-child comparison. DFS storage depends on height, BFS on maximum width. Balancing preserves logarithmic height; serialization must preserve null children.",
+      "invariant": "Each recursive call receives valid bounds or returns a well-defined subtree summary.",
+      "tradeoff": "Compare recursive DFS, an explicit stack and level-order traversal; include a skewed-tree test.",
+      "concepts": [
+        "binary trees",
+        "BSTs",
+        "preorder/inorder/postorder/level order",
+        "DFS/BFS",
+        "height/depth",
+        "LCA",
+        "balanced trees",
+        "serialization"
+      ],
+      "advanced_labs": [
+        "Implement and test binary trees on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test BSTs on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test preorder/inorder/postorder/level order on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test DFS/BFS on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test height/depth on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test LCA on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test balanced trees on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test serialization on tiny synthetic inputs; state an invariant, a counterexample and complexity."
+      ]
+    },
+    {
+      "id": "knowledge-dsa-heaps",
+      "title": "Heaps and priority queues",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "skill_ids": [
+        "skill-dsa-heaps"
+      ],
+      "explanation": "A heap exposes an extreme item without fully sorting all items. A size-k min-heap keeps the k largest seen values. Bottom-up heap construction is linear, not n log n. A k-way merge keeps one frontier item per sorted source.",
+      "invariant": "The retained heap represents the best k items of the processed prefix, or one frontier from each source.",
+      "tradeoff": "Compare full sorting with a bounded heap; account for output sorting separately.",
+      "concepts": [
+        "min/max heaps",
+        "heapify",
+        "priority queues",
+        "Top K",
+        "K-way merge",
+        "streaming"
+      ],
+      "advanced_labs": [
+        "Implement and test min/max heaps on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test heapify on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test priority queues on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test Top K on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test K-way merge on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test streaming on tiny synthetic inputs; state an invariant, a counterexample and complexity."
+      ]
+    },
+    {
+      "id": "knowledge-dsa-intervals",
+      "title": "Intervals and sweep lines",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "skill_ids": [
+        "skill-dsa-intervals"
+      ],
+      "explanation": "State whether intervals are closed or half-open before coding. Sorting by start allows one active merged interval; resource counts use arrival/departure events. At equal timestamps, a departure precedes an arrival for half-open intervals.",
+      "invariant": "Completed merged intervals cannot overlap the active interval; active event count equals simultaneous demand.",
+      "tradeoff": "Compare pairwise overlap tests with sorting and a sweep; test touching boundaries explicitly.",
+      "concepts": [
+        "merging",
+        "overlap",
+        "meeting rooms",
+        "scheduling",
+        "sweep line",
+        "event sorting"
+      ],
+      "advanced_labs": [
+        "Implement and test merging on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test overlap on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test meeting rooms on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test scheduling on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test sweep line on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test event sorting on tiny synthetic inputs; state an invariant, a counterexample and complexity."
+      ]
+    },
+    {
+      "id": "knowledge-dsa-graphs",
+      "title": "Graphs and connectivity",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "skill_ids": [
+        "skill-dsa-graphs"
+      ],
+      "explanation": "BFS finds shortest paths only with equal edge costs. Dijkstra relies on nonnegative weights; Bellman-Ford detects reachable negative cycles. Topological ordering exists only for a DAG. Union-find tracks undirected connectivity, not directed reachability.",
+      "invariant": "A BFS vertex is enqueued once; a topological frontier contains only vertices with zero remaining indegree.",
+      "tradeoff": "Compare adjacency list and matrix costs; choose shortest-path algorithms from edge constraints, not habit.",
+      "concepts": [
+        "adjacency lists/matrices",
+        "DFS/BFS",
+        "cycles",
+        "components",
+        "topological sort",
+        "Dijkstra",
+        "Bellman-Ford",
+        "MST",
+        "union-find",
+        "shortest paths"
+      ],
+      "advanced_labs": [
+        "Implement and test adjacency lists/matrices on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test DFS/BFS on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test cycles on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test components on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test topological sort on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test Dijkstra on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test Bellman-Ford on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test MST on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test union-find on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test shortest paths on tiny synthetic inputs; state an invariant, a counterexample and complexity."
+      ]
+    },
+    {
+      "id": "knowledge-dsa-backtracking",
+      "title": "Backtracking and constraint search",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "skill_ids": [
+        "skill-dsa-backtracking"
+      ],
+      "explanation": "Backtracking makes a choice, explores the remaining choices and restores state. A start index prevents duplicate combinations; permutations require a different used-item contract. Pruning is safe only when a branch cannot contain a valid answer.",
+      "invariant": "The current path is valid, and undo restores exactly the state before the choice.",
+      "tradeoff": "Compare exhaustive enumeration with constraint-driven pruning; output size can dominate algorithm runtime.",
+      "concepts": [
+        "recursion trees",
+        "subsets",
+        "permutations",
+        "combinations",
+        "constraint satisfaction",
+        "pruning",
+        "N-Queens"
+      ],
+      "advanced_labs": [
+        "Implement and test recursion trees on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test subsets on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test permutations on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test combinations on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test constraint satisfaction on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test pruning on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test N-Queens on tiny synthetic inputs; state an invariant, a counterexample and complexity."
+      ]
+    },
+    {
+      "id": "knowledge-dsa-dp",
+      "title": "Dynamic programming",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "skill_ids": [
+        "skill-dsa-dp"
+      ],
+      "explanation": "Define what each state means before selecting a recurrence. Memoization shares repeated subproblems; tabulation follows dependency order. Loop direction distinguishes reusable coins from 0/1 choices. For LCS and grid DP, specify both dimensions and boundary states.",
+      "invariant": "Every computed state depends only on already valid states and represents a complete optimum for its stated subproblem.",
+      "tradeoff": "Write an exponential oracle on tiny inputs, derive the recurrence, then optimize storage only after correctness.",
+      "concepts": [
+        "memoization",
+        "tabulation",
+        "states",
+        "recurrences",
+        "1D/2D DP",
+        "knapsack",
+        "grids",
+        "LCS",
+        "LIS",
+        "tree DP"
+      ],
+      "advanced_labs": [
+        "Implement and test memoization on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test tabulation on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test states on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test recurrences on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test 1D/2D DP on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test knapsack on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test grids on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test LCS on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test LIS on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test tree DP on tiny synthetic inputs; state an invariant, a counterexample and complexity."
+      ]
+    },
+    {
+      "id": "knowledge-dsa-greedy",
+      "title": "Greedy algorithms and proofs",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "skill_ids": [
+        "skill-dsa-greedy"
+      ],
+      "explanation": "A locally attractive choice needs an exchange or dominance proof. Earliest finishing activities leave maximum remaining room; highest weight is not a valid replacement for weighted interval scheduling, which requires a different formulation.",
+      "invariant": "A chosen prefix can be extended to an optimal solution without reducing the remaining feasible choices.",
+      "tradeoff": "Construct a counterexample to tempting heuristics before relying on one; compare with a DP oracle.",
+      "concepts": [
+        "greedy choice",
+        "interval/activity selection",
+        "priority optimization",
+        "correctness proofs",
+        "greedy versus DP"
+      ],
+      "advanced_labs": [
+        "Implement and test greedy choice on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test interval/activity selection on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test priority optimization on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test correctness proofs on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test greedy versus DP on tiny synthetic inputs; state an invariant, a counterexample and complexity."
+      ]
+    },
+    {
+      "id": "knowledge-dsa-advanced",
+      "title": "Advanced data structures and algorithms",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "skill_ids": [
+        "skill-dsa-advanced"
+      ],
+      "explanation": "A trie shares prefixes while a Fenwick tree stores partial sums over bit-defined ranges. Bitwise JavaScript operators use signed 32-bit integers; arbitrary precision needs BigInt. Segment trees support more general aggregates at increased implementation complexity.",
+      "invariant": "Each indexed aggregate covers a precisely defined range; trie counts represent inserted words, not traversals.",
+      "tradeoff": "Choose advanced structures only when query/update constraints justify them; derive low-bit transitions.",
+      "concepts": [
+        "tries",
+        "bits",
+        "bitmasks",
+        "DSU",
+        "advanced graphs",
+        "combinatorics",
+        "segment trees",
+        "Fenwick trees"
+      ],
+      "advanced_labs": [
+        "Implement and test tries on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test bits on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test bitmasks on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test DSU on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test advanced graphs on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test combinatorics on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test segment trees on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test Fenwick trees on tiny synthetic inputs; state an invariant, a counterexample and complexity."
+      ]
+    },
+    {
+      "id": "knowledge-dsa-senior",
+      "title": "Senior engineering coding interviews",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "skill_ids": [
+        "skill-dsa-senior"
+      ],
+      "explanation": "Practical assessments evaluate evolving contracts, tests and maintainability, not just optimal puzzle complexity. State idempotency, error and ownership boundaries. JavaScript async I/O is not CPU parallelism; limit active work explicitly and discuss shared-state races.",
+      "invariant": "Every output obeys the contract even on duplicates, malformed input or partial failure; bounded workers preserve input order.",
+      "tradeoff": "Compare a minimal pure function with an extensible design. Refactor only after observable behavior is protected by tests.",
+      "concepts": [
+        "OO design",
+        "interfaces",
+        "patterns",
+        "concurrency",
+        "thread safety",
+        "races",
+        "practical coding",
+        "refactoring",
+        "testing",
+        "debugging",
+        "APIs",
+        "data modeling"
+      ],
+      "advanced_labs": [
+        "Implement and test OO design on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test interfaces on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test patterns on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test concurrency on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test thread safety on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test races on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test practical coding on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test refactoring on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test testing on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test debugging on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test APIs on tiny synthetic inputs; state an invariant, a counterexample and complexity.",
+        "Implement and test data modeling on tiny synthetic inputs; state an invariant, a counterexample and complexity."
+      ]
+    }
+  ]
+}

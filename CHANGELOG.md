@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.1.0 - 2026-11-01
+
+- Added the sixth DSA track without changing the original five-track research.
+- Added 15 modules, 30 original exercises, 14/30/60-day curricula and 38 source-classified company profiles.
+- Added persistent timed/blind/pattern/random/company/mock practice, JavaScript browser execution, self-rubrics, manual revision and evidence-based topic recommendations.
+- Reserved companion DSA practice inside another track's daily budget.
+- Added migration `0002`, strict coding-evidence validation and tested legacy snapshot upgrades.
+- Added authored-reference, API, schema, persistence and real-browser regressions; release evidence is in `DSA_IMPLEMENTATION_REPORT.md`.
+
 ## 1.0.0 - 2026-10-31
 
 - Preserved and integrated the published research package.

@@ -1,6 +1,6 @@
 # Engineering Academy
 
-A local-first engineering learning and career workspace for experienced engineers. It combines five independent learning tracks, research-backed curricula, daily study guides, practical projects, interviews, employer/job research, notes and evidence-based competency assessments.
+A local-first engineering learning and career workspace for experienced engineers. It combines six independent learning tracks, research-backed curricula, daily study guides, practical projects, interviews, employer/job research, notes and evidence-based competency assessments.
 
 **No API key, cloud subscription or paid service is required for core features.** Videos and documentation open at their original publishers. The included research has explicit limitations; resource scores are not verified hiring predictions.
 
@@ -8,11 +8,12 @@ For step-by-step Windows startup instructions, see [RUN_INSTRUCTIONS.md](RUN_INS
 
 ## Features
 
-- Senior software, cloud, DevOps/platform, AI and agent/MCP tracks.
+- Senior software, cloud, DevOps/platform, AI, agent/MCP and DSA coding-interview tracks.
 - Independent 14/30/60-day plans with 180-240 minutes daily, prerequisite ordering, manual adjustments and retained learning evidence.
 - Separate video, reading, practical and knowledge-check completion.
 - Searchable resources; bookmarks, personal ratings and verification flags.
-- 325 questions, detailed answer rubrics, mock scenarios and spaced review.
+- 325 original engineering interview questions plus 30 authored DSA exercises, detailed answer rubrics, mock scenarios and spaced review.
+- DSA: 15 modules, persistent timed/blind/pattern/company practice, bounded browser-only JavaScript execution and 38 sourced company profiles.
 - Editable employer watchlists, manual job descriptions, reviewable keyword extraction, skill gaps and job-linked plans.
 - Multi-track portfolio projects, tasks and Markdown notes.
 - Validated research imports, JSON exports, private SQLite snapshots and confirmed restore.
@@ -135,11 +136,23 @@ git pull --ff-only
 .\scripts\Setup.ps1
 ```
 
-Restart both terminals. Do not remove `data`, `.env` or Docker volumes when updating. Future schema changes require a new migration; never rewrite an already deployed migration. Current restore accepts schema version `0001` only.
+Restart both terminals. Do not remove `data`, `.env` or Docker volumes when updating. Future schema changes require a new migration; never rewrite an already deployed migration. Current restore validates revisions `0001` and `0002`; validated older snapshots are migrated before replacement.
+
+## DSA and coding interviews
+
+Choose the sixth track in **Learning Tracks**, then create a 14/30/60-day plan in **My Curriculum**. Lessons use the existing Study Room and notes/progress system. In **Interview Preparation**, expand **DSA coding practice, timed assessments and company preparation**; it opens automatically when DSA is active.
+
+Select a pattern or a timed/random/blind/company/mock mode. Implement `solve(input)` in JavaScript, save your draft explicitly, run sample tests, explain complexity and submit the ten self-ratings. Saved sessions can be resumed or inspected; timers do not reset on reload. Reviewing a solution is recorded as assistance, not mastery.
+
+Company profiles show source classification, limits and editable-watchlist guidance. Company plans highlight researched skills without breaking prerequisite order. Unknown formats use generic practice, not invented company questions. For another active track, select a reserved 30/45-minute DSA routine when creating its plan.
+
+The runner is a timed, network-blocked browser worker, not a complete judge or a proctored examination. Other languages require local testing. Topic rates reflect submitted samples and self-assessment; they are not hiring predictions. See [DSA_IMPLEMENTATION_REPORT.md](DSA_IMPLEMENTATION_REPORT.md) and [DSA_RESEARCH_REPORT.md](research/dsa/DSA_RESEARCH_REPORT.md).
 
 ## Research and resource imports
 
 Settings accepts either a recognized dataset envelope (such as `RESOURCE_CATALOG.json`) or a `{"datasets": {"RESOURCE_CATALOG.json": ...}}` map. Validate and inspect added/updated counts and versions, then explicitly apply. References, duplicate IDs and JSON schemas are checked. Stale previews are rejected. Imports update the database, **not repository research files or personal progress**.
+
+For DSA updates, use named entries such as `{"datasets":{"dsa/DSA_QUESTION_BANK.json":...}}`. Startup adds missing DSA documents only; it never refreshes already edited research automatically. The DSA schema and dictionary are under `research\dsa`.
 
 Keep historical IDs in refreshed packages; flag outdated resources separately rather than removing referenced entities. JSON imports are limited to 20 MB and 10,000 records per backup collection. Missing source files are reported explicitly; no resources are fabricated. The research schema itself is required.
 

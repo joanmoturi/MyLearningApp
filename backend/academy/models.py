@@ -95,7 +95,8 @@ class PersonalRecord(Base):
     __table_args__ = (
         UniqueConstraint("user_id", "kind", "ref_key"),
         CheckConstraint(
-            "kind IN ('note','resource','competency','company','job','project','attempt','review','settings')"
+            "kind IN ('note','resource','competency','company','job','project','attempt','review','settings','coding_session')",
+            name="ck_personal_records_kind",
         ),
     )
     id: Mapped[str] = mapped_column(String(100), primary_key=True, default=uid)

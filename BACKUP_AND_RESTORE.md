@@ -25,6 +25,8 @@ JSON imports merge matching IDs after preview and confirmation; they are not an 
 
 No API keys are inside the snapshot. Reconfigure optional keys separately if desired.
 
-Current SQLite restore accepts migration revision `0001` and files up to 64 MB. JSON import is bounded to 20 MB. For incompatible or larger databases, keep the original safe and use a version-aware maintenance process; never alter the schema to bypass validation.
+Current SQLite restore accepts migration revisions `0001` and `0002` and files up to 64 MB. Older snapshots undergo full legacy-schema validation before migration to `0002` and replacement. JSON import is bounded to 20 MB. For incompatible or larger databases, keep the original safe and use a version-aware maintenance process; never alter the schema to bypass validation.
+
+DSA sessions, saved code/approaches, self-ratings, assistance flags and review schedules are included in private backups/JSON exports. Coding fixture checks are recomputed during validation. Restoring an older five-track snapshot requires a backend restart to add missing optional DSA documents; older personal records remain intact. Research refreshes never replace saved attempts or notes.
 
 Automated tests cover restore after later changes, restore into a fresh initialized database, rejection of invalid snapshots and restart persistence. Docker-volume restart/reboot recovery requires Docker verification and has not been claimed on the native-only test machine.

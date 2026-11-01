@@ -14,6 +14,7 @@ import {
   type Row,
 } from "../lib/data";
 import { Card, Content, Editor, External, type Field } from "./components";
+import DsaPractice from "./dsa-practice";
 
 const sections = [
   "Dashboard",
@@ -273,6 +274,23 @@ export default function Workspace() {
       options: choices(["balanced", "practical", "interview"]),
     },
     {
+      name: "dsa_practice_minutes",
+      label: "DSA routine within daily budget",
+      type: "select",
+      options: [
+        { value: "0", label: "No companion routine / dedicated DSA plan" },
+        {
+          value: "30",
+          label: "Reserve 30 minutes alongside this non-DSA track",
+        },
+        {
+          value: "45",
+          label: "Reserve 45 minutes alongside this non-DSA track",
+        },
+      ],
+      hint: "Reserved from implementation time, not added to your daily total.",
+    },
+    {
       name: "existing_competency",
       label: "Existing competency context",
       hint: "Context only. Advanced competency requires separate practical evidence.",
@@ -306,6 +324,7 @@ export default function Workspace() {
     const payload = {
       ...data,
       duration_days: Number(data.duration_days),
+      dsa_practice_minutes: Number(data.dsa_practice_minutes ?? 0),
       company_id: data.company_id || null,
       job_id: data.job_id || null,
     };
@@ -779,7 +798,7 @@ export default function Workspace() {
                     </Card>
                   ))}
                 </div>
-                <h2>Your five learning tracks</h2>
+                <h2>Your learning tracks</h2>
                 <div className="grid">
                   {tracks.map((item) => {
                     const list = plans.filter(
@@ -1122,6 +1141,7 @@ export default function Workspace() {
                               job_id: targetJob.id ?? null,
                               company_id: targetJob.company_id ?? null,
                               reuse_demonstrated: false,
+                              dsa_practice_minutes: 0,
                             }
                       }
                       onSave={savePlan}
@@ -1339,6 +1359,31 @@ export default function Workspace() {
                         <Content value={lesson.prerequisites} />
                         <Content value={lesson.time_budget_minutes} />
                       </details>
+                      {(lesson.example_implementation != null ||
+                        num(lesson.dsa_practice_minutes) > 0) && (
+                        <details>
+                          <summary>
+                            DSA implementation and coding practice
+                          </summary>
+                          {lesson.example_implementation != null && (
+                            <>
+                              <h3>Original example implementation</h3>
+                              <pre>{text(lesson.example_implementation)}</pre>
+                              <Content value={lesson.complexity_analysis} />
+                            </>
+                          )}
+                          {num(lesson.dsa_practice_minutes) > 0 && (
+                            <p>
+                              {num(lesson.dsa_practice_minutes)} minutes are
+                              reserved for DSA within this lesson&apos;s total
+                              budget.
+                            </p>
+                          )}
+                          <button onClick={() => go("Interview Preparation")}>
+                            Open DSA coding practice
+                          </button>
+                        </details>
+                      )}
                     </Card>
                     <div className="split" style={{ marginTop: 24 }}>
                       <div className="stack">
@@ -1723,6 +1768,20 @@ export default function Workspace() {
             )}
             {section === "Interview Preparation" && (
               <>
+                <details
+                  open={
+                    trackId === "track-dsa" || filters.track === "track-dsa"
+                  }
+                >
+                  <summary>
+                    DSA coding practice, timed assessments and company
+                    preparation
+                  </summary>
+                  <DsaPractice
+                    aiConfigured={Boolean(obj(boot.integrations).ai_configured)}
+                    onChanged={reload}
+                  />
+                </details>
                 <p className="lead">
                   Reason through incidents and trade-offs. Assess against
                   detailed rubrics, not keyword scoring or memorized flashcards.

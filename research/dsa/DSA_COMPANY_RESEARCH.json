@@ -1,0 +1,1888 @@
+{
+  "$schema": "DSA_PACKAGE_SCHEMA.json",
+  "dataset_type": "dsa",
+  "research_version": "1.0.0",
+  "research_date": "2026-10-31",
+  "profiles": [
+    {
+      "id": "profile-dsa-google",
+      "name": "Google",
+      "employer_id": "employer-google",
+      "category": "big_tech",
+      "career_url": "https://www.google.com/about/careers/applications/",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 1,
+      "interview_evidence": "officially_documented",
+      "coding_assessment_format": "Official general interview advice is available. The accessible page does not establish a specific engineering round count, DSA topic frequency or senior design format; use balanced practice pending recruiter guidance.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "Official general interview advice is available. The accessible page does not establish a specific engineering round count, DSA topic frequency or senior design format; use balanced practice pending recruiter guidance.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-google",
+        "source-dsa-guide-google"
+      ],
+      "source_urls": [
+        "https://www.google.com/about/careers/applications/",
+        "https://www.google.com/about/careers/applications/interview-tips/"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "medium",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-microsoft",
+      "name": "Microsoft",
+      "employer_id": "employer-microsoft",
+      "category": "big_tech",
+      "career_url": "https://careers.microsoft.com/",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 1,
+      "interview_evidence": "officially_documented",
+      "coding_assessment_format": "Official guidance names data structures and Big O. Practice clean implementation, tests and technical explanation.",
+      "dsa_intensity": "Coding preparation is documented; intensity is not measured.",
+      "main_dsa_topics": [
+        "arrays",
+        "patterns",
+        "linked",
+        "trees",
+        "graphs",
+        "senior"
+      ],
+      "pattern_skill_ids": [
+        "skill-dsa-arrays",
+        "skill-dsa-patterns",
+        "skill-dsa-linked",
+        "skill-dsa-trees",
+        "skill-dsa-graphs",
+        "skill-dsa-senior"
+      ],
+      "system_design_expectations": "Documented design component; confirm seniority and exact scope.",
+      "practical_coding_expectations": "Official guidance names data structures and Big O. Practice clean implementation, tests and technical explanation.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-microsoft",
+        "source-dsa-guide-microsoft"
+      ],
+      "source_urls": [
+        "https://careers.microsoft.com/",
+        "https://careers.microsoft.com/us/en/technical-interviewing"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "medium",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-amazon",
+      "name": "Amazon",
+      "employer_id": "employer-amazon",
+      "category": "big_tech",
+      "career_url": "https://www.amazon.jobs/",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 1,
+      "interview_evidence": "officially_documented",
+      "coding_assessment_format": "Official guidance includes a coding assessment and software-development topics. Supplement coding with object-oriented/system design and Leadership Principles preparation.",
+      "dsa_intensity": "Coding preparation is documented; intensity is not measured.",
+      "main_dsa_topics": [
+        "arrays",
+        "trees",
+        "graphs",
+        "dp",
+        "senior"
+      ],
+      "pattern_skill_ids": [
+        "skill-dsa-arrays",
+        "skill-dsa-trees",
+        "skill-dsa-graphs",
+        "skill-dsa-dp",
+        "skill-dsa-senior"
+      ],
+      "system_design_expectations": "Documented design component; confirm seniority and exact scope.",
+      "practical_coding_expectations": "Official guidance includes a coding assessment and software-development topics. Supplement coding with object-oriented/system design and Leadership Principles preparation.",
+      "behavioral_requirements": "Official preparation material includes Leadership Principles and behavioral examples. Prepare specific ownership, decision and collaboration stories using STAR.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-amazon",
+        "source-dsa-guide-amazon"
+      ],
+      "source_urls": [
+        "https://www.amazon.jobs/",
+        "https://www.amazon.jobs/content/en/how-we-hire/interview-prep/software-development-topics"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "medium",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-meta",
+      "name": "Meta",
+      "employer_id": "employer-meta",
+      "category": "big_tech",
+      "career_url": "https://www.metacareers.com/",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 1,
+      "interview_evidence": "officially_documented",
+      "coding_assessment_format": "The employer-authored full-loop guide covers coding, design and behavioral interviews. Recruiter materials govern the actual role's format.",
+      "dsa_intensity": "Coding preparation is documented; intensity is not measured.",
+      "main_dsa_topics": [
+        "arrays",
+        "patterns",
+        "trees",
+        "graphs"
+      ],
+      "pattern_skill_ids": [
+        "skill-dsa-arrays",
+        "skill-dsa-patterns",
+        "skill-dsa-trees",
+        "skill-dsa-graphs"
+      ],
+      "system_design_expectations": "Documented design component; confirm seniority and exact scope.",
+      "practical_coding_expectations": "The employer-authored full-loop guide covers coding, design and behavioral interviews. Recruiter materials govern the actual role's format.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-meta",
+        "source-dsa-guide-meta"
+      ],
+      "source_urls": [
+        "https://www.metacareers.com/",
+        "https://d3no4ktch0fdq4.cloudfront.net/public/course/files/Meta_SWE_full_loop_guide.pdf"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "medium",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-apple",
+      "name": "Apple",
+      "employer_id": "employer-apple",
+      "category": "big_tech",
+      "career_url": "https://www.apple.com/careers/",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 2,
+      "interview_evidence": "unknown",
+      "coding_assessment_format": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-apple"
+      ],
+      "source_urls": [
+        "https://www.apple.com/careers/"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-netflix",
+      "name": "Netflix",
+      "employer_id": "employer-netflix",
+      "category": "big_tech",
+      "career_url": "https://jobs.netflix.com/",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 2,
+      "interview_evidence": "unknown",
+      "coding_assessment_format": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-netflix"
+      ],
+      "source_urls": [
+        "https://jobs.netflix.com/"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-nvidia",
+      "name": "NVIDIA",
+      "employer_id": "employer-nvidia",
+      "category": "big_tech",
+      "career_url": "https://www.nvidia.com/en-us/about-nvidia/careers/",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 2,
+      "interview_evidence": "officially_documented",
+      "coding_assessment_format": "Official guidance describes team interviews and 30-60-minute conversations. It does not establish a universal DSA topic distribution.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "Official guidance describes team interviews and 30-60-minute conversations. It does not establish a universal DSA topic distribution.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-nvidia",
+        "source-dsa-guide-nvidia"
+      ],
+      "source_urls": [
+        "https://www.nvidia.com/en-us/about-nvidia/careers/",
+        "https://www.nvidia.com/en-us/about-nvidia/careers/how-we-hire/"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "medium",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-stripe",
+      "name": "Stripe",
+      "employer_id": "employer-stripe",
+      "category": "engineering_technology",
+      "career_url": "https://stripe.com/jobs",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 2,
+      "interview_evidence": "limited_anecdotal_evidence",
+      "coding_assessment_format": "Candidate reports suggest practical multipart implementation; not a guaranteed format or question-frequency estimate.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [
+        "arrays",
+        "senior"
+      ],
+      "pattern_skill_ids": [
+        "skill-dsa-arrays",
+        "skill-dsa-senior"
+      ],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "Candidate reports suggest practical multipart implementation; not a guaranteed format or question-frequency estimate.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "Individual/aggregated public reports, not official policy; new-graduate evidence is not automatically transferable to senior hiring.",
+      "source_ids": [
+        "source-dsa-company-stripe",
+        "source-dsa-report-stripe-0",
+        "source-dsa-report-stripe-1"
+      ],
+      "source_urls": [
+        "https://stripe.com/jobs",
+        "https://leetcode.com/discuss/post/8372404/",
+        "https://leetcode.com/discuss/post/7566910/"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-uber",
+      "name": "Uber",
+      "employer_id": "employer-uber",
+      "category": "engineering_technology",
+      "career_url": "https://www.uber.com/us/en/careers/",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 2,
+      "interview_evidence": "unknown",
+      "coding_assessment_format": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-uber"
+      ],
+      "source_urls": [
+        "https://www.uber.com/us/en/careers/"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-airbnb",
+      "name": "Airbnb",
+      "employer_id": "employer-airbnb",
+      "category": "engineering_technology",
+      "career_url": "https://careers.airbnb.com/",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 2,
+      "interview_evidence": "unknown",
+      "coding_assessment_format": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-airbnb"
+      ],
+      "source_urls": [
+        "https://careers.airbnb.com/"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-linkedin",
+      "name": "LinkedIn",
+      "employer_id": "employer-linkedin",
+      "category": "engineering_technology",
+      "career_url": "https://careers.linkedin.com/",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 2,
+      "interview_evidence": "unknown",
+      "coding_assessment_format": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-linkedin"
+      ],
+      "source_urls": [
+        "https://careers.linkedin.com/"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-bloomberg",
+      "name": "Bloomberg",
+      "employer_id": "employer-bloomberg",
+      "category": "engineering_technology",
+      "career_url": "https://www.bloomberg.com/company/careers/",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 2,
+      "interview_evidence": "unknown",
+      "coding_assessment_format": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-bloomberg"
+      ],
+      "source_urls": [
+        "https://www.bloomberg.com/company/careers/"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-datadog",
+      "name": "Datadog",
+      "employer_id": "employer-datadog",
+      "category": "engineering_technology",
+      "career_url": "https://careers.datadoghq.com/",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 2,
+      "interview_evidence": "unknown",
+      "coding_assessment_format": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-datadog"
+      ],
+      "source_urls": [
+        "https://careers.datadoghq.com/"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-cloudflare",
+      "name": "Cloudflare",
+      "employer_id": "employer-cloudflare",
+      "category": "engineering_technology",
+      "career_url": "https://www.cloudflare.com/careers/",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 2,
+      "interview_evidence": "unknown",
+      "coding_assessment_format": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-cloudflare"
+      ],
+      "source_urls": [
+        "https://www.cloudflare.com/careers/"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-snowflake",
+      "name": "Snowflake",
+      "employer_id": "employer-snowflake",
+      "category": "engineering_technology",
+      "career_url": "https://careers.snowflake.com/",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 2,
+      "interview_evidence": "unknown",
+      "coding_assessment_format": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-snowflake"
+      ],
+      "source_urls": [
+        "https://careers.snowflake.com/"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-adobe",
+      "name": "Adobe",
+      "employer_id": "employer-adobe",
+      "category": "engineering_technology",
+      "career_url": "https://careers.adobe.com/",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 2,
+      "interview_evidence": "unknown",
+      "coding_assessment_format": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-adobe"
+      ],
+      "source_urls": [
+        "https://careers.adobe.com/"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-salesforce",
+      "name": "Salesforce",
+      "employer_id": "employer-salesforce",
+      "category": "engineering_technology",
+      "career_url": "https://careers.salesforce.com/",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 2,
+      "interview_evidence": "unknown",
+      "coding_assessment_format": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-salesforce"
+      ],
+      "source_urls": [
+        "https://careers.salesforce.com/"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-atlassian",
+      "name": "Atlassian",
+      "employer_id": "employer-atlassian",
+      "category": "engineering_technology",
+      "career_url": "https://www.atlassian.com/company/careers",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 2,
+      "interview_evidence": "officially_documented",
+      "coding_assessment_format": "Official engineering guidance covers data structures, code design, system design and values discussions.",
+      "dsa_intensity": "Coding preparation is documented; intensity is not measured.",
+      "main_dsa_topics": [
+        "arrays",
+        "trees",
+        "senior"
+      ],
+      "pattern_skill_ids": [
+        "skill-dsa-arrays",
+        "skill-dsa-trees",
+        "skill-dsa-senior"
+      ],
+      "system_design_expectations": "Documented design component; confirm seniority and exact scope.",
+      "practical_coding_expectations": "Official engineering guidance covers data structures, code design, system design and values discussions.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-atlassian",
+        "source-dsa-guide-atlassian"
+      ],
+      "source_urls": [
+        "https://www.atlassian.com/company/careers",
+        "https://www.atlassian.com/company/careers/resources/interviewing/engineering"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "medium",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-shopify",
+      "name": "Shopify",
+      "employer_id": "employer-shopify",
+      "category": "engineering_technology",
+      "career_url": "https://www.shopify.com/careers",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 2,
+      "interview_evidence": "unknown",
+      "coding_assessment_format": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-shopify"
+      ],
+      "source_urls": [
+        "https://www.shopify.com/careers"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-openai",
+      "name": "OpenAI",
+      "employer_id": "employer-openai",
+      "category": "ai",
+      "career_url": "https://openai.com/careers/",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 3,
+      "interview_evidence": "officially_documented",
+      "coding_assessment_format": "Official guidance says assessments vary by team and may include pair coding, take-home projects or technical tests. Prepare practical implementation; no universal puzzle-only process is claimed.",
+      "dsa_intensity": "Coding preparation is documented; intensity is not measured.",
+      "main_dsa_topics": [
+        "senior"
+      ],
+      "pattern_skill_ids": [
+        "skill-dsa-senior"
+      ],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "Official guidance says assessments vary by team and may include pair coding, take-home projects or technical tests. Prepare practical implementation; no universal puzzle-only process is claimed.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-openai",
+        "source-dsa-guide-openai"
+      ],
+      "source_urls": [
+        "https://openai.com/careers/",
+        "https://openai.com/interview-guide/"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "medium",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-anthropic",
+      "name": "Anthropic",
+      "employer_id": "employer-anthropic",
+      "category": "ai",
+      "career_url": "https://www.anthropic.com/careers",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 3,
+      "interview_evidence": "limited_anecdotal_evidence",
+      "coding_assessment_format": "Candidate reports suggest practical multipart implementation; not a guaranteed format or question-frequency estimate.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [
+        "senior"
+      ],
+      "pattern_skill_ids": [
+        "skill-dsa-senior"
+      ],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "Candidate reports suggest practical multipart implementation; not a guaranteed format or question-frequency estimate.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "Individual/aggregated public reports, not official policy; new-graduate evidence is not automatically transferable to senior hiring.",
+      "source_ids": [
+        "source-dsa-company-anthropic",
+        "source-dsa-report-anthropic-0"
+      ],
+      "source_urls": [
+        "https://www.anthropic.com/careers",
+        "https://interviewing.io/anthropic-interview-questions"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-cohere",
+      "name": "Cohere",
+      "employer_id": "employer-cohere",
+      "category": "ai",
+      "career_url": "https://cohere.com/careers",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 3,
+      "interview_evidence": "unknown",
+      "coding_assessment_format": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-cohere"
+      ],
+      "source_urls": [
+        "https://cohere.com/careers"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-mistral",
+      "name": "Mistral AI",
+      "employer_id": "employer-mistral",
+      "category": "ai",
+      "career_url": "https://mistral.ai/careers",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 3,
+      "interview_evidence": "unknown",
+      "coding_assessment_format": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-mistral"
+      ],
+      "source_urls": [
+        "https://mistral.ai/careers"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-huggingface",
+      "name": "Hugging Face",
+      "employer_id": "employer-huggingface",
+      "category": "ai",
+      "career_url": "https://huggingface.co/join-us",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 3,
+      "interview_evidence": "unknown",
+      "coding_assessment_format": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-huggingface"
+      ],
+      "source_urls": [
+        "https://huggingface.co/join-us"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-deepmind",
+      "name": "Google DeepMind",
+      "employer_id": "employer-deepmind",
+      "category": "ai",
+      "career_url": "https://deepmind.google/careers/",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 3,
+      "interview_evidence": "unknown",
+      "coding_assessment_format": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-deepmind"
+      ],
+      "source_urls": [
+        "https://deepmind.google/careers/"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-safaricom",
+      "name": "Safaricom",
+      "employer_id": "employer-safaricom",
+      "category": "africa",
+      "career_url": "https://www.safaricom.co.ke/careers",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 1,
+      "interview_evidence": "unknown",
+      "coding_assessment_format": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-safaricom"
+      ],
+      "source_urls": [
+        "https://www.safaricom.co.ke/careers"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-mkopa",
+      "name": "M-KOPA",
+      "employer_id": "employer-mkopa",
+      "category": "africa",
+      "career_url": "https://www.m-kopa.com/careers",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 1,
+      "interview_evidence": "unknown",
+      "coding_assessment_format": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-mkopa"
+      ],
+      "source_urls": [
+        "https://www.m-kopa.com/careers"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-andela",
+      "name": "Andela",
+      "employer_id": "employer-andela",
+      "category": "africa",
+      "career_url": "https://www.andela.com/careers",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 1,
+      "interview_evidence": "unknown",
+      "coding_assessment_format": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-andela"
+      ],
+      "source_urls": [
+        "https://www.andela.com/careers"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-flutterwave",
+      "name": "Flutterwave",
+      "employer_id": "employer-flutterwave",
+      "category": "africa",
+      "career_url": "https://flutterwave.com/us/careers",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 2,
+      "interview_evidence": "unknown",
+      "coding_assessment_format": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-flutterwave"
+      ],
+      "source_urls": [
+        "https://flutterwave.com/us/careers"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-cellulant",
+      "name": "Cellulant",
+      "employer_id": "employer-cellulant",
+      "category": "africa",
+      "career_url": "https://www.cellulant.io/careers/",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 2,
+      "interview_evidence": "unknown",
+      "coding_assessment_format": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-cellulant"
+      ],
+      "source_urls": [
+        "https://www.cellulant.io/careers/"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-pesapal",
+      "name": "PesaPal",
+      "employer_id": "employer-pesapal",
+      "category": "africa",
+      "career_url": "https://pesapal.careers-page.com/",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 2,
+      "interview_evidence": "unknown",
+      "coding_assessment_format": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-pesapal"
+      ],
+      "source_urls": [
+        "https://pesapal.careers-page.com/"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-microsoft-africa",
+      "name": "Microsoft Africa",
+      "employer_id": "employer-microsoft",
+      "category": "africa",
+      "career_url": "https://careers.microsoft.com/",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 1,
+      "interview_evidence": "officially_documented",
+      "coding_assessment_format": "Official guidance names data structures and Big O. Practice clean implementation, tests and technical explanation. Regional vacancies and country eligibility require separate confirmation.",
+      "dsa_intensity": "Coding preparation is documented; intensity is not measured.",
+      "main_dsa_topics": [
+        "arrays",
+        "patterns",
+        "linked",
+        "trees",
+        "graphs",
+        "senior"
+      ],
+      "pattern_skill_ids": [
+        "skill-dsa-arrays",
+        "skill-dsa-patterns",
+        "skill-dsa-linked",
+        "skill-dsa-trees",
+        "skill-dsa-graphs",
+        "skill-dsa-senior"
+      ],
+      "system_design_expectations": "Documented design component; confirm seniority and exact scope.",
+      "practical_coding_expectations": "Official guidance names data structures and Big O. Practice clean implementation, tests and technical explanation. Regional vacancies and country eligibility require separate confirmation.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-microsoft-africa",
+        "source-dsa-guide-microsoft"
+      ],
+      "source_urls": [
+        "https://careers.microsoft.com/",
+        "https://careers.microsoft.com/us/en/technical-interviewing"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "medium",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-worldbank",
+      "name": "World Bank",
+      "employer_id": "employer-worldbank",
+      "category": "international_development",
+      "career_url": "https://www.worldbank.org/en/about/careers",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 3,
+      "interview_evidence": "unknown",
+      "coding_assessment_format": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-worldbank"
+      ],
+      "source_urls": [
+        "https://www.worldbank.org/en/about/careers"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-unicef",
+      "name": "UNICEF",
+      "employer_id": "employer-unicef",
+      "category": "international_development",
+      "career_url": "https://jobs.unicef.org/",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 3,
+      "interview_evidence": "unknown",
+      "coding_assessment_format": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-unicef"
+      ],
+      "source_urls": [
+        "https://jobs.unicef.org/"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-undp",
+      "name": "UNDP",
+      "employer_id": "employer-undp",
+      "category": "international_development",
+      "career_url": "https://www.undp.org/careers",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 3,
+      "interview_evidence": "unknown",
+      "coding_assessment_format": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-undp"
+      ],
+      "source_urls": [
+        "https://www.undp.org/careers"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-canonical",
+      "name": "Canonical",
+      "employer_id": "employer-canonical",
+      "category": "remote_first",
+      "career_url": "https://canonical.com/careers",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 2,
+      "interview_evidence": "unknown",
+      "coding_assessment_format": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-canonical"
+      ],
+      "source_urls": [
+        "https://canonical.com/careers"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-gitlab",
+      "name": "GitLab",
+      "employer_id": "employer-gitlab",
+      "category": "remote_first",
+      "career_url": "https://about.gitlab.com/jobs/",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 2,
+      "interview_evidence": "unknown",
+      "coding_assessment_format": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-gitlab"
+      ],
+      "source_urls": [
+        "https://about.gitlab.com/jobs/"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    },
+    {
+      "id": "profile-dsa-automattic",
+      "name": "Automattic",
+      "employer_id": "employer-automattic",
+      "category": "remote_first",
+      "career_url": "https://automattic.com/work-with-us/",
+      "relevant_job_titles": [
+        "Software Engineer",
+        "Senior Software Engineer",
+        "Platform Engineer"
+      ],
+      "job_title_status": "Watchlist search terms, not verified current openings.",
+      "location_eligibility": "Unknown for this learner; inspect each posting and ask about Kenya payroll, work authorization and relocation.",
+      "remote_from_kenya": "unknown",
+      "seniority": "Role-specific; no uniform cross-company level mapping.",
+      "preparation_tier": 2,
+      "interview_evidence": "unknown",
+      "coding_assessment_format": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "dsa_intensity": "unknown",
+      "main_dsa_topics": [],
+      "pattern_skill_ids": [],
+      "system_design_expectations": "Unknown from the selected sources; prepare the existing software track without claiming it is required.",
+      "practical_coding_expectations": "No role-specific interview process verified. Use balanced generic practice and ask the recruiter for the actual assessment.",
+      "behavioral_requirements": "Prepare evidence of ownership, collaboration and decisions; this is general preparation, not an employer-specific rubric.",
+      "role_specific_requirements": "Extract from the exact job description in Career Intelligence.",
+      "candidate_report_scope": "No candidate report retained.",
+      "source_ids": [
+        "source-dsa-company-automattic"
+      ],
+      "source_urls": [
+        "https://automattic.com/work-with-us/"
+      ],
+      "research_date": "2026-10-31",
+      "confidence": "low",
+      "limitations": [
+        "No suitable live vacancy or Kenyan remote-employment eligibility is asserted.",
+        "Seniority, visa/payroll eligibility, location, format and tool policy must be confirmed for the specific role.",
+        "Unknown fields are not negative evidence; preparation tiers are editable editorial priorities."
+      ]
+    }
+  ],
+  "employers": [
+    {
+      "id": "employer-apple",
+      "name": "Apple",
+      "career_url": "https://www.apple.com/careers/",
+      "watch_keywords": [
+        "Software Engineer",
+        "Senior Software Engineer"
+      ],
+      "limitations": "Research watchlist only. Interview process and Kenya eligibility may be unknown.",
+      "enabled": true,
+      "preparation_tier": 2
+    },
+    {
+      "id": "employer-netflix",
+      "name": "Netflix",
+      "career_url": "https://jobs.netflix.com/",
+      "watch_keywords": [
+        "Software Engineer",
+        "Senior Software Engineer"
+      ],
+      "limitations": "Research watchlist only. Interview process and Kenya eligibility may be unknown.",
+      "enabled": true,
+      "preparation_tier": 2
+    },
+    {
+      "id": "employer-stripe",
+      "name": "Stripe",
+      "career_url": "https://stripe.com/jobs",
+      "watch_keywords": [
+        "Software Engineer",
+        "Senior Software Engineer"
+      ],
+      "limitations": "Research watchlist only. Interview process and Kenya eligibility may be unknown.",
+      "enabled": true,
+      "preparation_tier": 2
+    },
+    {
+      "id": "employer-uber",
+      "name": "Uber",
+      "career_url": "https://www.uber.com/us/en/careers/",
+      "watch_keywords": [
+        "Software Engineer",
+        "Senior Software Engineer"
+      ],
+      "limitations": "Research watchlist only. Interview process and Kenya eligibility may be unknown.",
+      "enabled": true,
+      "preparation_tier": 2
+    },
+    {
+      "id": "employer-airbnb",
+      "name": "Airbnb",
+      "career_url": "https://careers.airbnb.com/",
+      "watch_keywords": [
+        "Software Engineer",
+        "Senior Software Engineer"
+      ],
+      "limitations": "Research watchlist only. Interview process and Kenya eligibility may be unknown.",
+      "enabled": true,
+      "preparation_tier": 2
+    },
+    {
+      "id": "employer-linkedin",
+      "name": "LinkedIn",
+      "career_url": "https://careers.linkedin.com/",
+      "watch_keywords": [
+        "Software Engineer",
+        "Senior Software Engineer"
+      ],
+      "limitations": "Research watchlist only. Interview process and Kenya eligibility may be unknown.",
+      "enabled": true,
+      "preparation_tier": 2
+    },
+    {
+      "id": "employer-bloomberg",
+      "name": "Bloomberg",
+      "career_url": "https://www.bloomberg.com/company/careers/",
+      "watch_keywords": [
+        "Software Engineer",
+        "Senior Software Engineer"
+      ],
+      "limitations": "Research watchlist only. Interview process and Kenya eligibility may be unknown.",
+      "enabled": true,
+      "preparation_tier": 2
+    },
+    {
+      "id": "employer-snowflake",
+      "name": "Snowflake",
+      "career_url": "https://careers.snowflake.com/",
+      "watch_keywords": [
+        "Software Engineer",
+        "Senior Software Engineer"
+      ],
+      "limitations": "Research watchlist only. Interview process and Kenya eligibility may be unknown.",
+      "enabled": true,
+      "preparation_tier": 2
+    },
+    {
+      "id": "employer-adobe",
+      "name": "Adobe",
+      "career_url": "https://careers.adobe.com/",
+      "watch_keywords": [
+        "Software Engineer",
+        "Senior Software Engineer"
+      ],
+      "limitations": "Research watchlist only. Interview process and Kenya eligibility may be unknown.",
+      "enabled": true,
+      "preparation_tier": 2
+    },
+    {
+      "id": "employer-salesforce",
+      "name": "Salesforce",
+      "career_url": "https://careers.salesforce.com/",
+      "watch_keywords": [
+        "Software Engineer",
+        "Senior Software Engineer"
+      ],
+      "limitations": "Research watchlist only. Interview process and Kenya eligibility may be unknown.",
+      "enabled": true,
+      "preparation_tier": 2
+    },
+    {
+      "id": "employer-atlassian",
+      "name": "Atlassian",
+      "career_url": "https://www.atlassian.com/company/careers",
+      "watch_keywords": [
+        "Software Engineer",
+        "Senior Software Engineer"
+      ],
+      "limitations": "Research watchlist only. Interview process and Kenya eligibility may be unknown.",
+      "enabled": true,
+      "preparation_tier": 2
+    },
+    {
+      "id": "employer-shopify",
+      "name": "Shopify",
+      "career_url": "https://www.shopify.com/careers",
+      "watch_keywords": [
+        "Software Engineer",
+        "Senior Software Engineer"
+      ],
+      "limitations": "Research watchlist only. Interview process and Kenya eligibility may be unknown.",
+      "enabled": true,
+      "preparation_tier": 2
+    },
+    {
+      "id": "employer-cohere",
+      "name": "Cohere",
+      "career_url": "https://cohere.com/careers",
+      "watch_keywords": [
+        "Software Engineer",
+        "Senior Software Engineer"
+      ],
+      "limitations": "Research watchlist only. Interview process and Kenya eligibility may be unknown.",
+      "enabled": true,
+      "preparation_tier": 3
+    },
+    {
+      "id": "employer-mistral",
+      "name": "Mistral AI",
+      "career_url": "https://mistral.ai/careers",
+      "watch_keywords": [
+        "Software Engineer",
+        "Senior Software Engineer"
+      ],
+      "limitations": "Research watchlist only. Interview process and Kenya eligibility may be unknown.",
+      "enabled": true,
+      "preparation_tier": 3
+    },
+    {
+      "id": "employer-huggingface",
+      "name": "Hugging Face",
+      "career_url": "https://huggingface.co/join-us",
+      "watch_keywords": [
+        "Software Engineer",
+        "Senior Software Engineer"
+      ],
+      "limitations": "Research watchlist only. Interview process and Kenya eligibility may be unknown.",
+      "enabled": true,
+      "preparation_tier": 3
+    },
+    {
+      "id": "employer-deepmind",
+      "name": "Google DeepMind",
+      "career_url": "https://deepmind.google/careers/",
+      "watch_keywords": [
+        "Software Engineer",
+        "Senior Software Engineer"
+      ],
+      "limitations": "Research watchlist only. Interview process and Kenya eligibility may be unknown.",
+      "enabled": true,
+      "preparation_tier": 3
+    },
+    {
+      "id": "employer-mkopa",
+      "name": "M-KOPA",
+      "career_url": "https://www.m-kopa.com/careers",
+      "watch_keywords": [
+        "Software Engineer",
+        "Senior Software Engineer"
+      ],
+      "limitations": "Research watchlist only. Interview process and Kenya eligibility may be unknown.",
+      "enabled": true,
+      "preparation_tier": 1
+    },
+    {
+      "id": "employer-flutterwave",
+      "name": "Flutterwave",
+      "career_url": "https://flutterwave.com/us/careers",
+      "watch_keywords": [
+        "Software Engineer",
+        "Senior Software Engineer"
+      ],
+      "limitations": "Research watchlist only. Interview process and Kenya eligibility may be unknown.",
+      "enabled": true,
+      "preparation_tier": 2
+    },
+    {
+      "id": "employer-cellulant",
+      "name": "Cellulant",
+      "career_url": "https://www.cellulant.io/careers/",
+      "watch_keywords": [
+        "Software Engineer",
+        "Senior Software Engineer"
+      ],
+      "limitations": "Research watchlist only. Interview process and Kenya eligibility may be unknown.",
+      "enabled": true,
+      "preparation_tier": 2
+    },
+    {
+      "id": "employer-pesapal",
+      "name": "PesaPal",
+      "career_url": "https://pesapal.careers-page.com/",
+      "watch_keywords": [
+        "Software Engineer",
+        "Senior Software Engineer"
+      ],
+      "limitations": "Research watchlist only. Interview process and Kenya eligibility may be unknown.",
+      "enabled": true,
+      "preparation_tier": 2
+    },
+    {
+      "id": "employer-gitlab",
+      "name": "GitLab",
+      "career_url": "https://about.gitlab.com/jobs/",
+      "watch_keywords": [
+        "Software Engineer",
+        "Senior Software Engineer"
+      ],
+      "limitations": "Research watchlist only. Interview process and Kenya eligibility may be unknown.",
+      "enabled": true,
+      "preparation_tier": 2
+    },
+    {
+      "id": "employer-automattic",
+      "name": "Automattic",
+      "career_url": "https://automattic.com/work-with-us/",
+      "watch_keywords": [
+        "Software Engineer",
+        "Senior Software Engineer"
+      ],
+      "limitations": "Research watchlist only. Interview process and Kenya eligibility may be unknown.",
+      "enabled": true,
+      "preparation_tier": 2
+    }
+  ]
+}

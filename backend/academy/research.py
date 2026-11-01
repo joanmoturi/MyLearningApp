@@ -21,6 +21,16 @@ FILES = {
     "LEARNING_DEPENDENCIES.json": {},
     **{f"CURRICULUM_{days}_DAYS.json": {"curricula": "curriculum"} for days in (14, 30, 60)},
 }
+DSA_FILES = {
+    "dsa/DSA_SKILL_MATRIX.json": {"tracks": "track", "skills": "skill", "modules": "knowledge"},
+    "dsa/DSA_RESOURCE_CATALOG.json": {"resources": "resource"},
+    "dsa/DSA_QUESTION_BANK.json": {"questions": "question", "mock_interviews": "mock"},
+    "dsa/DSA_COMPANY_RESEARCH.json": {"profiles": "company_profile", "employers": "employer"},
+    "dsa/DSA_SOURCE_REGISTER.json": {"sources": "source"},
+    "dsa/DSA_LEARNING_DEPENDENCIES.json": {},
+    **{f"dsa/DSA_CURRICULUM_{days}_DAYS.json": {"curricula": "curriculum"} for days in (14, 30, 60)},
+}
+FILES.update(DSA_FILES)
 DATASET_TYPES = {
     "LEARNER_PROFILE.json": "learner",
     "JOB_MARKET_SKILLS_MATRIX.json": "skills",
@@ -33,6 +43,7 @@ DATASET_TYPES = {
     "LEARNING_DEPENDENCIES.json": "dependencies",
     **{f"CURRICULUM_{days}_DAYS.json": "curricula" for days in (14, 30, 60)},
 }
+DATASET_TYPES.update({name: "dsa" for name in DSA_FILES})
 
 
 def digest(data: dict) -> str:
@@ -55,6 +66,11 @@ def validate_documents(documents: dict, research_root: Path, allow_partial: bool
     if set(documents) - FILES.keys():
         raise HTTPException(422, "Unknown research dataset filename.")
     for name, data in documents.items():
+        if name in DSA_FILES:
+            from .dsa_content import validate_dsa_document
+
+            validate_dsa_document(name, data)
+            continue
         errors = list(validator.iter_errors(data))
         if errors:
             raise HTTPException(422, f"{name}: schema validation failed. No data was applied.")
@@ -93,6 +109,8 @@ def validate_documents(documents: dict, research_root: Path, allow_partial: bool
         "canonical_lesson_id": "lesson",
         "knowledge_unit_id": "knowledge",
         "job_ids": "job",
+        "pattern_skill_ids": "skill",
+        "related_question_ids": "question",
     }
 
     def check(value):
@@ -141,7 +159,7 @@ def load_documents(research_root: Path):
         path = research_root / name
         if path.exists():
             documents[name] = json.loads(path.read_text(encoding="utf-8"))
-        else:
+        elif name not in DSA_FILES:
             missing.append(name)
     return documents, missing
 

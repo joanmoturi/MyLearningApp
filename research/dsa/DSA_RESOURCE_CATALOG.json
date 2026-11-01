@@ -1,0 +1,712 @@
+{
+  "$schema": "DSA_PACKAGE_SCHEMA.json",
+  "dataset_type": "dsa",
+  "research_version": "1.0.0",
+  "research_date": "2026-10-31",
+  "resources": [
+    {
+      "id": "resource-dsa-mit-video",
+      "title": "MIT 6.006 Introduction to Algorithms, Spring 2020",
+      "selection_label": "MIT 6.006 Introduction to Algorithms, Spring 2020",
+      "publisher_author": null,
+      "creator": "MIT OpenCourseWare",
+      "provider": "MIT OpenCourseWare",
+      "url": "https://www.youtube.com/playlist?list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY",
+      "resource_type": "youtube_playlist",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "skill_ids": [
+        "skill-dsa-foundations",
+        "skill-dsa-arrays",
+        "skill-dsa-sorting",
+        "skill-dsa-trees",
+        "skill-dsa-heaps",
+        "skill-dsa-graphs",
+        "skill-dsa-dp",
+        "skill-dsa-greedy"
+      ],
+      "difficulty": "intermediate_to_advanced",
+      "duration_minutes": null,
+      "duration_status": "Exact duration unavailable; watch selected sections within the lesson budget.",
+      "published_at": null,
+      "last_verified_at": "2026-10-31",
+      "free_status": "fully_free",
+      "free_evidence": "Public publisher material or public YouTube listing inspected. Paid add-ons, textbooks, certificates and Pro courses are not required; only the linked public portion is selected.",
+      "verification_scope": "Publisher/public listing and available chapter metadata; no exhaustive playback or full correctness audit.",
+      "view_count": null,
+      "like_count": null,
+      "comment_count": null,
+      "playlist_size": null,
+      "community_feedback_summary": "Comments unavailable; no sentiment or exact engagement counts invented.",
+      "overall_score": 76,
+      "technical_quality_score": 20,
+      "score_breakdown": {
+        "correctness_spot_check": 20,
+        "coverage": 16,
+        "demonstration": 15,
+        "interview_relevance": 15,
+        "publisher_provenance": 10,
+        "community": null
+      },
+      "score_rationale": "Provisional editorial selection score, not measured learner outcomes; missing community data scores no points. Correctness 25, coverage 20, demonstration 20, relevance 20, provenance 15; maximum 100.",
+      "confidence": "medium",
+      "verification_sources": [
+        "source-dsa-resource-mit-video"
+      ],
+      "limitations": [
+        "Most videos are foundational refreshers; the original independent labs and proofs raise senior-level depth.",
+        "Exact publication/duration and comments remain unknown; older stable algorithms are not made current by changing a date."
+      ],
+      "selection_reason": "Original educator/publisher, visual or documented explanation, free selected content, and explicit limits."
+    },
+    {
+      "id": "resource-dsa-bari-video",
+      "title": "Algorithms",
+      "selection_label": "Algorithms",
+      "publisher_author": null,
+      "creator": "Abdul Bari",
+      "provider": "Abdul Bari",
+      "url": "https://www.youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O",
+      "resource_type": "youtube_playlist",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "skill_ids": [
+        "skill-dsa-foundations",
+        "skill-dsa-sorting",
+        "skill-dsa-graphs",
+        "skill-dsa-backtracking",
+        "skill-dsa-dp",
+        "skill-dsa-greedy"
+      ],
+      "difficulty": "intermediate_to_advanced",
+      "duration_minutes": null,
+      "duration_status": "Exact duration unavailable; watch selected sections within the lesson budget.",
+      "published_at": null,
+      "last_verified_at": "2026-10-31",
+      "free_status": "fully_free",
+      "free_evidence": "Public publisher material or public YouTube listing inspected. Paid add-ons, textbooks, certificates and Pro courses are not required; only the linked public portion is selected.",
+      "verification_scope": "Publisher/public listing and available chapter metadata; no exhaustive playback or full correctness audit.",
+      "view_count": null,
+      "like_count": null,
+      "comment_count": null,
+      "playlist_size": null,
+      "community_feedback_summary": "Comments unavailable; no sentiment or exact engagement counts invented.",
+      "overall_score": 76,
+      "technical_quality_score": 20,
+      "score_breakdown": {
+        "correctness_spot_check": 20,
+        "coverage": 16,
+        "demonstration": 15,
+        "interview_relevance": 15,
+        "publisher_provenance": 10,
+        "community": null
+      },
+      "score_rationale": "Provisional editorial selection score, not measured learner outcomes; missing community data scores no points. Correctness 25, coverage 20, demonstration 20, relevance 20, provenance 15; maximum 100.",
+      "confidence": "medium",
+      "verification_sources": [
+        "source-dsa-resource-bari-video"
+      ],
+      "limitations": [
+        "Most videos are foundational refreshers; the original independent labs and proofs raise senior-level depth.",
+        "Exact publication/duration and comments remain unknown; older stable algorithms are not made current by changing a date."
+      ],
+      "selection_reason": "Original educator/publisher, visual or documented explanation, free selected content, and explicit limits."
+    },
+    {
+      "id": "resource-dsa-fiset-video",
+      "title": "Data Structures Easy to Advanced Course - Full Tutorial from a Google Engineer",
+      "selection_label": "Data Structures Easy to Advanced Course",
+      "publisher_author": "freeCodeCamp.org",
+      "creator": "William Fiset / freeCodeCamp",
+      "provider": "William Fiset / freeCodeCamp",
+      "url": "https://www.youtube.com/watch?v=RBSGKlAvoiM",
+      "resource_type": "youtube_video",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "skill_ids": [
+        "skill-dsa-arrays",
+        "skill-dsa-linked",
+        "skill-dsa-stacks",
+        "skill-dsa-trees",
+        "skill-dsa-heaps",
+        "skill-dsa-advanced"
+      ],
+      "difficulty": "intermediate_to_advanced",
+      "duration_minutes": null,
+      "duration_status": "Exact duration unavailable; watch selected sections within the lesson budget.",
+      "published_at": null,
+      "last_verified_at": "2026-10-31",
+      "free_status": "fully_free",
+      "free_evidence": "Public publisher material or public YouTube listing inspected. Paid add-ons, textbooks, certificates and Pro courses are not required; only the linked public portion is selected.",
+      "verification_scope": "Publisher/public listing and available chapter metadata; no exhaustive playback or full correctness audit.",
+      "view_count": null,
+      "like_count": null,
+      "comment_count": null,
+      "playlist_size": null,
+      "community_feedback_summary": "Comments unavailable; no sentiment or exact engagement counts invented.",
+      "overall_score": 76,
+      "technical_quality_score": 20,
+      "score_breakdown": {
+        "correctness_spot_check": 20,
+        "coverage": 16,
+        "demonstration": 15,
+        "interview_relevance": 15,
+        "publisher_provenance": 10,
+        "community": null
+      },
+      "score_rationale": "Provisional editorial selection score, not measured learner outcomes; missing community data scores no points. Correctness 25, coverage 20, demonstration 20, relevance 20, provenance 15; maximum 100.",
+      "confidence": "medium",
+      "verification_sources": [
+        "source-dsa-resource-fiset-video"
+      ],
+      "limitations": [
+        "Most videos are foundational refreshers; the original independent labs and proofs raise senior-level depth.",
+        "Exact publication/duration and comments remain unknown; older stable algorithms are not made current by changing a date."
+      ],
+      "selection_reason": "Original educator/publisher, visual or documented explanation, free selected content, and explicit limits."
+    },
+    {
+      "id": "resource-dsa-graph-video",
+      "title": "Algorithms Course - Graph Theory Tutorial from a Google Engineer",
+      "selection_label": "Algorithms Course - Graph Theory Tutorial",
+      "publisher_author": "freeCodeCamp.org",
+      "creator": "William Fiset / freeCodeCamp",
+      "provider": "William Fiset / freeCodeCamp",
+      "url": "https://www.youtube.com/watch?v=09_LlHjoEiY",
+      "resource_type": "youtube_video",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "skill_ids": [
+        "skill-dsa-graphs",
+        "skill-dsa-advanced"
+      ],
+      "difficulty": "intermediate_to_advanced",
+      "duration_minutes": null,
+      "duration_status": "Exact duration unavailable; watch selected sections within the lesson budget.",
+      "published_at": null,
+      "last_verified_at": "2026-10-31",
+      "free_status": "fully_free",
+      "free_evidence": "Public publisher material or public YouTube listing inspected. Paid add-ons, textbooks, certificates and Pro courses are not required; only the linked public portion is selected.",
+      "verification_scope": "Publisher/public listing and available chapter metadata; no exhaustive playback or full correctness audit.",
+      "view_count": null,
+      "like_count": null,
+      "comment_count": null,
+      "playlist_size": null,
+      "community_feedback_summary": "Comments unavailable; no sentiment or exact engagement counts invented.",
+      "overall_score": 76,
+      "technical_quality_score": 20,
+      "score_breakdown": {
+        "correctness_spot_check": 20,
+        "coverage": 16,
+        "demonstration": 15,
+        "interview_relevance": 15,
+        "publisher_provenance": 10,
+        "community": null
+      },
+      "score_rationale": "Provisional editorial selection score, not measured learner outcomes; missing community data scores no points. Correctness 25, coverage 20, demonstration 20, relevance 20, provenance 15; maximum 100.",
+      "confidence": "medium",
+      "verification_sources": [
+        "source-dsa-resource-graph-video"
+      ],
+      "limitations": [
+        "Most videos are foundational refreshers; the original independent labs and proofs raise senior-level depth.",
+        "Exact publication/duration and comments remain unknown; older stable algorithms are not made current by changing a date."
+      ],
+      "selection_reason": "Original educator/publisher, visual or documented explanation, free selected content, and explicit limits."
+    },
+    {
+      "id": "resource-dsa-dp-video",
+      "title": "Dynamic Programming - Learn to Solve Algorithmic Problems & Coding Challenges",
+      "selection_label": "Dynamic Programming - Learn to Solve Algorithmic Problems",
+      "publisher_author": "freeCodeCamp.org",
+      "creator": "Alvin Zablan / freeCodeCamp",
+      "provider": "Alvin Zablan / freeCodeCamp",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "resource_type": "youtube_video",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "skill_ids": [
+        "skill-dsa-dp"
+      ],
+      "difficulty": "intermediate_to_advanced",
+      "duration_minutes": null,
+      "duration_status": "Exact duration unavailable; watch selected sections within the lesson budget.",
+      "published_at": null,
+      "last_verified_at": "2026-10-31",
+      "free_status": "fully_free",
+      "free_evidence": "Public publisher material or public YouTube listing inspected. Paid add-ons, textbooks, certificates and Pro courses are not required; only the linked public portion is selected.",
+      "verification_scope": "Publisher/public listing and available chapter metadata; no exhaustive playback or full correctness audit.",
+      "view_count": null,
+      "like_count": null,
+      "comment_count": null,
+      "playlist_size": null,
+      "community_feedback_summary": "Comments unavailable; no sentiment or exact engagement counts invented.",
+      "overall_score": 76,
+      "technical_quality_score": 20,
+      "score_breakdown": {
+        "correctness_spot_check": 20,
+        "coverage": 16,
+        "demonstration": 15,
+        "interview_relevance": 15,
+        "publisher_provenance": 10,
+        "community": null
+      },
+      "score_rationale": "Provisional editorial selection score, not measured learner outcomes; missing community data scores no points. Correctness 25, coverage 20, demonstration 20, relevance 20, provenance 15; maximum 100.",
+      "confidence": "medium",
+      "verification_sources": [
+        "source-dsa-resource-dp-video"
+      ],
+      "limitations": [
+        "Most videos are foundational refreshers; the original independent labs and proofs raise senior-level depth.",
+        "Exact publication/duration and comments remain unknown; older stable algorithms are not made current by changing a date."
+      ],
+      "selection_reason": "Original educator/publisher, visual or documented explanation, free selected content, and explicit limits."
+    },
+    {
+      "id": "resource-dsa-neetcode-video",
+      "title": "NeetCode public playlists",
+      "selection_label": "NeetCode public playlists",
+      "publisher_author": null,
+      "creator": "NeetCode",
+      "provider": "NeetCode",
+      "url": "https://www.youtube.com/@NeetCode/playlists",
+      "resource_type": "youtube_channel",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "skill_ids": [
+        "skill-dsa-arrays",
+        "skill-dsa-patterns",
+        "skill-dsa-linked",
+        "skill-dsa-stacks",
+        "skill-dsa-sorting",
+        "skill-dsa-trees",
+        "skill-dsa-heaps",
+        "skill-dsa-intervals",
+        "skill-dsa-graphs",
+        "skill-dsa-backtracking",
+        "skill-dsa-dp",
+        "skill-dsa-greedy",
+        "skill-dsa-advanced"
+      ],
+      "difficulty": "intermediate_to_advanced",
+      "duration_minutes": null,
+      "duration_status": "Exact duration unavailable; watch selected sections within the lesson budget.",
+      "published_at": null,
+      "last_verified_at": "2026-10-31",
+      "free_status": "fully_free",
+      "free_evidence": "Public publisher material or public YouTube listing inspected. Paid add-ons, textbooks, certificates and Pro courses are not required; only the linked public portion is selected.",
+      "verification_scope": "Publisher/public listing and available chapter metadata; no exhaustive playback or full correctness audit.",
+      "view_count": null,
+      "like_count": null,
+      "comment_count": null,
+      "playlist_size": null,
+      "community_feedback_summary": "Comments unavailable; no sentiment or exact engagement counts invented.",
+      "overall_score": 76,
+      "technical_quality_score": 20,
+      "score_breakdown": {
+        "correctness_spot_check": 20,
+        "coverage": 16,
+        "demonstration": 15,
+        "interview_relevance": 15,
+        "publisher_provenance": 10,
+        "community": null
+      },
+      "score_rationale": "Provisional editorial selection score, not measured learner outcomes; missing community data scores no points. Correctness 25, coverage 20, demonstration 20, relevance 20, provenance 15; maximum 100.",
+      "confidence": "medium",
+      "verification_sources": [
+        "source-dsa-resource-neetcode-video"
+      ],
+      "limitations": [
+        "Most videos are foundational refreshers; the original independent labs and proofs raise senior-level depth.",
+        "Exact publication/duration and comments remain unknown; older stable algorithms are not made current by changing a date."
+      ],
+      "selection_reason": "Original educator/publisher, visual or documented explanation, free selected content, and explicit limits."
+    },
+    {
+      "id": "resource-dsa-mit-notes",
+      "title": "MIT 6.006 lecture and recitation notes",
+      "selection_label": "MIT 6.006 lecture and recitation notes",
+      "publisher_author": null,
+      "creator": "MIT OpenCourseWare",
+      "provider": "MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/pages/lecture-notes/",
+      "resource_type": "official_documentation",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "skill_ids": [
+        "skill-dsa-foundations",
+        "skill-dsa-arrays",
+        "skill-dsa-sorting",
+        "skill-dsa-trees",
+        "skill-dsa-heaps",
+        "skill-dsa-graphs",
+        "skill-dsa-dp",
+        "skill-dsa-greedy"
+      ],
+      "difficulty": "intermediate_to_advanced",
+      "duration_minutes": null,
+      "duration_status": "Exact duration unavailable; watch selected sections within the lesson budget.",
+      "published_at": null,
+      "last_verified_at": "2026-10-31",
+      "free_status": "free_documentation",
+      "free_evidence": "Public publisher material or public YouTube listing inspected. Paid add-ons, textbooks, certificates and Pro courses are not required; only the linked public portion is selected.",
+      "verification_scope": "Publisher/public listing and available chapter metadata; no exhaustive playback or full correctness audit.",
+      "view_count": null,
+      "like_count": null,
+      "comment_count": null,
+      "playlist_size": null,
+      "community_feedback_summary": "Comments unavailable; no sentiment or exact engagement counts invented.",
+      "overall_score": 78,
+      "technical_quality_score": 20,
+      "score_breakdown": {
+        "correctness_spot_check": 20,
+        "coverage": 16,
+        "demonstration": 12,
+        "interview_relevance": 15,
+        "publisher_provenance": 15,
+        "community": null
+      },
+      "score_rationale": "Provisional editorial selection score, not measured learner outcomes; missing community data scores no points. Correctness 25, coverage 20, demonstration 20, relevance 20, provenance 15; maximum 100.",
+      "confidence": "medium",
+      "verification_sources": [
+        "source-dsa-resource-mit-notes"
+      ],
+      "limitations": [
+        "Most videos are foundational refreshers; the original independent labs and proofs raise senior-level depth.",
+        "Exact publication/duration and comments remain unknown; older stable algorithms are not made current by changing a date."
+      ],
+      "selection_reason": "Original educator/publisher, visual or documented explanation, free selected content, and explicit limits."
+    },
+    {
+      "id": "resource-dsa-princeton",
+      "title": "Algorithms, 4th edition companion site",
+      "selection_label": "Algorithms, 4th edition companion site",
+      "publisher_author": null,
+      "creator": "Princeton / Sedgewick and Wayne",
+      "provider": "Princeton / Sedgewick and Wayne",
+      "url": "https://algs4.cs.princeton.edu/home/",
+      "resource_type": "official_documentation",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "skill_ids": [
+        "skill-dsa-foundations",
+        "skill-dsa-arrays",
+        "skill-dsa-sorting",
+        "skill-dsa-trees",
+        "skill-dsa-heaps",
+        "skill-dsa-graphs",
+        "skill-dsa-advanced"
+      ],
+      "difficulty": "intermediate_to_advanced",
+      "duration_minutes": null,
+      "duration_status": "Exact duration unavailable; watch selected sections within the lesson budget.",
+      "published_at": null,
+      "last_verified_at": "2026-10-31",
+      "free_status": "free_documentation",
+      "free_evidence": "Public publisher material or public YouTube listing inspected. Paid add-ons, textbooks, certificates and Pro courses are not required; only the linked public portion is selected.",
+      "verification_scope": "Publisher/public listing and available chapter metadata; no exhaustive playback or full correctness audit.",
+      "view_count": null,
+      "like_count": null,
+      "comment_count": null,
+      "playlist_size": null,
+      "community_feedback_summary": "Comments unavailable; no sentiment or exact engagement counts invented.",
+      "overall_score": 78,
+      "technical_quality_score": 20,
+      "score_breakdown": {
+        "correctness_spot_check": 20,
+        "coverage": 16,
+        "demonstration": 12,
+        "interview_relevance": 15,
+        "publisher_provenance": 15,
+        "community": null
+      },
+      "score_rationale": "Provisional editorial selection score, not measured learner outcomes; missing community data scores no points. Correctness 25, coverage 20, demonstration 20, relevance 20, provenance 15; maximum 100.",
+      "confidence": "medium",
+      "verification_sources": [
+        "source-dsa-resource-princeton"
+      ],
+      "limitations": [
+        "Most videos are foundational refreshers; the original independent labs and proofs raise senior-level depth.",
+        "Exact publication/duration and comments remain unknown; older stable algorithms are not made current by changing a date."
+      ],
+      "selection_reason": "Original educator/publisher, visual or documented explanation, free selected content, and explicit limits."
+    },
+    {
+      "id": "resource-dsa-visualgo",
+      "title": "VisuAlgo algorithm visualizations",
+      "selection_label": "VisuAlgo algorithm visualizations",
+      "publisher_author": null,
+      "creator": "VisuAlgo",
+      "provider": "VisuAlgo",
+      "url": "https://visualgo.net/en",
+      "resource_type": "interactive_visualization",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "skill_ids": [
+        "skill-dsa-foundations",
+        "skill-dsa-arrays",
+        "skill-dsa-linked",
+        "skill-dsa-stacks",
+        "skill-dsa-sorting",
+        "skill-dsa-trees",
+        "skill-dsa-heaps",
+        "skill-dsa-graphs",
+        "skill-dsa-advanced"
+      ],
+      "difficulty": "intermediate_to_advanced",
+      "duration_minutes": null,
+      "duration_status": "Exact duration unavailable; watch selected sections within the lesson budget.",
+      "published_at": null,
+      "last_verified_at": "2026-10-31",
+      "free_status": "fully_free",
+      "free_evidence": "Public publisher material or public YouTube listing inspected. Paid add-ons, textbooks, certificates and Pro courses are not required; only the linked public portion is selected.",
+      "verification_scope": "Publisher/public listing and available chapter metadata; no exhaustive playback or full correctness audit.",
+      "view_count": null,
+      "like_count": null,
+      "comment_count": null,
+      "playlist_size": null,
+      "community_feedback_summary": "Comments unavailable; no sentiment or exact engagement counts invented.",
+      "overall_score": 78,
+      "technical_quality_score": 20,
+      "score_breakdown": {
+        "correctness_spot_check": 20,
+        "coverage": 16,
+        "demonstration": 12,
+        "interview_relevance": 15,
+        "publisher_provenance": 15,
+        "community": null
+      },
+      "score_rationale": "Provisional editorial selection score, not measured learner outcomes; missing community data scores no points. Correctness 25, coverage 20, demonstration 20, relevance 20, provenance 15; maximum 100.",
+      "confidence": "medium",
+      "verification_sources": [
+        "source-dsa-resource-visualgo"
+      ],
+      "limitations": [
+        "Most videos are foundational refreshers; the original independent labs and proofs raise senior-level depth.",
+        "Exact publication/duration and comments remain unknown; older stable algorithms are not made current by changing a date."
+      ],
+      "selection_reason": "Original educator/publisher, visual or documented explanation, free selected content, and explicit limits."
+    },
+    {
+      "id": "resource-dsa-js-docs",
+      "title": "JavaScript reference",
+      "selection_label": "JavaScript reference",
+      "publisher_author": null,
+      "creator": "MDN",
+      "provider": "MDN",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference",
+      "resource_type": "official_documentation",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "skill_ids": [
+        "skill-dsa-arrays",
+        "skill-dsa-advanced",
+        "skill-dsa-senior"
+      ],
+      "difficulty": "intermediate_to_advanced",
+      "duration_minutes": null,
+      "duration_status": "Exact duration unavailable; watch selected sections within the lesson budget.",
+      "published_at": null,
+      "last_verified_at": "2026-10-31",
+      "free_status": "free_documentation",
+      "free_evidence": "Public publisher material or public YouTube listing inspected. Paid add-ons, textbooks, certificates and Pro courses are not required; only the linked public portion is selected.",
+      "verification_scope": "Publisher/public listing and available chapter metadata; no exhaustive playback or full correctness audit.",
+      "view_count": null,
+      "like_count": null,
+      "comment_count": null,
+      "playlist_size": null,
+      "community_feedback_summary": "Comments unavailable; no sentiment or exact engagement counts invented.",
+      "overall_score": 78,
+      "technical_quality_score": 20,
+      "score_breakdown": {
+        "correctness_spot_check": 20,
+        "coverage": 16,
+        "demonstration": 12,
+        "interview_relevance": 15,
+        "publisher_provenance": 15,
+        "community": null
+      },
+      "score_rationale": "Provisional editorial selection score, not measured learner outcomes; missing community data scores no points. Correctness 25, coverage 20, demonstration 20, relevance 20, provenance 15; maximum 100.",
+      "confidence": "medium",
+      "verification_sources": [
+        "source-dsa-resource-js-docs"
+      ],
+      "limitations": [
+        "Most videos are foundational refreshers; the original independent labs and proofs raise senior-level depth.",
+        "Exact publication/duration and comments remain unknown; older stable algorithms are not made current by changing a date."
+      ],
+      "selection_reason": "Original educator/publisher, visual or documented explanation, free selected content, and explicit limits."
+    },
+    {
+      "id": "resource-dsa-ts-docs",
+      "title": "TypeScript handbook",
+      "selection_label": "TypeScript handbook",
+      "publisher_author": null,
+      "creator": "Microsoft",
+      "provider": "Microsoft",
+      "url": "https://www.typescriptlang.org/docs/handbook/intro.html",
+      "resource_type": "official_documentation",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "skill_ids": [
+        "skill-dsa-senior"
+      ],
+      "difficulty": "intermediate_to_advanced",
+      "duration_minutes": null,
+      "duration_status": "Exact duration unavailable; watch selected sections within the lesson budget.",
+      "published_at": null,
+      "last_verified_at": "2026-10-31",
+      "free_status": "free_documentation",
+      "free_evidence": "Public publisher material or public YouTube listing inspected. Paid add-ons, textbooks, certificates and Pro courses are not required; only the linked public portion is selected.",
+      "verification_scope": "Publisher/public listing and available chapter metadata; no exhaustive playback or full correctness audit.",
+      "view_count": null,
+      "like_count": null,
+      "comment_count": null,
+      "playlist_size": null,
+      "community_feedback_summary": "Comments unavailable; no sentiment or exact engagement counts invented.",
+      "overall_score": 78,
+      "technical_quality_score": 20,
+      "score_breakdown": {
+        "correctness_spot_check": 20,
+        "coverage": 16,
+        "demonstration": 12,
+        "interview_relevance": 15,
+        "publisher_provenance": 15,
+        "community": null
+      },
+      "score_rationale": "Provisional editorial selection score, not measured learner outcomes; missing community data scores no points. Correctness 25, coverage 20, demonstration 20, relevance 20, provenance 15; maximum 100.",
+      "confidence": "medium",
+      "verification_sources": [
+        "source-dsa-resource-ts-docs"
+      ],
+      "limitations": [
+        "Most videos are foundational refreshers; the original independent labs and proofs raise senior-level depth.",
+        "Exact publication/duration and comments remain unknown; older stable algorithms are not made current by changing a date."
+      ],
+      "selection_reason": "Original educator/publisher, visual or documented explanation, free selected content, and explicit limits."
+    },
+    {
+      "id": "resource-dsa-python-docs",
+      "title": "Python data structures tutorial",
+      "selection_label": "Python data structures tutorial",
+      "publisher_author": null,
+      "creator": "Python Software Foundation",
+      "provider": "Python Software Foundation",
+      "url": "https://docs.python.org/3/tutorial/datastructures.html",
+      "resource_type": "official_documentation",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "skill_ids": [
+        "skill-dsa-arrays",
+        "skill-dsa-stacks",
+        "skill-dsa-sorting"
+      ],
+      "difficulty": "intermediate_to_advanced",
+      "duration_minutes": null,
+      "duration_status": "Exact duration unavailable; watch selected sections within the lesson budget.",
+      "published_at": null,
+      "last_verified_at": "2026-10-31",
+      "free_status": "free_documentation",
+      "free_evidence": "Public publisher material or public YouTube listing inspected. Paid add-ons, textbooks, certificates and Pro courses are not required; only the linked public portion is selected.",
+      "verification_scope": "Publisher/public listing and available chapter metadata; no exhaustive playback or full correctness audit.",
+      "view_count": null,
+      "like_count": null,
+      "comment_count": null,
+      "playlist_size": null,
+      "community_feedback_summary": "Comments unavailable; no sentiment or exact engagement counts invented.",
+      "overall_score": 78,
+      "technical_quality_score": 20,
+      "score_breakdown": {
+        "correctness_spot_check": 20,
+        "coverage": 16,
+        "demonstration": 12,
+        "interview_relevance": 15,
+        "publisher_provenance": 15,
+        "community": null
+      },
+      "score_rationale": "Provisional editorial selection score, not measured learner outcomes; missing community data scores no points. Correctness 25, coverage 20, demonstration 20, relevance 20, provenance 15; maximum 100.",
+      "confidence": "medium",
+      "verification_sources": [
+        "source-dsa-resource-python-docs"
+      ],
+      "limitations": [
+        "Most videos are foundational refreshers; the original independent labs and proofs raise senior-level depth.",
+        "Exact publication/duration and comments remain unknown; older stable algorithms are not made current by changing a date."
+      ],
+      "selection_reason": "Original educator/publisher, visual or documented explanation, free selected content, and explicit limits."
+    },
+    {
+      "id": "resource-dsa-neetcode-roadmap",
+      "title": "NeetCode 150 public roadmap",
+      "selection_label": "NeetCode 150 public roadmap",
+      "publisher_author": null,
+      "creator": "NeetCode",
+      "provider": "NeetCode",
+      "url": "https://neetcode.io/roadmap",
+      "resource_type": "practice_roadmap",
+      "track_ids": [
+        "track-dsa"
+      ],
+      "skill_ids": [
+        "skill-dsa-arrays",
+        "skill-dsa-patterns",
+        "skill-dsa-linked",
+        "skill-dsa-stacks",
+        "skill-dsa-sorting",
+        "skill-dsa-trees",
+        "skill-dsa-heaps",
+        "skill-dsa-intervals",
+        "skill-dsa-graphs",
+        "skill-dsa-backtracking",
+        "skill-dsa-dp",
+        "skill-dsa-greedy",
+        "skill-dsa-advanced"
+      ],
+      "difficulty": "intermediate_to_advanced",
+      "duration_minutes": null,
+      "duration_status": "Exact duration unavailable; watch selected sections within the lesson budget.",
+      "published_at": null,
+      "last_verified_at": "2026-10-31",
+      "free_status": "fully_free",
+      "free_evidence": "Public publisher material or public YouTube listing inspected. Paid add-ons, textbooks, certificates and Pro courses are not required; only the linked public portion is selected.",
+      "verification_scope": "Publisher/public listing and available chapter metadata; no exhaustive playback or full correctness audit.",
+      "view_count": null,
+      "like_count": null,
+      "comment_count": null,
+      "playlist_size": null,
+      "community_feedback_summary": "Comments unavailable; no sentiment or exact engagement counts invented.",
+      "overall_score": 78,
+      "technical_quality_score": 20,
+      "score_breakdown": {
+        "correctness_spot_check": 20,
+        "coverage": 16,
+        "demonstration": 12,
+        "interview_relevance": 15,
+        "publisher_provenance": 15,
+        "community": null
+      },
+      "score_rationale": "Provisional editorial selection score, not measured learner outcomes; missing community data scores no points. Correctness 25, coverage 20, demonstration 20, relevance 20, provenance 15; maximum 100.",
+      "confidence": "medium",
+      "verification_sources": [
+        "source-dsa-resource-neetcode-roadmap"
+      ],
+      "limitations": [
+        "Most videos are foundational refreshers; the original independent labs and proofs raise senior-level depth.",
+        "Exact publication/duration and comments remain unknown; older stable algorithms are not made current by changing a date."
+      ],
+      "selection_reason": "Original educator/publisher, visual or documented explanation, free selected content, and explicit limits."
+    }
+  ]
+}

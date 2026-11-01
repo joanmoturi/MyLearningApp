@@ -1,0 +1,931 @@
+{
+  "$schema": "DSA_PACKAGE_SCHEMA.json",
+  "dataset_type": "dsa",
+  "research_version": "1.0.0",
+  "research_date": "2026-10-31",
+  "sources": [
+    {
+      "id": "source-dsa-resource-mit-video",
+      "url": "https://www.youtube.com/playlist?list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY",
+      "title": "MIT 6.006 Introduction to Algorithms, Spring 2020",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://www.youtube.com/playlist?list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY",
+        "page_title": null,
+        "checked_at": "2026-10-31T21:53:28.424418+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-resource-bari-video",
+      "url": "https://www.youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O",
+      "title": "Algorithms",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://www.youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O",
+        "page_title": null,
+        "checked_at": "2026-10-31T21:53:28.459155+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-resource-fiset-video",
+      "url": "https://www.youtube.com/watch?v=RBSGKlAvoiM",
+      "title": "Data Structures Easy to Advanced Course",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://www.youtube.com/watch?v=RBSGKlAvoiM",
+        "page_title": null,
+        "checked_at": "2026-10-31T21:53:29.285186+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification.",
+        "oembed": {
+          "title": "Data Structures Easy to Advanced Course - Full Tutorial from a Google Engineer",
+          "author_name": "freeCodeCamp.org",
+          "provider_name": "YouTube",
+          "scope": "Official public oEmbed metadata; not duration, publication date, comments or complete playback."
+        }
+      }
+    },
+    {
+      "id": "source-dsa-resource-graph-video",
+      "url": "https://www.youtube.com/watch?v=09_LlHjoEiY",
+      "title": "Algorithms Course - Graph Theory Tutorial",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://www.youtube.com/watch?v=09_LlHjoEiY",
+        "page_title": null,
+        "checked_at": "2026-10-31T21:53:28.832414+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification.",
+        "oembed": {
+          "title": "Algorithms Course - Graph Theory Tutorial from a Google Engineer",
+          "author_name": "freeCodeCamp.org",
+          "provider_name": "YouTube",
+          "scope": "Official public oEmbed metadata; not duration, publication date, comments or complete playback."
+        }
+      }
+    },
+    {
+      "id": "source-dsa-resource-dp-video",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "title": "Dynamic Programming - Learn to Solve Algorithmic Problems",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+        "page_title": null,
+        "checked_at": "2026-10-31T21:53:29.403428+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification.",
+        "oembed": {
+          "title": "Dynamic Programming - Learn to Solve Algorithmic Problems & Coding Challenges",
+          "author_name": "freeCodeCamp.org",
+          "provider_name": "YouTube",
+          "scope": "Official public oEmbed metadata; not duration, publication date, comments or complete playback."
+        }
+      }
+    },
+    {
+      "id": "source-dsa-resource-neetcode-video",
+      "url": "https://www.youtube.com/@NeetCode/playlists",
+      "title": "NeetCode public playlists",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://www.youtube.com/@NeetCode/playlists",
+        "page_title": null,
+        "checked_at": "2026-10-31T21:53:28.488077+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-resource-mit-notes",
+      "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/pages/lecture-notes/",
+      "title": "MIT 6.006 lecture and recitation notes",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/pages/lecture-notes/",
+        "page_title": "Lecture Notes | Introduction to Algorithms | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+        "checked_at": "2026-10-31T21:53:21.337561+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-resource-princeton",
+      "url": "https://algs4.cs.princeton.edu/home/",
+      "title": "Algorithms, 4th edition companion site",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://algs4.cs.princeton.edu/home/",
+        "page_title": "Algorithms, 4th Edition by Robert Sedgewick and Kevin Wayne",
+        "checked_at": "2026-10-31T21:53:13.332646+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-resource-visualgo",
+      "url": "https://visualgo.net/en",
+      "title": "VisuAlgo algorithm visualizations",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://visualgo.net/en",
+        "page_title": "visualising data structures and algorithms through animation - VisuAlgo",
+        "checked_at": "2026-10-31T21:53:22.081056+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-resource-js-docs",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference",
+      "title": "JavaScript reference",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference",
+        "page_title": "JavaScript reference - JavaScript | MDN",
+        "checked_at": "2026-10-31T21:53:18.416091+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-resource-ts-docs",
+      "url": "https://www.typescriptlang.org/docs/handbook/intro.html",
+      "title": "TypeScript handbook",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://www.typescriptlang.org/docs/handbook/intro.html",
+        "page_title": "TypeScript: Handbook - The TypeScript Handbook",
+        "checked_at": "2026-10-31T21:53:27.790098+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-resource-python-docs",
+      "url": "https://docs.python.org/3/tutorial/datastructures.html",
+      "title": "Python data structures tutorial",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://docs.python.org/3/tutorial/datastructures.html",
+        "page_title": "5. Data Structures &#8212; Python 3.15.2 documentation",
+        "checked_at": "2026-10-31T21:53:18.777993+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-resource-neetcode-roadmap",
+      "url": "https://neetcode.io/roadmap",
+      "title": "NeetCode 150 public roadmap",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://neetcode.io/roadmap",
+        "page_title": "NeetCode | Coding Interview Prep, Courses, Versus Mode",
+        "checked_at": "2026-10-31T21:53:20.712285+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-candidate-hackerrank",
+      "url": "https://www.hackerrank.com/interview/preparation-kits",
+      "title": "HackerRank preparation kits; supplementary practice candidate, not selected as a video-first course.",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://www.hackerrank.com/interview/preparation-kits",
+        "page_title": "Preparation Kits | HackerRank",
+        "checked_at": "2026-10-31T21:53:26.951474+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-candidate-leetcode",
+      "url": "https://leetcode.com/explore/",
+      "title": "LeetCode Explore; free portions coexist with premium content. Not used as a source of copied problem statements.",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://leetcode.com/explore/",
+        "page_title": "Explore - LeetCode",
+        "checked_at": "2026-10-31T21:53:20.078152+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-senior-video",
+      "url": "https://www.youtube.com/watch?v=C842vFY5kRo",
+      "title": "Existing Academy system-design video reused for practical API and engineering trade-offs.",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://www.youtube.com/watch?v=C842vFY5kRo",
+        "page_title": null,
+        "checked_at": "2026-10-31T21:53:28.784051+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-senior-reading",
+      "url": "https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design",
+      "title": "Existing Academy official API design reading reused for the senior module.",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design",
+        "page_title": "Web API Design Best Practices - Azure Architecture Center | Microsoft Learn",
+        "checked_at": "2026-10-31T21:53:19.608583+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-google",
+      "url": "https://www.google.com/about/careers/applications/",
+      "title": "Google careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://www.google.com/about/careers/applications/",
+        "page_title": null,
+        "checked_at": "2026-10-31T21:53:26.393801+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-guide-google",
+      "url": "https://www.google.com/about/careers/applications/interview-tips/",
+      "title": "Google official preparation guide",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://www.google.com/about/careers/applications/interview-tips/",
+        "page_title": null,
+        "checked_at": "2026-10-31T21:53:26.513911+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-microsoft",
+      "url": "https://careers.microsoft.com/",
+      "title": "Microsoft careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://careers.microsoft.com/v2/global/en/home.html",
+        "page_title": "Home | Microsoft Careers",
+        "checked_at": "2026-10-31T21:53:18.009209+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-guide-microsoft",
+      "url": "https://careers.microsoft.com/us/en/technical-interviewing",
+      "title": "Microsoft official preparation guide",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://careers.microsoft.com/v2/global/en/hiring-tips/technical-interviewing",
+        "page_title": "Technical interviewing | Microsoft Careers",
+        "checked_at": "2026-10-31T21:53:17.839088+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-amazon",
+      "url": "https://www.amazon.jobs/",
+      "title": "Amazon careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://www.amazon.jobs/en/",
+        "page_title": "Amazon Careers: Impact the Future, Today",
+        "checked_at": "2026-10-31T21:53:24.282487+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-guide-amazon",
+      "url": "https://www.amazon.jobs/content/en/how-we-hire/interview-prep/software-development-topics",
+      "title": "Amazon official preparation guide",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://www.amazon.jobs/content/en/how-we-hire/interview-prep/software-development-topics",
+        "page_title": "Amazon Software Development Interview Topics",
+        "checked_at": "2026-10-31T21:53:24.333297+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-meta",
+      "url": "https://www.metacareers.com/",
+      "title": "Meta careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://www.metacareers.com/",
+        "page_title": "Meta Jobs &amp; Careers | Do the Most Meaningful Work of Your Career",
+        "checked_at": "2026-10-31T21:53:27.789093+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-guide-meta",
+      "url": "https://d3no4ktch0fdq4.cloudfront.net/public/course/files/Meta_SWE_full_loop_guide.pdf",
+      "title": "Meta official preparation guide",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://d3no4ktch0fdq4.cloudfront.net/public/course/files/Meta_SWE_full_loop_guide.pdf",
+        "page_title": null,
+        "checked_at": "2026-10-31T21:53:15.892047+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-apple",
+      "url": "https://www.apple.com/careers/",
+      "title": "Apple careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://www.apple.com/careers/us/",
+        "page_title": "Apple Roles and Opportunities - Careers at Apple",
+        "checked_at": "2026-10-31T21:53:24.463174+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-netflix",
+      "url": "https://jobs.netflix.com/",
+      "title": "Netflix careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://jobs.netflix.com/",
+        "page_title": "Join Us | Careers at Netflix",
+        "checked_at": "2026-10-31T21:53:19.988476+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-nvidia",
+      "url": "https://www.nvidia.com/en-us/about-nvidia/careers/",
+      "title": "NVIDIA careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://www.nvidia.com/en-us/about-nvidia/careers/",
+        "page_title": "Jobs at NVIDIA | NVIDIA Careers",
+        "checked_at": "2026-10-31T21:53:26.364639+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-guide-nvidia",
+      "url": "https://www.nvidia.com/en-us/about-nvidia/careers/how-we-hire/",
+      "title": "NVIDIA official preparation guide",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://www.nvidia.com/en-us/about-nvidia/careers/how-we-hire/",
+        "page_title": "How We Hire",
+        "checked_at": "2026-10-31T21:53:26.821673+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-stripe",
+      "url": "https://stripe.com/jobs",
+      "title": "Stripe careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://stripe.com/careers",
+        "page_title": "Stripe Careers | Shape the Future of the Global Economy",
+        "checked_at": "2026-10-31T21:53:23.745562+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-report-stripe-0",
+      "url": "https://leetcode.com/discuss/post/8372404/",
+      "title": "Candidate report, July 2, 2026: multipart parsing/data processing using sets and maps; not guaranteed policy.",
+      "source_type": "candidate_report",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://leetcode.com/discuss/post/8372404/",
+        "page_title": "Stripe - Backend Engineer Interview Experience - Discuss - LeetCode",
+        "checked_at": "2026-10-31T21:53:20.663508+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-report-stripe-1",
+      "url": "https://leetcode.com/discuss/post/7566910/",
+      "title": "New-graduate candidate report, February 2026: multipart programming and follow-ups. Senior applicability is uncertain.",
+      "source_type": "candidate_report",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://leetcode.com/discuss/post/7566910/",
+        "page_title": "Stripe New Grad Interview Experience 2026 - Discuss - LeetCode",
+        "checked_at": "2026-10-31T21:53:20.055420+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-uber",
+      "url": "https://www.uber.com/us/en/careers/",
+      "title": "Uber careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 406,
+        "page_title": null,
+        "checked_at": "2026-10-31T21:53:27.476282+00:00",
+        "scope": "Direct access unavailable; no content or eligibility inferred."
+      }
+    },
+    {
+      "id": "source-dsa-company-airbnb",
+      "url": "https://careers.airbnb.com/",
+      "title": "Airbnb careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://careers.airbnb.com/",
+        "page_title": "Home - Careers at Airbnb",
+        "checked_at": "2026-10-31T21:53:13.305579+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-linkedin",
+      "url": "https://careers.linkedin.com/",
+      "title": "LinkedIn careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://careers.linkedin.com/",
+        "page_title": "LinkedIn Careers: Find Your Opportunity Here",
+        "checked_at": "2026-10-31T21:53:14.346750+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-bloomberg",
+      "url": "https://www.bloomberg.com/company/careers/",
+      "title": "Bloomberg careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 403,
+        "page_title": null,
+        "checked_at": "2026-10-31T21:53:24.627979+00:00",
+        "scope": "Direct access unavailable; no content or eligibility inferred."
+      }
+    },
+    {
+      "id": "source-dsa-company-datadog",
+      "url": "https://careers.datadoghq.com/",
+      "title": "Datadog careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://careers.datadoghq.com/",
+        "page_title": "Join Our Pack | Datadog Careers",
+        "checked_at": "2026-10-31T21:53:13.443032+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-cloudflare",
+      "url": "https://www.cloudflare.com/careers/",
+      "title": "Cloudflare careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://www.cloudflare.com/careers/",
+        "page_title": "Cloudflare Careers | Cloudflare",
+        "checked_at": "2026-10-31T21:53:25.543631+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-snowflake",
+      "url": "https://careers.snowflake.com/",
+      "title": "Snowflake careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://careers.snowflake.com/us/en",
+        "page_title": "Join the Snowflake Team | Snowflake Careers",
+        "checked_at": "2026-10-31T21:53:19.335446+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-adobe",
+      "url": "https://careers.adobe.com/",
+      "title": "Adobe careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://careers.adobe.com/us/en",
+        "page_title": "Careers at Adobe | Adobe job opportunities.",
+        "checked_at": "2026-10-31T21:53:17.554472+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-salesforce",
+      "url": "https://careers.salesforce.com/",
+      "title": "Salesforce careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://www.salesforce.com/company/careers/?bc=OTH",
+        "page_title": "Salesforce Careers | Build the Future of AI with Us | Salesforce",
+        "checked_at": "2026-10-31T21:53:17.054426+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-atlassian",
+      "url": "https://www.atlassian.com/company/careers",
+      "title": "Atlassian careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://www.atlassian.com/company/careers",
+        "page_title": "Atlassian Careers: Join the Team | Atlassian",
+        "checked_at": "2026-10-31T21:53:24.367678+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-guide-atlassian",
+      "url": "https://www.atlassian.com/company/careers/resources/interviewing/engineering",
+      "title": "Atlassian official preparation guide",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://www.atlassian.com/company/careers/resources/interviewing/engineering",
+        "page_title": "Atlassian Engineering Interview Guide | Atlassian",
+        "checked_at": "2026-10-31T21:53:26.274535+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-shopify",
+      "url": "https://www.shopify.com/careers",
+      "title": "Shopify careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://www.shopify.com/careers",
+        "page_title": "Careers, Internships, and Jobs at Shopify | Shopify Careers - Shopify",
+        "checked_at": "2026-10-31T21:53:27.024815+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-openai",
+      "url": "https://openai.com/careers/",
+      "title": "OpenAI careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://openai.com/careers/",
+        "page_title": "Careers | OpenAI",
+        "checked_at": "2026-10-31T21:53:21.019003+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-guide-openai",
+      "url": "https://openai.com/interview-guide/",
+      "title": "OpenAI official preparation guide",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://openai.com/interview-guide/",
+        "page_title": "Interview Guide | OpenAI",
+        "checked_at": "2026-10-31T21:53:21.311731+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-anthropic",
+      "url": "https://www.anthropic.com/careers",
+      "title": "Anthropic careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://www.anthropic.com/careers",
+        "page_title": "Careers \\ Anthropic",
+        "checked_at": "2026-10-31T21:53:22.998036+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-report-anthropic-0",
+      "url": "https://interviewing.io/anthropic-interview-questions",
+      "title": "Candidate-report synthesis updated October 29, 2026; practical coding and systems reports, not employer policy.",
+      "source_type": "candidate_report",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://interviewing.io/anthropic-interview-questions",
+        "page_title": "Anthropic\u2019s Interview Process &amp; Questions",
+        "checked_at": "2026-10-31T21:53:18.593283+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-cohere",
+      "url": "https://cohere.com/careers",
+      "title": "Cohere careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://cohere.com/careers",
+        "page_title": "Careers | Cohere",
+        "checked_at": "2026-10-31T21:53:15.079891+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-mistral",
+      "url": "https://mistral.ai/careers",
+      "title": "Mistral AI careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://mistral.ai/careers/",
+        "page_title": "Careers at Mistral | Build the future of frontier AI.",
+        "checked_at": "2026-10-31T21:53:21.476479+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-huggingface",
+      "url": "https://huggingface.co/join-us",
+      "title": "Hugging Face careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://huggingface.co/JOIN-US",
+        "page_title": "JOIN-US (SHARE YOUR WORK)",
+        "checked_at": "2026-10-31T21:53:19.199579+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-deepmind",
+      "url": "https://deepmind.google/careers/",
+      "title": "Google DeepMind careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://deepmind.google/careers/",
+        "page_title": "Careers at Google DeepMind \u2014 Google DeepMind",
+        "checked_at": "2026-10-31T21:53:17.556621+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-safaricom",
+      "url": "https://www.safaricom.co.ke/careers",
+      "title": "Safaricom careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 403,
+        "page_title": null,
+        "checked_at": "2026-10-31T21:53:27.415142+00:00",
+        "scope": "Direct access unavailable; no content or eligibility inferred."
+      }
+    },
+    {
+      "id": "source-dsa-company-mkopa",
+      "url": "https://www.m-kopa.com/careers",
+      "title": "M-KOPA careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://www.m-kopa.com/careers",
+        "page_title": "Careers | M-KOPA",
+        "checked_at": "2026-10-31T21:53:25.305033+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-andela",
+      "url": "https://www.andela.com/careers",
+      "title": "Andela careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://www.andela.com/for-talent",
+        "page_title": "Work. Learn. Connect. Grow.",
+        "checked_at": "2026-10-31T21:53:22.719766+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-flutterwave",
+      "url": "https://flutterwave.com/us/careers",
+      "title": "Flutterwave careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://flutterwave.com/us/careers",
+        "page_title": "Flutterwave Careers",
+        "checked_at": "2026-10-31T21:53:18.887649+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-cellulant",
+      "url": "https://www.cellulant.io/careers/",
+      "title": "Cellulant careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 403,
+        "page_title": null,
+        "checked_at": "2026-10-31T21:53:24.713927+00:00",
+        "scope": "Direct access unavailable; no content or eligibility inferred."
+      }
+    },
+    {
+      "id": "source-dsa-company-pesapal",
+      "url": "https://pesapal.careers-page.com/",
+      "title": "PesaPal careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://pesapal.careers-page.com/",
+        "page_title": null,
+        "checked_at": "2026-10-31T21:53:22.433784+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-microsoft-africa",
+      "url": "https://careers.microsoft.com/",
+      "title": "Microsoft Africa careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://careers.microsoft.com/v2/global/en/home.html",
+        "page_title": "Home | Microsoft Careers",
+        "checked_at": "2026-10-31T21:53:18.009209+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-worldbank",
+      "url": "https://www.worldbank.org/en/about/careers",
+      "title": "World Bank careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://www.worldbank.org/ext/en/careers",
+        "page_title": "Careers | World Bank Group",
+        "checked_at": "2026-10-31T21:53:28.144794+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-unicef",
+      "url": "https://jobs.unicef.org/",
+      "title": "UNICEF careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://jobs.unicef.org/en-us/listing/",
+        "page_title": "Vacancies | UNICEF Careers",
+        "checked_at": "2026-10-31T21:53:20.905046+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-undp",
+      "url": "https://www.undp.org/careers",
+      "title": "UNDP careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 403,
+        "page_title": null,
+        "checked_at": "2026-10-31T21:53:27.296357+00:00",
+        "scope": "Direct access unavailable; no content or eligibility inferred."
+      }
+    },
+    {
+      "id": "source-dsa-company-canonical",
+      "url": "https://canonical.com/careers",
+      "title": "Canonical careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://canonical.com/careers",
+        "page_title": "Careers | Canonical",
+        "checked_at": "2026-10-31T21:53:13.741970+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-gitlab",
+      "url": "https://about.gitlab.com/jobs/",
+      "title": "GitLab careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://about.gitlab.com/jobs/",
+        "page_title": "Join GitLab",
+        "checked_at": "2026-10-31T21:53:12.645904+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    },
+    {
+      "id": "source-dsa-company-automattic",
+      "url": "https://automattic.com/work-with-us/",
+      "title": "Automattic careers",
+      "source_type": "official",
+      "accessed_at": "2026-10-31",
+      "http_observation": {
+        "status": 200,
+        "final_url": "https://automattic.com/work-with-us/",
+        "page_title": "Work With Us &#8211; Automattic",
+        "checked_at": "2026-10-31T21:53:12.413824+00:00",
+        "scope": "Bounded public HTTP response and title only; not vacancy, interview-policy or full video verification."
+      }
+    }
+  ]
+}

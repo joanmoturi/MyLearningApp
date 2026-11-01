@@ -80,6 +80,16 @@ To use it again, repeat steps 3-5. You do not need to reinstall dependencies eac
 
 Learning progress and personal records are stored in `data\academy.sqlite3`, not in the browser. Do not delete the `data` directory, and keep `.env` private.
 
+## Open the DSA course
+
+In **Learning Tracks**, select **Data Structures and Algorithms - Big Tech Coding Interviews**. Create a 14/30/60-day plan and open its lessons in the existing Study Room.
+
+For coding practice, open **Interview Preparation** and expand **DSA coding practice, timed assessments and company preparation**. Choose a mode, implement JavaScript `solve(input)`, save your draft, run samples and submit your answer/self-ratings. Resume saved sessions after reload. No API key is needed.
+
+Use the company profile selector for sourced preparation and company plans. To keep another course active, reserve 30 or 45 minutes of its existing daily budget for DSA when creating its plan.
+
+After an update, restart both servers and reload the browser. Startup applies the additive migration and loads missing DSA research without resetting personal data.
+
 ## Back up and update
 
 While both servers are running, create a private backup:

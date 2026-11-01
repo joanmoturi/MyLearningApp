@@ -1,0 +1,1399 @@
+{
+  "$schema": "DSA_PACKAGE_SCHEMA.json",
+  "dataset_type": "dsa",
+  "research_version": "1.0.0",
+  "research_date": "2026-10-31",
+  "curricula": [
+    {
+      "id": "curriculum-dsa-14",
+      "track_id": "track-dsa",
+      "duration_days": 14,
+      "daily_minutes": 210,
+      "total_hours": 49.0,
+      "scope": "Intensive refresh with combined foundation/array day; not mastery.",
+      "capstone_completion_level": "tested_algorithm_portfolio",
+      "adjustment_policy": {
+        "daily_budget": "180-240 minutes configurable; 30/45-minute companion practice is reserved from another track, never added on top.",
+        "unfinished_work": "Carry or extend unfinished work; do not mark viewed solutions mastered."
+      },
+      "lessons": [
+        {
+          "id": "lesson-dsa-14-01",
+          "day": 1,
+          "track_id": "track-dsa",
+          "topic": "Algorithmic foundations, arrays and strings - concept and slice",
+          "knowledge_unit_id": "knowledge-dsa-arrays",
+          "skill_ids": [
+            "skill-dsa-foundations",
+            "skill-dsa-arrays"
+          ],
+          "learning_objectives": [
+            "Count work before timing it. An asymptotic upper bound is not an exact runtime; identify the input variable and case. Geometric capacity growth makes append amortized constant despite occasional linear copies. A recursive implementation also consumes stack space. Hashing replaces repeated searches with expected constant-time lookup, at a memory cost. Prefix sums turn a range sum into a difference of cumulative sums. Difference arrays batch range updates before one reconstruction pass. JavaScript strings require an explicit Unicode policy.",
+            "At position i, the map or prefix table describes exactly the processed prefix.",
+            "Compare scanning each query with preprocessing; distinguish expected hash behavior from worst-case guarantees."
+          ],
+          "why_it_matters": "Derive the approach, implement independently, test and communicate complexity rather than memorizing a platform answer.",
+          "prerequisites": {
+            "lesson_ids": [],
+            "skill_ids": [],
+            "baseline_knowledge": [
+              "Working programming, functions, basic tests and Git"
+            ],
+            "gap_policy": "Repair prerequisites inside the budget; extend the calendar rather than adding hidden hours."
+          },
+          "recommended_youtube_resource_id": "resource-dsa-mit-video",
+          "supplementary_reading_resource_ids": [
+            "resource-dsa-mit-notes",
+            "resource-dsa-js-docs"
+          ],
+          "video_duration_minutes": null,
+          "planned_video_minutes": 35,
+          "video_selection": {
+            "focus": "arrays, strings, hash maps, hash sets, frequency counting, prefix sums, difference arrays, subarrays, matrix traversal",
+            "selection_method": "Select a relevant publisher-labeled chapter and watch at most 35 minutes.",
+            "verified_timestamp_seconds": null,
+            "coverage_limit": "No claim that the linked video fully covers every named advanced topic."
+          },
+          "reading_focus": "Read the sections on arrays, strings, hash maps, hash sets, frequency counting, prefix sums, difference arrays, subarrays, matrix traversal; verify language-specific semantics against the reference.",
+          "concept_explanation": "Count work before timing it. An asymptotic upper bound is not an exact runtime; identify the input variable and case. Geometric capacity growth makes append amortized constant despite occasional linear copies. A recursive implementation also consumes stack space. Hashing replaces repeated searches with expected constant-time lookup, at a memory cost. Prefix sums turn a range sum into a difference of cumulative sums. Difference arrays batch range updates before one reconstruction pass. JavaScript strings require an explicit Unicode policy.",
+          "example_implementation": "function solve(n) { return n * (n + 1) / 2; }",
+          "complexity_analysis": {
+            "time": "O(1)",
+            "space": "O(1)"
+          },
+          "coding_exercises": [
+            "question-dsa-01",
+            "question-dsa-02",
+            "question-dsa-03",
+            "question-dsa-04"
+          ],
+          "interview_question_ids": [
+            "question-dsa-01",
+            "question-dsa-02",
+            "question-dsa-03",
+            "question-dsa-04"
+          ],
+          "practical_implementation_exercise": "Guided implementation: derive a brute-force oracle, then implement the first exercise and prove its invariant. Guided contract: Given an integer n, return the number of visits performed by loops i=0..n-1 and j=0..i. Do not execute the loops in your final implementation. Independent contract: Input is {values,queries}. Each query [left,right] uses inclusive zero-based bounds. Return each range sum in query order.",
+          "revision_exercise": "Reimplement a previously failed question without hints. Explain why its invariant holds and which input broke your earlier approach.",
+          "study_guide": {
+            "before_video": [
+              "Count work before timing it. An asymptotic upper bound is not an exact runtime; identify the input variable and case. Geometric capacity growth makes append amortized constant despite occasional linear copies. A recursive implementation also consumes stack space. Hashing replaces repeated searches with expected constant-time lookup, at a memory cost. Prefix sums turn a range sum into a difference of cumulative sums. Difference arrays batch range updates before one reconstruction pass. JavaScript strings require an explicit Unicode policy.",
+              "Recognize: At position i, the map or prefix table describes exactly the processed prefix.",
+              "Predict a brute-force approach and its input-dependent cost."
+            ],
+            "during_video": [
+              "Observe the state changes and the proof behind them.",
+              "Record the invariant, not just the final code.",
+              "For later phases choose a new variation or prerequisite repair rather than repeating a watched chapter. Stop within the video budget."
+            ],
+            "after_video": {
+              "comprehension_questions": [
+                "Compare scanning each query with preprocessing; distinguish expected hash behavior from worst-case guarantees.",
+                "Which counterexample defeats the tempting shortcut?"
+              ],
+              "practice": "Guided implementation: derive a brute-force oracle, then implement the first exercise and prove its invariant.",
+              "validate_understanding": [
+                "At position i, the map or prefix table describes exactly the processed prefix.",
+                "Run all fixtures and a tiny randomized oracle.",
+                "State time, auxiliary space, stack and output complexity."
+              ]
+            }
+          },
+          "time_budget_minutes": {
+            "preparation": 10,
+            "video": 35,
+            "reading": 25,
+            "implementation": 100,
+            "interview": 20,
+            "revision": 20
+          },
+          "estimated_total_study_minutes": 210,
+          "expected_outcome": "Original tested implementation, independent attempt, explicit complexity analysis and a spoken trade-off explanation.",
+          "completion_criteria": [
+            "Record passing fixtures and at least one adversarial test.",
+            "Submit an independent implementation or honestly record assistance.",
+            "Record time/space analysis and explain the invariant.",
+            "Answer the interview questions; opening a solution does not complete the lesson."
+          ],
+          "phase": "concept_and_slice",
+          "assessment_status": "authored_plan_not_learner_executed"
+        },
+        {
+          "id": "lesson-dsa-14-02",
+          "day": 2,
+          "track_id": "track-dsa",
+          "topic": "Problem-solving patterns - concept and slice",
+          "knowledge_unit_id": "knowledge-dsa-patterns",
+          "skill_ids": [
+            "skill-dsa-patterns"
+          ],
+          "learning_objectives": [
+            "A sliding window is justified by an invariant that can be repaired while its left edge moves monotonically. Negative numbers invalidate many sum-threshold window arguments. Binary search on answers requires a monotone feasibility predicate, not merely sorted-looking data.",
+            "Each item enters and leaves the maintained state at most once; explain why moving a pointer cannot discard a valid better answer.",
+            "Use brute force as an oracle on small cases, then prove the optimized window or search predicate."
+          ],
+          "why_it_matters": "Derive the approach, implement independently, test and communicate complexity rather than memorizing a platform answer.",
+          "prerequisites": {
+            "lesson_ids": [
+              "lesson-dsa-14-01"
+            ],
+            "skill_ids": [],
+            "baseline_knowledge": [
+              "Working programming, functions, basic tests and Git"
+            ],
+            "gap_policy": "Repair prerequisites inside the budget; extend the calendar rather than adding hidden hours."
+          },
+          "recommended_youtube_resource_id": "resource-dsa-neetcode-video",
+          "supplementary_reading_resource_ids": [
+            "resource-dsa-mit-notes",
+            "resource-dsa-js-docs"
+          ],
+          "video_duration_minutes": null,
+          "planned_video_minutes": 35,
+          "video_selection": {
+            "focus": "two pointers, sliding window, fast/slow pointers, prefix/suffix, hashing, binary search on answers, in-place manipulation, sorting",
+            "selection_method": "Select a relevant publisher-labeled chapter and watch at most 35 minutes.",
+            "verified_timestamp_seconds": null,
+            "coverage_limit": "No claim that the linked video fully covers every named advanced topic."
+          },
+          "reading_focus": "Read the sections on two pointers, sliding window, fast/slow pointers, prefix/suffix, hashing, binary search on answers, in-place manipulation, sorting; verify language-specific semantics against the reference.",
+          "concept_explanation": "A sliding window is justified by an invariant that can be repaired while its left edge moves monotonically. Negative numbers invalidate many sum-threshold window arguments. Binary search on answers requires a monotone feasibility predicate, not merely sorted-looking data.",
+          "example_implementation": "function solve(events) { const seen=new Map(); let left=0,best=0; for(let right=0;right<events.length;right++){ if(seen.has(events[right])) left=Math.max(left,seen.get(events[right])+1); seen.set(events[right],right); best=Math.max(best,right-left+1); } return best; }",
+          "complexity_analysis": {
+            "time": "O(n) expected",
+            "space": "O(u)"
+          },
+          "coding_exercises": [
+            "question-dsa-05",
+            "question-dsa-06"
+          ],
+          "interview_question_ids": [
+            "question-dsa-05",
+            "question-dsa-06"
+          ],
+          "practical_implementation_exercise": "Guided implementation: derive a brute-force oracle, then implement the first exercise and prove its invariant. Guided contract: Given an array of event names, return the length of the longest contiguous block containing no repeated name. Independent contract: Input is {values,target}. Return the number of nonempty contiguous subarrays whose sum equals target; values may be negative.",
+          "revision_exercise": "Reimplement a previously failed question without hints. Explain why its invariant holds and which input broke your earlier approach.",
+          "study_guide": {
+            "before_video": [
+              "A sliding window is justified by an invariant that can be repaired while its left edge moves monotonically. Negative numbers invalidate many sum-threshold window arguments. Binary search on answers requires a monotone feasibility predicate, not merely sorted-looking data.",
+              "Recognize: Each item enters and leaves the maintained state at most once; explain why moving a pointer cannot discard a valid better answer.",
+              "Predict a brute-force approach and its input-dependent cost."
+            ],
+            "during_video": [
+              "Observe the state changes and the proof behind them.",
+              "Record the invariant, not just the final code.",
+              "For later phases choose a new variation or prerequisite repair rather than repeating a watched chapter. Stop within the video budget."
+            ],
+            "after_video": {
+              "comprehension_questions": [
+                "Use brute force as an oracle on small cases, then prove the optimized window or search predicate.",
+                "Which counterexample defeats the tempting shortcut?"
+              ],
+              "practice": "Guided implementation: derive a brute-force oracle, then implement the first exercise and prove its invariant.",
+              "validate_understanding": [
+                "Each item enters and leaves the maintained state at most once; explain why moving a pointer cannot discard a valid better answer.",
+                "Run all fixtures and a tiny randomized oracle.",
+                "State time, auxiliary space, stack and output complexity."
+              ]
+            }
+          },
+          "time_budget_minutes": {
+            "preparation": 10,
+            "video": 35,
+            "reading": 25,
+            "implementation": 100,
+            "interview": 20,
+            "revision": 20
+          },
+          "estimated_total_study_minutes": 210,
+          "expected_outcome": "Original tested implementation, independent attempt, explicit complexity analysis and a spoken trade-off explanation.",
+          "completion_criteria": [
+            "Record passing fixtures and at least one adversarial test.",
+            "Submit an independent implementation or honestly record assistance.",
+            "Record time/space analysis and explain the invariant.",
+            "Answer the interview questions; opening a solution does not complete the lesson."
+          ],
+          "phase": "concept_and_slice",
+          "assessment_status": "authored_plan_not_learner_executed"
+        },
+        {
+          "id": "lesson-dsa-14-03",
+          "day": 3,
+          "track_id": "track-dsa",
+          "topic": "Linked lists and caches - concept and slice",
+          "knowledge_unit_id": "knowledge-dsa-linked",
+          "skill_ids": [
+            "skill-dsa-linked"
+          ],
+          "learning_objectives": [
+            "Pointer changes must preserve access to the unprocessed suffix. Floyd's two speeds detect a cycle without storing every node. A hash map plus doubly linked list supports lookup and recency changes without scanning; distinguish node identity from equal values.",
+            "The processed prefix is valid and the unprocessed suffix remains reachable.",
+            "Compare auxiliary arrays with pointer rewiring; a bounded cache must state eviction and recency semantics."
+          ],
+          "why_it_matters": "Derive the approach, implement independently, test and communicate complexity rather than memorizing a platform answer.",
+          "prerequisites": {
+            "lesson_ids": [
+              "lesson-dsa-14-02"
+            ],
+            "skill_ids": [],
+            "baseline_knowledge": [
+              "Working programming, functions, basic tests and Git"
+            ],
+            "gap_policy": "Repair prerequisites inside the budget; extend the calendar rather than adding hidden hours."
+          },
+          "recommended_youtube_resource_id": "resource-dsa-fiset-video",
+          "supplementary_reading_resource_ids": [
+            "resource-dsa-mit-notes",
+            "resource-dsa-js-docs"
+          ],
+          "video_duration_minutes": null,
+          "planned_video_minutes": 35,
+          "video_selection": {
+            "focus": "singly/doubly linked lists, reversal, cycle detection, merging, fast/slow pointers, LRU cache",
+            "selection_method": "Select a relevant publisher-labeled chapter and watch at most 35 minutes.",
+            "verified_timestamp_seconds": null,
+            "coverage_limit": "No claim that the linked video fully covers every named advanced topic."
+          },
+          "reading_focus": "Read the sections on singly/doubly linked lists, reversal, cycle detection, merging, fast/slow pointers, LRU cache; verify language-specific semantics against the reference.",
+          "concept_explanation": "Pointer changes must preserve access to the unprocessed suffix. Floyd's two speeds detect a cycle without storing every node. A hash map plus doubly linked list supports lookup and recency changes without scanning; distinguish node identity from equal values.",
+          "example_implementation": "function solve(head) { let previous=null,current=head; while(current!==null){ const next=current.next; current.next=previous; previous=current; current=next; } return previous; }",
+          "complexity_analysis": {
+            "time": "O(n)",
+            "space": "O(1) auxiliary"
+          },
+          "coding_exercises": [
+            "question-dsa-07",
+            "question-dsa-08"
+          ],
+          "interview_question_ids": [
+            "question-dsa-07",
+            "question-dsa-08"
+          ],
+          "practical_implementation_exercise": "Guided implementation: derive a brute-force oracle, then implement the first exercise and prove its invariant. Guided contract: Input is the head of an acyclic singly linked list represented by nested {value,next} objects, or null. Return its reversed head by changing next links. Independent contract: Input is {capacity,operations}, where operations are ['put',key,value] or ['get',key]. Return an array containing each get result or null for a miss. A get or overwrite makes the key most recent; evict least recent on overflow.",
+          "revision_exercise": "Reimplement a previously failed question without hints. Explain why its invariant holds and which input broke your earlier approach.",
+          "study_guide": {
+            "before_video": [
+              "Pointer changes must preserve access to the unprocessed suffix. Floyd's two speeds detect a cycle without storing every node. A hash map plus doubly linked list supports lookup and recency changes without scanning; distinguish node identity from equal values.",
+              "Recognize: The processed prefix is valid and the unprocessed suffix remains reachable.",
+              "Predict a brute-force approach and its input-dependent cost."
+            ],
+            "during_video": [
+              "Observe the state changes and the proof behind them.",
+              "Record the invariant, not just the final code.",
+              "For later phases choose a new variation or prerequisite repair rather than repeating a watched chapter. Stop within the video budget."
+            ],
+            "after_video": {
+              "comprehension_questions": [
+                "Compare auxiliary arrays with pointer rewiring; a bounded cache must state eviction and recency semantics.",
+                "Which counterexample defeats the tempting shortcut?"
+              ],
+              "practice": "Guided implementation: derive a brute-force oracle, then implement the first exercise and prove its invariant.",
+              "validate_understanding": [
+                "The processed prefix is valid and the unprocessed suffix remains reachable.",
+                "Run all fixtures and a tiny randomized oracle.",
+                "State time, auxiliary space, stack and output complexity."
+              ]
+            }
+          },
+          "time_budget_minutes": {
+            "preparation": 10,
+            "video": 35,
+            "reading": 25,
+            "implementation": 100,
+            "interview": 20,
+            "revision": 20
+          },
+          "estimated_total_study_minutes": 210,
+          "expected_outcome": "Original tested implementation, independent attempt, explicit complexity analysis and a spoken trade-off explanation.",
+          "completion_criteria": [
+            "Record passing fixtures and at least one adversarial test.",
+            "Submit an independent implementation or honestly record assistance.",
+            "Record time/space analysis and explain the invariant.",
+            "Answer the interview questions; opening a solution does not complete the lesson."
+          ],
+          "phase": "concept_and_slice",
+          "assessment_status": "authored_plan_not_learner_executed"
+        },
+        {
+          "id": "lesson-dsa-14-04",
+          "day": 4,
+          "track_id": "track-dsa",
+          "topic": "Stacks, queues and monotonic structures - concept and slice",
+          "knowledge_unit_id": "knowledge-dsa-stacks",
+          "skill_ids": [
+            "skill-dsa-stacks"
+          ],
+          "learning_objectives": [
+            "Stacks model unfinished nested work; queues model arrival order. A monotonic stack discards candidates dominated by a later item. Its nested loop is amortized linear because every index is pushed and popped at most once. Avoid Array.shift in a hot queue.",
+            "Stack entries are unresolved candidates in a stated monotone order.",
+            "Compare scanning forward from each item with retaining only candidates that can still affect the answer."
+          ],
+          "why_it_matters": "Derive the approach, implement independently, test and communicate complexity rather than memorizing a platform answer.",
+          "prerequisites": {
+            "lesson_ids": [
+              "lesson-dsa-14-03"
+            ],
+            "skill_ids": [],
+            "baseline_knowledge": [
+              "Working programming, functions, basic tests and Git"
+            ],
+            "gap_policy": "Repair prerequisites inside the budget; extend the calendar rather than adding hidden hours."
+          },
+          "recommended_youtube_resource_id": "resource-dsa-fiset-video",
+          "supplementary_reading_resource_ids": [
+            "resource-dsa-mit-notes",
+            "resource-dsa-js-docs"
+          ],
+          "video_duration_minutes": null,
+          "planned_video_minutes": 35,
+          "video_selection": {
+            "focus": "stacks, queues, deques, monotonic stacks/queues, expression evaluation, parentheses, parsing",
+            "selection_method": "Select a relevant publisher-labeled chapter and watch at most 35 minutes.",
+            "verified_timestamp_seconds": null,
+            "coverage_limit": "No claim that the linked video fully covers every named advanced topic."
+          },
+          "reading_focus": "Read the sections on stacks, queues, deques, monotonic stacks/queues, expression evaluation, parentheses, parsing; verify language-specific semantics against the reference.",
+          "concept_explanation": "Stacks model unfinished nested work; queues model arrival order. A monotonic stack discards candidates dominated by a later item. Its nested loop is amortized linear because every index is pushed and popped at most once. Avoid Array.shift in a hot queue.",
+          "example_implementation": "function solve(value) { const stack=[],pairs={')':'(',']':'[','}':'{'}; for(const char of value){ if('([{'.includes(char)) stack.push(char); else if(stack.pop()!==pairs[char]) return false; } return stack.length===0; }",
+          "complexity_analysis": {
+            "time": "O(n)",
+            "space": "O(n)"
+          },
+          "coding_exercises": [
+            "question-dsa-09",
+            "question-dsa-10"
+          ],
+          "interview_question_ids": [
+            "question-dsa-09",
+            "question-dsa-10"
+          ],
+          "practical_implementation_exercise": "Guided implementation: derive a brute-force oracle, then implement the first exercise and prove its invariant. Guided contract: Given a string consisting only of ()[]{}, return whether all brackets are correctly nested and matched. Independent contract: Given integer measurements, return for each position the distance to the next strictly greater measurement, or 0 if none exists.",
+          "revision_exercise": "Reimplement a previously failed question without hints. Explain why its invariant holds and which input broke your earlier approach.",
+          "study_guide": {
+            "before_video": [
+              "Stacks model unfinished nested work; queues model arrival order. A monotonic stack discards candidates dominated by a later item. Its nested loop is amortized linear because every index is pushed and popped at most once. Avoid Array.shift in a hot queue.",
+              "Recognize: Stack entries are unresolved candidates in a stated monotone order.",
+              "Predict a brute-force approach and its input-dependent cost."
+            ],
+            "during_video": [
+              "Observe the state changes and the proof behind them.",
+              "Record the invariant, not just the final code.",
+              "For later phases choose a new variation or prerequisite repair rather than repeating a watched chapter. Stop within the video budget."
+            ],
+            "after_video": {
+              "comprehension_questions": [
+                "Compare scanning forward from each item with retaining only candidates that can still affect the answer.",
+                "Which counterexample defeats the tempting shortcut?"
+              ],
+              "practice": "Guided implementation: derive a brute-force oracle, then implement the first exercise and prove its invariant.",
+              "validate_understanding": [
+                "Stack entries are unresolved candidates in a stated monotone order.",
+                "Run all fixtures and a tiny randomized oracle.",
+                "State time, auxiliary space, stack and output complexity."
+              ]
+            }
+          },
+          "time_budget_minutes": {
+            "preparation": 10,
+            "video": 35,
+            "reading": 25,
+            "implementation": 100,
+            "interview": 20,
+            "revision": 20
+          },
+          "estimated_total_study_minutes": 210,
+          "expected_outcome": "Original tested implementation, independent attempt, explicit complexity analysis and a spoken trade-off explanation.",
+          "completion_criteria": [
+            "Record passing fixtures and at least one adversarial test.",
+            "Submit an independent implementation or honestly record assistance.",
+            "Record time/space analysis and explain the invariant.",
+            "Answer the interview questions; opening a solution does not complete the lesson."
+          ],
+          "phase": "concept_and_slice",
+          "assessment_status": "authored_plan_not_learner_executed"
+        },
+        {
+          "id": "lesson-dsa-14-05",
+          "day": 5,
+          "track_id": "track-dsa",
+          "topic": "Searching and sorting - concept and slice",
+          "knowledge_unit_id": "knowledge-dsa-sorting",
+          "skill_ids": [
+            "skill-dsa-sorting"
+          ],
+          "learning_objectives": [
+            "Binary search is a boundary search over a half-open interval. Merge sort gives predictable comparison complexity and uses extra storage; quicksort needs pivot and worst-case analysis; counting sort depends on key range, not just item count. JavaScript numeric sort needs a comparator.",
+            "All positions before low are known false and all positions at or after high are known true for the boundary predicate.",
+            "Compare linear search with sorted search including preprocessing; explain stable ordering and worst-case behavior."
+          ],
+          "why_it_matters": "Derive the approach, implement independently, test and communicate complexity rather than memorizing a platform answer.",
+          "prerequisites": {
+            "lesson_ids": [
+              "lesson-dsa-14-04"
+            ],
+            "skill_ids": [],
+            "baseline_knowledge": [
+              "Working programming, functions, basic tests and Git"
+            ],
+            "gap_policy": "Repair prerequisites inside the budget; extend the calendar rather than adding hidden hours."
+          },
+          "recommended_youtube_resource_id": "resource-dsa-mit-video",
+          "supplementary_reading_resource_ids": [
+            "resource-dsa-mit-notes",
+            "resource-dsa-js-docs"
+          ],
+          "video_duration_minutes": null,
+          "planned_video_minutes": 35,
+          "video_selection": {
+            "focus": "linear/binary search, lower/upper bounds, merge/quick/heap/counting sort, stability, sorting trade-offs",
+            "selection_method": "Select a relevant publisher-labeled chapter and watch at most 35 minutes.",
+            "verified_timestamp_seconds": null,
+            "coverage_limit": "No claim that the linked video fully covers every named advanced topic."
+          },
+          "reading_focus": "Read the sections on linear/binary search, lower/upper bounds, merge/quick/heap/counting sort, stability, sorting trade-offs; verify language-specific semantics against the reference.",
+          "concept_explanation": "Binary search is a boundary search over a half-open interval. Merge sort gives predictable comparison complexity and uses extra storage; quicksort needs pivot and worst-case analysis; counting sort depends on key range, not just item count. JavaScript numeric sort needs a comparator.",
+          "example_implementation": "function solve({values,target}) { let low=0,high=values.length; while(low<high){const mid=low+Math.floor((high-low)/2);if(values[mid]<target) low=mid+1;else high=mid;} return low; }",
+          "complexity_analysis": {
+            "time": "O(log n)",
+            "space": "O(1)"
+          },
+          "coding_exercises": [
+            "question-dsa-11",
+            "question-dsa-12"
+          ],
+          "interview_question_ids": [
+            "question-dsa-11",
+            "question-dsa-12"
+          ],
+          "practical_implementation_exercise": "Guided implementation: derive a brute-force oracle, then implement the first exercise and prove its invariant. Guided contract: Input is {values,target} with ascending integers. Return the first index whose value is at least target, or values.length if no such index exists. Independent contract: Given records {key,id}, return them sorted by ascending numeric key while preserving input order among equal keys. Implement merge sort rather than calling built-in sort.",
+          "revision_exercise": "Reimplement a previously failed question without hints. Explain why its invariant holds and which input broke your earlier approach.",
+          "study_guide": {
+            "before_video": [
+              "Binary search is a boundary search over a half-open interval. Merge sort gives predictable comparison complexity and uses extra storage; quicksort needs pivot and worst-case analysis; counting sort depends on key range, not just item count. JavaScript numeric sort needs a comparator.",
+              "Recognize: All positions before low are known false and all positions at or after high are known true for the boundary predicate.",
+              "Predict a brute-force approach and its input-dependent cost."
+            ],
+            "during_video": [
+              "Observe the state changes and the proof behind them.",
+              "Record the invariant, not just the final code.",
+              "For later phases choose a new variation or prerequisite repair rather than repeating a watched chapter. Stop within the video budget."
+            ],
+            "after_video": {
+              "comprehension_questions": [
+                "Compare linear search with sorted search including preprocessing; explain stable ordering and worst-case behavior.",
+                "Which counterexample defeats the tempting shortcut?"
+              ],
+              "practice": "Guided implementation: derive a brute-force oracle, then implement the first exercise and prove its invariant.",
+              "validate_understanding": [
+                "All positions before low are known false and all positions at or after high are known true for the boundary predicate.",
+                "Run all fixtures and a tiny randomized oracle.",
+                "State time, auxiliary space, stack and output complexity."
+              ]
+            }
+          },
+          "time_budget_minutes": {
+            "preparation": 10,
+            "video": 35,
+            "reading": 25,
+            "implementation": 100,
+            "interview": 20,
+            "revision": 20
+          },
+          "estimated_total_study_minutes": 210,
+          "expected_outcome": "Original tested implementation, independent attempt, explicit complexity analysis and a spoken trade-off explanation.",
+          "completion_criteria": [
+            "Record passing fixtures and at least one adversarial test.",
+            "Submit an independent implementation or honestly record assistance.",
+            "Record time/space analysis and explain the invariant.",
+            "Answer the interview questions; opening a solution does not complete the lesson."
+          ],
+          "phase": "concept_and_slice",
+          "assessment_status": "authored_plan_not_learner_executed"
+        },
+        {
+          "id": "lesson-dsa-14-06",
+          "day": 6,
+          "track_id": "track-dsa",
+          "topic": "Trees and ordered indexes - concept and slice",
+          "knowledge_unit_id": "knowledge-dsa-trees",
+          "skill_ids": [
+            "skill-dsa-trees"
+          ],
+          "learning_objectives": [
+            "A tree traversal combines results from children according to a contract. BST validity is a global bound, not just a parent-child comparison. DFS storage depends on height, BFS on maximum width. Balancing preserves logarithmic height; serialization must preserve null children.",
+            "Each recursive call receives valid bounds or returns a well-defined subtree summary.",
+            "Compare recursive DFS, an explicit stack and level-order traversal; include a skewed-tree test."
+          ],
+          "why_it_matters": "Derive the approach, implement independently, test and communicate complexity rather than memorizing a platform answer.",
+          "prerequisites": {
+            "lesson_ids": [
+              "lesson-dsa-14-05"
+            ],
+            "skill_ids": [],
+            "baseline_knowledge": [
+              "Working programming, functions, basic tests and Git"
+            ],
+            "gap_policy": "Repair prerequisites inside the budget; extend the calendar rather than adding hidden hours."
+          },
+          "recommended_youtube_resource_id": "resource-dsa-mit-video",
+          "supplementary_reading_resource_ids": [
+            "resource-dsa-mit-notes",
+            "resource-dsa-js-docs"
+          ],
+          "video_duration_minutes": null,
+          "planned_video_minutes": 35,
+          "video_selection": {
+            "focus": "binary trees, BSTs, preorder/inorder/postorder/level order, DFS/BFS, height/depth, LCA, balanced trees, serialization",
+            "selection_method": "Select a relevant publisher-labeled chapter and watch at most 35 minutes.",
+            "verified_timestamp_seconds": null,
+            "coverage_limit": "No claim that the linked video fully covers every named advanced topic."
+          },
+          "reading_focus": "Read the sections on binary trees, BSTs, preorder/inorder/postorder/level order, DFS/BFS, height/depth, LCA, balanced trees, serialization; verify language-specific semantics against the reference.",
+          "concept_explanation": "A tree traversal combines results from children according to a contract. BST validity is a global bound, not just a parent-child comparison. DFS storage depends on height, BFS on maximum width. Balancing preserves logarithmic height; serialization must preserve null children.",
+          "example_implementation": "function solve(node) { return node===null?0:1+Math.max(solve(node.left),solve(node.right)); }",
+          "complexity_analysis": {
+            "time": "O(n)",
+            "space": "O(h)"
+          },
+          "coding_exercises": [
+            "question-dsa-13",
+            "question-dsa-14"
+          ],
+          "interview_question_ids": [
+            "question-dsa-13",
+            "question-dsa-14"
+          ],
+          "practical_implementation_exercise": "Guided implementation: derive a brute-force oracle, then implement the first exercise and prove its invariant. Guided contract: Input is a binary tree {value,left,right} with null missing children. Return the maximum number of nodes on a root-to-leaf path; an empty tree has depth 0. Independent contract: Given a binary tree {value,left,right}, return whether it is a strict binary search tree. All left descendants must be smaller and all right descendants greater; duplicates are invalid.",
+          "revision_exercise": "Reimplement a previously failed question without hints. Explain why its invariant holds and which input broke your earlier approach.",
+          "study_guide": {
+            "before_video": [
+              "A tree traversal combines results from children according to a contract. BST validity is a global bound, not just a parent-child comparison. DFS storage depends on height, BFS on maximum width. Balancing preserves logarithmic height; serialization must preserve null children.",
+              "Recognize: Each recursive call receives valid bounds or returns a well-defined subtree summary.",
+              "Predict a brute-force approach and its input-dependent cost."
+            ],
+            "during_video": [
+              "Observe the state changes and the proof behind them.",
+              "Record the invariant, not just the final code.",
+              "For later phases choose a new variation or prerequisite repair rather than repeating a watched chapter. Stop within the video budget."
+            ],
+            "after_video": {
+              "comprehension_questions": [
+                "Compare recursive DFS, an explicit stack and level-order traversal; include a skewed-tree test.",
+                "Which counterexample defeats the tempting shortcut?"
+              ],
+              "practice": "Guided implementation: derive a brute-force oracle, then implement the first exercise and prove its invariant.",
+              "validate_understanding": [
+                "Each recursive call receives valid bounds or returns a well-defined subtree summary.",
+                "Run all fixtures and a tiny randomized oracle.",
+                "State time, auxiliary space, stack and output complexity."
+              ]
+            }
+          },
+          "time_budget_minutes": {
+            "preparation": 10,
+            "video": 35,
+            "reading": 25,
+            "implementation": 100,
+            "interview": 20,
+            "revision": 20
+          },
+          "estimated_total_study_minutes": 210,
+          "expected_outcome": "Original tested implementation, independent attempt, explicit complexity analysis and a spoken trade-off explanation.",
+          "completion_criteria": [
+            "Record passing fixtures and at least one adversarial test.",
+            "Submit an independent implementation or honestly record assistance.",
+            "Record time/space analysis and explain the invariant.",
+            "Answer the interview questions; opening a solution does not complete the lesson."
+          ],
+          "phase": "concept_and_slice",
+          "assessment_status": "authored_plan_not_learner_executed"
+        },
+        {
+          "id": "lesson-dsa-14-07",
+          "day": 7,
+          "track_id": "track-dsa",
+          "topic": "Heaps and priority queues - concept and slice",
+          "knowledge_unit_id": "knowledge-dsa-heaps",
+          "skill_ids": [
+            "skill-dsa-heaps"
+          ],
+          "learning_objectives": [
+            "A heap exposes an extreme item without fully sorting all items. A size-k min-heap keeps the k largest seen values. Bottom-up heap construction is linear, not n log n. A k-way merge keeps one frontier item per sorted source.",
+            "The retained heap represents the best k items of the processed prefix, or one frontier from each source.",
+            "Compare full sorting with a bounded heap; account for output sorting separately."
+          ],
+          "why_it_matters": "Derive the approach, implement independently, test and communicate complexity rather than memorizing a platform answer.",
+          "prerequisites": {
+            "lesson_ids": [
+              "lesson-dsa-14-06"
+            ],
+            "skill_ids": [],
+            "baseline_knowledge": [
+              "Working programming, functions, basic tests and Git"
+            ],
+            "gap_policy": "Repair prerequisites inside the budget; extend the calendar rather than adding hidden hours."
+          },
+          "recommended_youtube_resource_id": "resource-dsa-fiset-video",
+          "supplementary_reading_resource_ids": [
+            "resource-dsa-mit-notes",
+            "resource-dsa-js-docs"
+          ],
+          "video_duration_minutes": null,
+          "planned_video_minutes": 35,
+          "video_selection": {
+            "focus": "min/max heaps, heapify, priority queues, Top K, K-way merge, streaming",
+            "selection_method": "Select a relevant publisher-labeled chapter and watch at most 35 minutes.",
+            "verified_timestamp_seconds": null,
+            "coverage_limit": "No claim that the linked video fully covers every named advanced topic."
+          },
+          "reading_focus": "Read the sections on min/max heaps, heapify, priority queues, Top K, K-way merge, streaming; verify language-specific semantics against the reference.",
+          "concept_explanation": "A heap exposes an extreme item without fully sorting all items. A size-k min-heap keeps the k largest seen values. Bottom-up heap construction is linear, not n log n. A k-way merge keeps one frontier item per sorted source.",
+          "example_implementation": "function solve({values,k}) { if(k===0)return [];const heap=[];function push(v){heap.push(v);let i=heap.length-1;while(i>0){let p=Math.floor((i-1)/2);if(heap[p]<=heap[i])break;[heap[p],heap[i]]=[heap[i],heap[p]];i=p;}}function down(){let i=0;while(2*i+1<heap.length){let j=2*i+1;if(j+1<heap.length&&heap[j+1]<heap[j])j++;if(heap[i]<=heap[j])break;[heap[i],heap[j]]=[heap[j],heap[i]];i=j;}}for(const v of values){if(heap.length<k)push(v);else if(v>heap[0]){heap[0]=v;down();}}return heap.sort((a,b)=>a-b); }",
+          "complexity_analysis": {
+            "time": "O(n log(k+1) + k log k)",
+            "space": "O(k)"
+          },
+          "coding_exercises": [
+            "question-dsa-15",
+            "question-dsa-16"
+          ],
+          "interview_question_ids": [
+            "question-dsa-15",
+            "question-dsa-16"
+          ],
+          "practical_implementation_exercise": "Guided implementation: derive a brute-force oracle, then implement the first exercise and prove its invariant. Guided contract: Input is {values,k}. Return the k largest values including duplicates, in ascending order. Use a bounded min-heap rather than sorting every reading. Independent contract: Given an array of ascending numeric arrays, return one ascending array containing every value. Preserve duplicates. Use one frontier item per nonempty source in a min-heap.",
+          "revision_exercise": "Reimplement a previously failed question without hints. Explain why its invariant holds and which input broke your earlier approach.",
+          "study_guide": {
+            "before_video": [
+              "A heap exposes an extreme item without fully sorting all items. A size-k min-heap keeps the k largest seen values. Bottom-up heap construction is linear, not n log n. A k-way merge keeps one frontier item per sorted source.",
+              "Recognize: The retained heap represents the best k items of the processed prefix, or one frontier from each source.",
+              "Predict a brute-force approach and its input-dependent cost."
+            ],
+            "during_video": [
+              "Observe the state changes and the proof behind them.",
+              "Record the invariant, not just the final code.",
+              "For later phases choose a new variation or prerequisite repair rather than repeating a watched chapter. Stop within the video budget."
+            ],
+            "after_video": {
+              "comprehension_questions": [
+                "Compare full sorting with a bounded heap; account for output sorting separately.",
+                "Which counterexample defeats the tempting shortcut?"
+              ],
+              "practice": "Guided implementation: derive a brute-force oracle, then implement the first exercise and prove its invariant.",
+              "validate_understanding": [
+                "The retained heap represents the best k items of the processed prefix, or one frontier from each source.",
+                "Run all fixtures and a tiny randomized oracle.",
+                "State time, auxiliary space, stack and output complexity."
+              ]
+            }
+          },
+          "time_budget_minutes": {
+            "preparation": 10,
+            "video": 35,
+            "reading": 25,
+            "implementation": 100,
+            "interview": 20,
+            "revision": 20
+          },
+          "estimated_total_study_minutes": 210,
+          "expected_outcome": "Original tested implementation, independent attempt, explicit complexity analysis and a spoken trade-off explanation.",
+          "completion_criteria": [
+            "Record passing fixtures and at least one adversarial test.",
+            "Submit an independent implementation or honestly record assistance.",
+            "Record time/space analysis and explain the invariant.",
+            "Answer the interview questions; opening a solution does not complete the lesson."
+          ],
+          "phase": "concept_and_slice",
+          "assessment_status": "authored_plan_not_learner_executed"
+        },
+        {
+          "id": "lesson-dsa-14-08",
+          "day": 8,
+          "track_id": "track-dsa",
+          "topic": "Intervals and sweep lines - concept and slice",
+          "knowledge_unit_id": "knowledge-dsa-intervals",
+          "skill_ids": [
+            "skill-dsa-intervals"
+          ],
+          "learning_objectives": [
+            "State whether intervals are closed or half-open before coding. Sorting by start allows one active merged interval; resource counts use arrival/departure events. At equal timestamps, a departure precedes an arrival for half-open intervals.",
+            "Completed merged intervals cannot overlap the active interval; active event count equals simultaneous demand.",
+            "Compare pairwise overlap tests with sorting and a sweep; test touching boundaries explicitly."
+          ],
+          "why_it_matters": "Derive the approach, implement independently, test and communicate complexity rather than memorizing a platform answer.",
+          "prerequisites": {
+            "lesson_ids": [
+              "lesson-dsa-14-07"
+            ],
+            "skill_ids": [],
+            "baseline_knowledge": [
+              "Working programming, functions, basic tests and Git"
+            ],
+            "gap_policy": "Repair prerequisites inside the budget; extend the calendar rather than adding hidden hours."
+          },
+          "recommended_youtube_resource_id": "resource-dsa-mit-video",
+          "supplementary_reading_resource_ids": [
+            "resource-dsa-mit-notes",
+            "resource-dsa-js-docs"
+          ],
+          "video_duration_minutes": null,
+          "planned_video_minutes": 35,
+          "video_selection": {
+            "focus": "merging, overlap, meeting rooms, scheduling, sweep line, event sorting",
+            "selection_method": "Select a relevant publisher-labeled chapter and watch at most 35 minutes.",
+            "verified_timestamp_seconds": null,
+            "coverage_limit": "No claim that the linked video fully covers every named advanced topic."
+          },
+          "reading_focus": "Read the sections on merging, overlap, meeting rooms, scheduling, sweep line, event sorting; verify language-specific semantics against the reference.",
+          "concept_explanation": "State whether intervals are closed or half-open before coding. Sorting by start allows one active merged interval; resource counts use arrival/departure events. At equal timestamps, a departure precedes an arrival for half-open intervals.",
+          "example_implementation": "function solve(intervals) { const sorted=intervals.map(x=>x.slice()).sort((a,b)=>a[0]-b[0]),out=[];for(const [a,b] of sorted){const last=out[out.length-1];if(last && a<=last[1])last[1]=Math.max(last[1],b);else out.push([a,b]);}return out; }",
+          "complexity_analysis": {
+            "time": "O(n log n)",
+            "space": "O(n)"
+          },
+          "coding_exercises": [
+            "question-dsa-17",
+            "question-dsa-18"
+          ],
+          "interview_question_ids": [
+            "question-dsa-17",
+            "question-dsa-18"
+          ],
+          "practical_implementation_exercise": "Guided implementation: derive a brute-force oracle, then implement the first exercise and prove its invariant. Guided contract: Given closed intervals [start,end], return their union as sorted disjoint intervals. Touching endpoints merge. Independent contract: Given half-open meetings [start,end), return the minimum number of rooms. A meeting ending at t releases its room before another starting at t.",
+          "revision_exercise": "Reimplement a previously failed question without hints. Explain why its invariant holds and which input broke your earlier approach.",
+          "study_guide": {
+            "before_video": [
+              "State whether intervals are closed or half-open before coding. Sorting by start allows one active merged interval; resource counts use arrival/departure events. At equal timestamps, a departure precedes an arrival for half-open intervals.",
+              "Recognize: Completed merged intervals cannot overlap the active interval; active event count equals simultaneous demand.",
+              "Predict a brute-force approach and its input-dependent cost."
+            ],
+            "during_video": [
+              "Observe the state changes and the proof behind them.",
+              "Record the invariant, not just the final code.",
+              "For later phases choose a new variation or prerequisite repair rather than repeating a watched chapter. Stop within the video budget."
+            ],
+            "after_video": {
+              "comprehension_questions": [
+                "Compare pairwise overlap tests with sorting and a sweep; test touching boundaries explicitly.",
+                "Which counterexample defeats the tempting shortcut?"
+              ],
+              "practice": "Guided implementation: derive a brute-force oracle, then implement the first exercise and prove its invariant.",
+              "validate_understanding": [
+                "Completed merged intervals cannot overlap the active interval; active event count equals simultaneous demand.",
+                "Run all fixtures and a tiny randomized oracle.",
+                "State time, auxiliary space, stack and output complexity."
+              ]
+            }
+          },
+          "time_budget_minutes": {
+            "preparation": 10,
+            "video": 35,
+            "reading": 25,
+            "implementation": 100,
+            "interview": 20,
+            "revision": 20
+          },
+          "estimated_total_study_minutes": 210,
+          "expected_outcome": "Original tested implementation, independent attempt, explicit complexity analysis and a spoken trade-off explanation.",
+          "completion_criteria": [
+            "Record passing fixtures and at least one adversarial test.",
+            "Submit an independent implementation or honestly record assistance.",
+            "Record time/space analysis and explain the invariant.",
+            "Answer the interview questions; opening a solution does not complete the lesson."
+          ],
+          "phase": "concept_and_slice",
+          "assessment_status": "authored_plan_not_learner_executed"
+        },
+        {
+          "id": "lesson-dsa-14-09",
+          "day": 9,
+          "track_id": "track-dsa",
+          "topic": "Graphs and connectivity - concept and slice",
+          "knowledge_unit_id": "knowledge-dsa-graphs",
+          "skill_ids": [
+            "skill-dsa-graphs"
+          ],
+          "learning_objectives": [
+            "BFS finds shortest paths only with equal edge costs. Dijkstra relies on nonnegative weights; Bellman-Ford detects reachable negative cycles. Topological ordering exists only for a DAG. Union-find tracks undirected connectivity, not directed reachability.",
+            "A BFS vertex is enqueued once; a topological frontier contains only vertices with zero remaining indegree.",
+            "Compare adjacency list and matrix costs; choose shortest-path algorithms from edge constraints, not habit."
+          ],
+          "why_it_matters": "Derive the approach, implement independently, test and communicate complexity rather than memorizing a platform answer.",
+          "prerequisites": {
+            "lesson_ids": [
+              "lesson-dsa-14-08"
+            ],
+            "skill_ids": [],
+            "baseline_knowledge": [
+              "Working programming, functions, basic tests and Git"
+            ],
+            "gap_policy": "Repair prerequisites inside the budget; extend the calendar rather than adding hidden hours."
+          },
+          "recommended_youtube_resource_id": "resource-dsa-graph-video",
+          "supplementary_reading_resource_ids": [
+            "resource-dsa-mit-notes",
+            "resource-dsa-js-docs"
+          ],
+          "video_duration_minutes": null,
+          "planned_video_minutes": 35,
+          "video_selection": {
+            "focus": "adjacency lists/matrices, DFS/BFS, cycles, components, topological sort, Dijkstra, Bellman-Ford, MST, union-find, shortest paths",
+            "selection_method": "Select a relevant publisher-labeled chapter and watch at most 35 minutes.",
+            "verified_timestamp_seconds": null,
+            "coverage_limit": "No claim that the linked video fully covers every named advanced topic."
+          },
+          "reading_focus": "Read the sections on adjacency lists/matrices, DFS/BFS, cycles, components, topological sort, Dijkstra, Bellman-Ford, MST, union-find, shortest paths; verify language-specific semantics against the reference.",
+          "concept_explanation": "BFS finds shortest paths only with equal edge costs. Dijkstra relies on nonnegative weights; Bellman-Ford detects reachable negative cycles. Topological ordering exists only for a DAG. Union-find tracks undirected connectivity, not directed reachability.",
+          "example_implementation": "function solve({adjacency,start}) { const distances=Array(adjacency.length).fill(-1),queue=[start];distances[start]=0;for(let head=0;head<queue.length;head++){const node=queue[head];for(const next of adjacency[node])if(distances[next]===-1){distances[next]=distances[node]+1;queue.push(next);}}return distances; }",
+          "complexity_analysis": {
+            "time": "O(V + E)",
+            "space": "O(V)"
+          },
+          "coding_exercises": [
+            "question-dsa-19",
+            "question-dsa-20"
+          ],
+          "interview_question_ids": [
+            "question-dsa-19",
+            "question-dsa-20"
+          ],
+          "practical_implementation_exercise": "Guided implementation: derive a brute-force oracle, then implement the first exercise and prove its invariant. Guided contract: Input is {adjacency,start}, with adjacency an array of outgoing neighbor arrays. Return each vertex's shortest hop count from start, or -1 if unreachable. Independent contract: Input is an adjacency list of directed dependencies: an edge u->v means u must finish before v. Return the deterministic FIFO Kahn order, initially enqueueing zero-indegree vertices in ascending index order; return null if cyclic.",
+          "revision_exercise": "Reimplement a previously failed question without hints. Explain why its invariant holds and which input broke your earlier approach.",
+          "study_guide": {
+            "before_video": [
+              "BFS finds shortest paths only with equal edge costs. Dijkstra relies on nonnegative weights; Bellman-Ford detects reachable negative cycles. Topological ordering exists only for a DAG. Union-find tracks undirected connectivity, not directed reachability.",
+              "Recognize: A BFS vertex is enqueued once; a topological frontier contains only vertices with zero remaining indegree.",
+              "Predict a brute-force approach and its input-dependent cost."
+            ],
+            "during_video": [
+              "Observe the state changes and the proof behind them.",
+              "Record the invariant, not just the final code.",
+              "For later phases choose a new variation or prerequisite repair rather than repeating a watched chapter. Stop within the video budget."
+            ],
+            "after_video": {
+              "comprehension_questions": [
+                "Compare adjacency list and matrix costs; choose shortest-path algorithms from edge constraints, not habit.",
+                "Which counterexample defeats the tempting shortcut?"
+              ],
+              "practice": "Guided implementation: derive a brute-force oracle, then implement the first exercise and prove its invariant.",
+              "validate_understanding": [
+                "A BFS vertex is enqueued once; a topological frontier contains only vertices with zero remaining indegree.",
+                "Run all fixtures and a tiny randomized oracle.",
+                "State time, auxiliary space, stack and output complexity."
+              ]
+            }
+          },
+          "time_budget_minutes": {
+            "preparation": 10,
+            "video": 35,
+            "reading": 25,
+            "implementation": 100,
+            "interview": 20,
+            "revision": 20
+          },
+          "estimated_total_study_minutes": 210,
+          "expected_outcome": "Original tested implementation, independent attempt, explicit complexity analysis and a spoken trade-off explanation.",
+          "completion_criteria": [
+            "Record passing fixtures and at least one adversarial test.",
+            "Submit an independent implementation or honestly record assistance.",
+            "Record time/space analysis and explain the invariant.",
+            "Answer the interview questions; opening a solution does not complete the lesson."
+          ],
+          "phase": "concept_and_slice",
+          "assessment_status": "authored_plan_not_learner_executed"
+        },
+        {
+          "id": "lesson-dsa-14-10",
+          "day": 10,
+          "track_id": "track-dsa",
+          "topic": "Backtracking and constraint search - concept and slice",
+          "knowledge_unit_id": "knowledge-dsa-backtracking",
+          "skill_ids": [
+            "skill-dsa-backtracking"
+          ],
+          "learning_objectives": [
+            "Backtracking makes a choice, explores the remaining choices and restores state. A start index prevents duplicate combinations; permutations require a different used-item contract. Pruning is safe only when a branch cannot contain a valid answer.",
+            "The current path is valid, and undo restores exactly the state before the choice.",
+            "Compare exhaustive enumeration with constraint-driven pruning; output size can dominate algorithm runtime."
+          ],
+          "why_it_matters": "Derive the approach, implement independently, test and communicate complexity rather than memorizing a platform answer.",
+          "prerequisites": {
+            "lesson_ids": [
+              "lesson-dsa-14-09"
+            ],
+            "skill_ids": [],
+            "baseline_knowledge": [
+              "Working programming, functions, basic tests and Git"
+            ],
+            "gap_policy": "Repair prerequisites inside the budget; extend the calendar rather than adding hidden hours."
+          },
+          "recommended_youtube_resource_id": "resource-dsa-bari-video",
+          "supplementary_reading_resource_ids": [
+            "resource-dsa-mit-notes",
+            "resource-dsa-js-docs"
+          ],
+          "video_duration_minutes": null,
+          "planned_video_minutes": 35,
+          "video_selection": {
+            "focus": "recursion trees, subsets, permutations, combinations, constraint satisfaction, pruning, N-Queens",
+            "selection_method": "Select a relevant publisher-labeled chapter and watch at most 35 minutes.",
+            "verified_timestamp_seconds": null,
+            "coverage_limit": "No claim that the linked video fully covers every named advanced topic."
+          },
+          "reading_focus": "Read the sections on recursion trees, subsets, permutations, combinations, constraint satisfaction, pruning, N-Queens; verify language-specific semantics against the reference.",
+          "concept_explanation": "Backtracking makes a choice, explores the remaining choices and restores state. A start index prevents duplicate combinations; permutations require a different used-item contract. Pruning is safe only when a branch cannot contain a valid answer.",
+          "example_implementation": "function solve(names) { const out=[],path=[];function visit(i){if(i===names.length){out.push(path.slice());return;}visit(i+1);path.push(names[i]);visit(i+1);path.pop();}visit(0);return out; }",
+          "complexity_analysis": {
+            "time": "O(n 2^n) including output copies",
+            "space": "O(n) auxiliary excluding output"
+          },
+          "coding_exercises": [
+            "question-dsa-21",
+            "question-dsa-22"
+          ],
+          "interview_question_ids": [
+            "question-dsa-21",
+            "question-dsa-22"
+          ],
+          "practical_implementation_exercise": "Guided implementation: derive a brute-force oracle, then implement the first exercise and prove its invariant. Guided contract: Given distinct feature names, return every subset. Use include/exclude recursion, explore exclusion first, and preserve original order within a subset. Independent contract: Input is {sizes,target}, where sizes are distinct positive integers. Return nondecreasing combinations summing to target, lexicographically by sorted choice exploration. A size may be reused. The target-zero result is [[]].",
+          "revision_exercise": "Reimplement a previously failed question without hints. Explain why its invariant holds and which input broke your earlier approach.",
+          "study_guide": {
+            "before_video": [
+              "Backtracking makes a choice, explores the remaining choices and restores state. A start index prevents duplicate combinations; permutations require a different used-item contract. Pruning is safe only when a branch cannot contain a valid answer.",
+              "Recognize: The current path is valid, and undo restores exactly the state before the choice.",
+              "Predict a brute-force approach and its input-dependent cost."
+            ],
+            "during_video": [
+              "Observe the state changes and the proof behind them.",
+              "Record the invariant, not just the final code.",
+              "For later phases choose a new variation or prerequisite repair rather than repeating a watched chapter. Stop within the video budget."
+            ],
+            "after_video": {
+              "comprehension_questions": [
+                "Compare exhaustive enumeration with constraint-driven pruning; output size can dominate algorithm runtime.",
+                "Which counterexample defeats the tempting shortcut?"
+              ],
+              "practice": "Guided implementation: derive a brute-force oracle, then implement the first exercise and prove its invariant.",
+              "validate_understanding": [
+                "The current path is valid, and undo restores exactly the state before the choice.",
+                "Run all fixtures and a tiny randomized oracle.",
+                "State time, auxiliary space, stack and output complexity."
+              ]
+            }
+          },
+          "time_budget_minutes": {
+            "preparation": 10,
+            "video": 35,
+            "reading": 25,
+            "implementation": 100,
+            "interview": 20,
+            "revision": 20
+          },
+          "estimated_total_study_minutes": 210,
+          "expected_outcome": "Original tested implementation, independent attempt, explicit complexity analysis and a spoken trade-off explanation.",
+          "completion_criteria": [
+            "Record passing fixtures and at least one adversarial test.",
+            "Submit an independent implementation or honestly record assistance.",
+            "Record time/space analysis and explain the invariant.",
+            "Answer the interview questions; opening a solution does not complete the lesson."
+          ],
+          "phase": "concept_and_slice",
+          "assessment_status": "authored_plan_not_learner_executed"
+        },
+        {
+          "id": "lesson-dsa-14-11",
+          "day": 11,
+          "track_id": "track-dsa",
+          "topic": "Dynamic programming - concept and slice",
+          "knowledge_unit_id": "knowledge-dsa-dp",
+          "skill_ids": [
+            "skill-dsa-dp"
+          ],
+          "learning_objectives": [
+            "Define what each state means before selecting a recurrence. Memoization shares repeated subproblems; tabulation follows dependency order. Loop direction distinguishes reusable coins from 0/1 choices. For LCS and grid DP, specify both dimensions and boundary states.",
+            "Every computed state depends only on already valid states and represents a complete optimum for its stated subproblem.",
+            "Write an exponential oracle on tiny inputs, derive the recurrence, then optimize storage only after correctness."
+          ],
+          "why_it_matters": "Derive the approach, implement independently, test and communicate complexity rather than memorizing a platform answer.",
+          "prerequisites": {
+            "lesson_ids": [
+              "lesson-dsa-14-10"
+            ],
+            "skill_ids": [],
+            "baseline_knowledge": [
+              "Working programming, functions, basic tests and Git"
+            ],
+            "gap_policy": "Repair prerequisites inside the budget; extend the calendar rather than adding hidden hours."
+          },
+          "recommended_youtube_resource_id": "resource-dsa-dp-video",
+          "supplementary_reading_resource_ids": [
+            "resource-dsa-mit-notes",
+            "resource-dsa-js-docs"
+          ],
+          "video_duration_minutes": null,
+          "planned_video_minutes": 35,
+          "video_selection": {
+            "focus": "memoization, tabulation, states, recurrences, 1D/2D DP, knapsack, grids, LCS, LIS, tree DP",
+            "selection_method": "Select a relevant publisher-labeled chapter and watch at most 35 minutes.",
+            "verified_timestamp_seconds": null,
+            "coverage_limit": "No claim that the linked video fully covers every named advanced topic."
+          },
+          "reading_focus": "Read the sections on memoization, tabulation, states, recurrences, 1D/2D DP, knapsack, grids, LCS, LIS, tree DP; verify language-specific semantics against the reference.",
+          "concept_explanation": "Define what each state means before selecting a recurrence. Memoization shares repeated subproblems; tabulation follows dependency order. Loop direction distinguishes reusable coins from 0/1 choices. For LCS and grid DP, specify both dimensions and boundary states.",
+          "example_implementation": "function solve({sizes,target}) { const dp=Array(target+1).fill(Infinity);dp[0]=0;for(let amount=1;amount<=target;amount++)for(const size of sizes)if(size<=amount)dp[amount]=Math.min(dp[amount],dp[amount-size]+1);return Number.isFinite(dp[target])?dp[target]:-1; }",
+          "complexity_analysis": {
+            "time": "O(target * sizes.length)",
+            "space": "O(target)"
+          },
+          "coding_exercises": [
+            "question-dsa-23",
+            "question-dsa-24"
+          ],
+          "interview_question_ids": [
+            "question-dsa-23",
+            "question-dsa-24"
+          ],
+          "practical_implementation_exercise": "Guided implementation: derive a brute-force oracle, then implement the first exercise and prove its invariant. Guided contract: Input is {sizes,target}. Return the minimum count of reusable positive bundle sizes that sums exactly to target, or -1 if impossible. Independent contract: Given integer release scores, return the length of the longest strictly increasing subsequence, not necessarily contiguous. Equal scores do not extend it.",
+          "revision_exercise": "Reimplement a previously failed question without hints. Explain why its invariant holds and which input broke your earlier approach.",
+          "study_guide": {
+            "before_video": [
+              "Define what each state means before selecting a recurrence. Memoization shares repeated subproblems; tabulation follows dependency order. Loop direction distinguishes reusable coins from 0/1 choices. For LCS and grid DP, specify both dimensions and boundary states.",
+              "Recognize: Every computed state depends only on already valid states and represents a complete optimum for its stated subproblem.",
+              "Predict a brute-force approach and its input-dependent cost."
+            ],
+            "during_video": [
+              "Observe the state changes and the proof behind them.",
+              "Record the invariant, not just the final code.",
+              "For later phases choose a new variation or prerequisite repair rather than repeating a watched chapter. Stop within the video budget."
+            ],
+            "after_video": {
+              "comprehension_questions": [
+                "Write an exponential oracle on tiny inputs, derive the recurrence, then optimize storage only after correctness.",
+                "Which counterexample defeats the tempting shortcut?"
+              ],
+              "practice": "Guided implementation: derive a brute-force oracle, then implement the first exercise and prove its invariant.",
+              "validate_understanding": [
+                "Every computed state depends only on already valid states and represents a complete optimum for its stated subproblem.",
+                "Run all fixtures and a tiny randomized oracle.",
+                "State time, auxiliary space, stack and output complexity."
+              ]
+            }
+          },
+          "time_budget_minutes": {
+            "preparation": 10,
+            "video": 35,
+            "reading": 25,
+            "implementation": 100,
+            "interview": 20,
+            "revision": 20
+          },
+          "estimated_total_study_minutes": 210,
+          "expected_outcome": "Original tested implementation, independent attempt, explicit complexity analysis and a spoken trade-off explanation.",
+          "completion_criteria": [
+            "Record passing fixtures and at least one adversarial test.",
+            "Submit an independent implementation or honestly record assistance.",
+            "Record time/space analysis and explain the invariant.",
+            "Answer the interview questions; opening a solution does not complete the lesson."
+          ],
+          "phase": "concept_and_slice",
+          "assessment_status": "authored_plan_not_learner_executed"
+        },
+        {
+          "id": "lesson-dsa-14-12",
+          "day": 12,
+          "track_id": "track-dsa",
+          "topic": "Greedy algorithms and proofs - concept and slice",
+          "knowledge_unit_id": "knowledge-dsa-greedy",
+          "skill_ids": [
+            "skill-dsa-greedy"
+          ],
+          "learning_objectives": [
+            "A locally attractive choice needs an exchange or dominance proof. Earliest finishing activities leave maximum remaining room; highest weight is not a valid replacement for weighted interval scheduling, which requires a different formulation.",
+            "A chosen prefix can be extended to an optimal solution without reducing the remaining feasible choices.",
+            "Construct a counterexample to tempting heuristics before relying on one; compare with a DP oracle."
+          ],
+          "why_it_matters": "Derive the approach, implement independently, test and communicate complexity rather than memorizing a platform answer.",
+          "prerequisites": {
+            "lesson_ids": [
+              "lesson-dsa-14-11"
+            ],
+            "skill_ids": [],
+            "baseline_knowledge": [
+              "Working programming, functions, basic tests and Git"
+            ],
+            "gap_policy": "Repair prerequisites inside the budget; extend the calendar rather than adding hidden hours."
+          },
+          "recommended_youtube_resource_id": "resource-dsa-bari-video",
+          "supplementary_reading_resource_ids": [
+            "resource-dsa-mit-notes",
+            "resource-dsa-js-docs"
+          ],
+          "video_duration_minutes": null,
+          "planned_video_minutes": 35,
+          "video_selection": {
+            "focus": "greedy choice, interval/activity selection, priority optimization, correctness proofs, greedy versus DP",
+            "selection_method": "Select a relevant publisher-labeled chapter and watch at most 35 minutes.",
+            "verified_timestamp_seconds": null,
+            "coverage_limit": "No claim that the linked video fully covers every named advanced topic."
+          },
+          "reading_focus": "Read the sections on greedy choice, interval/activity selection, priority optimization, correctness proofs, greedy versus DP; verify language-specific semantics against the reference.",
+          "concept_explanation": "A locally attractive choice needs an exchange or dominance proof. Earliest finishing activities leave maximum remaining room; highest weight is not a valid replacement for weighted interval scheduling, which requires a different formulation.",
+          "example_implementation": "function solve(activities) { const sorted=activities.slice().sort((a,b)=>a[1]-b[1]||a[0]-b[0]);let end=-Infinity,count=0;for(const [a,b]of sorted)if(a>=end){count++;end=b;}return count; }",
+          "complexity_analysis": {
+            "time": "O(n log n)",
+            "space": "O(n) for input-preserving copy"
+          },
+          "coding_exercises": [
+            "question-dsa-25",
+            "question-dsa-26"
+          ],
+          "interview_question_ids": [
+            "question-dsa-25",
+            "question-dsa-26"
+          ],
+          "practical_implementation_exercise": "Guided implementation: derive a brute-force oracle, then implement the first exercise and prove its invariant. Guided contract: Given half-open activities [start,end), return the maximum number one worker can perform without overlap. Every activity has equal value. Independent contract: Input is {supply,cost} of equal nonzero length. Return the candidate start produced by a left-to-right deficit reset that can complete the circle, or -1 if total supply is insufficient.",
+          "revision_exercise": "Reimplement a previously failed question without hints. Explain why its invariant holds and which input broke your earlier approach.",
+          "study_guide": {
+            "before_video": [
+              "A locally attractive choice needs an exchange or dominance proof. Earliest finishing activities leave maximum remaining room; highest weight is not a valid replacement for weighted interval scheduling, which requires a different formulation.",
+              "Recognize: A chosen prefix can be extended to an optimal solution without reducing the remaining feasible choices.",
+              "Predict a brute-force approach and its input-dependent cost."
+            ],
+            "during_video": [
+              "Observe the state changes and the proof behind them.",
+              "Record the invariant, not just the final code.",
+              "For later phases choose a new variation or prerequisite repair rather than repeating a watched chapter. Stop within the video budget."
+            ],
+            "after_video": {
+              "comprehension_questions": [
+                "Construct a counterexample to tempting heuristics before relying on one; compare with a DP oracle.",
+                "Which counterexample defeats the tempting shortcut?"
+              ],
+              "practice": "Guided implementation: derive a brute-force oracle, then implement the first exercise and prove its invariant.",
+              "validate_understanding": [
+                "A chosen prefix can be extended to an optimal solution without reducing the remaining feasible choices.",
+                "Run all fixtures and a tiny randomized oracle.",
+                "State time, auxiliary space, stack and output complexity."
+              ]
+            }
+          },
+          "time_budget_minutes": {
+            "preparation": 10,
+            "video": 35,
+            "reading": 25,
+            "implementation": 100,
+            "interview": 20,
+            "revision": 20
+          },
+          "estimated_total_study_minutes": 210,
+          "expected_outcome": "Original tested implementation, independent attempt, explicit complexity analysis and a spoken trade-off explanation.",
+          "completion_criteria": [
+            "Record passing fixtures and at least one adversarial test.",
+            "Submit an independent implementation or honestly record assistance.",
+            "Record time/space analysis and explain the invariant.",
+            "Answer the interview questions; opening a solution does not complete the lesson."
+          ],
+          "phase": "concept_and_slice",
+          "assessment_status": "authored_plan_not_learner_executed"
+        },
+        {
+          "id": "lesson-dsa-14-13",
+          "day": 13,
+          "track_id": "track-dsa",
+          "topic": "Advanced data structures and algorithms - concept and slice",
+          "knowledge_unit_id": "knowledge-dsa-advanced",
+          "skill_ids": [
+            "skill-dsa-advanced"
+          ],
+          "learning_objectives": [
+            "A trie shares prefixes while a Fenwick tree stores partial sums over bit-defined ranges. Bitwise JavaScript operators use signed 32-bit integers; arbitrary precision needs BigInt. Segment trees support more general aggregates at increased implementation complexity.",
+            "Each indexed aggregate covers a precisely defined range; trie counts represent inserted words, not traversals.",
+            "Choose advanced structures only when query/update constraints justify them; derive low-bit transitions."
+          ],
+          "why_it_matters": "Derive the approach, implement independently, test and communicate complexity rather than memorizing a platform answer.",
+          "prerequisites": {
+            "lesson_ids": [
+              "lesson-dsa-14-12"
+            ],
+            "skill_ids": [],
+            "baseline_knowledge": [
+              "Working programming, functions, basic tests and Git"
+            ],
+            "gap_policy": "Repair prerequisites inside the budget; extend the calendar rather than adding hidden hours."
+          },
+          "recommended_youtube_resource_id": "resource-dsa-fiset-video",
+          "supplementary_reading_resource_ids": [
+            "resource-dsa-mit-notes",
+            "resource-dsa-js-docs"
+          ],
+          "video_duration_minutes": null,
+          "planned_video_minutes": 35,
+          "video_selection": {
+            "focus": "tries, bits, bitmasks, DSU, advanced graphs, combinatorics, segment trees, Fenwick trees",
+            "selection_method": "Select a relevant publisher-labeled chapter and watch at most 35 minutes.",
+            "verified_timestamp_seconds": null,
+            "coverage_limit": "No claim that the linked video fully covers every named advanced topic."
+          },
+          "reading_focus": "Read the sections on tries, bits, bitmasks, DSU, advanced graphs, combinatorics, segment trees, Fenwick trees; verify language-specific semantics against the reference.",
+          "concept_explanation": "A trie shares prefixes while a Fenwick tree stores partial sums over bit-defined ranges. Bitwise JavaScript operators use signed 32-bit integers; arbitrary precision needs BigInt. Segment trees support more general aggregates at increased implementation complexity.",
+          "example_implementation": "function solve({words,prefixes}) { const root={count:0,next:new Map()};for(const word of words){let node=root;node.count++;for(const char of word){if(!node.next.has(char))node.next.set(char,{count:0,next:new Map()});node=node.next.get(char);node.count++;}}return prefixes.map(prefix=>{let node=root;for(const char of prefix){node=node.next.get(char);if(!node)return 0;}return node.count;}); }",
+          "complexity_analysis": {
+            "time": "O(total word characters + total prefix characters)",
+            "space": "O(total word characters)"
+          },
+          "coding_exercises": [
+            "question-dsa-27",
+            "question-dsa-28"
+          ],
+          "interview_question_ids": [
+            "question-dsa-27",
+            "question-dsa-28"
+          ],
+          "practical_implementation_exercise": "Guided implementation: derive a brute-force oracle, then implement the first exercise and prove its invariant. Guided contract: Input is {words,prefixes}. Return for each prefix the number of inserted words beginning with it, counting duplicate insertions. Empty prefix counts all words. Build a trie. Independent contract: Input is {values,operations}. Operations are ['add',index,delta] or ['sum',left,right] with inclusive indices. Return each sum result. Use a Fenwick tree.",
+          "revision_exercise": "Reimplement a previously failed question without hints. Explain why its invariant holds and which input broke your earlier approach.",
+          "study_guide": {
+            "before_video": [
+              "A trie shares prefixes while a Fenwick tree stores partial sums over bit-defined ranges. Bitwise JavaScript operators use signed 32-bit integers; arbitrary precision needs BigInt. Segment trees support more general aggregates at increased implementation complexity.",
+              "Recognize: Each indexed aggregate covers a precisely defined range; trie counts represent inserted words, not traversals.",
+              "Predict a brute-force approach and its input-dependent cost."
+            ],
+            "during_video": [
+              "Observe the state changes and the proof behind them.",
+              "Record the invariant, not just the final code.",
+              "For later phases choose a new variation or prerequisite repair rather than repeating a watched chapter. Stop within the video budget."
+            ],
+            "after_video": {
+              "comprehension_questions": [
+                "Choose advanced structures only when query/update constraints justify them; derive low-bit transitions.",
+                "Which counterexample defeats the tempting shortcut?"
+              ],
+              "practice": "Guided implementation: derive a brute-force oracle, then implement the first exercise and prove its invariant.",
+              "validate_understanding": [
+                "Each indexed aggregate covers a precisely defined range; trie counts represent inserted words, not traversals.",
+                "Run all fixtures and a tiny randomized oracle.",
+                "State time, auxiliary space, stack and output complexity."
+              ]
+            }
+          },
+          "time_budget_minutes": {
+            "preparation": 10,
+            "video": 35,
+            "reading": 25,
+            "implementation": 100,
+            "interview": 20,
+            "revision": 20
+          },
+          "estimated_total_study_minutes": 210,
+          "expected_outcome": "Original tested implementation, independent attempt, explicit complexity analysis and a spoken trade-off explanation.",
+          "completion_criteria": [
+            "Record passing fixtures and at least one adversarial test.",
+            "Submit an independent implementation or honestly record assistance.",
+            "Record time/space analysis and explain the invariant.",
+            "Answer the interview questions; opening a solution does not complete the lesson."
+          ],
+          "phase": "concept_and_slice",
+          "assessment_status": "authored_plan_not_learner_executed"
+        },
+        {
+          "id": "lesson-dsa-14-14",
+          "day": 14,
+          "track_id": "track-dsa",
+          "topic": "Senior engineering coding interviews - concept and slice",
+          "knowledge_unit_id": "knowledge-dsa-senior",
+          "skill_ids": [
+            "skill-dsa-senior"
+          ],
+          "learning_objectives": [
+            "Practical assessments evaluate evolving contracts, tests and maintainability, not just optimal puzzle complexity. State idempotency, error and ownership boundaries. JavaScript async I/O is not CPU parallelism; limit active work explicitly and discuss shared-state races.",
+            "Every output obeys the contract even on duplicates, malformed input or partial failure; bounded workers preserve input order.",
+            "Compare a minimal pure function with an extensible design. Refactor only after observable behavior is protected by tests."
+          ],
+          "why_it_matters": "Derive the approach, implement independently, test and communicate complexity rather than memorizing a platform answer.",
+          "prerequisites": {
+            "lesson_ids": [
+              "lesson-dsa-14-13"
+            ],
+            "skill_ids": [],
+            "baseline_knowledge": [
+              "Working programming, functions, basic tests and Git"
+            ],
+            "gap_policy": "Repair prerequisites inside the budget; extend the calendar rather than adding hidden hours."
+          },
+          "recommended_youtube_resource_id": "resource-system-design",
+          "supplementary_reading_resource_ids": [
+            "resource-api-design",
+            "resource-dsa-js-docs",
+            "resource-dsa-ts-docs"
+          ],
+          "video_duration_minutes": null,
+          "planned_video_minutes": 35,
+          "video_selection": {
+            "focus": "OO design, interfaces, patterns, concurrency, thread safety, races, practical coding, refactoring, testing, debugging, APIs, data modeling",
+            "selection_method": "Select a relevant publisher-labeled chapter and watch at most 35 minutes.",
+            "verified_timestamp_seconds": null,
+            "coverage_limit": "No claim that the linked video fully covers every named advanced topic."
+          },
+          "reading_focus": "Read the sections on OO design, interfaces, patterns, concurrency, thread safety, races, practical coding, refactoring, testing, debugging, APIs, data modeling; verify language-specific semantics against the reference.",
+          "concept_explanation": "Practical assessments evaluate evolving contracts, tests and maintainability, not just optimal puzzle complexity. State idempotency, error and ownership boundaries. JavaScript async I/O is not CPU parallelism; limit active work explicitly and discuss shared-state races.",
+          "example_implementation": "function solve(events) { const seen=new Set(),accepted=[];let duplicates=0;for(const event of events){if(seen.has(event.id)){duplicates++;continue;}seen.add(event.id);accepted.push({...event});}return {accepted,duplicates}; }",
+          "complexity_analysis": {
+            "time": "O(n) expected",
+            "space": "O(n)"
+          },
+          "coding_exercises": [
+            "question-dsa-29",
+            "question-dsa-30"
+          ],
+          "interview_question_ids": [
+            "question-dsa-29",
+            "question-dsa-30"
+          ],
+          "practical_implementation_exercise": "Guided implementation: derive a brute-force oracle, then implement the first exercise and prove its invariant. Guided contract: Given events {id,value}, return {accepted,duplicates}. Accept only the first occurrence of each id in input order; duplicates is the number of later occurrences. Do not mutate the input. Independent contract: Input is {values,limit}. Simulate asynchronous doubling using a resolved Promise for each item. Return doubled values in original input order, using no more than limit worker loops. Do not launch one Promise per input item up front.",
+          "revision_exercise": "Reimplement a previously failed question without hints. Explain why its invariant holds and which input broke your earlier approach.",
+          "study_guide": {
+            "before_video": [
+              "Practical assessments evaluate evolving contracts, tests and maintainability, not just optimal puzzle complexity. State idempotency, error and ownership boundaries. JavaScript async I/O is not CPU parallelism; limit active work explicitly and discuss shared-state races.",
+              "Recognize: Every output obeys the contract even on duplicates, malformed input or partial failure; bounded workers preserve input order.",
+              "Predict a brute-force approach and its input-dependent cost."
+            ],
+            "during_video": [
+              "Observe the state changes and the proof behind them.",
+              "Record the invariant, not just the final code.",
+              "For later phases choose a new variation or prerequisite repair rather than repeating a watched chapter. Stop within the video budget."
+            ],
+            "after_video": {
+              "comprehension_questions": [
+                "Compare a minimal pure function with an extensible design. Refactor only after observable behavior is protected by tests.",
+                "Which counterexample defeats the tempting shortcut?"
+              ],
+              "practice": "Guided implementation: derive a brute-force oracle, then implement the first exercise and prove its invariant.",
+              "validate_understanding": [
+                "Every output obeys the contract even on duplicates, malformed input or partial failure; bounded workers preserve input order.",
+                "Run all fixtures and a tiny randomized oracle.",
+                "State time, auxiliary space, stack and output complexity."
+              ]
+            }
+          },
+          "time_budget_minutes": {
+            "preparation": 10,
+            "video": 35,
+            "reading": 25,
+            "implementation": 100,
+            "interview": 20,
+            "revision": 20
+          },
+          "estimated_total_study_minutes": 210,
+          "expected_outcome": "Original tested implementation, independent attempt, explicit complexity analysis and a spoken trade-off explanation.",
+          "completion_criteria": [
+            "Record passing fixtures and at least one adversarial test.",
+            "Submit an independent implementation or honestly record assistance.",
+            "Record time/space analysis and explain the invariant.",
+            "Answer the interview questions; opening a solution does not complete the lesson."
+          ],
+          "phase": "concept_and_slice",
+          "assessment_status": "authored_plan_not_learner_executed"
+        }
+      ]
+    }
+  ]
+}

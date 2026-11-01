@@ -11,3 +11,5 @@ Keep `.env`, `data`, snapshots, private notes and traces out of Git. Check resea
 To report a vulnerability, use the repository's private GitHub security advisory/reporting facility if enabled, or contact the repository owner privately through GitHub. Do not include secrets, private databases or personal notes in a public issue.
 
 Known development-only dependency advisories and audit scope are documented in `SECURITY_AUDIT.md`. Production dependency scans and boundary regression tests run in CI. A passing scan does not guarantee security.
+
+DSA JavaScript runs only in an opaque-origin sandboxed iframe's worker. Its dedicated CSP blocks network connections; the main application does not allow `unsafe-eval`. Execution is terminated after three seconds, with a five-second parent fallback, plus source/input/output bounds. There is no hard browser heap quota: do not run untrusted third-party code. Sample checks are not a proctored or tamper-proof judge. Saved code is private personal data and is included in backups.

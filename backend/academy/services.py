@@ -206,6 +206,10 @@ def adjusted_lesson(lesson: dict, config: PlanInput):
     elif config.intensity == "interview":
         budget["video"] -= 10
         budget["interview"] += 10
+    if config.dsa_practice_minutes:
+        budget["implementation"] -= config.dsa_practice_minutes
+        budget["coding_practice"] = config.dsa_practice_minutes
+    data["dsa_practice_minutes"] = config.dsa_practice_minutes
     data["estimated_total_study_minutes"] = sum(budget.values())
     data["planned_video_minutes"] = budget["video"]
     data["target_role"] = config.target_role
@@ -433,6 +437,7 @@ def seed_companies(session: Session):
                 target_roles=", ".join(employer["watch_keywords"]),
                 notes=employer["limitations"],
                 enabled=employer["enabled"],
+                priority=employer.get("preparation_tier", 3),
             ).model_dump()
             existing = save_personal(
                 session, "company", data, research_ref=employer["id"], ref_key=employer["id"]

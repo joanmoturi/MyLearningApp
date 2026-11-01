@@ -26,7 +26,7 @@ jobs:
           .venv/bin/python -m pip install --no-deps -e backend
       - name: Backend checks
         run: |
-          .venv/bin/python -m ruff check backend
+          .venv/bin/python -m ruff check backend research/dsa
           .venv/bin/python -m ruff format --check backend
           .venv/bin/python -m pytest backend/tests -q
           .venv/bin/python -m pip_audit --progress-spinner off

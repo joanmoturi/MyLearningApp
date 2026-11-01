@@ -31,7 +31,7 @@ from .models import (
     User,
     now,
 )
-from .research import FILES, apply_documents, digest, records, validate_documents
+from .research import DATASET_TYPES, FILES, apply_documents, digest, records, validate_documents
 from .schemas import PERSONAL_SCHEMAS, PlanInput, ProgressInput
 from .services import LOCAL_USER
 
@@ -76,6 +76,8 @@ def export_bundle(session: Session):
 
 
 def validate_backup(payload: dict, research_root: Path):
+    from .dsa import CodingSession
+
     if not isinstance(payload, dict):
         raise HTTPException(422, "Backup must be a JSON object.")
     if (
@@ -211,6 +213,19 @@ def validate_backup(payload: dict, research_root: Path):
             or data.get("method") != "rubric_self_assessment"
         ):
             raise HTTPException(422, "Backup attempt metadata is inconsistent.")
+        if row["kind"] == "coding_session":
+            from .dsa import sample_checks
+
+            state = CodingSession.model_validate(data)
+            if any(
+                not research_kind(qid, "question") or expected[qid][1].get("track_id") != "track-dsa"
+                for qid in state.question_ids
+            ):
+                raise HTTPException(422, "Backup coding session question reference is invalid.")
+            for entry in state.submissions:
+                qid = entry["answer"]["question_id"]
+                if entry["sample_checks"] != sample_checks(expected[qid][1], entry["answer"]["outputs"]):
+                    raise HTTPException(422, "Backup coding sample checks are inconsistent.")
         if row["kind"] in ("resource", "competency") and (
             row["ref_key"] != row["research_ref"]
             or expected.get(row["research_ref"], (None,))[0]
@@ -239,18 +254,7 @@ def preview_import(session: Session, kind: str, payload: dict, research_root: Pa
                 candidates = [
                     name
                     for name in FILES
-                    if payload.get("dataset_type")
-                    == {
-                        "LEARNER_PROFILE.json": "learner",
-                        "JOB_MARKET_SKILLS_MATRIX.json": "skills",
-                        "EMPLOYER_RESEARCH.json": "employers",
-                        "RESOURCE_CATALOG.json": "resources",
-                        "PRACTICAL_PROJECTS.json": "projects",
-                        "INTERVIEW_QUESTION_BANK.json": "questions",
-                        "SHARED_KNOWLEDGE_MAP.json": "shared",
-                        "SOURCE_REGISTER.json": "sources",
-                        "LEARNING_DEPENDENCIES.json": "dependencies",
-                    }.get(name, "curricula")
+                    if payload.get("dataset_type") == DATASET_TYPES[name]
                     and (not name.startswith("CURRICULUM") or str(payload.get("plan_days")) in name)
                 ]
                 if len(candidates) == 1:
@@ -358,7 +362,8 @@ def restore_sqlite(engine, path: Path, data: bytes, research_root: Path):
                     kind != "table" for _, kind in objects
                 ):
                     raise HTTPException(422, "Unknown schema, trigger or view in backup.")
-                if connection.execute("SELECT version_num FROM alembic_version").fetchall() != [("0001",)]:
+                revision = connection.execute("SELECT version_num FROM alembic_version").fetchall()
+                if revision not in ([("0001",)], [("0002",)]):
                     raise HTTPException(422, "Backup migration version is incompatible.")
                 if connection.execute("PRAGMA foreign_key_check").fetchall():
                     raise HTTPException(422, "Backup relationships are inconsistent.")
@@ -421,12 +426,22 @@ def restore_sqlite(engine, path: Path, data: bytes, research_root: Path):
                         normalize(constraint["sqltext"])
                         for constraint in inspector.get_check_constraints(table.name)
                     }
+                    if revision == [("0001",)] and table.name == "personal_records":
+                        expected_checks = {
+                            normalize(
+                                "kind IN ('note','resource','competency','company','job','project','attempt','review','settings')"
+                            )
+                        }
                     if expected_unique != actual_unique or expected_checks != actual_checks:
                         raise HTTPException(422, "Backup uniqueness or check constraints differ.")
                 with factory() as session:
                     validate_backup(export_bundle(session), research_root)
             finally:
                 candidate_engine.dispose()
+            if revision == [("0001",)]:
+                from .database import migrate
+
+                migrate("sqlite:///" + str(candidate))
             # Preserve a recovery copy before replacing the active database.
             recovery = path.with_suffix(".pre-restore.sqlite3")
             recovery.write_bytes(sqlite_backup(path))

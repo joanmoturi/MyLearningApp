@@ -34,3 +34,11 @@ Full `npm audit`: **16 moderate development-tree advisories**, rooted in minimat
 ## Residual boundaries
 
 No real multi-user authentication, no isolation from other local OS users/processes, no live provider credential verification and no Docker network execution test on this machine. Do not expose this local product as a public service. Review research-profile content and select a license before changing repository visibility.
+
+## DSA extension checks - November 1, 2026
+
+The implementing engineer reviewed and exercised the new coding boundary; no independent final penetration-test claim is made. Actual Chromium execution confirmed sample execution, blocked network calls with a controlled CORS-allowed probe, three-second infinite-loop termination and iframe cleanup. The parent application retains its no-evaluation policy; only the dedicated network-none sandbox route allows worker/evaluation operations.
+
+User code never executes on the backend. Source, fixture and returned-output bounds are applied, but browser heap usage has no hard quota. Do not run untrusted third-party code. Blind practice is not proctoring: local catalogue/API access can expose authored references, and self-reported outputs/ratings are not tamper-proof grading.
+
+Strict coding envelopes validate timestamp policy, assistance/late flags, ordered question submissions and recomputed sample checks. Malformed/tampered personal imports and legacy/current snapshot recovery have regressions. Private pre-upgrade snapshots/exports remain ignored by Git. Production scans again found zero npm/Python dependency advisories; the full npm development tree still reports 16 moderate advisories. All existing Host/Origin regressions pass.

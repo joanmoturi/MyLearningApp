@@ -1,5 +1,7 @@
 # Production readiness report - 2026-10-31
 
+**Sixth-track update, November 1, 2026:** 90 local application tests pass; DSA research, coding isolation, migration/legacy restore and exact existing personal-data retention are verified. See `DSA_IMPLEMENTATION_REPORT.md` for current scope and remaining limitations. Hosted sixth-track CI is pending; the original evidence below refers to the original five-track runtime.
+
 **Status: core native release, fresh-checkout recovery and hosted CI verified; remaining acceptance gaps are explicit.** This is a local single-learner product, not an authenticated Internet-facing service.
 
 The incoming assumption that implementation was complete was incorrect: the backend was unvalidated and the actual frontend was missing. The audit therefore included completing the functional workspace rather than merely reviewing scaffolding.
@@ -28,10 +30,10 @@ The incoming assumption that implementation was complete was incorrect: the back
 
 ## Verified evidence and remaining conditions
 
-See `TEST_RESULTS.md` for 48 passing application tests and quality checks; `SECURITY_AUDIT.md` for scope, findings and dependency scans; `INSTALLATION_VERIFICATION.md` for fresh-checkout evidence.
+See `TEST_RESULTS.md` for the current 90-test release and historical 48-test baseline; `SECURITY_AUDIT.md` for scope, findings and dependency scans; `INSTALLATION_VERIFICATION.md` for fresh-checkout evidence.
 
 Research files/history are preserved. Core operation needs no API key or paid service. AI feedback, provider quota usage, cloud exercise deployments and external hosting may cost money when explicitly configured.
 
-The published runtime is `a2ab3639aa3cc3b8847ecef6aac32ea36231e1e0`; subsequent report-only commits record its evidence without changing that tested code. Docker execution, live provider credentials, an actual laptop reboot and exhaustive video playback remain unverified. Development-tree dependency advisories and the owner's licensing decision remain unresolved.
+The original five-track runtime is `a2ab3639aa3cc3b8847ecef6aac32ea36231e1e0`; its report-only commits record historical evidence. Docker execution, live provider credentials, an actual laptop reboot and exhaustive video playback remain unverified. Development-tree dependency advisories and the owner's licensing decision remain unresolved.
 
 Product-depth limitations also remain: job analysis uses editable keyword/section matching, priority skills are highlighted rather than semantically rescheduled, and resource availability/content quality still requires human review. Public-service authentication and PostgreSQL deployment are not implemented or claimed. These limitations prevent an unconditional all-requirements acceptance claim, but do not require paid APIs for verified core local use.

@@ -15,7 +15,7 @@ from sqlalchemy import select
 from sqlalchemy.exc import IntegrityError
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 
-from . import integrations
+from . import dsa, integrations
 from .data_management import apply_import, export_bundle, preview_import, restore_sqlite, sqlite_backup
 from .database import make_database, migrate
 from .models import (
@@ -31,7 +31,7 @@ from .models import (
     now,
     uid,
 )
-from .research import apply_documents, catalogue, digest, get_research, load_documents
+from .research import DSA_FILES, apply_documents, catalogue, digest, get_research, load_documents
 from .schemas import (
     AttemptInput,
     CompanyInput,
@@ -96,6 +96,17 @@ def create_app(database_url: str | None = None, research_root: Path | None = Non
             app.state.research_issues = missing
             if not session.scalar(select(ResearchDocument)) and documents:
                 apply_documents(session, documents, research_root, allow_partial=bool(missing))
+            else:
+                current = {doc.name: doc.data for doc in session.scalars(select(ResearchDocument))}
+                additions = {
+                    name: data
+                    for name, data in documents.items()
+                    if name in DSA_FILES and name not in current
+                }
+                if additions:
+                    apply_documents(
+                        session, {**current, **additions}, research_root, allow_partial=bool(missing)
+                    )
             settings(session)
             seed_companies(session)
             if not session.scalar(select(Plan).where(Plan.user_id == LOCAL_USER)) and session.get(
@@ -170,6 +181,8 @@ def create_app(database_url: str | None = None, research_root: Path | None = Non
             except Exception:
                 session.rollback()
                 raise
+
+    dsa.register_routes(app, database)
 
     @app.get("/api/health")
     def health():

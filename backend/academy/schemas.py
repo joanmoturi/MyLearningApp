@@ -34,6 +34,13 @@ class PlanInput(Input):
     company_id: str | None = None
     job_id: str | None = None
     reuse_demonstrated: bool = False
+    dsa_practice_minutes: Literal[0, 30, 45] = 0
+
+    @model_validator(mode="after")
+    def dedicated_dsa(self):
+        if self.track_id == "track-dsa" and self.dsa_practice_minutes:
+            raise ValueError("A dedicated DSA plan already includes coding practice.")
+        return self
 
 
 class ProgressInput(Input):
@@ -123,7 +130,7 @@ class Task(Input):
 
 class ProjectInput(Input):
     title: str = Field(min_length=1, max_length=200)
-    track_ids: list[str] = Field(min_length=1, max_length=5)
+    track_ids: list[str] = Field(min_length=1, max_length=6)
     skill_ids: list[str] = Field(default_factory=list, max_length=80)
     overview: str = Field(default="", max_length=20000)
     architecture: str = Field(default="", max_length=20000)
@@ -164,7 +171,7 @@ class SettingsInput(Input):
     active_plan_id: str | None = None
     theme: Literal["dark", "light", "system"] = "dark"
     daily_minutes: int = Field(default=210, ge=180, le=240)
-    priorities: list[str] = Field(default_factory=list, max_length=5)
+    priorities: list[str] = Field(default_factory=list, max_length=6)
     review_intervals: list[int] = Field(
         default_factory=lambda: [1, 3, 7, 14, 30], min_length=1, max_length=15
     )

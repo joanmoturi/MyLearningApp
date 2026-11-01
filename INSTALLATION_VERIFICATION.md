@@ -1,5 +1,11 @@
 # Installation verification
 
+## DSA update - November 1, 2026
+
+The existing live native application was backed up and restarted with revision `0002`. Frontend and backend returned HTTP 200, six tracks loaded, and all pre-existing personal rows matched the pre-update export exactly. Three new/current Chromium acceptance workflows passed against a separate initialized test database, including coding execution and recovery. This is update and fresh-database evidence, not another clean operating-system installation. Extension-specific hosted checkout/install results are pending publication.
+
+## Original native and hosted installation
+
 **Native clean-clone installation succeeded on October 31, 2026.**
 
 Method: a separate `git clone --no-local` of the committed repository into a clean session directory, a new Python virtual environment, `npm ci`, `.env.example` copied without credentials and the documented `Setup.ps1`. No original database or virtual environment is copied.

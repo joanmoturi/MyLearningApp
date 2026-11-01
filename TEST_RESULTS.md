@@ -1,4 +1,21 @@
-# Test results - 2026-10-31
+# Test results
+
+## Sixth-track release verification - November 1, 2026
+
+| Suite/check | Total | Passed | Failed | Skipped |
+|---|---:|---:|---:|---:|
+| Backend/API/database/research | 45 | 45 | 0 | 0 |
+| Frontend/data/proxy/reference solutions | 42 | 42 | 0 | 0 |
+| Playwright Chromium acceptance | 3 | 3 | 0 | 0 |
+| **Application tests** | **90** | **90** | **0** | **0** |
+
+Includes the unchanged original regression cases, all 30 authored JavaScript reference implementations/75 fixtures, DSA schema/reference validation, three curricula, reserved budgets, blind drafts/deadlines, assistance/late honesty, three-date mastery, manual revision, hostile coding imports, legacy migration/restore and exact existing-data preservation.
+
+Actual Chromium execution passed: lesson/video-link rendering, saved drafts after reload, sample execution and submission, saved-answer inspection, company plan/practice, network denial with a controlled CORS-allowed probe, infinite-loop termination/iframe cleanup and original learning/career/backup/mobile/Host workflows. Latest complete browser run: 24.0 seconds, a single Windows observation.
+
+Type/lint/format/build checks and production dependency scans passed. No cases were skipped. A concurrent local startup timed out once; the complete sequential browser run subsequently passed without changing test timeouts. Historical release results below remain historical; hosted evidence for the sixth-track runtime will be recorded after its run completes.
+
+## Original five-track release - October 31, 2026
 
 | Suite/check | Total | Passed | Failed | Skipped |
 |---|---:|---:|---:|---:|

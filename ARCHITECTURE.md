@@ -20,6 +20,9 @@ The proxy checks the exact configured Host and Origin, bounds bodies, validates 
 | `services.py` | Curriculum preservation, explicit competency, job gaps and spaced reviews. |
 | `data_management.py` | Preview/apply, export, validated snapshot/recovery. |
 | `integrations.py` | Fixed official provider endpoints, bounded errors and local fallbacks. |
+| `backend\academy\dsa.py`, `dsa_content.py` | Typed coding sessions, sample comparison, analytics and additive research contracts. |
+| `frontend\app\dsa-practice.tsx` | Existing interview section's DSA workspace, saved attempts and company preparation. |
+| `frontend\lib\coding-runner.ts`, `app\coding-sandbox\route.ts` | Opaque-origin iframe and time-bounded browser worker; no server code execution. |
 
 The workspace centralizes orchestration for a personal product; reusable components and backend services avoid separate microservices. As the frontend grows, extract individual sections behind typed props rather than creating a global plugin framework.
 
@@ -41,7 +44,11 @@ Progress stores four independent flags and actual minutes, answers and practical
 
 OpenAPI is available at the loopback backend `/docs`; it defines typed domain inputs. Catalog endpoints support bounded filters/offset/limit. Personal endpoints are ownership-scoped. Imports are previewed, time-limited, digest-checked and explicitly confirmed; stale state requires re-preview.
 
-Migrations run at startup. Add a new Alembic revision for every future schema change, test upgrades from the previous release and preserve personal data. Never edit a deployed revision. Current SQLite restore only accepts revision `0001`; future upgrades must explicitly migrate validated snapshots before restoring them.
+Migrations run at startup. Add a new Alembic revision for every future schema change, test upgrades from the previous release and preserve personal data. Never edit a deployed revision. Revision `0002` extends the personal-record kind constraint with `coding_session`, preserving existing rows. Restore accepts fully validated `0001`/`0002` snapshots, migrating a verified older candidate before replacement. Downgrade refuses to delete coding evidence.
+
+DSA files are registered separately under `research\dsa`; the original five-track JSON/schema remain unchanged. Startup merges only missing DSA documents into persisted research. Sessions record server deadlines, drafts, self-ratings, assistance and fixture checks. Import/restore recomputes checks and validates ordered evidence. Performance recommendations prioritize due revisions and observed weaknesses, then curriculum order.
+
+User JavaScript executes in a worker owned by an iframe with scripts permitted but no same-origin permission. The dedicated static runner has network-none CSP and narrowly scoped worker/evaluation permissions. The main application still prohibits evaluation; arbitrary code is never sent to a server execution service. This is browser isolation, not a hard memory quota or an accredited coding judge.
 
 ## Adding content and providers
 

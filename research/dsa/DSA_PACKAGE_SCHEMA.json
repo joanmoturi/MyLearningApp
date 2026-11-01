@@ -1,0 +1,866 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Additive Engineering Academy DSA package",
+  "oneOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "$schema": {
+          "const": "DSA_PACKAGE_SCHEMA.json"
+        },
+        "dataset_type": {
+          "const": "dsa"
+        },
+        "research_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "research_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "tracks": {
+          "type": "array",
+          "maxItems": 10000,
+          "items": {
+            "additionalProperties": true,
+            "properties": {
+              "id": {
+                "pattern": "^[a-z][a-z0-9-]{2,149}$",
+                "title": "Id",
+                "type": "string"
+              }
+            },
+            "required": [
+              "id"
+            ],
+            "title": "Entity",
+            "type": "object"
+          }
+        },
+        "skills": {
+          "type": "array",
+          "maxItems": 10000,
+          "items": {
+            "additionalProperties": true,
+            "properties": {
+              "id": {
+                "pattern": "^[a-z][a-z0-9-]{2,149}$",
+                "title": "Id",
+                "type": "string"
+              }
+            },
+            "required": [
+              "id"
+            ],
+            "title": "Entity",
+            "type": "object"
+          }
+        },
+        "modules": {
+          "type": "array",
+          "maxItems": 10000,
+          "items": {
+            "additionalProperties": true,
+            "properties": {
+              "id": {
+                "pattern": "^[a-z][a-z0-9-]{2,149}$",
+                "title": "Id",
+                "type": "string"
+              }
+            },
+            "required": [
+              "id"
+            ],
+            "title": "Entity",
+            "type": "object"
+          }
+        }
+      },
+      "required": [
+        "$schema",
+        "dataset_type",
+        "research_version",
+        "research_date",
+        "tracks",
+        "skills",
+        "modules"
+      ]
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "$schema": {
+          "const": "DSA_PACKAGE_SCHEMA.json"
+        },
+        "dataset_type": {
+          "const": "dsa"
+        },
+        "research_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "research_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "resources": {
+          "type": "array",
+          "maxItems": 10000,
+          "items": {
+            "additionalProperties": true,
+            "properties": {
+              "id": {
+                "pattern": "^[a-z][a-z0-9-]{2,149}$",
+                "title": "Id",
+                "type": "string"
+              },
+              "title": {
+                "title": "Title",
+                "type": "string"
+              },
+              "creator": {
+                "title": "Creator",
+                "type": "string"
+              },
+              "url": {
+                "title": "Url",
+                "type": "string"
+              },
+              "resource_type": {
+                "title": "Resource Type",
+                "type": "string"
+              },
+              "track_ids": {
+                "items": {
+                  "type": "string"
+                },
+                "title": "Track Ids",
+                "type": "array"
+              },
+              "skill_ids": {
+                "items": {
+                  "type": "string"
+                },
+                "title": "Skill Ids",
+                "type": "array"
+              },
+              "free_status": {
+                "enum": [
+                  "fully_free",
+                  "free_documentation"
+                ],
+                "title": "Free Status",
+                "type": "string"
+              },
+              "free_evidence": {
+                "title": "Free Evidence",
+                "type": "string"
+              },
+              "last_verified_at": {
+                "format": "date",
+                "title": "Last Verified At",
+                "type": "string"
+              },
+              "overall_score": {
+                "maximum": 100,
+                "minimum": 0,
+                "title": "Overall Score",
+                "type": "integer"
+              },
+              "confidence": {
+                "enum": [
+                  "low",
+                  "medium",
+                  "high"
+                ],
+                "title": "Confidence",
+                "type": "string"
+              },
+              "verification_sources": {
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1,
+                "title": "Verification Sources",
+                "type": "array"
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "creator",
+              "url",
+              "resource_type",
+              "track_ids",
+              "skill_ids",
+              "free_status",
+              "free_evidence",
+              "last_verified_at",
+              "overall_score",
+              "confidence",
+              "verification_sources"
+            ],
+            "title": "DsaResource",
+            "type": "object"
+          }
+        }
+      },
+      "required": [
+        "$schema",
+        "dataset_type",
+        "research_version",
+        "research_date",
+        "resources"
+      ]
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "$schema": {
+          "const": "DSA_PACKAGE_SCHEMA.json"
+        },
+        "dataset_type": {
+          "const": "dsa"
+        },
+        "research_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "research_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "questions": {
+          "type": "array",
+          "maxItems": 10000,
+          "items": {
+            "additionalProperties": true,
+            "properties": {
+              "id": {
+                "pattern": "^[a-z][a-z0-9-]{2,149}$",
+                "title": "Id",
+                "type": "string"
+              },
+              "track_id": {
+                "const": "track-dsa",
+                "title": "Track Id",
+                "type": "string"
+              },
+              "title": {
+                "title": "Title",
+                "type": "string"
+              },
+              "question": {
+                "title": "Question",
+                "type": "string"
+              },
+              "skill_ids": {
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1,
+                "title": "Skill Ids",
+                "type": "array"
+              },
+              "pattern": {
+                "title": "Pattern",
+                "type": "string"
+              },
+              "difficulty": {
+                "enum": [
+                  "easy",
+                  "medium",
+                  "hard"
+                ],
+                "title": "Difficulty",
+                "type": "string"
+              },
+              "category": {
+                "const": "coding",
+                "default": "coding",
+                "title": "Category",
+                "type": "string"
+              },
+              "constraints": {
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1,
+                "title": "Constraints",
+                "type": "array"
+              },
+              "test_cases": {
+                "items": {
+                  "additionalProperties": true,
+                  "type": "object"
+                },
+                "maxItems": 12,
+                "minItems": 2,
+                "title": "Test Cases",
+                "type": "array"
+              },
+              "hints": {
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1,
+                "title": "Hints",
+                "type": "array"
+              },
+              "solution_code": {
+                "maxLength": 20000,
+                "minLength": 10,
+                "title": "Solution Code",
+                "type": "string"
+              },
+              "detailed_explanation": {
+                "title": "Detailed Explanation",
+                "type": "string"
+              },
+              "complexity": {
+                "additionalProperties": {
+                  "type": "string"
+                },
+                "title": "Complexity",
+                "type": "object"
+              },
+              "expected_answer_elements": {
+                "items": {
+                  "type": "string"
+                },
+                "title": "Expected Answer Elements",
+                "type": "array"
+              },
+              "evaluation_rubric": {
+                "items": {
+                  "additionalProperties": true,
+                  "type": "object"
+                },
+                "title": "Evaluation Rubric",
+                "type": "array"
+              },
+              "follow_up_questions": {
+                "items": {
+                  "type": "string"
+                },
+                "title": "Follow Up Questions",
+                "type": "array"
+              },
+              "common_mistakes": {
+                "items": {
+                  "type": "string"
+                },
+                "title": "Common Mistakes",
+                "type": "array"
+              },
+              "related_question_ids": {
+                "items": {
+                  "type": "string"
+                },
+                "title": "Related Question Ids",
+                "type": "array"
+              },
+              "source_ids": {
+                "items": {
+                  "type": "string"
+                },
+                "title": "Source Ids",
+                "type": "array"
+              },
+              "recommended_minutes": {
+                "maximum": 90,
+                "minimum": 10,
+                "title": "Recommended Minutes",
+                "type": "integer"
+              },
+              "authorship": {
+                "title": "Authorship",
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "track_id",
+              "title",
+              "question",
+              "skill_ids",
+              "pattern",
+              "difficulty",
+              "constraints",
+              "test_cases",
+              "hints",
+              "solution_code",
+              "detailed_explanation",
+              "complexity",
+              "expected_answer_elements",
+              "evaluation_rubric",
+              "follow_up_questions",
+              "common_mistakes",
+              "related_question_ids",
+              "source_ids",
+              "recommended_minutes",
+              "authorship"
+            ],
+            "title": "DsaQuestion",
+            "type": "object"
+          }
+        },
+        "mock_interviews": {
+          "type": "array",
+          "maxItems": 10000,
+          "items": {
+            "additionalProperties": true,
+            "properties": {
+              "id": {
+                "pattern": "^[a-z][a-z0-9-]{2,149}$",
+                "title": "Id",
+                "type": "string"
+              }
+            },
+            "required": [
+              "id"
+            ],
+            "title": "Entity",
+            "type": "object"
+          }
+        }
+      },
+      "required": [
+        "$schema",
+        "dataset_type",
+        "research_version",
+        "research_date",
+        "questions",
+        "mock_interviews"
+      ]
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "$schema": {
+          "const": "DSA_PACKAGE_SCHEMA.json"
+        },
+        "dataset_type": {
+          "const": "dsa"
+        },
+        "research_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "research_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "profiles": {
+          "type": "array",
+          "maxItems": 10000,
+          "items": {
+            "additionalProperties": true,
+            "properties": {
+              "id": {
+                "pattern": "^[a-z][a-z0-9-]{2,149}$",
+                "title": "Id",
+                "type": "string"
+              },
+              "name": {
+                "title": "Name",
+                "type": "string"
+              },
+              "employer_id": {
+                "title": "Employer Id",
+                "type": "string"
+              },
+              "category": {
+                "title": "Category",
+                "type": "string"
+              },
+              "career_url": {
+                "title": "Career Url",
+                "type": "string"
+              },
+              "preparation_tier": {
+                "maximum": 3,
+                "minimum": 1,
+                "title": "Preparation Tier",
+                "type": "integer"
+              },
+              "interview_evidence": {
+                "enum": [
+                  "officially_documented",
+                  "multiple_candidate_reports",
+                  "limited_anecdotal_evidence",
+                  "unknown"
+                ],
+                "title": "Interview Evidence",
+                "type": "string"
+              },
+              "pattern_skill_ids": {
+                "items": {
+                  "type": "string"
+                },
+                "title": "Pattern Skill Ids",
+                "type": "array"
+              },
+              "source_ids": {
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1,
+                "title": "Source Ids",
+                "type": "array"
+              },
+              "research_date": {
+                "format": "date",
+                "title": "Research Date",
+                "type": "string"
+              },
+              "confidence": {
+                "enum": [
+                  "low",
+                  "medium",
+                  "high"
+                ],
+                "title": "Confidence",
+                "type": "string"
+              },
+              "limitations": {
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1,
+                "title": "Limitations",
+                "type": "array"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "employer_id",
+              "category",
+              "career_url",
+              "preparation_tier",
+              "interview_evidence",
+              "pattern_skill_ids",
+              "source_ids",
+              "research_date",
+              "confidence",
+              "limitations"
+            ],
+            "title": "DsaProfile",
+            "type": "object"
+          }
+        },
+        "employers": {
+          "type": "array",
+          "maxItems": 10000,
+          "items": {
+            "additionalProperties": true,
+            "properties": {
+              "id": {
+                "pattern": "^[a-z][a-z0-9-]{2,149}$",
+                "title": "Id",
+                "type": "string"
+              }
+            },
+            "required": [
+              "id"
+            ],
+            "title": "Entity",
+            "type": "object"
+          }
+        }
+      },
+      "required": [
+        "$schema",
+        "dataset_type",
+        "research_version",
+        "research_date",
+        "profiles",
+        "employers"
+      ]
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "$schema": {
+          "const": "DSA_PACKAGE_SCHEMA.json"
+        },
+        "dataset_type": {
+          "const": "dsa"
+        },
+        "research_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "research_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "sources": {
+          "type": "array",
+          "maxItems": 10000,
+          "items": {
+            "additionalProperties": true,
+            "properties": {
+              "id": {
+                "pattern": "^[a-z][a-z0-9-]{2,149}$",
+                "title": "Id",
+                "type": "string"
+              }
+            },
+            "required": [
+              "id"
+            ],
+            "title": "Entity",
+            "type": "object"
+          }
+        }
+      },
+      "required": [
+        "$schema",
+        "dataset_type",
+        "research_version",
+        "research_date",
+        "sources"
+      ]
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "$schema": {
+          "const": "DSA_PACKAGE_SCHEMA.json"
+        },
+        "dataset_type": {
+          "const": "dsa"
+        },
+        "research_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "research_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "edges": {
+          "type": "array",
+          "maxItems": 10000,
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "required": [
+        "$schema",
+        "dataset_type",
+        "research_version",
+        "research_date",
+        "edges"
+      ]
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "$schema": {
+          "const": "DSA_PACKAGE_SCHEMA.json"
+        },
+        "dataset_type": {
+          "const": "dsa"
+        },
+        "research_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "research_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "curricula": {
+          "type": "array",
+          "maxItems": 10000,
+          "items": {
+            "additionalProperties": true,
+            "properties": {
+              "id": {
+                "pattern": "^[a-z][a-z0-9-]{2,149}$",
+                "title": "Id",
+                "type": "string"
+              },
+              "track_id": {
+                "const": "track-dsa"
+              },
+              "duration_days": {
+                "enum": [
+                  14,
+                  30,
+                  60
+                ]
+              },
+              "lessons": {
+                "type": "array",
+                "minItems": 14,
+                "maxItems": 60,
+                "items": {
+                  "additionalProperties": true,
+                  "properties": {
+                    "id": {
+                      "pattern": "^[a-z][a-z0-9-]{2,149}$",
+                      "title": "Id",
+                      "type": "string"
+                    },
+                    "track_id": {
+                      "const": "track-dsa",
+                      "title": "Track Id",
+                      "type": "string"
+                    },
+                    "day": {
+                      "maximum": 60,
+                      "minimum": 1,
+                      "title": "Day",
+                      "type": "integer"
+                    },
+                    "topic": {
+                      "title": "Topic",
+                      "type": "string"
+                    },
+                    "learning_objectives": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "minItems": 1,
+                      "title": "Learning Objectives",
+                      "type": "array"
+                    },
+                    "prerequisites": {
+                      "additionalProperties": true,
+                      "title": "Prerequisites",
+                      "type": "object"
+                    },
+                    "skill_ids": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "minItems": 1,
+                      "title": "Skill Ids",
+                      "type": "array"
+                    },
+                    "knowledge_unit_id": {
+                      "title": "Knowledge Unit Id",
+                      "type": "string"
+                    },
+                    "recommended_youtube_resource_id": {
+                      "title": "Recommended Youtube Resource Id",
+                      "type": "string"
+                    },
+                    "supplementary_reading_resource_ids": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "minItems": 1,
+                      "title": "Supplementary Reading Resource Ids",
+                      "type": "array"
+                    },
+                    "interview_question_ids": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "minItems": 1,
+                      "title": "Interview Question Ids",
+                      "type": "array"
+                    },
+                    "study_guide": {
+                      "additionalProperties": true,
+                      "title": "Study Guide",
+                      "type": "object"
+                    },
+                    "example_implementation": {
+                      "title": "Example Implementation",
+                      "type": "string"
+                    },
+                    "complexity_analysis": {
+                      "additionalProperties": true,
+                      "title": "Complexity Analysis",
+                      "type": "object"
+                    },
+                    "coding_exercises": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "minItems": 2,
+                      "title": "Coding Exercises",
+                      "type": "array"
+                    },
+                    "completion_criteria": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "minItems": 2,
+                      "title": "Completion Criteria",
+                      "type": "array"
+                    },
+                    "time_budget_minutes": {
+                      "additionalProperties": {
+                        "type": "integer"
+                      },
+                      "title": "Time Budget Minutes",
+                      "type": "object"
+                    },
+                    "estimated_total_study_minutes": {
+                      "const": 210,
+                      "title": "Estimated Total Study Minutes",
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "track_id",
+                    "day",
+                    "topic",
+                    "learning_objectives",
+                    "prerequisites",
+                    "skill_ids",
+                    "knowledge_unit_id",
+                    "recommended_youtube_resource_id",
+                    "supplementary_reading_resource_ids",
+                    "interview_question_ids",
+                    "study_guide",
+                    "example_implementation",
+                    "complexity_analysis",
+                    "coding_exercises",
+                    "completion_criteria",
+                    "time_budget_minutes",
+                    "estimated_total_study_minutes"
+                  ],
+                  "title": "DsaLesson",
+                  "type": "object"
+                }
+              }
+            },
+            "required": [
+              "id",
+              "track_id",
+              "duration_days",
+              "lessons"
+            ],
+            "title": "Entity",
+            "type": "object"
+          }
+        }
+      },
+      "required": [
+        "$schema",
+        "dataset_type",
+        "research_version",
+        "research_date",
+        "curricula"
+      ]
+    }
+  ]
+}

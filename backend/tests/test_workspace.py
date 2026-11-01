@@ -20,8 +20,16 @@ def first_lesson(client):
 def test_seed_and_migration(workspace):
     client, app, _ = workspace
     assert client.get("/api/health").json()["status"] == "ok"
-    assert len(client.get("/api/bootstrap").json()["tracks"]) == 5
-    assert client.get("/api/catalog/resource").json()["total"] == 54
+    assert {track["id"] for track in client.get("/api/bootstrap").json()["tracks"]} == {
+        "track-swe",
+        "track-cloud",
+        "track-devops",
+        "track-ai",
+        "track-agent",
+        "track-dsa",
+    }
+    resources = client.get("/api/catalog/resource").json()
+    assert len([item for item in resources["items"] if not item["id"].startswith("resource-dsa-")]) == 54
     assert "alembic_version" in inspect(app.state.engine).get_table_names()
     assert client.get("/api/dashboard").json()["completed_lessons"] == 0
 

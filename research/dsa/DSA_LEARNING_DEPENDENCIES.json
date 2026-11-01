@@ -1,0 +1,78 @@
+{
+  "$schema": "DSA_PACKAGE_SCHEMA.json",
+  "dataset_type": "dsa",
+  "research_version": "1.0.0",
+  "research_date": "2026-10-31",
+  "edges": [
+    {
+      "from": "skill-dsa-foundations",
+      "to": "skill-dsa-arrays",
+      "reason": "Recommended course sequence; repair an undemonstrated prerequisite within the current budget."
+    },
+    {
+      "from": "skill-dsa-arrays",
+      "to": "skill-dsa-patterns",
+      "reason": "Recommended course sequence; repair an undemonstrated prerequisite within the current budget."
+    },
+    {
+      "from": "skill-dsa-patterns",
+      "to": "skill-dsa-linked",
+      "reason": "Recommended course sequence; repair an undemonstrated prerequisite within the current budget."
+    },
+    {
+      "from": "skill-dsa-linked",
+      "to": "skill-dsa-stacks",
+      "reason": "Recommended course sequence; repair an undemonstrated prerequisite within the current budget."
+    },
+    {
+      "from": "skill-dsa-stacks",
+      "to": "skill-dsa-sorting",
+      "reason": "Recommended course sequence; repair an undemonstrated prerequisite within the current budget."
+    },
+    {
+      "from": "skill-dsa-sorting",
+      "to": "skill-dsa-trees",
+      "reason": "Recommended course sequence; repair an undemonstrated prerequisite within the current budget."
+    },
+    {
+      "from": "skill-dsa-trees",
+      "to": "skill-dsa-heaps",
+      "reason": "Recommended course sequence; repair an undemonstrated prerequisite within the current budget."
+    },
+    {
+      "from": "skill-dsa-heaps",
+      "to": "skill-dsa-intervals",
+      "reason": "Recommended course sequence; repair an undemonstrated prerequisite within the current budget."
+    },
+    {
+      "from": "skill-dsa-intervals",
+      "to": "skill-dsa-graphs",
+      "reason": "Recommended course sequence; repair an undemonstrated prerequisite within the current budget."
+    },
+    {
+      "from": "skill-dsa-graphs",
+      "to": "skill-dsa-backtracking",
+      "reason": "Recommended course sequence; repair an undemonstrated prerequisite within the current budget."
+    },
+    {
+      "from": "skill-dsa-backtracking",
+      "to": "skill-dsa-dp",
+      "reason": "Recommended course sequence; repair an undemonstrated prerequisite within the current budget."
+    },
+    {
+      "from": "skill-dsa-dp",
+      "to": "skill-dsa-greedy",
+      "reason": "Recommended course sequence; repair an undemonstrated prerequisite within the current budget."
+    },
+    {
+      "from": "skill-dsa-greedy",
+      "to": "skill-dsa-advanced",
+      "reason": "Recommended course sequence; repair an undemonstrated prerequisite within the current budget."
+    },
+    {
+      "from": "skill-dsa-advanced",
+      "to": "skill-dsa-senior",
+      "reason": "Recommended course sequence; repair an undemonstrated prerequisite within the current budget."
+    }
+  ]
+}
