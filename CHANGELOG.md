@@ -8,6 +8,7 @@
 - Reserved companion DSA practice inside another track's daily budget.
 - Added migration `0002`, strict coding-evidence validation and tested legacy snapshot upgrades.
 - Added authored-reference, API, schema, persistence and real-browser regressions; release evidence is in `DSA_IMPLEMENTATION_REPORT.md`.
+- Verified 90 local tests, the independent native checkout update, exact pre-existing-data preservation and hosted Ubuntu CI `41300867329` on runtime `e99415a`.
 
 ## 1.0.0 - 2026-10-31
 

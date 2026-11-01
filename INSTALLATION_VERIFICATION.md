@@ -2,7 +2,11 @@
 
 ## DSA update - November 1, 2026
 
-The existing live native application was backed up and restarted with revision `0002`. Frontend and backend returned HTTP 200, six tracks loaded, and all pre-existing personal rows matched the pre-update export exactly. Three new/current Chromium acceptance workflows passed against a separate initialized test database, including coding execution and recovery. This is update and fresh-database evidence, not another clean operating-system installation. Extension-specific hosted checkout/install results are pending publication.
+The existing live native application was backed up and restarted with revision `0002`. Frontend and backend returned HTTP 200, six tracks loaded, and all pre-existing personal rows matched the pre-update export exactly. Three new/current Chromium acceptance workflows passed against a separate initialized test database, including coding execution and recovery. This is update and fresh-database evidence, not another clean operating-system installation.
+
+The independently installed Windows checkout was updated to published `e99415a2bd71822d89d0eadb07f2fa6379f4fd1d`; its production build, 42 frontend/reference tests and three browser workflows passed (27.0-second browser observation). No dependencies changed and no personal data or credentials were copied from the live application.
+
+Hosted Ubuntu Academy CI `41300867329` passed on that same runtime, including fresh checkout, dependency installation, all backend/frontend tests, type/lint/format/build, scans and Chromium startup/recovery. This provides executed fresh-install evidence for the extension; Docker and a clean Windows operating-system image remain unverified.
 
 ## Original native and hosted installation
 

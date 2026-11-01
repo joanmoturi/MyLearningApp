@@ -13,7 +13,9 @@ Includes the unchanged original regression cases, all 30 authored JavaScript ref
 
 Actual Chromium execution passed: lesson/video-link rendering, saved drafts after reload, sample execution and submission, saved-answer inspection, company plan/practice, network denial with a controlled CORS-allowed probe, infinite-loop termination/iframe cleanup and original learning/career/backup/mobile/Host workflows. Latest complete browser run: 24.0 seconds, a single Windows observation.
 
-Type/lint/format/build checks and production dependency scans passed. No cases were skipped. A concurrent local startup timed out once; the complete sequential browser run subsequently passed without changing test timeouts. Historical release results below remain historical; hosted evidence for the sixth-track runtime will be recorded after its run completes.
+Type/lint/format/build checks and production dependency scans passed. No cases were skipped. A concurrent local startup timed out once; the complete sequential browser run subsequently passed without changing test timeouts.
+
+Published runtime `e99415a2bd71822d89d0eadb07f2fa6379f4fd1d` passed hosted Ubuntu Academy CI `41300867329` on November 1, 2026, including clean dependency installation and all 90 tests/checks. The independently installed Windows checkout updated to that runtime also passed its build, 42 frontend/reference tests and three browser workflows (27.0-second browser observation). Historical release results below remain historical.
 
 ## Original five-track release - October 31, 2026
 

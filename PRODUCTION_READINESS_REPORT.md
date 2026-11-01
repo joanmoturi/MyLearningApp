@@ -1,6 +1,6 @@
 # Production readiness report - 2026-10-31
 
-**Sixth-track update, November 1, 2026:** 90 local application tests pass; DSA research, coding isolation, migration/legacy restore and exact existing personal-data retention are verified. See `DSA_IMPLEMENTATION_REPORT.md` for current scope and remaining limitations. Hosted sixth-track CI is pending; the original evidence below refers to the original five-track runtime.
+**Sixth-track update, November 1, 2026:** 90 local application tests pass; DSA research, coding isolation, migration/legacy restore and exact existing personal-data retention are verified. Published runtime `e99415a` passed hosted Ubuntu CI `41300867329`, including fresh dependency installation, and the independently installed Windows checkout passed its updated build/browser workflows. See `DSA_IMPLEMENTATION_REPORT.md` for current scope and remaining limitations. The original evidence below refers to the original five-track runtime.
 
 **Status: core native release, fresh-checkout recovery and hosted CI verified; remaining acceptance gaps are explicit.** This is a local single-learner product, not an authenticated Internet-facing service.
 

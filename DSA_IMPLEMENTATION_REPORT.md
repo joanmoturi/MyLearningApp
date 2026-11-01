@@ -39,7 +39,9 @@ Before updating the running local application, private SQLite/JSON recovery copi
 
 Local verification completed November 1, 2026. All 30 original reference implementations passed their 75 fixtures. TypeScript, ESLint, Ruff, Prettier and the optimized build passed. `pip_audit` found no known dependency vulnerabilities (the local editable application is not a PyPI advisory entry); production npm audit found zero. The full development tree retains 16 moderate upstream advisories.
 
-The running local application was restarted, health/frontend HTTP 200 verified, all six tracks observed, database revision `0002` confirmed, and every pre-existing personal row compared exactly against the pre-upgrade export. No existing rows changed. Hosted CI for this extension is pending publication; the historical five-track CI result is not substituted for a new run.
+The running local application was restarted, health/frontend HTTP 200 verified, all six tracks observed, database revision `0002` confirmed, and every pre-existing personal row compared exactly against the pre-upgrade export. No existing rows changed.
+
+Published runtime **`e99415a2bd71822d89d0eadb07f2fa6379f4fd1d`** passed hosted Academy CI **`41300867329`** on November 1, 2026: clean Ubuntu checkout, dependency installation, backend/frontend tests, lint/format/type/build checks, dependency scans and actual Chromium acceptance. The separately installed Windows checkout was also updated to that runtime; its production build, 42 frontend/reference tests and three browser workflows passed (27.0-second browser observation). This is a verified update of an independently installed checkout, not a new operating-system image.
 
 TypeScript, ESLint and production build have passed during integration. Initial failures were corrected rather than skipped: misnested sandbox header configuration, a test fixture's duplicated SQLite URL, ambiguous test selectors, asynchronous draft reset during a new-session request, and incorrect test assumptions about the existing nested plan contract.
 
